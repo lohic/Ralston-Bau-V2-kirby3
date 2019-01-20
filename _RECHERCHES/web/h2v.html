@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ralston Bau</title>
+	<link rel="stylesheet" href="">
+
+	<style>
+
+		html{
+			font-size: 16px;
+		}
+
+		html, body{
+			margin: 0;
+			height: 100%;
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+
+		#title{
+			background: #F00;
+			padding: 2rem;
+		}
+
+		#info{
+			background: #0F0;
+			padding: 2rem;
+		}
+
+		#main{
+			background: #00F;
+			padding: 2rem;
+		}
+		
+
+		h1{
+			margin: 0;
+			font-size: 1rem;
+		}
+
+		#info{
+			transition: max-height 2s;
+			max-height:1000px;
+			height: auto;
+			overflow: hidden;
+		}
+
+		#info.close{
+			max-height: 5rem;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="title" class="drawer">
+		<h1>HOME</h1>
+	</div>
+
+	<!-- <div id="content" class="drawer"> -->
+		<div id="info" class="drawer close">
+				
+				<h1>INFOS</h1>
+			
+				<div>
+					<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nam cum quo molestiae laboriosam dignissimos eaque, pariatur itaque repellendus incidunt tenetur modi fuga quos nulla quidem, magni natus explicabo ut.</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quod doloribus inventore architecto reprehenderit harum corporis voluptatum! Dignissimos deserunt ipsa, temporibus quae reiciendis blanditiis amet, quam in laborum recusandae eligendi.</p>
+				</div>
+				<div>
+					<h2>Saepe, harum molestiae maxime, omnis ipsum vitae ex mollitia sed natus commodi, ad perspiciatis. Neque ducimus accusantium provident eligendi, fuga quisquam natus doloremque possimus modi dolores doloribus nesciunt quibusdam, nisi!</h2>
+					<p>Corrupti, laudantium, temporibus ratione ipsa quam adipisci perferendis, eos explicabo molestias quas possimus facere deleniti. Alias quas nobis amet iusto suscipit, deleniti est aspernatur ab eius voluptatem, sunt quisquam autem?</p>
+				</div>
+				<div>
+					<h2>Repellendus voluptatem tempore magni natus, quia? Commodi magni a repudiandae vero ullam similique porro culpa non itaque unde. Sit veniam, reprehenderit nulla cupiditate quam ratione dolorum adipisci est repellendus provident.</h2>
+					<p>Nulla id ab hic, tempore fuga eius nesciunt dolore! Molestiae, magnam ducimus nulla sit ab tempora, nemo, nesciunt hic modi minus nam iure. Consectetur, omnis quo quia eveniet voluptate, at.</p>
+				</div>
+				<div>
+					<h2>Totam, aperiam. Repellendus, totam, cum. Hic eius ut porro deleniti molestiae cumque totam similique, reprehenderit quos. Eligendi perspiciatis fugit magni, eum, magnam, consequatur quam dolore corrupti tempore animi unde. Rerum.</h2>
+					<p>Non earum vel velit molestias, aperiam. Eius quas voluptatum accusamus, asperiores ea dolorum quaerat esse et dicta magni exercitationem eos officia ut, dolore officiis, laboriosam repellat possimus. Doloribus, fuga, officia!</p>
+				</div>
+				<div>
+					<h2>Architecto repellendus eos soluta vero odio ullam, aspernatur cum earum perspiciatis quo illum facilis dolorem rerum iste aliquid. Sequi consequuntur pariatur earum culpa suscipit dolorem deserunt ipsum, laudantium at distinctio.</h2>
+					<p>Distinctio sequi debitis, ex alias enim eaque, reiciendis illum officia. Possimus magni impedit iure maiores porro, repellendus qui quam esse pariatur sequi vero illo velit voluptates perferendis modi, tenetur molestias!</p>
+				</div>
+				<div>
+					<h2>Facere assumenda animi, tempore nisi voluptate consequuntur tenetur quam neque, molestiae rem necessitatibus ipsum vitae voluptas eligendi corrupti id reprehenderit voluptatibus dicta eveniet culpa sapiente ab totam temporibus quas beatae!</h2>
+					<p>Maxime impedit, est voluptas quasi deserunt fugiat perferendis aliquid nulla, libero vero accusamus maiores quia, repellendus rerum perspiciatis labore saepe et hic eveniet suscipit, veniam in consectetur aut! Molestiae, cum.</p>
+				</div>
+
+		</div>
+		<div id="main" class="drawer open">
+			
+		
+			<h1>MAIN</h1>
+
+		</div>
+
+	<!-- </div> -->
+	
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+
+		var lang_arr = ["en", "no", "fr"];
+		var lang_id  = 0;
+		
+		$(document).ready(function(){
+
+			$("#info").click(function(event){
+
+				$(this).toggleClass("close");
+
+			})
+
+		})
+
+
+	</script>
+</body>
+</html>

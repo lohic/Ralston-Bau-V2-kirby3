@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ralston Bau</title>
+	<link rel="stylesheet" href="">
+
+	<style>
+
+		html{
+			font-size: 16px;
+		}
+
+		html, body{
+			margin: 0;
+			height: 100%;
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+
+		.drawer{
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			transition: width 2s;
+			overflow: auto;
+			overflow-x: hidden;
+		}
+
+		#title{
+			left:0;
+			background: #FFF;
+			width: 252px;
+		}
+
+		#content{
+			left:252px;
+			right: 0;
+		}
+
+		#info{
+			left: 0;
+			background: #F2E0CD;
+			padding:68px 38px;
+			cursor: pointer;
+		}
+
+		#main{
+			right: 0;
+			background: #000;
+			color: #FFF;
+			padding:123px 90px;
+			font-size: 3.1875rem;
+		}
+
+		
+		#info.close{
+			width: 72px;
+		}
+
+		#info.close * {
+			display: none;
+		}
+		#info.open{
+			width: 35%;
+		}
+
+		#main.close{		
+			width: 65%;
+		}
+		#main.open{
+			width: calc(100% - 72px);
+		}
+
+		.close .hideonclose{
+			display: none;
+		}
+
+		.open .hideonopen{
+			display: none;
+		}
+
+
+		#info>div{
+
+			min-width: 300px;
+
+		}
+
+		
+		.mirror{
+			transform: rotate(180deg);
+			transform-origin: center;
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="title" class="drawer">
+		<h1><span>Ralston</span><span class="mirror">Bau</span></h1>
+	</div>
+
+	<div id="content" class="drawer">
+		<div id="info" class="drawer close">
+				
+			<h1>Now</h1>
+
+			<div>
+				<h2>Associated artists 2017-2020</h2>
+				<h2>Territoire Ideal</h2>
+				<p>MAGASIN des Horizons<br>Grenoble, France</p>
+			</div>
+
+			<div>
+				<h2>Idealist design</h2>
+				<p>ESAAA<br>24 January 2019 - Annecy, France</p>
+			</div>
+
+			<div>
+				<h2>Why not?</h2>
+				<p>Central Saint Martins<br>7-12 January 2019, London, UK</p>
+			</div>
+
+			<div>
+				<h2>Ideal village</h2>
+				<p>UiB, KMD, Institute of Design<br>12-22 February 2019, Bergen, Norway</p>
+			</div>
+
+			<div>
+				<h2>Design in Design Thinking</h2>
+				<p>Executive Master DT Bergen<br>10 April 2019, Bergen, Norway</p>
+			</div>
+
+			<div>
+				<h2>New product launch</h2>
+				<p>Salone del Mobile<br>9-14 April 2019, Milano, Italy</p>
+			</div>
+		</div>
+		<div id="main" class="drawer open">
+			
+			<div class="hideonclose">
+				<p class="lang en">Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston & Bau transform ideas into action – and complex questions into the objects you need.</p>
+
+				<p class="lang no">Uavhengig designstudio som dekoder den komplekse verda rundt oss. Gjennom transformativ praksis koblar vi mennesker med dei felles romma som omgir oss. Ralston & Bau gjer idear om til handling – og komplekse spørsmål om til objekt ein har behov for.</p>
+
+				<p class="lang fr">Studio de design indépendant, s’attachant à décoder la complexité de notre monde, il met en connexion personnes et espaces partagés. Pratiquant le design transformatif, Ralston & Bau passe des idées à l’action et des questions complexes en objet essentiel.</p>
+			</div>
+		
+			<p class="hideonopen">Cases and practice will soon be shown here.</p>
+		</div>
+
+	</div>
+	
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+
+		var lang_arr = ["en", "no", "fr"];
+		var lang_id  = 0;
+		
+		$(document).ready(function(){
+			console.log("RALSTON BAU ok");
+
+			$("#info").click(function(e){
+				$("#info").toggleClass("open").toggleClass("close");
+				$("#main").toggleClass("open").toggleClass("close");
+			})
+
+			lang_interval = setInterval(lang_switcher,3000);
+			lang_switcher()
+		})
+
+		function lang_switcher(){
+			console.log("lang "+lang_id );
+
+			$(".lang").hide()
+			$("."+lang_arr[lang_id]).show();
+			lang_id = (lang_id + 1) % lang_arr.length;
+		}
+
+	</script>
+</body>
+</html>
