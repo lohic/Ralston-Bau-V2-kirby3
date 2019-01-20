@@ -13,6 +13,9 @@ Icon
 /site/cache/*
 !/site/cache/index.html
 
+/media/*
+!/media/index.html
+
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
