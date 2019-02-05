@@ -41,3 +41,4 @@ Icon
 .DS_Store
 
 node_modules
+site/sessions
