@@ -3,6 +3,8 @@ title: Site
 columns:
   - width: 1/2
     sections:
+      cases: sections/cases
+      practices: sections/practices
       albums: sections/albums
   - width: 1/2
     sections:

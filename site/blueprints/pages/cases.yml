@@ -1,21 +1,21 @@
-title: Photos
+title: Cases
 
 columns:
   - width: 1/2
     sections:
       drafts:
-        extends: sections/notes
+        extends: sections/cases
         headline: Drafts
         status: draft
 
       unlisted:
-        extends: sections/notes
+        extends: sections/cases
         headline: In Review
         status: unlisted
 
   - width: 1/2
     sections:
       listed:
-        extends: sections/notes
+        extends: sections/cases
         headline: Published
         status: listed

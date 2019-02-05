@@ -1,0 +1,11 @@
+type: pages
+headline: Practices
+parent: site.find("practice")
+size: tiny
+info: "{{ page.images.count }} image(s)"
+template: practice
+empty: No practice yet
+image:
+  query: page.cover
+  cover: true
+  ratio: 5/4
