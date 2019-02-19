@@ -29,15 +29,8 @@ columns:
             type: date
             time: true
             default: now
+            translate: false
           author:
             type: users
+            translate: false
           tags: true
-          gallery:
-            type: pages
-            query: site.find("photography").children
-            multiple: false
-            info: "{{ page.images.count }} image(s)"
-            empty: "No gallery selected"
-            image:
-              cover: true
-            help: Place the {{ gallery }} tag anywhere in your text to add the selected gallery

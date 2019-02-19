@@ -1,21 +1,18 @@
-title: Cases
+title: Articles
 options:
   status: false
   changeSlug: false
   delete: false
   preview: false
-num: zero
-
-
+num: zero 
 
 sections:
   drafts:
-    extends: sections/cases
+    extends: sections/notes
     headline: Drafts
     status: draft
 
   listed:
-    extends: sections/cases
-    headline: Published
+    extends: sections/notes
+    headline: Published Articles
     status: listed
-    layout: cards

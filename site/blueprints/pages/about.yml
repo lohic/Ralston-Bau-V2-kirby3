@@ -23,21 +23,33 @@ columns:
       address:
         label: Address
         type: textarea
+        translate: false
       email:
         label: Email
         type: email
+        translate: false
       phone:
         label: Phone
         type: tel
+        translate: false
       social:
         label: On the web
         type: structure
+        translate: false
         fields:
           platform:
             label: Platform
             type: text
-            width: 1/2
+            width: 1/4
+            translate: false
           url:
             label: URL
             type: url
-            width: 1/2
+            width: 2/4
+            translate: false
+          icon:
+            label: Icon
+            type: files
+            width: 1/4
+            multiple: false
+            translate: false

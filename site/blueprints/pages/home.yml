@@ -9,11 +9,22 @@ sections:
   info:
     headline: Info
     type: info
-    text: All content for the homepage is being pulled from the photography page.
+    text: All content for the homepage is being pulled from practices, cases and notes.
 
-  photography:
-    headline: Photography
-    extends: sections/albums
+  practices:
+    headline: Practices
+    extends: sections/practices
     status: listed
+
+  cases:
+    headline: Cases
+    extends: sections/cases
+    status: listed
+
+  notes:
+    headline: Notes
+    extends: sections/notes
+    status: listed
+
 
 

@@ -1,13 +1,11 @@
 title: Practice
 
-icon: 🖼
-
 status:
   draft: true
   listed: true
 
 columns:
-  - width: 1/2
+  - width: 1/3
     sections:
       images:
         type: files
@@ -20,13 +18,21 @@ columns:
         min: 1
         size: small
 
-  - width: 1/2
+  - width: 2/3
     fields:
+      practicetype:
+        label: Practice type
+        type: select
+        translate: false 
+        options: 
+          bigpicture: Big picture
+          people: People
+          scenario: Scenario
+          form: Form
       cover:
         type: files
         multiple: false
-      headline:
-        type: text
+        translate: false 
       description:
         type: textarea
-      tags: true
+        size: large

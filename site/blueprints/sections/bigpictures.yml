@@ -1,0 +1,15 @@
+type: pagesdisplay
+headline: Big pictures
+# parent: site.find("practices").children.filterBy("practicetype", "people")
+
+# https://github.com/rasteiner/k3-pagesdisplay-section
+query: site.find("practices").children.filterBy("practicetype", "bigpicture")
+# size: tiny
+info: "{{ page.images.count }} image(s)"
+# layout: cards
+# template: practice
+empty: No big picture yet
+# image:
+  # query: page.cover
+  # cover: true
+  # ratio: 5/4

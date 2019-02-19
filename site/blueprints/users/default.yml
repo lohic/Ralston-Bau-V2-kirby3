@@ -6,30 +6,37 @@ columns:
       street:
         label: Street
         type: text
+        translate: false 
       zip:
         label: ZIP
         type: text
         width: 1/4
+        translate: false 
       city:
         label: City
         type: text
         width: 3/4
+        translate: false 
       country:
         label: Country
         type: text
+        translate: false 
 
   - width: 1/2
     fields:
       website:
         label: Website
         type: url
+        translate: false 
       twitter:
         label: Twitter
         type: text
         icon: twitter
         placeholder: @username
+        translate: false 
       instagram:
         label: Instagram
         type: text
         icon: instagram
         placeholder: username
+        translate: false 

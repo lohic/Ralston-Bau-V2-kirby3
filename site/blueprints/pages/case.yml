@@ -1,17 +1,9 @@
 title: Case
 num: date
-icon: 📖
 
 status:
-  draft:
-    label: Draft
-    text: The case is still in draft mode. It can only be seen by editors with panel access.
-  unlisted:
-    label: In Review
-    text: The case is online and can be visited with the direct URL. The team must still give the final go to publish it.
-  listed:
-    label: Published
-    text: The case is online and listed in the blog
+  draft: true
+  listed: true
 
 columns:
   - width: 2/3
@@ -20,27 +12,83 @@ columns:
         type: textarea
         size: large
 
+      bigpictures:
+        label: Big pictures
+        width: 1/2
+        type: pages
+        translate: false
+        query: site.find("practices").children.filterBy("practicetype", "bigpicture")
+        multiple: true
+        info: "{{ page.images.count }} image(s)"
+        empty: "No Big picture selected"
+        image:
+          cover: true
+
+      peoples:
+        label: Peoples
+        width: 1/2
+        type: pages
+        translate: false
+        query: site.find("practices").children.filterBy("practicetype", "people")
+        multiple: true
+        info: "{{ page.images.count }} image(s)"
+        empty: "No People selected"
+        image:
+          cover: true
+
+      scenarios:
+        label: Scenarios
+        width: 1/2
+        type: pages
+        translate: false
+        query: site.find("practices").children.filterBy("practicetype", "scenario")
+        multiple: true
+        info: "{{ page.images.count }} image(s)"
+        empty: "No Scenarios selected"
+        image:
+          cover: true
+
+      forms:
+        label: Forms
+        width: 1/2
+        type: pages
+        translate: false
+        query: site.find("practices").children.filterBy("practicetype", "form")
+        multiple: true
+        info: "{{ page.images.count }} image(s)"
+        empty: "No Form selected"
+        image:
+          cover: true
+
   - width: 1/3
     sections:
       cover:
         type: files
         multiple: false
+        translate: false
       meta:
         type: fields
-        fields:
+        fields: 
           date:
             type: date
             time: true
             default: now
-          author:
-            type: users
+            translate: false
           tags: true
-          gallery:
-            type: pages
-            query: site.find("photography").children
-            multiple: false
-            info: "{{ page.images.count }} image(s)"
-            empty: "No gallery selected"
-            image:
-              cover: true
-            help: Place the {{ gallery }} tag anywhere in your text to add the selected gallery
+
+          # https://github.com/sylvainjule/kirby-locator
+          # https://docs.mapbox.com/help/glossary/map-id/
+          map:
+            label: Location
+            type: locator
+            translate: false
+            # tiles: mapbox
+            center:
+              lat: 60.395027
+              lon: 5.322331
+            zoom:
+              # min: 2
+              default: 12
+              # max: 18
+
+          

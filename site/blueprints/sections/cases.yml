@@ -3,11 +3,11 @@ headline: Cases
 parent: site.find("cases")
 size: tiny
 info: "{{ page.case.toDate('d.m.Y') }}"
-layout: cards
+# layout: cards
 template: case
 empty: No cases yet
 sortBy: date desc
 image:
-  query: page.cover
+  # query: page.cover
   cover: true
   ratio: 5/4
