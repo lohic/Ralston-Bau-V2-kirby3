@@ -1,0 +1,23 @@
+Title: test practice person
+
+----
+
+Practicetype: people
+
+----
+
+Cover: 
+
+- capture-decran-2019-02-18-a-15.21.15.png
+
+----
+
+Description: test de practice people
+
+----
+
+Headline: 
+
+----
+
+Tags: 

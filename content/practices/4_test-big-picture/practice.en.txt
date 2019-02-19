@@ -1,0 +1,13 @@
+Title: test big picture
+
+----
+
+Practicetype: bigpicture
+
+----
+
+Cover: 
+
+----
+
+Description: Ok big picture

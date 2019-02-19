@@ -1,0 +1,13 @@
+Title: test people n°2
+
+----
+
+Practicetype: people
+
+----
+
+Cover: 
+
+----
+
+Description: Yes that's working :-)
