@@ -5,11 +5,12 @@ icon: 🏠
 options:
   status: false
 
+
 sections:
-  info:
-    headline: Info
-    type: info
-    text: All content for the homepage is being pulled from practices, cases and notes.
+  # info:
+  #   headline: Info
+  #   type: info
+  #   text: All content for the homepage is being pulled from practices, cases and notes.
 
   practices:
     headline: Practices
@@ -27,4 +28,7 @@ sections:
     status: listed
 
 
-
+# fields:
+#   intro:
+#     label: Intro text
+#     type: textarea

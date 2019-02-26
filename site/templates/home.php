@@ -1,8 +1,8 @@
 <?php snippet('header') ?>
 
-<!-- default.php -->
+<!-- home.php -->
 
-default
+home
 
 <main>
   <header class="intro">
@@ -13,6 +13,6 @@ default
   </div>
 </main>
 
-<!-- fin default.php -->
+<!-- fin home.php -->
 
 <?php snippet('footer') ?>
