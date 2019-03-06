@@ -1,1 +1,5 @@
 Title: Home
+
+----
+
+Intro: Texte d'introduction

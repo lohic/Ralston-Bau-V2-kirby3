@@ -6,26 +6,6 @@ Text: Case's test
 
 ----
 
-Date: 2019-02-18 18:50
-
-----
-
-Tags: 
-
-----
-
-Map: 
-
-lat: "48.562942"
-lon: "7.7662531"
-number: "18"
-city: Strasbourg
-country: France
-postcode: "67100"
-address: Rue de Ribeauvillé
-
-----
-
 Bigpictures: 
 
 - practices/test-big-picture
@@ -46,3 +26,27 @@ Scenarios:
 ----
 
 Forms: 
+
+----
+
+Date: 2019-02-18 18:50
+
+----
+
+Themes: test
+
+----
+
+Map: 
+
+lat: "48.562942"
+lon: "7.7662531"
+number: "18"
+city: Strasbourg
+country: France
+postcode: "67100"
+address: Rue de Ribeauvillé
+
+----
+
+Tags: 

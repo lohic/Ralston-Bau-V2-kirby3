@@ -6,4 +6,24 @@ Maintenance: true
 
 ----
 
+Share: 
+
+----
+
+Facebook-id: 
+
+----
+
+Twitter-id: 
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
 Ogimage: 
