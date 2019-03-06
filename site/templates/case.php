@@ -5,31 +5,57 @@
 case
 
 <main>
-  <header class="intro">
-    <h1><?= $page->title() ?></h1>
-    <p><?= $page->date() ?></p>
+	<header class="intro">
+		<h1><?= $page->title() ?></h1>
+		<p><?= $page->date() ?></p>
+
+	</header>
 
 
-	<?php foreach ($page->bigpictures()->children() as $bigpicture): ?>
-		<?= $bigpicture ?>
+	<div class="text">
+		<?= $page->text()->kt() ?>
+	</div>
+
+
+	<?= snippet('map') ?>
+
+	<?php 
+
+	$bigpictures = $page->bigpictures()->toPages();
+	foreach($bigpictures as $practice_data): ?>
+
+	<?= snippet('practice', ['practice' => $practice_data]) ?>
+	
 	<?php endforeach ?>
 
-	<?php foreach ($page->peoples()->children() as $people): ?>
-		<?= $people ?>
+	<?php 
+
+	$peoples = $page->peoples()->toPages();
+	foreach ($peoples as $practice_data): ?>
+	
+	<?= snippet('practice', ['practice' => $practice_data]) ?>
+
 	<?php endforeach ?>
 
-	<?php foreach ($page->scenarios()->children() as $scenario): ?>
-		<?= $scenario ?>
+	<?php
+
+	$scenarios = $page->scenarios()->toPages();
+	foreach ($scenarios as $practice_data): ?>
+	
+	<?= snippet('practice', ['practice' => $practice_data]) ?>
+	
 	<?php endforeach ?>
 
-	<?php foreach ($page->forms()->children() as $form): ?>
-		<?= $form ?>
-	<?php endforeach ?>
+	<?php
 
-  </header>
-  <div class="text">
-    <?= $page->text()->kt() ?>
-  </div>
+	$forms = $page->forms()->toPages();
+	foreach ($forms as $practice_data): ?>
+
+	<?= snippet('practice', ['practice' => $practice_data]) ?>
+
+	<?php endforeach ?>
+	
+	<?= snippet('share') ?>
 </main>
 
 <!-- fin case.php -->

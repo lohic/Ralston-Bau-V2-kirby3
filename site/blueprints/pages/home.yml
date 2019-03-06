@@ -7,6 +7,14 @@ options:
 
 
 sections:
+
+  content:
+    type: fields
+    fields:
+      intro:
+        label: Intro text
+        type: textarea
+
   # info:
   #   headline: Info
   #   type: info
@@ -28,7 +36,4 @@ sections:
     status: listed
 
 
-# fields:
-#   intro:
-#     label: Intro text
-#     type: textarea
+

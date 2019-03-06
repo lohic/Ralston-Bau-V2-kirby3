@@ -74,7 +74,11 @@ columns:
             time: true
             default: now
             translate: false
-          tags: true
+          themes:
+            label: Themes
+            type: tags
+            options: query
+            query: page.siblings.pluck("themes", ",", true)
 
           # https://github.com/sylvainjule/kirby-locator
           # https://docs.mapbox.com/help/glossary/map-id/

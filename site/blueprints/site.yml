@@ -31,6 +31,22 @@ tabs:
             type: toggle
             text: Enable Maintenance
             translate: false
+          share:
+            label: Share on
+            type: checkboxes
+            options:
+              facebook: Facebook
+              twitter: Twitter
+              pinterest: Pinterest
+            help:  Enable the icons to share content on social network.
+          facebook-id:
+            label: Facebook page title
+            type: text
+          twitter-id:
+            label: Twitter
+            type: text
+            placeholder: @twitter-account
+
       - width: 1/2
         fields:
           description:
@@ -44,4 +60,3 @@ tabs:
             type:  url
             help:  URL of the thumbnail that will represent your website on the social networks.
             translate: false
-

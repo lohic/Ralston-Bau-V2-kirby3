@@ -2,53 +2,32 @@
 <html lang="en">
 <head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-	<title><?= $site->title() ?> | <?= $page->title() ?></title>
+<title><?= $site->title() ?> | <?= $page->title() ?></title>
 
-	<?php //echo css(['assets/css/index.css', '@auto']) ?>
+<?= js(['assets/js/jquery-3.3.1.min.js',
+			'assets/prettySocial-1.1.0/jquery.prettySocial.min.js',
+			'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
+			'assets/js/main.js']) ?> 
+
+<?= css(['https://use.typekit.net/vrl2tmu.css',
+			 'assets/fonts/Colaborate/stylesheet.css',
+			 'assets/fontawesome-free-5.7.2-web/css/all.min.css',
+			 'assets/css/index.css',
+			 'assets/css/style.css',
+			 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
+			 '@auto']) ?>
 
 </head>
 <body>
 
-	<header class="header">
-		<a class="logo" href="<?= $site->url() ?>"><?= $site->title() ?></a>
+<?php if($site->maintenance()->isTrue() and $page->uid() != 'maintenance') { go('maintenance');} ?>
 
-		<!-- pages -->
-		<nav id="menu" class="menu">
-			<?php foreach ($site->children()->listed() as $item): ?>
-				<?= $item->title()->link() ?>
-			<?php endforeach ?>
-		</nav>
-
-		<!-- cases -->
-		<?php if ($cases = page('cases')): ?>
-		<nav id="menu-cases" class="menu">
-			<?php foreach ($cases->children()->listed() as $case): ?>
-				<?= $case->title()->link() ?>
-			<?php endforeach ?>
-		</nav>
-		<?php endif ?>
-
-		<!-- practices -->
-		<?php if ($practices = page('practices')): ?>
-		<nav id="menu-practices" class="menu">
-			<?php foreach ($practices->children()->listed() as $practice): ?>
-				<?= $practice->title()->link() ?>
-			<?php endforeach ?>
-		</nav>
-		<?php endif ?>
-
-		<!-- social + external -->
-		<?php if ($about = page('about')): ?>
-		<nav class="social">   
-			<?php foreach ($about->social()->toStructure() as $social): ?>
-				<a href="<?= $social->url() ?>"><?= $social->platform() ?></a>
-			<?php endforeach ?>
-		</nav>
-		<?php endif ?>
-
-	</header>
+<?php if($page->uid() != 'maintenance') { ?>
+<?php 	snippet('menu') ?>
+<?php } ?>
 
 <!-- fin header.php -->
