@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Email Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RB_-181113" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Home-181113" transform="translate(-160.000000, -973.000000)" stroke="#000000">
+            <g id="LeftWhite">
+                <g id="SoMe" transform="translate(47.000000, 973.000000)">
+                    <g id="Email-Icon" transform="translate(113.000000, 0.000000)">
+                        <g id="Group">
+                            <path d="M2,25.5 L25.5,11.5" id="Stroke-1024"></path>
+                            <path d="M0.5,11.4912 L13,19.0002" id="Stroke-1025"></path>
+                            <path d="M14.2048,0.9897 C13.8808,0.7027 13.4708,0.4997 12.9998,0.4997 C12.5288,0.4997 12.1188,0.7027 11.7948,0.9897 C9.8168,2.7407 4.1138,7.2087 1.6538,9.1267 C0.9238,9.6957 0.4998,10.5667 0.4998,11.4907 L0.4998,23.9997 C0.4998,24.8277 1.1718,25.4997 1.9998,25.4997 L23.9998,25.4997 C24.8278,25.4997 25.4998,24.8277 25.4998,23.9997 L25.4998,11.1887 C25.4998,10.4537 25.1668,9.7657 24.5868,9.3147 C23.6478,8.5827 15.1048,1.7857 14.2048,0.9897 Z" id="Stroke-1026"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

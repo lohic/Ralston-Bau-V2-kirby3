@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="46px" viewBox="0 0 45 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>mail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="WaitWeb-open" transform="translate(-1335.000000, -926.000000)" stroke="#FFFFFF" stroke-width="1">
+            <g id="Group-48" transform="translate(1236.000000, 927.000000)">
+                <g id="mail" transform="translate(99.000000, 0.000000)">
+                    <path d="M3.4658,43.6328 L44.1298,19.4078" id="Stroke-42"></path>
+                    <path d="M0.8701,19.3926 L22.5001,32.3856" id="Stroke-44"></path>
+                    <path d="M24.584,1.2207 C24.023,0.7247 23.314,0.3727 22.499,0.3727 C21.685,0.3727 20.975,0.7247 20.414,1.2207 C16.991,4.2507 7.123,11.9827 2.866,15.3007 C1.604,16.2857 0.869,17.7927 0.869,19.3917 L0.869,41.0367 C0.869,42.4697 2.032,43.6327 3.465,43.6327 L41.533,43.6327 C42.966,43.6327 44.129,42.4697 44.129,41.0367 L44.129,18.8687 C44.129,17.5977 43.553,16.4077 42.549,15.6257 C40.925,14.3597 26.142,2.5987 24.584,1.2207 Z" id="Stroke-46"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
