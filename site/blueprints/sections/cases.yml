@@ -6,7 +6,7 @@ info: "{{ page.case.toDate('d.m.Y') }}"
 # layout: cards
 template: case
 empty: No cases yet
-sortBy: date desc
+# sortBy: date desc
 image:
   # query: page.cover
   cover: true

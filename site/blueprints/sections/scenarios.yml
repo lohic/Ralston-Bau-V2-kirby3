@@ -11,3 +11,4 @@ empty: No scenario yet
   # query: page.cover
   # cover: true
   # ratio: 5/4
+sortable: true

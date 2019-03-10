@@ -4,7 +4,8 @@ options:
   changeSlug: false
   delete: false
   preview: false
-num: zero 
+# num: zero 
+sortable: true
 
 # sections:
   # listed:
@@ -23,25 +24,21 @@ columns:
     sections:
       bigpictures:
         extends: sections/bigpictures
-        # headline: Published Peoples
         status: listed
   - width: 1/4
     sections:
       peoples:
         extends: sections/peoples
-        # headline: Published Peoples
         status: listed
 
   - width: 1/4
     sections:
       scenarios:
         extends: sections/scenarios
-        # headline: Published Peoples
         status: listed
 
   - width: 1/4
     sections:
       forms:
         extends: sections/forms
-        # headline: Published Peoples
         status: listed
