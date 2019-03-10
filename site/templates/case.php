@@ -18,7 +18,7 @@
 		</div>
 		
 
-		<?php // echo snippet('map') ?>
+		<?php echo snippet('map') ?>
 
 		
 		

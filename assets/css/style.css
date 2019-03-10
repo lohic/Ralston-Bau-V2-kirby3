@@ -349,10 +349,12 @@ main.grid {
 }
 
 main.grid .tile {
- display: inline-block;
- margin:  0.25rem;
- width:  100%;
- position: relative;
+	background: #111;
+	display: inline-block;
+	margin:  0.25rem;
+	width:  100%;
+	position: relative;
+	min-height: 150px;
 }
 
 main.grid .tile img{
