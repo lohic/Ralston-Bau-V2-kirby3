@@ -1,5 +1,5 @@
 type: pages
-headline: Articles
+headline: News
 parent: site.find("notes")
 info: "{{ page.date.toDate('d.m.Y') }}"
 template: note

@@ -6,8 +6,14 @@ Practicetype: people
 
 ----
 
-Cover: 
+Thumbnail: 
+
+- img_4159.jpeg
 
 ----
 
 Description: Yes that's working :-)
+
+----
+
+Cover: 

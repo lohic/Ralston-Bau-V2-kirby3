@@ -50,6 +50,7 @@ table {
 
 /* --------------------------------------------------- FIN DU RESET --------------------------------------------------- */
 
+*, *:before, *:after {box-sizing:  border-box !important;}
 
 html{
 	/*font-size: 16px;*/
@@ -67,9 +68,6 @@ body{
 	font-style: normal;
 }
 
-*{
-	box-sizing: border-box;
-}
 
 button{
 	background: none;
@@ -292,6 +290,14 @@ button{
 }
 
 
+.links a{
+	color: #FFF;
+	text-decoration: none;
+	font-size: 1.6rem;
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+
 
 
 
@@ -324,6 +330,45 @@ button{
 	position: absolute;
 	top: 43px;
 	right: 43px;
+	color: #FFF;
+}
+
+
+main{
+	font-family: "Colaborate";
+	font-size: 2.23rem;
+	line-height: 1.35em;
+}
+
+
+main.grid {
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	-moz-column-gap: 7px;
+	-webkit-column-gap: 7px; 
+}
+
+main.grid .tile {
+ display: inline-block;
+ margin:  0.25rem;
+ width:  100%;
+ position: relative;
+}
+
+main.grid .tile img{
+	width: 100%
+}
+
+
+main.grid .tile h2{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	text-align: right;
+}
+
+main.grid .tile a h2{
+	text-decoration: none;
 	color: #FFF;
 }
 

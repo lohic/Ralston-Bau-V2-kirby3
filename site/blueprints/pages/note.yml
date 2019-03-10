@@ -30,7 +30,11 @@ columns:
             time: true
             default: now
             translate: false
-          author:
-            type: users
-            translate: false
-          tags: true
+          place:
+            label: Place
+            type: text
+            width: 1/2
+          datefromto:
+            label: Date in text format, place complement
+            type: text
+            width: 1/2 

@@ -9,7 +9,7 @@
 <div id="title" class="drawer">
 	<h1><img id="logo" src="<?= kirby()->url() ?>/assets/images/logo.svg" alt="Ralston Bau"></h1>
 
-	<button id="btn-newsletter">Newsletter</button>        
+	<button id="btn-newsletter"><?= t('newsletter','Newsletter') ?></button>        
 </div>
 
 <div id="content" class="drawer">

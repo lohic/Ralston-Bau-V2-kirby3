@@ -29,7 +29,17 @@ Forms:
 
 ----
 
+Images: 
+
+----
+
 Date: 2019-02-18 18:50
+
+----
+
+Thumbnail: 
+
+- dsc_2142.jpg
 
 ----
 
@@ -39,13 +49,13 @@ Themes: test
 
 Map: 
 
-lat: "48.562942"
-lon: "7.7662531"
-number: "18"
-city: Strasbourg
-country: France
-postcode: "67100"
-address: Rue de Ribeauvillé
+lat: "48.562699885078"
+lon: "7.7664808681954"
+number: null
+city: null
+country: null
+postcode: null
+address: null
 
 ----
 

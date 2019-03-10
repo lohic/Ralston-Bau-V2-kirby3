@@ -2,16 +2,11 @@
 
 <!-- practice.php -->
 
-practice
-
-<main>
-  <header class="intro">
-    <h1><?= $page->title() ?></h1>
-  </header>
-  <div class="text">
-    <?= $page->description()->kt() ?>
-  </div>
-</main>
+<div>
+	<main>
+		<?= snippet('practice'); ?>
+	</main>
+</div>
 
 <!-- fin practice.php -->
 

@@ -1,5 +1,4 @@
 title: Case
-# num: date
 
 status:
   draft: true
@@ -60,12 +59,19 @@ columns:
         image:
           cover: true
 
+      images:
+        type: files
+        layout: cards
+        template: image
+        info: "{{ file.dimensions }}"
+        image:
+          ratio: 5/4
+          cover: true
+        min: 1
+        size: small
+
   - width: 1/3
     sections:
-      cover:
-        type: files
-        multiple: false
-        translate: false
       meta:
         type: fields
         fields: 
@@ -74,6 +80,14 @@ columns:
             time: true
             default: now
             translate: false
+            
+          thumbnail:
+            type: files
+            translate: false 
+            template: cover
+            min: 1
+            max: 1
+
           themes:
             label: Themes
             type: tags

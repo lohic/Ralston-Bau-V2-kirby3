@@ -8,18 +8,19 @@
 
 <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
-<?= js(['assets/js/jquery-3.3.1.min.js',
-			'assets/prettySocial-1.1.0/jquery.prettySocial.min.js',
-			'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
-			'assets/js/main.js']) ?> 
+<?= js(['assets/vendor/jquery-3.3.1.min.js',
+		'assets/vendor/prettySocial-1.1.0/jquery.prettySocial.min.js',
+		'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
+		'assets/vendor/slick-1.8.1/slick/slick.min.js',
+		'assets/js/main.js']) ?> 
 
 <?= css(['https://use.typekit.net/vrl2tmu.css',
-			 'assets/fonts/Colaborate/stylesheet.css',
-			 'assets/fontawesome-free-5.7.2-web/css/all.min.css',
-			 'assets/css/index.css',
-			 'assets/css/style.css',
-			 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
-			 '@auto']) ?>
+		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
+		 'assets/fonts/Colaborate/stylesheet.css',
+		 'assets/vendor/fontawesome-free-5.7.2-web/css/all.min.css',
+		 'assets/vendor/slick-1.8.1/slick/slick.css',
+		 'assets/css/style.css',
+		 '@auto']) ?>
 
 </head>
 <body>
