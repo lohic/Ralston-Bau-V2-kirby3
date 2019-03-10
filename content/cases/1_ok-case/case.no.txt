@@ -2,7 +2,7 @@ Title: ok case
 
 ----
 
-Text: Test de case ok en français
+Text: Case's test Norsk
 
 ----
 
