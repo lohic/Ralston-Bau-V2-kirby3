@@ -2,7 +2,7 @@
 
 <!-- default.php -->
 
-<main>
+<main class="texte">
   <header class="intro">
     <h1><?= $page->title() ?></h1>
   </header>

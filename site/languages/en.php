@@ -6,10 +6,13 @@ return array (
 	'direction' => 'ltr',
 	'locale' => 'en_US',
 	'name' => 'English',
-	'translation' => [
+	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',
 		'subscribe' =>  'Subscribe',
-		'newsletter' =>'Irregular Notes'
+		'newsletter' =>'Irregular Notes',
+		'practice' => 'Practice',
+		'cases' => 'Cases',
+		'studio' => 'Studio'
 	]
 );

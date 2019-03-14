@@ -2,5 +2,6 @@
 
 return [
     'debug' => true,
-    'languages' => true, 
+    'languages' => true,
+    'languages.detect' => true
 ];

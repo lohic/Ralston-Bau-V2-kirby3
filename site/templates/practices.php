@@ -1,8 +1,6 @@
 <?php snippet('header') ?>
 <!-- practices.php -->
 
-<!-- practices -->
-
 <main class="grid">
 	<?php
 	$practices = page('practices')->children()

@@ -5,10 +5,13 @@ return [
 	'direction' => 'ltr',
 	'locale' => 'no_NO',
 	'name' => 'Norsk',
-	'translation' => [
+	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',
 		'subscribe' =>  'Subscribe',
-		'newsletter' =>'Irregular Notes'
+		'newsletter' =>'Irregular Notes',
+		'practice' => 'Practice',
+		'cases' => 'Cases',
+		'studio' => 'Studio'
 	]
 ];
