@@ -17,9 +17,44 @@ $(function(){
 	    return isInternalLink;
 	};
 
+	/**
+	 * MENU
+	 * @type {[type]}
+	 */
+	let selectedMenu = $("#main-content").data('menu');
+	$("#main-menu").find("."+selectedMenu).addClass('selected');
+	$("#secondary-menu").find("."+selectedMenu).css("display","block");
 
-	$('.prettySocial').prettySocial();
 
+	$("#main-menu>ul>li>a").click(function(event){
+		$("#main-menu li").removeClass('selected');
+		$("#main-menu li, #secondary-menu li").removeClass('active');
+		$("#secondary-menu ul").css("display","none");
+
+		$(this).parent().addClass('selected');
+
+		let clickedMenu = $(this).parent().data('menu');
+		$("#secondary-menu").find("."+clickedMenu).css("display","block");
+
+	})
+
+
+	/**
+	 * ISOTOPE GRID
+	 * @type {String}
+	 */
+	$('.grid').isotope({
+		itemSelector: '.tile',
+		percentPosition: true,
+		masonry: {
+			// use outer width of grid-sizer for columnWidth
+			columnWidth: '.grid-sizer'
+		}
+	})
+	/**
+	 * GALLERY CAROUSSEL
+	 * @type {Boolean}
+	 */
 	$('.gallery').slick({
 		dots: false,
 		infinite: true,
@@ -29,62 +64,10 @@ $(function(){
 		variableWidth: true
 	});
 
-	$("#secondary-menu .active").parent().addClass('show');
+	/**
+	 * SHARE
+	 */
+	$('.prettySocial').prettySocial();
 
-	$("#main-menu>ul>li li>a").click(function(event){
-
-		// console.log($(this).attr("href"));
-		// 
-		// console.log( $("#secondary-menu .active").parent().addClass('show') );
-
-		$("#secondary-menu .active").parent().addClass('show')
-
-		// if($(this).attr("href") == $("nav.sub-menu .active>a").attr("href")){
-		// 	console.log( $(this).parent().parent() );
-		// }
-
-		// event.preventDefault();
-
-		// console.log("ok");
-		// console.log( $(this).parent().find('.sub-menu').html() );
-
-		// $("nav.sub-menu").html( $(this).parent().find('.sub-menu').html() );
-
-	})
-
-	// if( $(this).parent().parent().attr("id") == "menu-menu-mediatheque" ){
-	// 	// console.log("MAIN MENU");
-		
-	// 	$("nav a").removeClass('active');
-	// 	$(this).addClass('active');
-
-	// 	$(".col2").hide();
-	// 	$(".col2").html("");
-	// 	submenu = $(this).parent().find('.sub-menu').html();				
-	// }else{
-	// 	// console.log("SUB MENU");
-	// 	$(".col2 a").removeClass('active');
-	// 	$(this).addClass('active');
-	// }
-
-
-
-	// // console.log("submenu",submenu);
-
-	// if(submenu !== "" && submenu !== undefined){
-	// 	$(".col2").scrollTop(0);
-	// 	$(".col2").html("<ul>"+submenu+"</ul>");
-
-	// 	$("nav a").unbind("click");
-
-	// 	$(".col2").show();
-
-	// 	$(".col2").optiscroll();
-	// 	// $(".col2").optiscroll({ forceScrollbars: true });
-
-	// 	bindMenuAction();
-	// }else{
-	// 	// $(".col2").html("");
-	// }
-
+	
 })

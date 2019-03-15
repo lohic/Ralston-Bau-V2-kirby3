@@ -1,4 +1,4 @@
-menu.php -->
+<!-- menu.php -->
 
 
 <div id="title" class="drawer">
@@ -7,16 +7,18 @@ menu.php -->
 	<!-- main menu -->
 	<nav id="main-menu">
 		<ul>
-			<li class="practices"><a href="#"><?= t('practice') ?></a>
+			<!-- practices -->
+			<li class="practices" data-menu="practices"><a href="#"><?= t('practice') ?></a>
 				<ul class="sub-menu">
 					<?php if ($practicetype = page('practices')->children()->listed()->pluck("practicetype", ",", true)): ?>
 					<?php foreach ($practicetype as $step): ?>
-						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= html($step) ?></a></li>
+						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
 					<?php endforeach ?>
 					<?php endif ?>
 				</ul>
 			</li>
-			<li class="cases"><a href="#"><?= t('cases') ?></a>
+			<!-- cases -->
+			<li class="cases" data-menu="cases"><a href="#"><?= t('cases') ?></a>
 				<ul class="sub-menu">
 					<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
 					<?php foreach ($casethemes as $theme): ?>
@@ -25,9 +27,9 @@ menu.php -->
 					<?php endif ?>
 				</ul>
 			</li>
-			<li class="studio"><a href="#"><?= t('studio') ?></a>
+			<!-- pages -->
+			<li class="studio" data-menu="studio"><a href="#"><?= t('studio') ?></a>
 				<ul class="sub-menu">
-					<!-- pages -->
 					<?php foreach ($site->children()->listed() as $item): ?>
 						<li <?php e(Url::current() == $item->url(), ' class="active"') ?>><?= $item->title()->link() ?></li>
 					<?php endforeach ?>
@@ -70,13 +72,15 @@ menu.php -->
 		
 
 		<nav id="secondary-menu">
+			<!-- practices -->
 			<ul class="practices sub-menu">
 				<?php if ($practicetype = page('practices')->children()->listed()->pluck("practicetype", ",", true)): ?>
 				<?php foreach ($practicetype as $step): ?>
-					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= html($step) ?></a></li>
+					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
 				<?php endforeach ?>
 				<?php endif ?>
 			</ul>
+			<!-- cases -->
 			<ul class="cases sub-menu">
 				<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
 				<?php foreach ($casethemes as $theme): ?>
@@ -84,8 +88,8 @@ menu.php -->
 				<?php endforeach ?>
 				<?php endif ?>
 			</ul>
+			<!-- studio -->
 			<ul class="studio sub-menu">
-				<!-- pages -->
 				<?php foreach ($site->children()->listed() as $item): ?>
 					<li <?php e(Url::current() == $item->url(), ' class="active"') ?>><?= $item->title()->link() ?></li>
 				<?php endforeach ?>

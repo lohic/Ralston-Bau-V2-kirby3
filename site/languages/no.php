@@ -4,7 +4,7 @@ return [
 	'code' => 'no',
 	'direction' => 'ltr',
 	'locale' => 'no_NO',
-	'name' => 'Norsk',
+	'name' => 'No',
 	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',
@@ -12,6 +12,10 @@ return [
 		'newsletter' =>'Irregular Notes',
 		'practice' => 'Practice',
 		'cases' => 'Cases',
-		'studio' => 'Studio'
+		'studio' => 'Studio',
+		'scenario' => 'Scenario',
+		'people' => 'People',
+		'form' => 'form',
+		'bigpicture' => 'Big picture'
 	]
 ];

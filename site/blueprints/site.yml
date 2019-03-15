@@ -9,7 +9,7 @@ tabs:
       - width: 1/2
         sections:
           cases: sections/cases
-          practices: sections/practices
+          # practices: sections/practices
       - width: 1/2
         sections:
           notes: sections/notes
@@ -20,6 +20,41 @@ tabs:
               - about
               - home
               - default
+      - width: 1
+        fields:
+          practice-head:
+            type: headline
+            label: Practice
+            numbered: false
+      - width: 1
+        sections:
+          drafts:
+            extends: sections/practices
+            headline: Drafts
+            status: draft
+
+      - width: 1/4
+        sections:
+          bigpictures:
+            extends: sections/bigpictures
+            status: listed
+      - width: 1/4
+        sections:
+          peoples:
+            extends: sections/peoples
+            status: listed
+
+      - width: 1/4
+        sections:
+          scenarios:
+            extends: sections/scenarios
+            status: listed
+
+      - width: 1/4
+        sections:
+          forms:
+            extends: sections/forms
+            status: listed
   settings:
     label: Settings
     icon: text

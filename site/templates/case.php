@@ -2,10 +2,10 @@
 
 <!-- case.php -->
 
-<div>
+<div id="main-content" data-menu="cases">
 	<header class="intro">
 		<h1><?= $page->title() ?></h1>
-		<p><?= $page->date()->toDate("d.m.y") ?></p>
+		<!-- <p><?= $page->date()->toDate("d.m.y") ?></p> -->
 		<?= snippet('share') ?>
 	</header>
 
@@ -16,9 +16,6 @@
 		<div class="text">
 			<?= $page->text()->kt() ?>
 		</div>
-		
-
-		<?php echo snippet('map') ?>
 
 		
 		
@@ -32,7 +29,7 @@
 		endif;
 		foreach($bigpictures as $practice_data): ?>
 
-		<?= snippet('practice', ['page' => $practice_data]) ?>
+		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 		
 		<?php endforeach ?>
 
@@ -49,7 +46,7 @@
 		endif;
 		foreach ($peoples as $practice_data): ?>
 		
-		<?= snippet('practice', ['page' => $practice_data]) ?>
+		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>
 
@@ -64,7 +61,7 @@
 		endif;
 		foreach ($scenarios as $practice_data): ?>
 		
-		<?= snippet('practice', ['page' => $practice_data]) ?>
+		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 		
 		<?php endforeach ?>
 
@@ -80,11 +77,13 @@
 
 		foreach ($forms as $practice_data): ?>
 
-		<?= snippet('practice', ['page' => $practice_data]) ?>
+		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>
+
+		<?php echo snippet('map') ?>
 		
-		<?= snippet('share') ?>
+		<?php echo snippet('share') ?>
 	</main>
 </div>
 

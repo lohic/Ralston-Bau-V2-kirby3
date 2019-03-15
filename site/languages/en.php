@@ -5,7 +5,7 @@ return array (
 	'default' => true,
 	'direction' => 'ltr',
 	'locale' => 'en_US',
-	'name' => 'English',
+	'name' => 'En',
 	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',
@@ -13,6 +13,10 @@ return array (
 		'newsletter' =>'Irregular Notes',
 		'practice' => 'Practice',
 		'cases' => 'Cases',
-		'studio' => 'Studio'
+		'studio' => 'Studio',
+		'scenario' => 'Scenario',
+		'people' => 'People',
+		'form' => 'form',
+		'bigpicture' => 'Big picture'
 	]
 );

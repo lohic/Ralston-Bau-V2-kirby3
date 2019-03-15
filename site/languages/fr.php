@@ -4,7 +4,7 @@ return [
 	'code' => 'fr',
 	'direction' => 'ltr',
 	'locale' => 'fr_FR',
-	'name' => 'Français',
+	'name' => 'Fr',
 	'translations' => [
 		'submit' => 'Envoyer',
 		'cancel' => 'Annuler',
@@ -12,6 +12,10 @@ return [
 		'newsletter' => 'Irregular Notes',
 		'practice' => 'Practice',
 		'cases' => 'Cases',
-		'studio' => 'Studio'
+		'studio' => 'Studio',
+		'scenario' => 'Scenario',
+		'people' => 'People',
+		'form' => 'form',
+		'bigpicture' => 'Big picture'
 	]
 ];

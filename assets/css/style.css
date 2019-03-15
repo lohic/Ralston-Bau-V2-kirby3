@@ -45,6 +45,7 @@ body{
 	background: #FFF;
 	width: 250px;
 	padding: 47px;
+	display: grid;
 }
 
 /*#logo{
@@ -81,6 +82,12 @@ body{
 
 #info, #main{
 	transition: width 2s ease, top 2s ease;
+}
+
+#title nav#contact{
+}
+
+#title #btn-newsletter{
 }
 
 
@@ -184,10 +191,18 @@ button{
 	display: none;
 }
 
-#main-menu .active a{
-	transform: rotate(180deg);
-	transform-origin: center;
+#main-menu a{
+	transform-origin: center 55%;
 	display: inline-block;
+}
+#secondary-menu a{
+	transform-origin: center 60%;
+	display: inline-block;
+}
+
+#main-menu .selected a,
+#secondary-menu .active a{
+	transform: rotate(180deg);
 }
 
 #secondary-menu .sub-menu{
@@ -202,7 +217,9 @@ button{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
 	font-size: 2.15rem;
+	line-height: 1.35em;
 }
+
 
 .mirror{
 	transform: rotate(180deg);
@@ -212,11 +229,44 @@ button{
 
 
 
+.links a{
+	color: #000;
+	text-decoration: none;
+	font-size: 1rem;
+	display: inline-block;
+	margin-right: 0.1rem;
+	min-width: 1.5rem;
+	text-align: center;
+
+	-webkit-text-stroke: 1px white;
+	/*color: white;*/
+	text-shadow:
+		/*3px 3px 0 #FFF,*/
+		-0.5px -0.5px 0 #FFF,  
+		0.5px -0.5px 0 #FFF,
+		-0.5px  0.5px 0 #FFF,
+		0.5px  0.5px 0 #FFF;
+
+	border: solid 0.8px #FFF;
+	padding: 0.2rem;
+	border-radius: 0.15rem;
+}
+/*
+	-webkit-text-stroke: 1px black;
+	color: white;
+	text-shadow:
+		3px 3px 0 #000,
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px  1px 0 #000,
+		1px  1px 0 #000;
+ */
+
 /* ==========================================================================
    TITLE Content 
    ========================================================================== */
 
-/*.languages li{
+.languages li{
 	display: inline-block;
 	font-family: "Colaborate";
 	padding: 0;
@@ -236,7 +286,7 @@ button{
 .languages li.active a{
 	text-decoration: underline;
 }
-*/
+
 
 
 
@@ -270,7 +320,7 @@ button{
    ========================================================================== */
 
 main.texte{
-	padding:2.3rem 1.075rem; /* 47px 22px 
+	padding:2.3rem 1.075rem; /* 47px 22px */
 }
 
 main.texte a{
@@ -297,7 +347,7 @@ main.texte a{
 
 @keyframes lang-animation {
     0% {
-    	opacity:0
+    	opacity:0;
     }
     20%{
     	opacity: 1;
@@ -306,7 +356,7 @@ main.texte a{
     	opacity: 1;
     }
     100% {
-		opacity:0
+		opacity:0;
     }
 }
 
@@ -364,13 +414,6 @@ main.texte a{
 }
 
 
-.links a{
-	color: #FFF;
-	text-decoration: none;
-	font-size: 1.6rem;
-	display: inline-block;
-	margin-right: 0.5rem;
-}
 
 #newsletter input{
 	border: #FFF solid 1px;
@@ -410,6 +453,33 @@ main.texte a{
    ========================================================================== */
 
 main{
+}
+
+main.grid{
+
+}
+
+.grid-sizer,
+.tile {
+	width: calc(100% / 2);
+}
+
+.tile{
+	padding: 5px;
+}
+.tile h2{
+	font-family: big-caslon-fb, serif;
+	font-weight: 400;
+	font-size: 2.95rem;
+	line-height: 1em;
+	position: absolute;
+	bottom: 1.175rem;
+	left: 10px;
+	text-align: left;
+}
+.tile img{
+	width: 100%;
+	height: auto; 
 }
 
 /*

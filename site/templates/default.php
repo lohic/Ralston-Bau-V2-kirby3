@@ -1,16 +1,14 @@
 <?php snippet('header') ?>
-
 <!-- default.php -->
-
-<main class="texte">
-  <header class="intro">
-    <h1><?= $page->title() ?></h1>
-  </header>
-  <div class="text">
-    <?= $page->text()->kt() ?>
-  </div>
-</main>
-
+<div id="main-content" data-menu="studio">
+	<main class="texte">
+		<header class="intro">
+			<h1><?= $page->title() ?></h1>
+		</header>
+		<div class="text">
+			<?= $page->text()->kt() ?>
+		</div>
+	</main>
+</div>
 <!-- fin default.php -->
-
 <?php snippet('footer') ?>
