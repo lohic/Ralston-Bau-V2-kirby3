@@ -12,3 +12,4 @@ empty: No scenario yet
   # cover: true
   # ratio: 5/4
 sortable: true
+limit: 50

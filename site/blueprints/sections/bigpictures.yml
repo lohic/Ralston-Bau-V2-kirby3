@@ -14,3 +14,4 @@ empty: No big picture yet
   # cover: true
   # ratio: 5/4
 sortable: true
+limit: 50

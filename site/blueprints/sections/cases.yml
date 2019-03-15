@@ -7,6 +7,7 @@ info: "{{ page.case.toDate('d.m.Y') }}"
 template: case
 empty: No cases yet
 # sortBy: date desc
+limit: 50
 image:
   # query: page.cover
   cover: true

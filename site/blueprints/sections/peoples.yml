@@ -13,3 +13,4 @@ empty: No people yet
   # ratio: 5/4
 
 sortable: true
+limit: 50

@@ -1,11 +1,12 @@
 type: pages
-headline: Practices
+headline: Practice
 parent: site.find("practices")
 size: tiny
 info: "[{{page.practicetype}}] {{ page.images.count }} image(s)"
 # layout: cards
 template: practice
 empty: No practice yet
+limit: 50
 image:
   # query: page.cover
   cover: true
