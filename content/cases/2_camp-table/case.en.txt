@@ -48,7 +48,7 @@ Thumbnail:
 
 ----
 
-Themes: test
+Themes: Test
 
 ----
 

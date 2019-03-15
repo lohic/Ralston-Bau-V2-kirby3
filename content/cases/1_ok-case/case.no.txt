@@ -10,7 +10,7 @@ Images:
 
 ----
 
-Themes: test
+Themes: Test
 
 ----
 
