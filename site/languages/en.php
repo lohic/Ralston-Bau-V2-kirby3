@@ -16,7 +16,7 @@ return array (
 		'studio' => 'Studio',
 		'scenario' => 'Scenario',
 		'people' => 'People',
-		'form' => 'form',
+		'form' => 'Form',
 		'bigpicture' => 'Big picture'
 	]
 );

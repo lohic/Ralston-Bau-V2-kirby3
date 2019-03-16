@@ -196,7 +196,7 @@ button{
 	display: inline-block;
 }
 #secondary-menu a{
-	transform-origin: center 60%;
+	transform-origin: center 55%;
 	display: inline-block;
 }
 
@@ -213,10 +213,10 @@ button{
 	display: block;
 }
 
-#secondary-menu li a{
+#secondary-menu li{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
-	font-size: 2.15rem;
+	font-size: 1.7rem;
 	line-height: 1.35em;
 }
 
@@ -265,6 +265,14 @@ button{
 /* ==========================================================================
    TITLE Content 
    ========================================================================== */
+
+#main-menu li{
+	font-family: big-caslon-fb, serif;
+	font-weight: 400;
+	font-size: 2.45rem;
+	line-height: 1.65em;
+}
+
 
 .languages li{
 	display: inline-block;
