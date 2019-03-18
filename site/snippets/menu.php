@@ -39,7 +39,7 @@
 	</nav>
 
 	<!-- lang selector -->
-	<nav class="languages" role="navigation">
+	<nav class="languages serif" role="navigation">
 		<ul>
 			<?php foreach($kirby->languages() as $language): ?>
 			<li<?php e($kirby->language() == $language, ' class="active"') ?>>
@@ -50,7 +50,7 @@
 	</nav>
 
 	<!-- contact menu  -->
-	<nav id="contact">
+	<nav id="contact" class="serif">
 		<?php if ($about = page('about')): ?>
 		<?php foreach ($about->social()->toStructure() as $social): ?>
 			<a href="<?= $social->url() ?>" target="_blank"><?= $social->platform() ?></a>
@@ -62,7 +62,7 @@
 	</nav>
 	
 
-	<button id="btn-newsletter"><?= t('newsletter','Newsletter') ?></button>        
+	<button id="btn-newsletter" class="serif"><?= t('newsletter','Newsletter') ?></button>        
 </div>
 
 

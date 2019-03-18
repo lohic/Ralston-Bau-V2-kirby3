@@ -193,6 +193,11 @@ main.texte h1{
 .txt-normal{
 }
 
+.serif{
+	font-family: big-caslon-fb, serif;
+	font-weight: 400;
+}
+
 
 
 /* ==========================================================================
@@ -306,7 +311,7 @@ button{
 
 .languages li{
 	display: inline-block;
-	font-family: "Colaborate";
+	/*font-family: "Colaborate";*/
 	padding: 0;
 	margin: 0;
 }
