@@ -45,7 +45,37 @@ body{
 	background: #FFF;
 	width: 250px;
 	padding: 47px;
+
 	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 180px auto 1rem 2.5rem 1rem;
+	grid-template-areas: 
+	"logo-bloc"
+	"main-menu"
+	"languages"
+	"contact"
+	"btn-newsletter";
+	justify-items: start;
+}
+
+#title h1{
+	grid-area: logo-bloc;
+}
+
+#title #main-menu{
+	grid-area: main-menu;
+}
+
+#title .languages{
+	grid-area: languages;
+}
+
+#title #contact{
+	grid-area: contact;
+}
+
+#title #btn-newsletter{
+	grid-area: btn-newsletter;
 }
 
 /*#logo{
