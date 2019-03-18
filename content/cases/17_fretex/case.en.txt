@@ -1,0 +1,49 @@
+Title: Fretex
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+- practices/redesign-form
+
+----
+
+Images: 
+
+----
+
+Date: 
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: social, upcycling
+
+----
+
+Map: 
+
+lat: "61.3635404"
+lon: "5.400416"
+city: Dale
+country: Norway
+postcode: "6963"

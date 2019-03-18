@@ -1,0 +1,51 @@
+Title: Alibis
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+- practices/alibis-big-picture
+
+----
+
+Peoples: 
+
+- practices/alibis-people
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-18 14:45
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: social, sharing, knowledge
+
+----
+
+Map: 
+
+lat: "45.88975045"
+lon: "6.135465100226"
+city: Annecy
+country: France
+postcode: "74000"

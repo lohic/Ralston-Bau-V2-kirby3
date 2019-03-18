@@ -1,0 +1,50 @@
+Title: Contact
+
+----
+
+Text: 
+
+----
+
+Address: 
+
+Lystgården
+Kanonhaugen 39
+5097 Bergen
+Norway
+
+Le Building
+73-75 La Canebière
+13001 Marseille
+France
+
+----
+
+Email: studio@ralstonbau.com
+
+----
+
+Phone: 
+
+----
+
+Social: 
+
+- 
+  platform: Instagram
+  url: >
+    https://www.instagram.com/studioralstonbau/
+  icon: [ ]
+- 
+  platform: Facebook
+  url: https://www.facebook.com/ralstonbau
+  icon: [ ]
+
+----
+
+Contact: 
+
+Kirby Magazine Inc.
+Sesamestreet 1
+Gotham City
+USA

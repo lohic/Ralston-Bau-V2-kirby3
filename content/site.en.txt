@@ -6,7 +6,7 @@ Maintenance: false
 
 ----
 
-Share: 
+Share: facebook, twitter
 
 ----
 

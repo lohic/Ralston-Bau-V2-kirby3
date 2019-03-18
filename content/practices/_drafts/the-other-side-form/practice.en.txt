@@ -1,0 +1,13 @@
+Title: The Other Side scenario
+
+----
+
+Practicetype: scenario
+
+----
+
+Thumbnail: 
+
+----
+
+Description: 

@@ -1,0 +1,43 @@
+Title: Light Modules
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+- practices/light-modules
+
+----
+
+Images: 
+
+----
+
+Date: 
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: light
+
+----
+
+Map: 

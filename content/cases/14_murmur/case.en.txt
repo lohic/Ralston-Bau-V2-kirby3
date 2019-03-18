@@ -1,0 +1,47 @@
+Title: MurMur
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+- practices/murmur-insights
+
+----
+
+Scenarios: 
+
+- practices/murmur-scenario
+
+----
+
+Forms: 
+
+- practices/murmur-form
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-15 17:25
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: privacy, acoustic
+
+----
+
+Map: 

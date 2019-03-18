@@ -1,0 +1,50 @@
+Title: Le Building Canebière
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+- practices/le-building-table
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-15 16:25
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: identity, local
+
+----
+
+Map: 
+
+lat: "43.2957584"
+lon: "5.3757902"
+city: Marseille
+country: France
+postcode: "13001"
+address: La Canebière
