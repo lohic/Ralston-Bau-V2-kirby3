@@ -84,7 +84,7 @@
 			<ul class="cases sub-menu">
 				<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
 				<?php foreach ($casethemes as $theme): ?>
-					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html($theme) ?></a></li>
+					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst($theme) ) ?></a></li>
 				<?php endforeach ?>
 				<?php endif ?>
 			</ul>
