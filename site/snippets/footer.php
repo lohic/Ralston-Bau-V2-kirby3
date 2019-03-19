@@ -6,7 +6,7 @@
 
 <?php } ?>
 
-<div id="newsletter">
+<!-- <div id="newsletter">
 
 	<form action="https://tinyletter.com/ralstonbau" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ralstonbau', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 		
@@ -18,14 +18,8 @@
 
 	</form>
 
-</div>
-<!-- 
-  <footer class="footer">
-    <a href="<?= url() ?>">&copy; <?= date('Y') ?> / <?= $site->title() ?></a>
-  </footer>
+</div> -->
 
-
- -->
 
 </body>
 </html>
