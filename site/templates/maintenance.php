@@ -116,12 +116,12 @@
 			$("#newsletter")
 				.css("visibility", "")
 				.addClass('open');//.show();
-		})
+		});
 
 		$("#newsletter").click(function(event){
 			$("#newsletter")
 				.removeClass('open');//.hide();
-		})
+		});
 
 	})
 

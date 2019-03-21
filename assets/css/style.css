@@ -425,6 +425,7 @@ main.texte a{
     animation-name: newsletter-close-animation;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
+    visibility: hidden;
 }
 
 #newsletter.open{
@@ -505,6 +506,11 @@ main.grid{
 .grid-sizer,
 .tile {
 	width: calc(100% / 2);
+}
+
+.loading .grid-sizer,
+.loading .tile {
+	width: calc(100% / 3);
 }
 
 .tile{

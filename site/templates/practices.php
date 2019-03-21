@@ -11,15 +11,14 @@
 		?>
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
-				<h2><?= $page->title() ?></h2>
-				<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
+			<h2><?= $page->title() ?></h2>
+			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>
-				<?php endif;?>
+			<?php else : ?>
+				<img alt="" src="<?= $kirby->url('assets') ?>/images/black.png">
+			<?php endif;?>
 			</a>
 		</div>
-		<!-- 	<div class="text">
-			<?= $page->text()->kt() ?>
-		</div> -->
 		<?php endforeach; ?>
 	</main>
 </div>
