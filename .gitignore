@@ -43,3 +43,5 @@ Icon
 node_modules
 site/sessions
 vendor
+
+!assets/vendor
