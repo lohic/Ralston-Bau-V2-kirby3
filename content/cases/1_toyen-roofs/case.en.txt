@@ -1,0 +1,55 @@
+Title: Tøyen roofs
+
+----
+
+Text: ...
+
+----
+
+Bigpictures: 
+
+- practices/toyen
+
+----
+
+Peoples: 
+
+- practices/toyen-people
+
+----
+
+Scenarios: 
+
+- practices/scenario-common-ground
+
+----
+
+Forms: 
+
+- practices/toyen-roofs
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-14 11:10
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: public, social
+
+----
+
+Map: 
+
+lat: "59.9185771"
+lon: "10.7725391"
+city: Oslo
+country: Norway
+postcode: "0577"

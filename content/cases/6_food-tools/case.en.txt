@@ -1,0 +1,51 @@
+Title: Food tools
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+- practices/food-tools
+
+----
+
+Images: 
+
+----
+
+Date: 
+
+----
+
+Thumbnail: 
+
+- mouillette-all-1292x670.jpg
+
+----
+
+Themes: food
+
+----
+
+Map: 
+
+lat: "61.3635404"
+lon: "5.400416"
+city: Dale
+country: Norway
+postcode: "6963"

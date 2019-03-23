@@ -1,0 +1,55 @@
+Title: Shroom
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+- practices/longer-participation
+
+----
+
+Peoples: 
+
+- practices/sensing-dale
+
+----
+
+Scenarios: 
+
+- practices/knowledge-transfer
+
+----
+
+Forms: 
+
+- practices/shroom
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-14 16:00
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: public, lighting
+
+----
+
+Map: 
+
+lat: "61.3635404"
+lon: "5.400416"
+city: Dale
+country: Norway
+postcode: "6963"

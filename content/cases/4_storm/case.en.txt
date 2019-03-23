@@ -1,0 +1,53 @@
+Title: Storm
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+- practices/toyen
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+- practices/adapt
+
+----
+
+Forms: 
+
+- practices/storm
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-15 16:20
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: identity, migration
+
+----
+
+Map: 
+
+lat: "61.5998581"
+lon: "5.0320356"
+city: Florø
+country: Norway
+postcode: "6901"

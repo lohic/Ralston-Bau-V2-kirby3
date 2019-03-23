@@ -1,0 +1,49 @@
+Title: Gastronomic Institute
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+- practices/vertical-feast
+
+----
+
+Images: 
+
+----
+
+Date: 
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: food, identity
+
+----
+
+Map: 
+
+lat: "58.9680427"
+lon: "5.7324722"
+city: Stavanger
+country: Norway
+postcode: "4006"

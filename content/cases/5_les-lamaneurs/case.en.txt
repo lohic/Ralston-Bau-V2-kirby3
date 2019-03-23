@@ -1,0 +1,55 @@
+Title: Les Lamaneurs
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+- practices/toyen
+
+----
+
+Peoples: 
+
+- practices/les-lamaneurs-people
+
+----
+
+Scenarios: 
+
+- practices/belong-saint-nazaire
+
+----
+
+Forms: 
+
+- practices/les-lamaneurs
+
+----
+
+Images: 
+
+----
+
+Date: 2019-03-14 11:05
+
+----
+
+Thumbnail: 
+
+----
+
+Themes: public, identity
+
+----
+
+Map: 
+
+lat: "45.2566002"
+lon: "5.8490243"
+city: Saint-Nazaire-les-Eymes
+country: France
+postcode: "38330"
