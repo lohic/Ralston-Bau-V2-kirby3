@@ -24,10 +24,6 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 2019-03-05 18:00
 
 ----
@@ -49,6 +45,10 @@ lon: "5.400416"
 city: Dale
 country: Norway
 postcode: "6963"
+
+----
+
+Images: 
 
 ----
 
