@@ -9,8 +9,8 @@
 <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
 <?= js(['assets/vendor/jquery-3.3.1.min.js',
-		'assets/vendor/isotope.pkgd.min.js',
-		'assets/vendor/imagesloaded.pkgd.min.js',
+		// 'assets/vendor/isotope.pkgd.min.js',
+		// 'assets/vendor/imagesloaded.pkgd.min.js',
 		'assets/vendor/prettySocial-1.1.0/jquery.prettySocial.min.js',
 		'assets/vendor/slick-1.8.1/slick/slick.min.js',
 		'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',

@@ -40,64 +40,28 @@ $(function(){
 
 
 	/**
-	 * ISOTOPE GRID
+	 * GRID
 	 * @type {String}
 	 */
-	$grid = $('.grid').isotope({
-		itemSelector: '.tile',
-		percentPosition: true,
-		masonry: {
-			// use outer width of grid-sizer for columnWidth
-			columnWidth: '.grid-sizer'
-		}
-	})
-
-
 	setTimeout(function(){ 
 		$("#info").toggleClass("loading");
 		$("#main").toggleClass("loading");
-
-		$grid.isotope("layout");
 	}, 2000);
 
 
 	$("#info").click(function(e){
 		$("#info").toggleClass("loading");
 		$("#main").toggleClass("loading");
-
-		$grid.isotope("layout");
-
-		// $grid.isotope("layout");
-
-		setTimeout(function(){ 
-			$grid.isotope("layout");
-		}, 1500);
 	})
 	
-	$('.grid').imagesLoaded( function() {
-		// images have loaded
-		$grid.isotope("layout");
-	});
-
-	// https://stackoverflow.com/questions/2794148/css3-transition-events
-	$("#main").one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', 
-	function() {
-		console.log("END main bloc transition");
-
-		setTimeout(function(){ 
-			console.log("relayout");
-			$grid.isotope("layout");
-		}, 1500);
-	});
-
 	
 	/**
 	 * GALLERY CAROUSSEL
 	 * @type {Boolean}
 	 */
 	$('.gallery').slick({
-		dots: false,
-		infinite: true,
+		dots: true,
+		infinite: false,
 		speed: 300,
 		slidesToShow: 1,
 		centerMode: false,

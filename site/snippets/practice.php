@@ -6,6 +6,6 @@
 
 <?= snippet('gallery', ['page' => $page]); ?>
 
-<div><?= $page->description()->kt() ?></div>
+<div class="text"><?= $page->description()->kt() ?></div>
 
 <!-- fin practice.php -->

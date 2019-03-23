@@ -7,7 +7,7 @@
 ?>
 
 <?php if(!empty( $location['lon'] ) && !empty( $location['lat'] )){ ?>
-<div id="map" style='width: 100%; height: 300px;'></div>
+<div id="map"></div>
 <style>
 /*.marker {
 	display: block;

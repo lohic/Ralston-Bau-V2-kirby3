@@ -2,7 +2,7 @@
 <!-- cases.php -->
 <div id="main-content" data-menu="cases">
 	<main class="grid">
-		<div class="grid-sizer"></div>
+		<!-- <div class="grid-sizer"></div> -->
 		<?php
 		$practices = page('cases')->children()
 			->listed()
@@ -11,6 +11,7 @@
 		?>
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
+			<div class="gradient"></div>
 			<h2><?= $page->title() ?></h2>
 			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>

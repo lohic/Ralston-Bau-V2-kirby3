@@ -6,59 +6,61 @@ status:
 
 columns:
   - width: 2/3
-    fields:
-      text:
-        type: textarea
-        size: large
+    sections:
+      content:
+        type: fields
+        fields:
+          text:
+            type: textarea
+            size: large
 
-      bigpictures:
-        label: Big pictures
-        width: 1/2
-        type: pages
-        translate: false
-        query: site.find("practices").children.filterBy("practicetype", "bigpicture")
-        multiple: true
-        info: "{{ page.images.count }} image(s)"
-        empty: "No Big picture selected"
-        image:
-          cover: true
+          bigpictures:
+            label: Big pictures
+            width: 1/2
+            type: pages
+            translate: false
+            query: site.find("practices").children.filterBy("practicetype", "bigpicture")
+            multiple: true
+            info: "{{ page.images.count }} image(s)"
+            empty: "No Big picture selected"
+            image:
+              cover: true
 
-      peoples:
-        label: Peoples
-        width: 1/2
-        type: pages
-        translate: false
-        query: site.find("practices").children.filterBy("practicetype", "people")
-        multiple: true
-        info: "{{ page.images.count }} image(s)"
-        empty: "No People selected"
-        image:
-          cover: true
+          peoples:
+            label: Peoples
+            width: 1/2
+            type: pages
+            translate: false
+            query: site.find("practices").children.filterBy("practicetype", "people")
+            multiple: true
+            info: "{{ page.images.count }} image(s)"
+            empty: "No People selected"
+            image:
+              cover: true
 
-      scenarios:
-        label: Scenarios
-        width: 1/2
-        type: pages
-        translate: false
-        query: site.find("practices").children.filterBy("practicetype", "scenario")
-        multiple: true
-        info: "{{ page.images.count }} image(s)"
-        empty: "No Scenarios selected"
-        image:
-          cover: true
+          scenarios:
+            label: Scenarios
+            width: 1/2
+            type: pages
+            translate: false
+            query: site.find("practices").children.filterBy("practicetype", "scenario")
+            multiple: true
+            info: "{{ page.images.count }} image(s)"
+            empty: "No Scenarios selected"
+            image:
+              cover: true
 
-      forms:
-        label: Forms
-        width: 1/2
-        type: pages
-        translate: false
-        query: site.find("practices").children.filterBy("practicetype", "form")
-        multiple: true
-        info: "{{ page.images.count }} image(s)"
-        empty: "No Form selected"
-        image:
-          cover: true
-
+          forms:
+            label: Forms
+            width: 1/2
+            type: pages
+            translate: false
+            query: site.find("practices").children.filterBy("practicetype", "form")
+            multiple: true
+            info: "{{ page.images.count }} image(s)"
+            empty: "No Form selected"
+            image:
+              cover: true
       images:
         type: files
         layout: cards
@@ -69,7 +71,7 @@ columns:
           cover: true
         min: 1
         size: small
-
+    
   - width: 1/3
     sections:
       meta:
@@ -83,10 +85,9 @@ columns:
             
           thumbnail:
             type: files
+            multiple: false
             translate: false 
-            template: cover
-            min: 1
-            max: 1
+            query: page.images
 
           themes:
             label: Themes
