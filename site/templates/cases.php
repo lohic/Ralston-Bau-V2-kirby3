@@ -4,10 +4,10 @@
 	<main class="grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php
-		$practices = page('cases')->children()
+		$cases = page('cases')->children()
 			->listed()
 			->filterBy('themes', param('theme'), ',');
-		foreach($practices as $page):
+		foreach($cases as $page):
 		?>
 		<div class="tile">
 			<a href="<?= $page->url() ?>">

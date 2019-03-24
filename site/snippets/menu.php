@@ -10,9 +10,17 @@
 			<!-- practices -->
 			<li class="practices" data-menu="practices"><a href="#"><?= t('practice') ?></a>
 				<ul class="sub-menu">
-					<?php if ($practicetype = page('practices')->children()->listed()->pluck("practicetype", ",", true)): ?>
+
+					<?php 
+
+						$practicelist = page('practices')->children()->listed()->pluck("practicetype", ",", true);
+						$practicetype = ['bigpicture','people','scenario','form'];
+					 ?>
+					<?php if ($practicetype): ?>
 					<?php foreach ($practicetype as $step): ?>
+					<?php if(in_array($step, $practicelist, true)): ?>
 						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
+					<?php endif ?>
 					<?php endforeach ?>
 					<?php endif ?>
 				</ul>
@@ -74,15 +82,17 @@
 		<nav id="secondary-menu">
 			<!-- practices -->
 			<ul class="practices sub-menu">
-				<?php if ($practicetype = page('practices')->children()->listed()->pluck("practicetype", ",", true)): ?>
+				<?php if ($practicetype): ?>
 				<?php foreach ($practicetype as $step): ?>
+				<?php if(in_array($step, $practicelist, true)): ?>
 					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
+				<?php endif ?>
 				<?php endforeach ?>
 				<?php endif ?>
 			</ul>
 			<!-- cases -->
 			<ul class="cases sub-menu">
-				<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
+				<?php if ($casethemes): ?>
 				<?php foreach ($casethemes as $theme): ?>
 					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst($theme) ) ?></a></li>
 				<?php endforeach ?>

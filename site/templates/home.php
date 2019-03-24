@@ -1,13 +1,25 @@
 <?php snippet('header') ?>
 <!-- home.php -->
-<div id="main-content" data-menu="home">
-	<main>
-		<header class="intro">
-			<h1><?= $page->title() ?></h1>
-		</header>
-		<div class="text">
-			<?= $page->text()->kt() ?>
+<div id="main-content">
+	<main class="grid">
+		<!-- <div class="grid-sizer"></div> -->
+		<?php
+		$cases = page('cases')->children()
+			->listed();
+		foreach($cases as $page):
+		?>
+		<div class="tile">
+			<a href="<?= $page->url() ?>">
+			<div class="gradient"></div>
+			<h2><?= $page->title() ?></h2>
+			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
+				<?= $page->thumbnail()->toFile()->resize(400,null) ?>
+			<?php else : ?>
+				<img alt="" src="<?= $kirby->url('assets') ?>/images/black.png">
+			<?php endif;?>
+			</a>
 		</div>
+		<?php endforeach; ?>
 	</main>
 </div>
 <!-- fin home.php -->

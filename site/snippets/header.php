@@ -25,7 +25,14 @@
 		 'assets/css/style.css',
 		 '@auto']) ?>
 
+<?php
+
+$domain = $kirby->url();
+
+Cookie::set("test", "ok", ["lifetime"=>10,"domain"=>$domain]); ?>
+
 </head>
+
 <body>
 
 <?php if($site->maintenance()->isTrue() and $page->uid() != 'maintenance') { go('maintenance');} ?>
