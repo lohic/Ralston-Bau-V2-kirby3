@@ -7,6 +7,8 @@
 ?>
 
 <?php if(!empty( $location['lon'] ) && !empty( $location['lat'] )){ ?>
+
+<h3>Case location</h3>
 <div id="map"></div>
 <style>
 /*.marker {
@@ -70,11 +72,29 @@
 	// 	.setLngLat(marker.geometry.coordinates)
 	// 	.addTo(map);
 	// });
-	// 
+	
 	// https://docs.mapbox.com/mapbox-gl-js/api/#marker
 	var marker = new mapboxgl.Marker()
 		  .setLngLat([<?= $location['lon'] ?>, <?= $location['lat'] ?>])
 		  .addTo(map);
+
+
+	$(function(){
+
+		// https://stackoverflow.com/questions/2794148/css3-transition-events
+		$("#main").one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', 
+		function() {
+			console.log("END main bloc transition");
+
+			map.resize();
+
+			setTimeout(function(){ 
+				console.log("relayout");
+				map.resize();
+			}, 1500);
+		});
+
+	});
 </script>
 <?php } ?>
 

@@ -80,10 +80,10 @@
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>
+		
+		<?php // echo snippet('share') ?>
 
 		<?php echo snippet('map') ?>
-		
-		<?php echo snippet('share') ?>
 	</main>
 </div>
 
