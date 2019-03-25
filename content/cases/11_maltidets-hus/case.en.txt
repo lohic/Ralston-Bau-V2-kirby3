@@ -24,15 +24,13 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 
 
 ----
 
 Thumbnail: 
+
+- anders-veggoppifra-854x670.jpg
 
 ----
 
@@ -47,3 +45,7 @@ lon: "5.7324722"
 city: Stavanger
 country: Norway
 postcode: "4006"
+
+----
+
+Images: 

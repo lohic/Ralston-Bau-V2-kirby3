@@ -24,15 +24,13 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 
 
 ----
 
 Thumbnail: 
+
+- balancoire-et-arbre-hd-600x921.jpg
 
 ----
 
@@ -41,3 +39,7 @@ Themes: food
 ----
 
 Map: 
+
+----
+
+Images: 
