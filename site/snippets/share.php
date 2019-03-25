@@ -1,10 +1,12 @@
 <!-- share.php -->
 <?php
 if( $page->thumbnail()->isNotEmpty() ) {
-	$thumb = $page->thumbnail()->resize(400,null);
+	$thumb = $page->thumbnail()->toFile()->resize(400,null)->url();
 }else{
 	$thumb = $kirby->url('assets').'/images/black.png';
 }
+
+// echo $thumb;
 ?>
 <div class="social-container">
 	<div class="links">

@@ -131,7 +131,8 @@ body{
    ========================================================================== */
 #info{
 	/*width: 35%;*/
-	width: 24%;
+	/*width: 24%; */
+	width: 19.8336vw; /* 82.64 */
 }
 
 #info *{
@@ -153,15 +154,18 @@ body{
    ========================================================================== */
 #main{		
 	/*width: 65%;*/
-	width: 76%;
+	/*width: 76%;*/
+	width: 62.8064vw; /* 82.64 */
 }
 #main.loading{
 	/*width: calc(100% - 72px);*/
-	width: calc(100% - 5vw);
+	/*width: calc(100% - 5vw);*/
+	width: 77.64vw;
 }
 #main-content{
 	margin: 0.4vw;
 }
+
 
 
 /* ==========================================================================
@@ -221,6 +225,7 @@ header.intro h2{
 	position: absolute;
 	bottom: 1.175rem;
 	left: 1vw;
+	margin: 0;
 }
 
 main h2{
@@ -378,7 +383,21 @@ button{
 .gallery figure,
 .gallery img{
 	height: 26.4vw;
+	transition: height 2s ease;
 }
+
+/*
+	width: 62.8064vw
+	width: 77.64vw
+*/
+
+#main.loading .gallery,
+#main.loading .gallery figure,
+#main.loading .gallery img{
+	height: 32.6351vw;
+}
+
+
 
 .gallery img{
 	width: auto;
