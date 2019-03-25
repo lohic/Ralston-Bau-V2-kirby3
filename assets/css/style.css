@@ -371,21 +371,22 @@ button{
  */
 
 .gallery{
-	height: 26.4vw;
 	background: #111;
 }
 
-.gallery figure{
+.gallery,
+.gallery figure,
+.gallery img{
 	height: 26.4vw;
 }
 
 .gallery img{
-	height: 26.4vw;
 	width: auto;
 }
 
 .slick-arrow{
-	display: none;
+	display: none !important;
+	height: 0;
 }
 
  .slick-dots{
