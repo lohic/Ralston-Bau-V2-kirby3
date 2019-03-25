@@ -47,7 +47,7 @@
 	</nav>
 
 	<!-- lang selector -->
-	<nav class="languages serif" role="navigation">
+	<nav class="languages" role="navigation">
 		<ul>
 			<?php foreach($kirby->languages() as $language): ?>
 			<li<?php e($kirby->language() == $language, ' class="active"') ?>>
@@ -58,19 +58,19 @@
 	</nav>
 
 	<!-- contact menu  -->
-	<nav id="contact" class="serif">
+	<nav id="contact" class="">
 		<?php if ($about = page('about')): ?>
 		<?php foreach ($about->social()->toStructure() as $social): ?>
-			<a href="<?= $social->url() ?>" target="_blank"><?= $social->platform() ?></a>
+			<!-- <a href="<?= $social->url() ?>" target="_blank"><?= $social->platform() ?></a> -->
 		<?php endforeach ?>
 		<?php endif ?>
-		<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="<?= $kirby->url('assets') ?>/images/facebook-black.svg" alt="facebook"></a>
-		<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="<?= $kirby->url('assets') ?>/images/instagram-black.svg" alt="instagram"></a>
-		<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= $kirby->url('assets') ?>/images/mail-black.svg" alt="mail"></a>
+		<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="<?= $kirby->url('assets') ?>/images/fb-black.svg" alt="facebook"></a>
+		<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="<?= $kirby->url('assets') ?>/images/ig-black.svg" alt="instagram"></a>
+		<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= $kirby->url('assets') ?>/images/email-black.svg" alt="mail"></a>
 	</nav>
 	
 
-	<button id="btn-newsletter" class="serif"><?= t('newsletter','Newsletter') ?></button>        
+	<button id="btn-newsletter" class=""><?= t('newsletter','Newsletter') ?></button>        
 </div>
 
 

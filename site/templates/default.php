@@ -2,11 +2,13 @@
 <!-- default.php -->
 <div id="main-content" data-menu="studio">
 
-	<main class="texte">
-		<header class="intro">
-			<?= snippet('gallery', ['page' => $page]); ?>
-			<h1><?= $page->title() ?></h1>
-		</header>
+	<header class="intro">
+		<?= snippet('gallery', ['page' => $page]); ?>
+		<div class="gradient"></div>
+		<h2><?= $page->title() ?></h2>
+	</header>
+
+	<main>
 
 		<div class="text">
 			<?= $page->text()->kt() ?>

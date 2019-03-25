@@ -1,5 +1,7 @@
 // javascript
- 
+
+var overmenu = false;
+
 $(function(){
 
 	console.log('Ralston Bau yo');
@@ -32,25 +34,52 @@ $(function(){
 
 
 	$("#main-menu>ul>li>a").click(function(event){
+
+		console.log("#main-menu item click");
+
 		$("#main-menu li").removeClass('selected');
 		$("#main-menu li, #secondary-menu li").removeClass('active');
 		$("#secondary-menu ul").css("display","none");
 
 		$(this).parent().addClass('selected');
 
+		$("#info").removeClass("loading");
+		$("#main").removeClass("loading");
+
 		let clickedMenu = $(this).parent().data('menu');
 		$("#secondary-menu").find("."+clickedMenu).css("display","block");
 
 	});
+
+	// $("#title, #info").mouseenter(function(event){
+	// 	overmenu = true;
+	// });
+
+	// $("#title, #info").mouseleave(function(event){
+	// 	overmenu = false;
+
+	// 	if(!overmenu){
+	// 		setTimeout(function(){ 
+	// 			$("#info").toggleClass("loading");
+	// 			$("#main").toggleClass("loading");
+	// 		}, 2000);
+	// 	}
+	// });
+
+	$("body").mousemove(function(event){
+		console.log(event.originalEvent.clientX);
+	})
 
 
 	/**
 	 * GRID
 	 * @type {String}
 	 */
-	setTimeout(function(){ 
-		$("#info").toggleClass("loading");
-		$("#main").toggleClass("loading");
+	setTimeout(function(){
+		if(!overmenu){
+			$("#info").toggleClass("loading");
+			$("#main").toggleClass("loading");
+		}
 	}, 2000);
 
 
@@ -94,6 +123,11 @@ $(function(){
 		$("#newsletter")
 			.removeClass('open');//.hide();
 	});	
+
+	$("input").click(function(event){
+		console.log("stop propagation")
+		event.stopPropagation();
+	});
 })
 
 

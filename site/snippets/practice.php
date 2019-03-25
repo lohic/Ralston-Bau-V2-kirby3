@@ -1,10 +1,15 @@
 <!-- practice.php (snippet)-->
 
-<?php if($showtitle == true) : ?>
-<h3><?= $page->title() ?></h3>
-<?php endif; ?>
-
+<header class="intro">
 <?= snippet('gallery', ['page' => $page]); ?>
+<?php if($showtitle == true) : ?>
+<h2><?= $page->title() ?></h2>
+<?php endif; ?>
+</header>
+
+<?php if($showtitle == true) : ?>
+<?= snippet('share') ?>
+<?php endif; ?>
 
 <div class="text"><?= $page->description()->kt() ?></div>
 

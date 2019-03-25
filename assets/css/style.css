@@ -2,7 +2,8 @@
 
 html{
 	/*font-size: 16px;*/
-	font-size: 2vmin;
+	/*font-size: 2vmin;*/
+	font-size: 1.1vw;
 }
 
 html, body{
@@ -43,12 +44,14 @@ body{
 #title{
 	left:0;
 	background: #FFF;
-	width: 250px;
-	padding: 47px;
+	/*width: 250px;*/
+	width: 17.36vw;
+	/*padding: 47px;*/
+	padding: 3.26vw; 
 
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 180px auto 1rem 2.5rem 1rem;
+	grid-template-rows: 12.5vw auto 4rem 2.5rem 1rem;
 	grid-template-areas: 
 	"logo-bloc"
 	"main-menu"
@@ -78,10 +81,10 @@ body{
 	grid-area: btn-newsletter;
 }
 
-/*#logo{
-	width: 130px;
+#logo{
+	width: 8.1818rem; /* 9vw */ 
 	height: auto;
-}*/
+}
 
 /*#btn-newsletter{
 	position: absolute;
@@ -89,14 +92,16 @@ body{
 }*/
 
 #content{
-	left:250px;
+	/*left:250px;*/
+	left: 17.36vw;
 	right: 0;
 }
 
 #info{
 	left: 0;
 	background: #F2E0CD;
-	padding:33px 64px;
+	/*padding:33px 64px;*/
+	padding: 2.29vw 4.44vw;
 	cursor: pointer;
 }
 
@@ -149,9 +154,12 @@ body{
 	width: 65%;
 }
 #main.loading{
-	width: calc(100% - 72px);
+	/*width: calc(100% - 72px);*/
+	width: calc(100% - 5vw);
 }
-
+#main-content{
+	margin: 0.4vw;
+}
 
 
 /* ==========================================================================
@@ -197,13 +205,20 @@ main.texte h1{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
 }
+
+header.intro{
+	position: relative;
+}
+
 header.intro h2{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
 	font-size: 2.95rem;
 	line-height: 2.95rem;
-	margin: 1rem 2rem;
-
+	/*margin: 1rem 2rem;*/
+	position: absolute;
+	bottom: 1.175rem;
+	left: 1vw;
 }
 
 main h2{
@@ -211,24 +226,33 @@ main h2{
 	font-weight: 400;
 	font-size: 2.95rem;
 	line-height: 2.95rem;
-	margin: 1rem 2rem;
+	margin: 1rem 1vw;
 }
 main h3{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
 	font-size: 1rem;
-	margin: 1rem 2rem;
+	margin: 1rem 1vw;
 }
 
 .text{
-	margin: 2rem;
+	margin: 2rem 1vw;
 	/*max-width: 35rem;*/
+}
+
+.text img{
+	max-width: 100%;
+	height: auto;
 }
 
 #map{
 	/*width: 100%;*/
-	margin: 2rem;
+	/*margin: 1vw;*/
 	height: 300px;
+}
+
+p+p{
+	margin-top: 1rem;
 }
 
 
@@ -281,11 +305,16 @@ button{
 	display: block;
 }
 
+#secondary-menu ul{
+	margin-top: 14.9vw;
+}
+
 #secondary-menu li{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
 	font-size: 1.7rem;
 	line-height: 1.35em;
+	margin-bottom: 2rem;
 }
 
 
@@ -296,8 +325,16 @@ button{
 }
 
 .social-container{
-	margin: 1rem 2rem;
+	margin: 1rem 1vw;
 }
+
+#contact img,
+.social-container img{
+	width: 1.7045rem;
+	/*width: 1.875vw;*/
+	height: auto;	
+}
+
 
 
 /*.links a{
@@ -332,7 +369,17 @@ button{
  */
 
 .gallery{
+	height: 26.4vw;
 	background: #111;
+}
+
+.gallery figure{
+	height: 26.4vw;
+}
+
+.gallery img{
+	height: 26.4vw;
+	width: auto;
 }
 
 .slick-arrow{
@@ -346,6 +393,7 @@ button{
  	left: 1rem;
  	right: 1rem;
  	text-align: center;
+	z-index: 3000;
  }
 
  .slick-dots li{
@@ -395,11 +443,6 @@ button{
 	background: white;
 }
 
-.gallery img{
-	height: 550px;
-	width: auto;
-}
-
 /* ==========================================================================
    TITLE Content 
    ========================================================================== */
@@ -413,14 +456,14 @@ button{
 
 
 .languages li{
-	display: inline-block;
+	/*display: inline-block;*/
 	/*font-family: "Colaborate";*/
 	padding: 0;
 	margin: 0;
 }
 
 .languages li+li:before{
-	content: "\\";
+	/*content: "\\";*/
 }
 
 .languages li a{
@@ -430,7 +473,8 @@ button{
 }
 
 .languages li.active a{
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+	font-weight: bold;
 }
 
 
@@ -529,6 +573,7 @@ main.texte a{
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
     visibility: hidden;
+    z-index: 5000;
 }
 
 #newsletter.open{
@@ -603,29 +648,21 @@ main{
 }
 
 main.grid{
+	margin: 0.4vw;
 	column-count: 2;
-	column-gap: 1rem;
+	column-gap: 0.4vw;
 }
 
 .loading main.grid{
+	margin: 0.4vw;
 	column-count: 3;
-	column-gap: 1rem; 
+	column-gap: 0.4vw; 
 }
-
-/*.grid-sizer,
-.tile {
-	width: calc(100% / 2);
-}*/
-
-/*.loading .grid-sizer,
-.loading .tile {
-	width: calc(100% / 3);
-}*/
 
 .tile{
 	display: inline-block;
-	padding: 5px;
-	margin-bottom: 1rem;
+	/*padding: 5px;*/
+	margin-bottom: 0.4vw;
 	position: relative;
 	width: 100%;
 }
@@ -645,7 +682,20 @@ main.grid{
 }
 
 .tile .gradient{
-	background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 80%);
+	background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(216,216,216,0) 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+header.intro{
+
+}
+
+header.intro .gradient{
+	background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(216,216,216,0) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -697,12 +747,16 @@ main.grid .tile a h2{
 
 @media screen and (max-width: 1000px ){
 
-	html{
+/*	html{
 		font-size: 14px;
 	}
-
+*/
 }
 @media screen and (max-width: 500px ){
+
+	html{
+		font-size: 20px;
+	}
 
 	body{
 		background: #000;
@@ -719,6 +773,7 @@ main.grid .tile a h2{
 	#title{
 		width: auto;
 		height: auto;
+		display: block;
 		padding: 17px;
 	}
 
@@ -736,7 +791,7 @@ main.grid .tile a h2{
 		width: auto;
 		padding: 33px 26px;
 		transition: max-height 2s;
-		max-height: 100vh;
+		/*max-height: 100vh;*/
 	}
 
 	#info.loading{
@@ -744,6 +799,24 @@ main.grid .tile a h2{
 		max-height: 60px;
 	}
 
+/*	#title{
+		left:0;
+		background: #FFF;
+		width: 17.36vw;
+		padding: 3.26vw; 
+
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: 12.5vw auto 4rem 2.5rem 1rem;
+		grid-template-areas: 
+		"logo-bloc"
+		"main-menu"
+		"languages"
+		"contact"
+		"btn-newsletter";
+		justify-items: start;
+	}
+*/
 
 	#main{
 		width: auto;
@@ -793,6 +866,38 @@ main.grid .tile a h2{
 	#main #contact .btn-mail{
 		position: relative;
 		top: -1px;
+	}
+
+
+
+	#secondary-menu ul{
+		margin-top: 1rem;
+	}
+
+	#secondary-menu li{
+		margin-bottom: 0.5rem;
+	}
+
+
+
+
+	main.grid,
+	.loading main.grid{
+		column-count: 1;
+	}
+
+	.tile h2{
+		font-size: 1.95rem;
+		bottom: 0.875rem;
+		left: 10px;
+	}
+
+
+
+	.gallery,
+	.gallery figure,
+	.gallery img{
+		height: 250px;
 	}
 
 }

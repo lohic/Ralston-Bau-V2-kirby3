@@ -4,14 +4,13 @@
 
 <div id="main-content" data-menu="cases">
 	<header class="intro">
+		<?= snippet('gallery', ['page' => $page]); ?>
+		<div class="gradient"></div>
 		<h2><?= $page->title() ?></h2>
-		<!-- <p><?= $page->date()->toDate("d.m.y") ?></p> -->
-		<?= snippet('share') ?>
 	</header>
 
 	<main>
-		
-		<?= snippet('gallery', ['page' => $page]); ?>
+		<?= snippet('share') ?>
 
 		<div class="text">
 			<?= $page->text()->kt() ?>

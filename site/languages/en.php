@@ -5,7 +5,7 @@ return array (
 	'default' => true,
 	'direction' => 'ltr',
 	'locale' => 'en_US',
-	'name' => 'En',
+	'name' => 'English',
 	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',

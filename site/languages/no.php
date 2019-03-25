@@ -4,7 +4,7 @@ return [
 	'code' => 'no',
 	'direction' => 'ltr',
 	'locale' => 'no_NO',
-	'name' => 'No',
+	'name' => 'Norsk',
 	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',

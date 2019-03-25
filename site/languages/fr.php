@@ -4,7 +4,7 @@ return [
 	'code' => 'fr',
 	'direction' => 'ltr',
 	'locale' => 'fr_FR',
-	'name' => 'Fr',
+	'name' => 'Français',
 	'translations' => [
 		'submit' => 'Envoyer',
 		'cancel' => 'Annuler',
