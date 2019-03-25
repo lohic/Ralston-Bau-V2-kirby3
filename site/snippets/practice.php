@@ -1,16 +1,16 @@
 <!-- practice.php (snippet)-->
-
 <header class="intro">
-<?= snippet('gallery', ['page' => $page]); ?>
-<?php if($showtitle == true) : ?>
-<h2><?= $page->title() ?></h2>
-<?php endif; ?>
+	<?= snippet('gallery', ['page' => $page]); ?>
+	<?php if($showtitle == true) : ?>
+	<h2><?= $page->title() ?></h2>
+	<?php endif; ?>
 </header>
 
 <?php if($showtitle == true) : ?>
 <?= snippet('share') ?>
 <?php endif; ?>
 
-<div class="text"><?= $page->description()->kt() ?></div>
-
+<div class="text">
+	<?= $page->description()->kt() ?>
+</div>
 <!-- fin practice.php -->

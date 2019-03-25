@@ -116,14 +116,7 @@
 	
 		<?php //endforeach; ?>
 
-
-
-
-		
-
 	</div>
-
-
 	<div id="main" class="drawer txt-normal">
 
 <!-- fin menu.php
