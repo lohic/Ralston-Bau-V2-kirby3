@@ -723,6 +723,16 @@ header.intro .gradient{
 	left: 0;
 	right: 0;
 	bottom: 0;
+	transition: opacity 1s ease;
+}
+
+header.intro h2{
+	transition: opacity 1s ease;	
+}
+
+header.intro:hover h2,
+header.intro:hover .gradient{
+	opacity: 0;
 }
 
 /*
@@ -814,11 +824,35 @@ main.grid .tile a h2{
 		padding: 33px 26px;
 		transition: max-height 2s;
 		/*max-height: 100vh;*/
+
+		display: none;
 	}
 
 	#info.loading{
 		width: auto;
 		max-height: 60px;
+
+		display: none;
+	}
+
+
+	#main-menu{
+		margin-top: 5rem;
+	}
+
+	#main-menu .sub-menu{
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	#main-menu .sub-menu li{
+		font-size: 1.7rem;
+		line-height: 1.35em;
+		margin-bottom: 0rem;
+	}
+
+	#title .languages {
+		margin-bottom: 1rem;
 	}
 
 /*	#title{
@@ -875,9 +909,15 @@ main.grid .tile a h2{
 	}
 
 	#btn-newsletter{
-		position: absolute;
-		bottom: 47px;
-		display: none;
+		position: fixed;
+		z-index: 4000;
+		display: block;
+		background: #FFF;
+		padding: 8px 17px;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		text-align: left;
 	}
 
 	#main #contact img{
@@ -901,6 +941,15 @@ main.grid .tile a h2{
 	}
 
 
+	.logo {
+		position: fixed;
+		background: #FFF;
+		padding: 17px 17px 5px;
+		left: 0;
+		top: 0;
+		right: 0;
+		z-index: 4000;
+	}
 
 
 	main.grid,
@@ -922,10 +971,20 @@ main.grid .tile a h2{
 		height: 250px;
 	}
 
+	#main.loading .gallery,
+	#main.loading .gallery figure,
+	#main.loading .gallery img{
+		height: 250px;
+	}
+
+	.slick-dots {
+		position: static;
+	}
+
 }
 
 @media screen and (max-width: 370px ){
 	html{
-		font-size: 12px;
+		font-size: 16px;
 	}
 }

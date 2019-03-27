@@ -2,6 +2,7 @@
 <!-- default.php -->
 <div id="main-content" data-menu="studio">
 	<header class="intro">
+		<?= snippet('gallery', ['page' => $page]); ?>
 		<div class="gradient"></div>
 		<h2><?= $page->title() ?></h2>
 	</header>

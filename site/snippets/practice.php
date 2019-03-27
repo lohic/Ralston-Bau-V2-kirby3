@@ -2,6 +2,7 @@
 <header class="intro">
 	<?= snippet('gallery', ['page' => $page]); ?>
 	<?php if($showtitle == true) : ?>
+	<div class="gradient"></div>
 	<h2><?= $page->title() ?></h2>
 	<?php endif; ?>
 </header>
