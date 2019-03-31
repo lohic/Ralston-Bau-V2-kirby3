@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <!-- practices.php -->
-<div id="main-content" data-menu="practices">
-	<main class="grid">
+<div id="main-content" class="grid" data-menu="practices">
+	<main class="the-grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php
 		$practices = page('practices')->children()

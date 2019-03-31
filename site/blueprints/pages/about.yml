@@ -12,11 +12,24 @@ options:
 
 columns:
   - width: 1/2
-    fields:
-      text:
-        label: Text
-        type: textarea
-        size: huge
+    sections:
+      content:
+        type: fields
+        fields:
+          text:
+            label: Text
+            type: textarea
+            size: huge
+      images:
+        type: files
+        layout: cards
+        template: image
+        info: "{{ file.dimensions }}"
+        image:
+          ratio: 5/4
+          cover: true
+        min: 1
+        size: small
 
   - width: 1/2
     fields:

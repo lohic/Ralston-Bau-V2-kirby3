@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <!-- cases.php -->
-<div id="main-content" data-menu="cases">
-	<main class="grid">
+<div id="main-content" class="grid" data-menu="cases">
+	<main class="the-grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php
 		$cases = page('cases')->children()

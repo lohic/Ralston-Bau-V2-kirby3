@@ -21,6 +21,7 @@ font-family: big-caslon-fb, serif;
 body{
 	font-family: "Colaborate", sans-serif;
 	font-style: normal;
+	font-weight: 300;
 	line-height: 1.25em;
 }
 
@@ -51,12 +52,11 @@ body{
 
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 12.5vw auto 4rem 2.5rem 1rem;
+	grid-template-rows: 12.5vw auto 4.5rem 1rem;
 	grid-template-areas: 
 	"logo-bloc"
 	"main-menu"
 	"languages"
-	"contact"
 	"btn-newsletter";
 	justify-items: start;
 }
@@ -71,19 +71,25 @@ body{
 
 #title .languages{
 	grid-area: languages;
+	align-self: start;
 }
-
+/*
 #title #contact{
 	grid-area: contact;
-}
+}*/
 
 #title #btn-newsletter{
 	grid-area: btn-newsletter;
+	align-self: end;
 }
 
 #logo{
 	width: 8.1818rem; /* 9vw */ 
 	height: auto;
+}
+
+#hamburger{
+	display: none;
 }
 
 /*#btn-newsletter{
@@ -123,6 +129,7 @@ body{
 }
 
 #title #btn-newsletter{
+	font-weight: 300;
 }
 
 
@@ -164,6 +171,9 @@ body{
 }
 #main-content{
 	margin: 0.4vw;
+}
+#main-content.grid{
+	/*margin: 0;*/
 }
 
 
@@ -342,6 +352,9 @@ button{
 	height: auto;	
 }
 
+#contact{
+	margin-top: 1rem;
+}
 
 
 /*.links a{
@@ -496,7 +509,7 @@ button{
 
 .languages li.active a{
 	/*text-decoration: underline;*/
-	font-weight: bold;
+	font-weight: 500;
 }
 
 
@@ -635,7 +648,7 @@ main.texte a{
 	background: #000;
 	font-size: 2rem;
 	padding: 0.5rem;
-	font-family: big-caslon-fb, serif;
+	/*font-family: big-caslon-fb, serif;*/
 	letter-spacing: 0.15rem;
 }
 
@@ -646,6 +659,9 @@ main.texte a{
 #newsletter a{
 	color: #FFF;
 	text-decoration: none;
+	margin-left: 0.6rem;
+	font-family: big-caslon-fb, serif;
+	font-weight: 400;
 }
 
 #btn-send{
@@ -669,14 +685,14 @@ main.texte a{
 main{
 }
 
-main.grid{
-	margin: 0.4vw;
+main.the-grid{
+	/*margin: 0.4vw;*/
 	column-count: 2;
 	column-gap: 0.4vw;
 }
 
-.loading main.grid{
-	margin: 0.4vw;
+.loading main.the-grid{
+	/*margin: 0.4vw;*/
 	column-count: 3;
 	column-gap: 0.4vw; 
 }
@@ -684,7 +700,7 @@ main.grid{
 .tile{
 	display: inline-block;
 	/*padding: 5px;*/
-	margin-bottom: 0.4vw;
+	margin-bottom: 0.2vw; /* 0.4 vw*/ 
 	position: relative;
 	width: 100%;
 }
@@ -879,7 +895,8 @@ main.grid .tile a h2{
 		height: auto;
 		left: auto;
 		right: auto;
-		padding:60px 15px;
+		/*padding:60px 15px;*/
+
 		position: relative;
 	}
 
@@ -913,7 +930,7 @@ main.grid .tile a h2{
 		z-index: 4000;
 		display: block;
 		background: #FFF;
-		padding: 8px 17px;
+		padding: 3.5vw 2.5vw;
 		left: 0;
 		bottom: 0;
 		right: 0;
@@ -952,9 +969,21 @@ main.grid .tile a h2{
 	}
 
 
-	main.grid,
-	.loading main.grid{
+	#hamburger{
+		position: fixed;
+		display: block; 
+		font-size: 40px;
+		color: #000;
+		right: 0;
+		top:0;
+		padding: 17px 17px 5px;
+		z-index: 4000;
+	}
+
+	main.the-grid,
+	.loading main.the-grid{
 		column-count: 1;
+		padding: 2vw 2vw calc(8.3vw + 1rem);
 	}
 
 	.tile h2{

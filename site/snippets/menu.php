@@ -3,6 +3,7 @@
 
 <div id="title" class="drawer">
 	<h1><a class="logo" href="<?= $site->url() ?>"><img id="logo" src="<?= $kirby->url('assets') ?>/images/logo.svg" alt="Ralston Bau"></a></h1>
+	<div id="hamburger">X</div>
 
 	<!-- main menu -->
 	<nav id="main-menu">
@@ -57,17 +58,7 @@
 		</ul>
 	</nav>
 
-	<!-- contact menu  -->
-	<nav id="contact" class="">
-		<?php if ($about = page('about')): ?>
-		<?php foreach ($about->social()->toStructure() as $social): ?>
-			<!-- <a href="<?= $social->url() ?>" target="_blank"><?= $social->platform() ?></a> -->
-		<?php endforeach ?>
-		<?php endif ?>
-		<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="<?= $kirby->url('assets') ?>/images/fb-black.svg" alt="facebook"></a>
-		<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="<?= $kirby->url('assets') ?>/images/ig-black.svg" alt="instagram"></a>
-		<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= $kirby->url('assets') ?>/images/email-black.svg" alt="mail"></a>
-	</nav>
+	
 	
 
 	<button id="btn-newsletter" class=""><?= t('newsletter','Newsletter') ?></button>        
@@ -75,7 +66,7 @@
 
 
 <div id="content" class="drawer">
-	<div id="info" class="drawer">
+	<div id="info" class="drawer loading">
 			
 		
 
@@ -117,6 +108,6 @@
 		<?php //endforeach; ?>
 
 	</div>
-	<div id="main" class="drawer txt-normal">
+	<div id="main" class="drawer txt-normal loading">
 
 <!-- fin menu.php
