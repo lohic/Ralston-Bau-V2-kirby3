@@ -82,6 +82,12 @@ columns:
             time: true
             default: now
             translate: false
+
+          description:
+            type: textarea
+            label: Description
+            size: medium
+            buttons: false
             
           thumbnail:
             type: files

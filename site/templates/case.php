@@ -2,7 +2,7 @@
 
 <!-- case.php -->
 
-<div id="main-content" data-menu="cases">
+<div id="main-content" data-menu="cases" data-submenu="<?= $page->themes()->toData(",")[0] ?>">
 	<header class="intro">
 		<?= snippet('gallery', ['page' => $page]); ?>
 		<div class="gradient"></div>
@@ -13,6 +13,12 @@
 		<?= snippet('share') ?>
 
 		<div class="text">
+
+			<?php if( $page->description()->isNotEmpty() ) : ?>
+			<div class="description">
+				<?= $page->description()->kt() ?>
+			</div>
+			<?php endif; ?>
 			<?= $page->text()->kt() ?>
 		</div>
 
@@ -80,7 +86,7 @@
 
 		<?php endforeach ?>
 		
-		<?php // echo snippet('share') ?>
+		<?php echo snippet('share') ?>
 
 		<?php echo snippet('map') ?>
 	</main>

@@ -24,13 +24,23 @@ $(function(){
 	    return isInternalLink;
 	};
 
+	$("a:internal").click(function(event){
+	});
+
 	/**
 	 * MENU
 	 * @type {[type]}
 	 */
 	let selectedMenu = $("#main-content").data('menu');
+	let selectedSubMenu = $("#main-content").data('submenu');
+
+	console.log(selectedMenu+ " " + selectedSubMenu);
+
 	$("#main-menu").find("."+selectedMenu).addClass('selected');
 	$("#secondary-menu").find("."+selectedMenu).css("display","block");
+
+	$("#main-menu").find("."+selectedSubMenu).addClass('active');
+	$("#secondary-menu").find("."+selectedSubMenu).addClass('active');
 
 
 	$("#main-menu>ul>li>a").click(function(event){
@@ -112,6 +122,7 @@ $(function(){
 	$("#newsletter").css("visibility", "hidden");
 
 	$("#btn-newsletter").click(function(event){
+		$('#newsletter #tlemail').val("");
 		$("#newsletter")
 			.css("visibility", "")
 			.addClass('open');//.show();
@@ -126,7 +137,13 @@ $(function(){
 		console.log("stop propagation")
 		event.stopPropagation();
 	});
-})
+
+	$("#hamburger").click(function(event){
+
+		$("#mobile-menu").toggleClass("show");
+
+	});
+});
 
 
 function setCookie(cname, cvalue, exdays) {

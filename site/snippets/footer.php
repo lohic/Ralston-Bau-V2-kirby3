@@ -8,7 +8,7 @@
 
 <div id="newsletter">
 
-	<form action="https://tinyletter.com/ralstonbau" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ralstonbau', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+	<form action="//tinyletter.com/ralstonbau" method="post" target="popupwindow" onsubmit="window.open('//tinyletter.com/ralstonbau', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 		
 		<p><input type="text" name="email" id="tlemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email@domain.ltd" />
 		<input type="hidden" value="1" name="embed"/>

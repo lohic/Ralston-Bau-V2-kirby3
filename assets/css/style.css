@@ -52,12 +52,25 @@ body{
 
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 12.5vw auto 4.5rem 1rem;
+	/*grid-template-rows: 12.5vw auto 3.5rem 1rem;*/
+	grid-template-rows: 12.5vw auto 1rem;
+	grid-gap: 1rem;
 	grid-template-areas: 
 	"logo-bloc"
-	"main-menu"
-	"languages"
+	"mobile-menu"
 	"btn-newsletter";
+	justify-items: start;
+}
+
+#mobile-menu{
+	grid-area: mobile-menu;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 4.5rem;
+	grid-gap: 1rem;
+	grid-template-areas: 
+	"main-menu"
+	"languages";
 	justify-items: start;
 }
 
@@ -86,6 +99,9 @@ body{
 #logo{
 	width: 8.1818rem; /* 9vw */ 
 	height: auto;
+	position: relative;
+	left: -1.63vw;
+	top: -1.33vw;
 }
 
 #hamburger{
@@ -130,6 +146,7 @@ body{
 
 #title #btn-newsletter{
 	font-weight: 300;
+	text-transform: uppercase;
 }
 
 
@@ -248,12 +265,13 @@ main h2{
 main h3{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
-	font-size: 1rem;
-	margin: 1rem 1vw;
+	font-size: 2rem;
+	margin: 2rem 1vw;
 }
 
 .text{
 	margin: 2rem 1vw;
+	font-size: 1.2rem;
 	/*max-width: 35rem;*/
 }
 
@@ -262,10 +280,17 @@ main h3{
 	height: auto;
 }
 
+.text .description{
+	width: 15.32vw;
+	float: right;
+	margin: 0 0 2rem 3rem;
+}
+
 #map{
 	/*width: 100%;*/
 	/*margin: 1vw;*/
-	height: 300px;
+	/*height: 300px;*/
+	height: 32.6351vw;
 }
 
 p+p{
@@ -309,8 +334,9 @@ button{
 	display: inline-block;
 }
 
-#main-menu .selected a,
-#secondary-menu .active a{
+#main-menu .selected>a,
+.sub-menu .active>a,
+#secondary-menu .active>a{
 	transform: rotate(180deg);
 }
 
@@ -331,7 +357,8 @@ button{
 	font-weight: 400;
 	font-size: 1.7rem;
 	line-height: 1.35em;
-	margin-bottom: 2rem;
+	/*margin-bottom: 2rem;*/
+	margin-bottom: 1rem;
 }
 
 
@@ -504,7 +531,7 @@ button{
 .languages li a{
 	text-decoration: none;
 	color: #000;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 
 .languages li.active a{
@@ -713,6 +740,8 @@ main.the-grid{
 	bottom: 1.175rem;
 	left: 10px;
 	text-align: left;
+	opacity: 0;
+	transition: opacity 1s ease;
 }
 .tile img{
 	width: 100%;
@@ -720,20 +749,27 @@ main.the-grid{
 }
 
 .tile .gradient{
-	background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(216,216,216,0) 100%);
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	opacity: 0;
+	transition: opacity 1s ease;
 }
+.tile:hover h2,
+.tile:hover .gradient{
+	opacity: 1;
+}
+
 
 header.intro{
 
 }
 
 header.intro .gradient{
-	background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(216,216,216,0) 100%);
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -852,16 +888,53 @@ main.grid .tile a h2{
 	}
 
 
+	#hamburger{
+		position: fixed;
+		display: block; 
+		font-size: 40px;
+		color: #000;
+		right: 0;
+		top:0;
+		padding: 17px 17px 5px;
+		z-index: 4000;
+	}
+
+
 	#main-menu{
-		margin-top: 5rem;
+		/*margin-top: 5rem;*/
 	}
 
 	#main-menu .sub-menu{
 		display: block;
 		margin-bottom: 1rem;
+		margin-left: 3rem;
 	}
 
 	#main-menu .sub-menu li{
+		font-size: 1.7rem;
+		line-height: 1.35em;
+		margin-bottom: 0rem;
+	}
+
+
+	#mobile-menu{
+		background: #FFF;
+		position: fixed;
+		top:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 3999;
+		overflow: auto;
+		padding: 3.26vw; 
+		display: none;
+	}
+
+	#mobile-menu.show{
+		display:grid;
+	}
+
+	#main-menu li {
 		font-size: 1.7rem;
 		line-height: 1.35em;
 		margin-bottom: 0rem;
@@ -927,14 +1000,15 @@ main.grid .tile a h2{
 
 	#btn-newsletter{
 		position: fixed;
-		z-index: 4000;
+		z-index: 3000;
 		display: block;
 		background: #FFF;
 		padding: 3.5vw 2.5vw;
 		left: 0;
 		bottom: 0;
 		right: 0;
-		text-align: left;
+		text-align: right;
+		font-size: 0.8rem;
 	}
 
 	#main #contact img{
@@ -965,31 +1039,26 @@ main.grid .tile a h2{
 		left: 0;
 		top: 0;
 		right: 0;
-		z-index: 4000;
-	}
-
-
-	#hamburger{
-		position: fixed;
-		display: block; 
-		font-size: 40px;
-		color: #000;
-		right: 0;
-		top:0;
-		padding: 17px 17px 5px;
-		z-index: 4000;
+		z-index: 3500;
 	}
 
 	main.the-grid,
 	.loading main.the-grid{
 		column-count: 1;
-		padding: 2vw 2vw calc(8.3vw + 1rem);
+		/*padding: 2vw 2vw calc(8.3vw + 1rem);*/
 	}
 
 	.tile h2{
 		font-size: 1.95rem;
 		bottom: 0.875rem;
 		left: 10px;
+	}
+
+
+	.text .description{
+		width: 100%;
+		float: auto;
+		margin: 0 0 2rem 0;
 	}
 
 
@@ -1002,13 +1071,21 @@ main.grid .tile a h2{
 
 	#main.loading .gallery,
 	#main.loading .gallery figure,
-	#main.loading .gallery img{
-		height: 250px;
+	#main.loading .gallery img,
+	#map{
+		/*height: 250px;*/
+		height: 50.90vw;
 	}
 
 	.slick-dots {
 		position: static;
 	}
+
+	#main-content {
+		margin: 0;
+		padding: 20vw 2vw calc(9.3vw + 0.8rem);
+	}
+
 
 }
 

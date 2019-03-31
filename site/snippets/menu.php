@@ -3,8 +3,9 @@
 
 <div id="title" class="drawer">
 	<h1><a class="logo" href="<?= $site->url() ?>"><img id="logo" src="<?= $kirby->url('assets') ?>/images/logo.svg" alt="Ralston Bau"></a></h1>
-	<div id="hamburger">X</div>
+	<div id="hamburger"><img src="<?= $kirby->url('assets') ?>/images/hamburger.svg"></div>
 
+	<div id="mobile-menu">
 	<!-- main menu -->
 	<nav id="main-menu">
 		<ul>
@@ -20,7 +21,7 @@
 					<?php if ($practicetype): ?>
 					<?php foreach ($practicetype as $step): ?>
 					<?php if(in_array($step, $practicelist, true)): ?>
-						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
+						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
 					<?php endif ?>
 					<?php endforeach ?>
 					<?php endif ?>
@@ -31,7 +32,7 @@
 				<ul class="sub-menu">
 					<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
 					<?php foreach ($casethemes as $theme): ?>
-						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html($theme) ?></a></li>
+						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active '.$theme.'"',  ' class="'.$theme.'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst( $theme) ) ?></a></li>
 					<?php endforeach ?>
 					<?php endif ?>
 				</ul>
@@ -59,6 +60,7 @@
 	</nav>
 
 	
+	</div>
 	
 
 	<button id="btn-newsletter" class=""><?= t('newsletter','Newsletter') ?></button>        
@@ -76,7 +78,7 @@
 				<?php if ($practicetype): ?>
 				<?php foreach ($practicetype as $step): ?>
 				<?php if(in_array($step, $practicelist, true)): ?>
-					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
+					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?> ><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
 				<?php endif ?>
 				<?php endforeach ?>
 				<?php endif ?>
@@ -85,7 +87,7 @@
 			<ul class="cases sub-menu">
 				<?php if ($casethemes): ?>
 				<?php foreach ($casethemes as $theme): ?>
-					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst($theme) ) ?></a></li>
+					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active '.$theme.'"',  ' class="'.$theme.'"') ?> ><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst($theme) ) ?></a></li>
 				<?php endforeach ?>
 				<?php endif ?>
 			</ul>
