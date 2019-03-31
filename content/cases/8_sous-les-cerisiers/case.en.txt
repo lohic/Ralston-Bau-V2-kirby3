@@ -24,11 +24,11 @@ Forms:
 
 ----
 
-Images: 
+Date: 
 
 ----
 
-Date: 
+Description: yes
 
 ----
 
@@ -51,3 +51,7 @@ city: Paris
 country: France
 postcode: "75006"
 address: Rue Stanislas
+
+----
+
+Images: 
