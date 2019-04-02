@@ -46,7 +46,7 @@ body{
 	left:0;
 	background: #FFF;
 	/*width: 250px;*/
-	width: 17.36vw;
+	width: 15.56vw;
 	/*padding: 47px;*/
 	padding: 3.26vw; 
 
@@ -97,7 +97,7 @@ body{
 }
 
 #logo{
-	width: 8.1818rem; /* 9vw */ 
+	width: 7rem; /* 9vw */ 
 	height: auto;
 	position: relative;
 	left: -1.63vw;
@@ -115,7 +115,8 @@ body{
 
 #content{
 	/*left:250px;*/
-	left: 17.36vw;
+	/*left: 17.36vw;*/
+	left: 15.56vw;
 	right: 0;
 }
 
@@ -123,7 +124,9 @@ body{
 	left: 0;
 	background: #F2E0CD;
 	/*padding:33px 64px;*/
-	padding: 2.29vw 4.44vw;
+	/*padding: 2.29vw 4.44vw;*/
+
+	padding: 2.29vw 3.26vw;
 	cursor: pointer;
 }
 
@@ -156,7 +159,8 @@ body{
 #info{
 	/*width: 35%;*/
 	/*width: 24%; */
-	width: 19.8336vw; /* 82.64 */
+	/*width: 19.8336vw;*/ /* 82.64 */
+	width: 15.56vw;
 }
 
 #info *{
@@ -179,12 +183,13 @@ body{
 #main{		
 	/*width: 65%;*/
 	/*width: 76%;*/
-	width: 62.8064vw; /* 82.64 */
+	/*width: 62.8064vw;*/ /* 82.64 */
+	width: 68.88vw;
 }
 #main.loading{
 	/*width: calc(100% - 72px);*/
 	/*width: calc(100% - 5vw);*/
-	width: 77.64vw;
+	width: 80.64vw;
 }
 #main-content{
 	margin: 0.4vw;
@@ -272,7 +277,9 @@ main h3{
 .text{
 	margin: 2rem 1vw;
 	font-size: 1.2rem;
-	/*max-width: 35rem;*/
+	line-height: 1.15em;
+	font-weight: 100;
+	max-width: 55rem;
 }
 
 .text img{
@@ -349,7 +356,8 @@ button{
 }
 
 #secondary-menu ul{
-	margin-top: 14.9vw;
+	/*margin-top: 14.9vw;*/
+	margin-top: 15.7vw;
 }
 
 #secondary-menu li{
@@ -358,7 +366,7 @@ button{
 	font-size: 1.7rem;
 	line-height: 1.35em;
 	/*margin-bottom: 2rem;*/
-	margin-bottom: 1rem;
+	margin-bottom: 0.4rem;
 }
 
 
@@ -383,8 +391,15 @@ button{
 	margin-top: 1rem;
 }
 
+.links a{
+	display: inline-block;
+	margin-right: 0.3rem;
+}
 
-/*.links a{
+/*
+.links a{
+
+	}
 	color: #000;
 	text-decoration: none;
 	font-size: 1rem;
@@ -720,7 +735,8 @@ main.the-grid{
 
 .loading main.the-grid{
 	/*margin: 0.4vw;*/
-	column-count: 3;
+	/*column-count: 3;*/
+	column-count: 2;
 	column-gap: 0.4vw; 
 }
 
@@ -734,7 +750,8 @@ main.the-grid{
 .tile h2{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
-	font-size: 2.95rem;
+	/*font-size: 2.95rem;*/
+	font-size: 2.65rem;
 	line-height: 1em;
 	position: absolute;
 	bottom: 1.175rem;

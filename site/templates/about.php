@@ -13,7 +13,7 @@
 			<address>
 				<?= $page->address()->kt() ?>
 			</address>
-			<p class="email"><?= $page->email()->text() ?></p>
+			<!-- <p class="email"><?= $page->email()->text() ?></p> -->
 
 			<!-- contact menu  -->
 			<nav id="contact" class="">
@@ -22,9 +22,9 @@
 					<!-- <a href="<?= $social->url() ?>" target="_blank"><?= $social->platform() ?></a> -->
 				<?php endforeach ?>
 				<?php endif ?>
+				<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= $kirby->url('assets') ?>/images/email.svg" alt="mail"></a>
 				<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="<?= $kirby->url('assets') ?>/images/fb.svg" alt="facebook"></a>
 				<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="<?= $kirby->url('assets') ?>/images/ig.svg" alt="instagram"></a>
-				<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= $kirby->url('assets') ?>/images/email.svg" alt="mail"></a>
 			</nav>
 		</div>
 	</main>

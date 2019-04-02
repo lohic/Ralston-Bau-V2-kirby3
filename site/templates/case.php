@@ -10,7 +10,7 @@
 	</header>
 
 	<main>
-		<?= snippet('share') ?>
+		<?php //echo snippet('share') ?>
 
 		<div class="text">
 
