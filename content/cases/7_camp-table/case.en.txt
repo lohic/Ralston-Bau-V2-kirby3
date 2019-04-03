@@ -4,6 +4,12 @@ Title: Camp Tables
 
 Text: 
 
+#Test de titre niveau 1
+
+##Test de titre niveau 2
+
+###Test de titre niveau 3
+
 ----
 
 Bigpictures: 
@@ -28,7 +34,20 @@ Date: 2019-03-05 18:00
 
 ----
 
+Description: 
+
+Ceci est une description
+et ça fonctionne
+
+----
+
 Thumbnail: 
+
+- undercst-447x670.jpg
+
+----
+
+Panorama: 
 
 - undercst-447x670.jpg
 

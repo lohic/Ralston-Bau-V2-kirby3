@@ -18,6 +18,14 @@ Twitter-id:
 
 ----
 
+Projectbgcolor: #000000
+
+----
+
+Projecttxtcolor: #FFFFFF
+
+----
+
 Description: 
 
 ----
