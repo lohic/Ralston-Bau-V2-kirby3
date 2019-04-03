@@ -29,11 +29,12 @@
 		$bigpictures = $page->bigpictures()->toPages();
 		if($bigpictures->count() > 0) :
 		?>
-		<h3>Big Picture</h3>
+		<!-- <h3>Big Picture</h3> -->
 		<?php
 		endif;
 		foreach($bigpictures as $practice_data): ?>
 
+		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 		
 		<?php endforeach ?>
@@ -46,11 +47,11 @@
 		$peoples = $page->peoples()->toPages();
 		if($peoples->count() > 0) :
 		?>
-		<h3>Peoples</h3>
+		<!-- <h3>Peoples</h3> -->
 		<?php
 		endif;
 		foreach ($peoples as $practice_data): ?>
-		
+		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>
@@ -61,11 +62,11 @@
 		$scenarios = $page->scenarios()->toPages();
 		if($scenarios->count() > 0) :
 		?>
-		<h3>Scenario</h3>
+		<!-- <h3>Scenario</h3> -->
 		<?php
 		endif;
 		foreach ($scenarios as $practice_data): ?>
-		
+		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 		
 		<?php endforeach ?>
@@ -76,12 +77,12 @@
 		$forms = $page->forms()->toPages();
 		if($forms->count() > 0) :
 		?>
-		<h3>Form</h3>
+		<!-- <h3>Form</h3> -->
 		<?php
 		endif;
 
 		foreach ($forms as $practice_data): ?>
-
+		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>

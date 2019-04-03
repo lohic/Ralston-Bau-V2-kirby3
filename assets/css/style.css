@@ -21,7 +21,7 @@ font-family: big-caslon-fb, serif;
 body{
 	font-family: "Colaborate", sans-serif;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 100;
 	line-height: 1.25em;
 }
 
@@ -53,7 +53,8 @@ body{
 	display: grid;
 	grid-template-columns: auto;
 	/*grid-template-rows: 12.5vw auto 3.5rem 1rem;*/
-	grid-template-rows: 12.5vw auto 1rem;
+	/*grid-template-rows: 12.5vw auto 1rem;*/
+	grid-template-rows: 11.36rem auto 1rem;
 	grid-gap: 1rem;
 	grid-template-areas: 
 	"logo-bloc"
@@ -148,7 +149,7 @@ body{
 }
 
 #title #btn-newsletter{
-	font-weight: 300;
+	font-weight: 100;
 	text-transform: uppercase;
 }
 
@@ -223,18 +224,20 @@ body{
    TEXTE
    ========================================================================== */
 
-main.texte h1,
-main.texte h2,
-main.texte h3{
+/*main .text h1,
+main .text h2,
+main .text h3{
 	font-family: big-caslon-fb, serif;
-	font-weight: 400;
+	font-weight: 100;
 	line-height: 1em;
-}
+	font-size: 2rem;
+	margin: 1.1rem 0;
+}*/
 
-main.texte h1{
+/*main .text h1{
 	font-size: 2rem;
 	margin-bottom: 0.875em;
-}
+}*/
 
 .txt-normal{
 }
@@ -260,6 +263,13 @@ header.intro h2{
 	margin: 0;
 }
 
+/*main h1{
+	font-family: big-caslon-fb, serif;
+	font-weight: 400;
+	font-size: 2.95rem;
+	line-height: 2.95rem;
+	margin: 1rem 1vw;
+}*/
 main h2{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
@@ -274,12 +284,22 @@ main h3{
 	margin: 2rem 1vw;
 }
 
+
+
+
+
 .text{
 	margin: 2rem 1vw;
 	font-size: 1.2rem;
 	line-height: 1.15em;
 	font-weight: 100;
-	max-width: 55rem;
+	/*max-width: 55rem;*/
+}
+
+.text:after{
+	content: " ";
+	display: block;
+	clear: both;
 }
 
 .text img{
@@ -291,6 +311,45 @@ main h3{
 	width: 15.32vw;
 	float: right;
 	margin: 0 0 2rem 3rem;
+	/*text-transform: uppercase;*/
+	font-size: 0.95rem;
+	line-height: 1.2rem;
+}
+
+.text a {
+	text-decoration: underline;
+}
+
+.text em{
+	font-style: italic;
+}
+
+.text strong{
+	font-weight: 500;
+}
+
+.text h1,
+.text h2,
+.text h3{
+	font-family: "Colaborate", sans-serif;
+	font-weight: 100;
+}
+
+
+.text h1{
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	margin: 1.2rem 0;
+}
+.text h2{
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	margin: 1.2rem 0;
+}
+.text h3{
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	margin: 1.2rem 0;
 }
 
 #map{
@@ -441,6 +500,12 @@ button{
 	transition: height 2s ease;
 }
 
+.gallery iframe{
+	height: 26.4vw !important;
+	width: 46.93vw !important;
+	transition: height 2s ease, width 2s ease;
+}
+
 /*
 	width: 62.8064vw
 	width: 77.64vw
@@ -451,6 +516,32 @@ button{
 #main.loading .gallery img{
 	height: 32.6351vw;
 }
+#main.loading .gallery figure+figure{
+	margin-left: 0.4vw;
+}
+
+
+#main.loading .gallery iframe{
+	height: 32.6351vw !important;
+	width: 58.018vw !important;
+}
+
+
+#main .gallery figure.panorama>div{
+	width: 68.08vw;
+	height: 26.4vw;
+	background-size: cover;
+	background-repeat: none;
+	background-position: center;
+	transition: width 2s ease, height 2s ease;
+}
+
+
+#main.loading .gallery figure.panorama>div{
+	width: 80.56vw;
+	height: 32.6351vw;
+}
+
 
 
 
@@ -467,9 +558,9 @@ button{
  	position: absolute;
  	bottom: 1rem ;
  	width: 100%;
- 	left: 1rem;
+ 	/*left: 1rem;*/
  	right: 1rem;
- 	text-align: center;
+	text-align: right;
 	z-index: 3000;
  }
 
@@ -487,9 +578,9 @@ button{
  	font-size: 0;
 	line-height: 0;
 	display: block;
-	width: 0.5rem;
-	height: 0.5rem;
-	padding: 0.5rem;
+	width: 0.7rem;
+	height: 0.7rem;
+	padding: 0.7rem;
 	cursor: pointer;
 	color: transparent;
 	border: 0;
@@ -503,8 +594,8 @@ button{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 0.5rem;
-	height: 0.5rem;
+	width: 0.7rem;
+	height: 0.7rem;
 	border-radius: 50%;
 	content: ' ';
 	text-align: center;
@@ -551,9 +642,14 @@ button{
 
 .languages li.active a{
 	/*text-decoration: underline;*/
-	font-weight: 500;
+	font-weight: 400;
 }
 
+
+.languages,
+#btn-newsletter{
+	font-size: 0.95rem;
+}
 
 
 
@@ -793,10 +889,12 @@ header.intro .gradient{
 	right: 0;
 	bottom: 0;
 	transition: opacity 1s ease;
+	pointer-events: none;
 }
 
 header.intro h2{
-	transition: opacity 1s ease;	
+	transition: opacity 1s ease;
+	pointer-events: none;	
 }
 
 header.intro:hover h2,
@@ -846,13 +944,24 @@ main.grid .tile a h2{
    RESPONSIVE
    ========================================================================== */
 
-@media screen and (max-width: 1000px ){
 
-/*	html{
-		font-size: 14px;
+@media screen and (min-aspect-ratio: 15/9){
+	html{
+		/*font-size: 16px;*/
+		/*font-size: 2vmin;*/
+		font-size: 2vh;
 	}
-*/
+
+	#title{
+		grid-template-rows: 9.36rem auto 1rem;
+	}
+
+	#secondary-menu ul {
+		margin-top: 12.36rem;
+	}
 }
+
+
 @media screen and (max-width: 500px ){
 
 	html{
@@ -1082,25 +1191,41 @@ main.grid .tile a h2{
 
 	.gallery,
 	.gallery figure,
-	.gallery img{
-		height: 250px;
-	}
-
-	#main.loading .gallery,
-	#main.loading .gallery figure,
-	#main.loading .gallery img,
+	.gallery img,
 	#map{
 		/*height: 250px;*/
 		height: 50.90vw;
 	}
 
+	#main.loading .gallery,
+	#main.loading .gallery figure,
+	#main.loading .gallery img,
+	#main.loading .gallery .panorama div,
+	#map{
+		/*height: 250px;*/
+		height: 50.90vw;
+	}
+
+	.gallery .panorama div,
+	#main.loading .gallery .panorama div,
+	.gallery iframe,
+	#main.loading .gallery iframe {
+		height: 50.90vw !important;
+		width: 99.2vw !important;
+	}
+
+	#main.loading .gallery figure+figure {
+		margin-left: 1.5vw;
+	}
+
 	.slick-dots {
 		position: static;
+		text-align: center;
 	}
 
 	#main-content {
 		margin: 0;
-		padding: 20vw 2vw calc(9.3vw + 0.8rem);
+		padding: 18vw 2vw calc(9.3vw + 0.8rem);
 	}
 
 

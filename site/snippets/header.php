@@ -22,7 +22,7 @@
 		 'assets/vendor/fontawesome-free-5.7.2-web/css/all.min.css',
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css',
+		 'assets/css/style.css?v=1',
 		 '@auto']) ?>
 
 <?php
@@ -30,6 +30,15 @@
 $domain = $kirby->url();
 
 Cookie::set("test", "ok", ["lifetime"=>10,"domain"=>$domain]); ?>
+
+<?php if( $site->projectbgcolor() != "#000000" || $site->projecttxtcolor() != "#FFFFFF" ) : ?>
+<style>
+	#main{
+		background: <?= $site->projectbgcolor() ?>;
+		color: <?= $site->projecttxtcolor() ?>;
+	}
+</style>
+<?php endif; ?>
 
 </head>
 

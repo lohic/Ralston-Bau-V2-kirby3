@@ -17,6 +17,7 @@ columns:
           cover: true
         min: 1
         size: small
+        # sortBy: order asc
 
   - width: 2/3
     fields:
@@ -30,11 +31,23 @@ columns:
           scenario: Scenario
           form: Form
       thumbnail:
-            type: files
-            multiple: false
-            translate: false 
-            query: page.images
+        type: files
+        multiple: false
+        translate: false 
+        query: page.images
+
+      panorama:
+        type: files
+        multiple: false
+        translate: false 
+        query: page.images
 
       description:
         type: textarea
         size: large
+
+      legend:
+        type: textarea
+        label: Legend
+        size: medium
+        buttons: false

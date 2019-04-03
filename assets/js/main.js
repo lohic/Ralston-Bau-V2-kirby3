@@ -25,7 +25,14 @@ $(function(){
 	};
 
 	$("a:internal").click(function(event){
+		console.log( "INTERNAL : ",$(this).attr("href") );
 	});
+
+	// $("a:internal").click(function(event){
+	// 	console.log( "EXTERNAL : ",$(this).attr("href") );
+
+	// 	event.preventDefault();
+	// });
 
 	/**
 	 * MENU

@@ -71,6 +71,7 @@ columns:
           cover: true
         min: 1
         size: small
+        # sortBy: order asc
     
   - width: 1/3
     sections:
@@ -85,11 +86,17 @@ columns:
 
           description:
             type: textarea
-            label: Description
+            label: Legend
             size: medium
             buttons: false
             
           thumbnail:
+            type: files
+            multiple: false
+            translate: false 
+            query: page.images
+
+          panorama:
             type: files
             multiple: false
             translate: false 

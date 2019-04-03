@@ -7,11 +7,17 @@
 	<?php endif; ?>
 </header>
 
+<div class="text">
+	<?php if( $page->legend()->isNotEmpty() ) : ?>
+	<div class="description">
+		<?= $page->legend()->kt() ?>
+	</div>
+	<?php endif; ?>
+	<?= $page->description()->kt() ?>
+</div>
+
 <?php if($showtitle == true) : ?>
 <?= snippet('share') ?>
 <?php endif; ?>
 
-<div class="text">
-	<?= $page->description()->kt() ?>
-</div>
 <!-- fin practice.php -->

@@ -84,6 +84,22 @@ tabs:
 
       - width: 1/2
         fields:
+          projectbgcolor:
+            type: color
+            editableAlpha: false
+            default: "#000000"
+            presets:
+              - "#000000"
+              - "#FFFFFF"
+              - "#F2E0CD"
+          projecttxtcolor:
+            type: color
+            editableAlpha: false
+            default: "#FFFFFF"
+            presets:
+              - "#000000"
+              - "#FFFFFF"
+              - "#F2E0CD"
           description:
             label: Description
             type:  textarea
