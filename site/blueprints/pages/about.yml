@@ -16,6 +16,13 @@ columns:
       content:
         type: fields
         fields:
+
+          panorama:
+            type: files
+            multiple: false
+            translate: false 
+            query: page.images
+            
           text:
             label: Text
             type: textarea

@@ -33,8 +33,6 @@
 		<?php
 		endif;
 		foreach($bigpictures as $practice_data): ?>
-
-		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 		
 		<?php endforeach ?>
@@ -51,7 +49,6 @@
 		<?php
 		endif;
 		foreach ($peoples as $practice_data): ?>
-		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>
@@ -66,7 +63,6 @@
 		<?php
 		endif;
 		foreach ($scenarios as $practice_data): ?>
-		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 		
 		<?php endforeach ?>
@@ -82,7 +78,6 @@
 		endif;
 
 		foreach ($forms as $practice_data): ?>
-		<h3><?= $practice_data->title() ?></h3>
 		<?= snippet('practice', ['page' => $practice_data, 'showtitle'=> false]) ?>
 
 		<?php endforeach ?>

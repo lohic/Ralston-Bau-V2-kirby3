@@ -24,15 +24,12 @@ $(function(){
 	    return isInternalLink;
 	};
 
-	$("a:internal").click(function(event){
-		console.log( "INTERNAL : ",$(this).attr("href") );
+	$("a:not(:internal)").click(function(event){
+		$(this).attr("target", "_blank");
+
+		// console.log( "EXTERNAL : ",$(this).attr("href") );
 	});
 
-	// $("a:internal").click(function(event){
-	// 	console.log( "EXTERNAL : ",$(this).attr("href") );
-
-	// 	event.preventDefault();
-	// });
 
 	/**
 	 * MENU
@@ -108,14 +105,26 @@ $(function(){
 	 * GALLERY CAROUSSEL
 	 * @type {Boolean}
 	 */
-	$('.gallery').slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 1,
-		centerMode: false,
-		variableWidth: true
-	});
+	
+	$('.gallery').each(function(){
+
+		let showdots = false;
+
+		if( $(this).find("figure").length > 1 ){
+			showdots = true;
+		}
+
+		$(this).slick({
+			dots: showdots,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 1,
+			centerMode: false,
+			variableWidth: true
+		});
+	})
+
+	
 
 	/**
 	 * SHARE

@@ -16,6 +16,13 @@ pages:
   template: default
 
 fields:
+
+  panorama:
+    type: files
+    multiple: false
+    translate: false 
+    query: page.images
+    
   text:
     type: textarea
     size: huge
