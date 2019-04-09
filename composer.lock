@@ -108,16 +108,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "74b593ff86f9a220343d08e3c631b128d09e76d6"
+                "reference": "52e21a48f32b8edf7bc0a2bd630b41b8dab5561c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/74b593ff86f9a220343d08e3c631b128d09e76d6",
-                "reference": "74b593ff86f9a220343d08e3c631b128d09e76d6",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/52e21a48f32b8edf7bc0a2bd630b41b8dab5561c",
+                "reference": "52e21a48f32b8edf7bc0a2bd630b41b8dab5561c",
                 "shasum": ""
             },
             "require": {
@@ -165,7 +165,7 @@
                 "core",
                 "kirby"
             ],
-            "time": "2019-03-19T08:43:05+00:00"
+            "time": "2019-03-26T09:52:09+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -473,50 +473,17 @@
             "time": "2018-11-20T15:27:04+00:00"
         },
         {
-            "name": "sylvainjule/locator",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sylvainjule/kirby-locator.git",
-                "reference": "60f8e54bb2cacae4ad0827c78026f8f906beaae9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-locator/zipball/60f8e54bb2cacae4ad0827c78026f8f906beaae9",
-                "reference": "60f8e54bb2cacae4ad0827c78026f8f906beaae9",
-                "shasum": ""
-            },
-            "type": "kirby-plugin",
-            "autoload": {
-                "files": [
-                    "config.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sylvain Julé",
-                    "email": "contact@sylvain-jule.fr"
-                }
-            ],
-            "description": "A map & geolocation field, built on top of open-source services / Mapbox",
-            "time": "2018-12-26T11:50:57+00:00"
-        },
-        {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
                 "shasum": ""
             },
             "require": {
@@ -528,7 +495,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -562,7 +529,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "true/punycode",
