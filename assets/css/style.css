@@ -318,8 +318,8 @@ main h2{
 main h3.practice-title{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
-	font-size: 2.95rem;
-	line-height: 2.95rem;
+	font-size: 1.8rem;
+	line-height: 1.8rem;
 	margin: 1rem 1vw;
 }
 
@@ -416,39 +416,39 @@ p+p{
 }
 
 
-.linked-cases{
+.related-cases{
 	display: flex;
 	/*justify-content: space-around;*/
 	justify-content: start;
 	flex-wrap: wrap;
 }
 
-.linked-cases li{
-	width: 200px;
+.related-cases li{
+	width: 320px;
 	height: 200px;
-	border-radius: 50%;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-end;
+	justify-content: flex-start;
 	margin: 0 1rem 1rem 0;
 	background-size: 100% 100%;
 	background-position: center center;
 	transition: background-size .5s ease;
 }
 
-.linked-cases li:hover{
+.related-cases li:hover{
 	background-size: 110% 110%;
 }
 
-.linked-cases li h2{
+.related-cases li h2{
 	position: relative;
 	z-index: 10;
 	text-align: center;
 	font-size: 1.5rem;
 	line-height: 1.5rem;
+	margin: 1rem;
 }
 
-.linked-cases a {
+.related-cases a {
 	text-decoration: none;
 }
 
@@ -1787,6 +1787,10 @@ main.grid .tile a h2{
 		font-size: 1.2rem;
 		line-height: 1.2rem;
 		margin: 1.2rem 0;
+	}
+
+	.related{
+		display: none;
 	}
 
 }

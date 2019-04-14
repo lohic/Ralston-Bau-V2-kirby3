@@ -25,7 +25,7 @@
 		 // 'assets/vendor/fontawesome-free-5.7.2-web/css/all.min.css',
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.14'/*,
+		 'assets/css/style.css?v=1.15'/*,
 		 '@auto'*/]) ?>
 
 <?php
