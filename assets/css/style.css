@@ -952,6 +952,13 @@ main.the-grid{
 	position: relative;
 	width: 100%;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .tile{
+    	display: block;
+    }
+}
+
 .tile h2{
 	font-family: big-caslon-fb, serif;
 	font-weight: 400;
