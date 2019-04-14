@@ -109,6 +109,44 @@ body{
 	display: none;
 }
 
+
+#hamburger {
+	height: 30px;
+	background: #F00;
+	border: 0;
+	border-bottom: solid 3px #000;
+	width: 30px;
+	padding: 0;
+	height: 0;
+}
+
+#hamburger::before,
+#hamburger::after {
+  display: block;
+  content: " ";
+  border: 0;
+  border-bottom: solid 3px #000;
+  transition: top .5s ease, bottom .5s ease; 
+}
+
+#hamburger::before{
+  position: relative;
+  bottom: 7px;
+}
+
+#hamburger::after{
+  position: relative;
+  bottom: -4px;
+}
+
+#hamburger.active::before{
+  bottom: 12px;
+}
+
+#hamburger.active::after{
+  bottom: -9px;
+}
+
 /*#btn-newsletter{
 	position: absolute;
 	bottom: 47px;
@@ -292,7 +330,7 @@ main h3.practice-title{
 .text{
 	margin: 2rem 1vw;
 	font-size: 1.2rem;
-	line-height: 1.15em;
+	line-height: 1.25em;
 	font-weight: 100;
 	/*max-width: 55rem;*/
 }
@@ -369,8 +407,49 @@ main h3.practice-title{
 	height: 32.6351vw;
 }
 
+/*.map h3{
+	margin: 1rem 1vw;
+}*/
+
 p+p{
 	margin-top: 1rem;
+}
+
+
+.linked-cases{
+	display: flex;
+	/*justify-content: space-around;*/
+	justify-content: start;
+	flex-wrap: wrap;
+}
+
+.linked-cases li{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 1rem 1rem 0;
+	background-size: 100% 100%;
+	background-position: center center;
+	transition: background-size .5s ease;
+}
+
+.linked-cases li:hover{
+	background-size: 110% 110%;
+}
+
+.linked-cases li h2{
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+
+.linked-cases a {
+	text-decoration: none;
 }
 
 
@@ -384,7 +463,7 @@ a{
 	text-decoration: none;
 }
 
-button{
+.button{
 	background: none;
 	border:0;
 	padding: 0;
@@ -537,19 +616,24 @@ button{
 }
 
 
-#main .gallery figure.panorama>div{
+#main .gallery figure.panorama{
 	width: 68.08vw;
 	height: 26.4vw;
 	background-size: cover;
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 	transition: width 2s ease, height 2s ease;
 }
 
 
-#main.loading .gallery figure.panorama>div{
+#main.loading .gallery figure.panorama{
 	width: 80.56vw;
 	height: 32.6351vw;
+}
+
+
+#main .gallery figure.panorama img{
+	display: none;
 }
 
 
@@ -619,6 +703,17 @@ button{
 .slick-dots li.slick-active button:before {
 	/*opacity: .75;*/
 	background: white;
+}
+
+
+
+.mapboxgl-popup-content{
+	color: #000;
+}
+.mapboxgl-popup-content p{
+	margin-right: 10px;
+	font-size: 1rem;
+	font-weight: 100;
 }
 
 /* ==========================================================================
@@ -840,6 +935,7 @@ main.the-grid{
 	/*margin: 0.4vw;*/
 	column-count: 2;
 	column-gap: 0.4vw;
+	-webkit-column-break-inside: avoid;    
 }
 
 .loading main.the-grid{
@@ -1050,7 +1146,8 @@ main.grid .tile a h2{
 }
 
 
-@media screen and (max-width: 750px ){
+
+@media screen and (max-width: 750px){
 
 	html{
 		font-size: 20px;
@@ -1105,11 +1202,11 @@ main.grid .tile a h2{
 	#hamburger{
 		position: fixed;
 		display: block; 
-		font-size: 40px;
+		height: 0px;
 		color: #000;
-		right: 0;
-		top:0;
-		padding: calc(17px + 0.5rem);
+		right: calc(17px + 0.5rem);
+		top:calc(17px + 0.5rem);
+		/*padding: calc(17px + 0.5rem);*/
 		z-index: 4000;
 	}
 
@@ -1378,8 +1475,320 @@ main.grid .tile a h2{
 
 }
 
+@media screen and (max-width: 750px) and (orientation: landscape){
+/*	#title {
+		grid-template-rows: 7.36rem auto 1rem;
+	}*/
+
+	.logo {
+		position: static;
+		padding: 10px 10px 5px;
+		left: 0;
+		top: 0;
+		right: 0;
+		z-index: 3500;
+	}
+
+	#hamburger {
+		/*position: fixed;
+		display: block;
+		font-size: 40px;
+		color: #000;
+		right: 0;
+		top: 0;
+		padding: calc(2vw);
+		z-index: 4000;*/
+	}
+
+	#main-content {
+		margin: 0;
+		padding: 2vw 2vw calc(4.3vw + 0.8rem);
+	}
+
+	#btn-newsletter {
+		position: fixed;
+		z-index: 3000;
+		display: block;
+		background: #FFF;
+		padding: 1vw 2vw;
+		left: 0;
+		bottom: -2rem;
+		right: 0;
+		text-align: right;
+		font-size: 0.8rem;
+		transition: bottom 0.5s ease;
+	}
+
+	#btn-newsletter.show{
+		bottom: 0;
+	}
+}
+
+
 @media screen and (max-width: 370px ){
 	html{
 		font-size: 16px;
 	}
+}
+
+@media print {
+	
+
+  	body {
+  		-webkit-print-color-adjust: exact;
+  		color-adjust:exact;
+  	}
+
+	html{
+		font-size: 5mm;
+	}
+
+	*{
+		background: none !important;
+		color: #000 !important;
+	}
+
+	#mobile-menu,
+	#btn-newsletter,
+	#newsletter,
+	.map,
+	header.intro .gradient,
+	.slick-dots{
+		display: none !important;
+	}
+
+	.drawer{
+		height: auto;
+		position: static;
+		top: auto;
+		overflow: visible;
+		overflow-x: visible;
+	}
+
+	#title{
+		width: auto;
+		height: auto;
+		display: block;
+		padding: 17px;
+	}
+
+	#content{
+		width: auto;
+		height: auto;
+		padding: 0;
+		left: auto;
+		right: auto;
+	}
+
+	#logo {
+		width: 7rem;
+		height: auto;
+		position: static;
+		left: auto;
+		top: auto;
+	}
+
+	.gradient{
+		opacity: 0;
+	}
+
+	header.intro{
+		margin: 1vw;
+	}
+
+	header.intro:hover h2{
+		opacity: 1;
+	}
+
+	header.intro h2{
+		position: static;
+		opacity: 1;
+		transition: none;
+		margin-top: 1rem;
+	}
+
+	#info{
+		left: auto;
+		right: auto;
+		width: auto;
+		padding: 33px 26px;
+		transition: max-height 2s;
+		/*max-height: 100vh;*/
+
+		display: none;
+	}
+
+	#main{
+		width: auto !important;
+	}
+
+	#main-content {
+	     margin: 0; 
+	}
+
+	.slick-list{
+		position: static !important;
+		overflow: auto !important;
+	}
+
+	.slick-track{
+		position: static !important;
+		width: auto !important;
+		transform: none;
+	}
+
+	.slick-track figure{
+		height: auto !important;
+		/*display: inline-block !important;*/
+		float: none !important;
+	}
+
+	
+	.gallery,
+	.gallery figure,
+	.gallery img {
+	    height: auto !important;
+	    transition: none;
+	}
+
+
+	figure.panorama{
+		width: 100%;
+		height: 50vw;
+		background: none !important;
+		/*content:url(http://localhost:8888/Site-RALSTON-BAU-kirby3/media/pages/cases/camp-table/1492902465-1553356282/undercst-447x670.jpg);*/
+	}
+/*
+	.slick-track figure.panorama{
+		height: 10cm !important;
+	}
+*/
+	.slick-track figure:first-child img{
+	    height: 9cm !important;	
+		width: auto !important;
+	    transition: none;
+	}
+
+	#main .gallery figure.panorama img{
+		display: inline-block;
+	}
+
+
+/*	figure.panorama div{
+		width: 100%;
+		height: 50vw;
+		-webkit-print-color-adjust: exact;
+		color-adjust: exact !important; 
+		background-repeat: no-repeat !important; 
+		background-size: cover !important;
+		background-position: center !important;
+
+	}*/
+
+	#main.loading .gallery figure+figure {
+	     margin-left: 0; 
+	}
+
+	/* FLEX */
+	
+	.gallery .slick-track{
+		display: flex; 
+		flex-wrap: wrap; 
+		align-items: flex-end !important; 
+	}
+
+	.slick-track figure{
+		height: 3cm;
+		margin: 0.2cm 0.2cm 0 0;
+	}
+
+	.slick-track figure img{
+		height: 3cm !important;	
+		width: auto !important;
+	}
+
+
+	/* COLUMNS */
+
+/*	.gallery .slick-track{
+		column-count: 3;
+		column-gap: 0.2cm;
+		-webkit-column-break-inside: avoid;  
+	}
+
+	.slick-track figure{
+		margin-bottom: 0.2cm;
+	}
+
+	.slick-track figure img{
+		height: auto !important;
+		width: auto !important;
+		max-width: 100%;
+	}*/
+
+
+
+	.text {
+		max-width: auto; 
+		font-size: 1rem;
+		margin-left: 4rem;
+		text-align: justify;
+		hyphens: auto;
+	}
+
+	.text h1,
+	.text h2,
+	.text h3,
+	.text .description{
+
+		text-align: left;
+		hyphens: none;
+	}
+
+	.text .description {
+		width: 25vw;
+		float: right;
+		margin: 0 0 1rem 1.5rem;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+
+	.text a{
+		text-decoration: none;
+	}
+
+	.text a:after {
+		content: " [url: " attr(href) "]";
+		font-size: 0.8rem;
+		position: relative;
+		bottom: 0.2rem;
+	}
+
+
+	.text h1{
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		margin: 1.2rem 0;
+	}
+	.text h2{
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+		margin: 1.2rem 0;
+	}
+	.text h3{
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		margin: 1.2rem 0;
+	}
+
+}
+
+@page {
+	/*size:A4 landscape;*/
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin: 2cm;
 }

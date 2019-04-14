@@ -16,6 +16,8 @@ return [
 		'scenario' => 'Scenario',
 		'people' => 'People',
 		'form' => 'Form',
-		'bigpicture' => 'Big picture'
+		'bigpicture' => 'Big picture',
+		'location' => 'Localisation du case',
+		'linked' => 'Cases reliés'
 	]
 ];

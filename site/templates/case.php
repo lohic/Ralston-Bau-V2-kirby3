@@ -11,17 +11,18 @@
 
 	<main>
 		<?php //echo snippet('share') ?>
+		
+		<section class="case">
+			<div class="text">
 
-		<div class="text">
-
-			<?php if( $page->description()->isNotEmpty() ) : ?>
-			<div class="description">
-				<?= $page->description()->kt() ?>
+				<?php if( $page->description()->isNotEmpty() ) : ?>
+				<div class="description">
+					<?= $page->description()->kt() ?>
+				</div>
+				<?php endif; ?>
+				<?= $page->text()->kt() ?>
 			</div>
-			<?php endif; ?>
-			<?= $page->text()->kt() ?>
-		</div>
-
+		</section>
 		
 		
 		<?php 
@@ -84,7 +85,7 @@
 		
 		<?php echo snippet('share') ?>
 
-		<?php echo snippet('map') ?>
+		<?php echo snippet('map', ['global'=> false]) ?>
 	</main>
 </div>
 

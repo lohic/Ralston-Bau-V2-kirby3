@@ -14,15 +14,15 @@
 		'assets/vendor/prettySocial-1.1.0/jquery.prettySocial.min.js',
 		'assets/vendor/slick-1.8.1/slick/slick.min.js',
 		'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
-		'assets/js/main.js']) ?> 
+		'assets/js/main.js?v=1.2']) ?> 
 
 <?= css(['https://use.typekit.net/vrl2tmu.css',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
 		 'assets/fonts/Colaborate/stylesheet.css',
-		 'assets/vendor/fontawesome-free-5.7.2-web/css/all.min.css',
+		 // 'assets/vendor/fontawesome-free-5.7.2-web/css/all.min.css',
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1'/*,
+		 'assets/css/style.css?v=1.14'/*,
 		 '@auto'*/]) ?>
 
 <?php

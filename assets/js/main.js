@@ -124,6 +124,30 @@ $(function(){
 		});
 	})
 
+	$(window).scroll(function(){
+		// console.log( $('body').scrollTop() + " " + ( $(document).height() - $('body').height() ) );
+
+		if( $('body').scrollTop() >= ( $(document).height() - $('body').height() ) ){
+			$("#btn-newsletter").addClass("show");
+		}else{
+			$("#btn-newsletter").removeClass("show");
+		}
+	})
+
+
+
+	$(window).bind('scroll', function(e) {
+		var val = $(this).scrollTop();
+
+		console.log(val);
+
+		if (val >= ( $(document).height() - $('body').height() )) {
+			$("#btn-newsletter").addClass("show");
+		} else {
+			$("#btn-newsletter").removeClass("show");
+		}
+
+	});
 	
 
 	/**
@@ -156,6 +180,7 @@ $(function(){
 
 	$("#hamburger").click(function(event){
 
+		$(this).toggleClass('active')
 		$("#mobile-menu").toggleClass("show");
 
 	});

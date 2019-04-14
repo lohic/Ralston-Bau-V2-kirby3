@@ -20,6 +20,7 @@ tabs:
               - about
               - home
               - default
+              - map
       - width: 1
         fields:
           practice-head:

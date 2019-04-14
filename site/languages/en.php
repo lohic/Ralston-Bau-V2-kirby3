@@ -17,6 +17,8 @@ return array (
 		'scenario' => 'Scenario',
 		'people' => 'People',
 		'form' => 'Form',
-		'bigpicture' => 'Big picture'
+		'bigpicture' => 'Big picture',
+		'location' => 'Case location',
+		'linked' => 'Related cases'
 	]
 );
