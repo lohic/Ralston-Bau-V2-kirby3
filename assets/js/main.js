@@ -31,6 +31,9 @@ $(function(){
 	});
 
 
+
+
+
 	/**
 	 * MENU
 	 * @type {[type]}
@@ -153,8 +156,7 @@ $(function(){
 	/**
 	 * SHARE
 	 */
-	$('.prettySocial').prettySocial();
-
+	// $('.prettySocial').prettySocial();
 
 	/**
 	 * NEWSLETTER

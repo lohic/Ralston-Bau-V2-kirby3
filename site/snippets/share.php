@@ -1,19 +1,13 @@
 <!-- share.php -->
 <?php
-// if( $page->thumbnail()->isNotEmpty() ) {
-// 	$thumb = $page->thumbnail()->toFile()->resize(400,null)->url();
-// }else{
-// 	$thumb = $kirby->url('assets').'/images/black.png';
-// }
 if( $page->images()->isNotEmpty() ){
 	$thumb = $page->images()->first()->resize(400,null)->url();
 }else{
 	$thumb = $kirby->url('assets').'/images/black.png';
 }
-// echo $thumb;
 ?>
 <div class="social-container">
-	<div class="links">
+	<!-- <div class="links">
 		<a href="mailto:?subject=Ralston Bau – <?= $page->title() ?>&body=<?= $page->url() ?>">
 			<img src="<?= $kirby->url('assets') ?>/images/email.svg" alt="">
 		</a>
@@ -26,6 +20,10 @@ if( $page->images()->isNotEmpty() ){
 		<a href="#" data-type="twitter" data-url="<?= $page->url() ?>" data-description="Ralston Bau – <?= $page->title() ?>" data-via="RalstonBau" class="prettySocial">
 			<img src="<?= $kirby->url('assets') ?>/images/twitter.svg" alt="">
 		</a>
-	</div>
+	</div> -->
+
+
+
+	<div id="share"></div>
 </div>
 <!-- fin share.php -->

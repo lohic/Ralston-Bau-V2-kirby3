@@ -20,6 +20,23 @@
 
 </div>
 
-
+<script>
+	$("#share").jsSocials({
+    	showLabel: false,
+        shares: [{
+	        share: "email",
+	        logo: "<?= $kirby->url('assets') ?>/images/email.svg"
+		}, {
+	        share: "facebook",
+	        logo: "<?= $kirby->url('assets') ?>/images/facebook.svg"
+		}, {
+	        share: "linkedin",
+	        logo: "<?= $kirby->url('assets') ?>/images/linkedin.svg"
+		}, {
+	        share: "twitter",
+	        logo: "<?= $kirby->url('assets') ?>/images/twitter.svg"
+    	}]
+    });
+</script>
 </body>
 </html>
