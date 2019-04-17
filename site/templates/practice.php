@@ -36,7 +36,7 @@
 				foreach ($cases as $case) :
 
 					if( $case->thumbnail()->isNotEmpty() ){
-						$image = $case->thumbnail()->toFile()->resize(320,200)->url();
+						$image = $case->thumbnail()->toFile()->resize(500,312)->url();
 					}else{
 						$image = $kirby->url('assets') . '/images/black.png';
 					}

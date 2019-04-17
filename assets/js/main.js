@@ -150,6 +150,13 @@ $(function(){
 			$("#btn-newsletter").removeClass("show");
 		}
 
+
+		if (val > 40) {
+			$("#title>h1").addClass("hide");
+		} else {
+			$("#title>h1").removeClass("hide");
+		}
+
 	});
 	
 

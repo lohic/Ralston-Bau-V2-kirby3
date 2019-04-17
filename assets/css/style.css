@@ -114,10 +114,11 @@ body{
 	height: 30px;
 	background: #F00;
 	border: 0;
-	border-bottom: solid 3px #000;
+	border-bottom: solid 3px #FFF;
 	width: 30px;
 	padding: 0;
 	height: 0;
+	mix-blend-mode: difference;
 }
 
 #hamburger::before,
@@ -125,7 +126,7 @@ body{
   display: block;
   content: " ";
   border: 0;
-  border-bottom: solid 3px #000;
+  border-bottom: solid 3px #FFF;
   transition: top .5s ease, bottom .5s ease; 
 }
 
@@ -425,8 +426,8 @@ p+p{
 
 .related-cases li{
 	position: relative;
-	width: 320px;
-	height: 200px;
+	width: 15.56vw;/*320px;*/
+	height: 9.725vw;/*200px;*/
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-start;
@@ -436,10 +437,6 @@ p+p{
 	/*transition: background-size .5s ease;*/
 }
 
-/*.related-cases li:hover{
-	background-size: 110% 110%;
-}*/
-
 .related-cases li .gradient{
 	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
 	position: absolute;
@@ -447,7 +444,7 @@ p+p{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	opacity: 1;
+	opacity: 0;
 	transition: opacity .75s ease;
 }
 
@@ -458,13 +455,13 @@ p+p{
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	margin: 1rem;
-	opacity: 1;
+	opacity: 0;
 	transition: opacity .75s ease;
 }
 
 .related-cases li:hover h2,
 .related-cases li:hover .gradient{
-	opacity: 0;
+	opacity: 1;
 }
 
 .related-cases a {
@@ -1345,10 +1342,15 @@ main.grid .tile a h2{
 		background: #FFF;
 		padding: 3.5vw 2.5vw;
 		left: 0;
-		bottom: 0;
+		bottom: -3rem;
 		right: 0;
 		text-align: right;
 		font-size: 0.8rem;
+		transition: bottom 0.5s ease;
+	}
+
+	#btn-newsletter.show{
+		bottom: 0;
 	}
 
 	#main #contact img{
@@ -1372,14 +1374,23 @@ main.grid .tile a h2{
 	}
 
 
-	.logo {
+	#title>h1{
 		position: fixed;
-		background: #FFF;
-		padding: 17px 17px 5px;
 		left: 0;
 		top: 0;
 		right: 0;
+		padding: 5px 0.8vw 1px;
+		background: #FFF;
 		z-index: 3500;
+		transition: top 0.5s ease;
+	}
+
+
+	#title>h1.hide{
+		top:-5rem;
+	}
+
+	.logo {
 	}
 
 
@@ -1447,7 +1458,7 @@ main.grid .tile a h2{
 
 	#main-content {
 		margin: 0;
-		padding: 18vw 2vw calc(9.3vw + 0.8rem);
+		padding: 14vw 2vw calc(9.3vw + 0.8rem);
 	}
 
 	#newsletter form{
@@ -1498,6 +1509,14 @@ main.grid .tile a h2{
 		display: none;
 	}
 
+	.related-cases li{
+		width: calc(49vw - 1rem);
+		height: calc(calc(49vw - 1rem) * 0.625);
+	}
+
+	.related-cases a:nth-child(even) li{
+		margin-right: 0;
+	}
 
 }
 
