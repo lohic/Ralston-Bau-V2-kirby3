@@ -424,19 +424,31 @@ p+p{
 }
 
 .related-cases li{
+	position: relative;
 	width: 320px;
 	height: 200px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-start;
 	margin: 0 1rem 1rem 0;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center center;
-	transition: background-size .5s ease;
+	/*transition: background-size .5s ease;*/
 }
 
-.related-cases li:hover{
+/*.related-cases li:hover{
 	background-size: 110% 110%;
+}*/
+
+.related-cases li .gradient{
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	transition: opacity .75s ease;
 }
 
 .related-cases li h2{
@@ -446,6 +458,13 @@ p+p{
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	margin: 1rem;
+	opacity: 1;
+	transition: opacity .75s ease;
+}
+
+.related-cases li:hover h2,
+.related-cases li:hover .gradient{
+	opacity: 0;
 }
 
 .related-cases a {
@@ -1670,6 +1689,11 @@ main.grid .tile a h2{
 		height: 10cm !important;
 	}
 */
+
+	.slick-track figure:first-child{
+		flex-basis: 100%;
+	}
+
 	.slick-track figure:first-child img{
 	    height: 9cm !important;	
 		width: auto !important;
@@ -1738,7 +1762,7 @@ main.grid .tile a h2{
 	.text {
 		max-width: auto; 
 		font-size: 1rem;
-		margin-left: 4rem;
+		/*margin-left: 4rem;*/
 		text-align: justify;
 		hyphens: auto;
 	}

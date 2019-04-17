@@ -44,6 +44,7 @@
 			?>
 			<a href="<?= $case->url() ?>">
 				<li style="background-image: url(<?= $image ?>)">
+					<div class="gradient"></div>
 					<h2><?= $case->title() ?></h2>
 				</li>
 			</a>
