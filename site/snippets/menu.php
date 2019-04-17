@@ -3,7 +3,11 @@
 
 <div id="title" class="drawer">
 	<h1><a class="logo" href="<?= $site->url() ?>"><img id="logo" src="<?= $kirby->url('assets') ?>/images/logo.svg" alt="Ralston Bau"></a></h1>
-	<button id="hamburger" class="button"><!-- <img src="<?= $kirby->url('assets') ?>/images/hamburger.svg"> --></button>
+	<button id="hamburger" class="button">
+		<div class="hamburger-box">
+			<div class="hamburger-inner"></div>
+		</div><!-- <img src="<?= $kirby->url('assets') ?>/images/hamburger.svg"> -->
+	</button>
 
 	<div id="mobile-menu">
 	<!-- main menu -->

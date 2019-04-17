@@ -105,53 +105,63 @@ body{
 	top: -1.33vw;
 }
 
+
+/* HAMBURGER BUTTON */
 #hamburger{
 	display: none;
 }
 
-
 #hamburger {
-	height: 30px;
-	background: #F00;
 	border: 0;
-	border-bottom: solid 3px #FFF;
-	width: 30px;
 	padding: 0;
-	height: 0;
+	background: none;
 	mix-blend-mode: difference;
 }
 
-#hamburger::before,
-#hamburger::after {
-  display: block;
-  content: " ";
-  border: 0;
-  border-bottom: solid 3px #FFF;
-  transition: top .5s ease, bottom .5s ease; 
+.hamburger-box {
+	position: relative;
+	height: 30px;
+	width: 30px;
 }
 
-#hamburger::before{
-  position: relative;
-  bottom: 7px;
+.hamburger-inner {
+	border: 0;
+	border-bottom: solid 3px #FFF;
+	position: relative;
+	top: calc(50% - 7px);
 }
 
-#hamburger::after{
-  position: relative;
-  bottom: -4px;
+.hamburger-inner::before,
+.hamburger-inner::after {
+	display: block;
+	content: " ";
+	border: 0;
+	border-bottom: inherit;
+	transition: top 0.5s ease, bottom 0.5s ease;
 }
 
-#hamburger.active::before{
-  bottom: 12px;
+.hamburger-inner::before {
+	position: relative;
+	bottom: 1px;
 }
 
-#hamburger.active::after{
-  bottom: -9px;
+.hamburger-inner::after {
+	position: relative;
+	bottom: -10px;
 }
 
-/*#btn-newsletter{
-	position: absolute;
-	bottom: 47px;
-}*/
+#hamburger.active .hamburger-inner::before {
+	bottom: 5px;
+}
+
+#hamburger.active .hamburger-inner::after {
+	bottom: -14px;
+}
+
+/* end HAMBURGER BUTTON */
+
+
+
 
 #content{
 	/*left:250px;*/
@@ -704,8 +714,8 @@ a{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 0.7rem;
-	height: 0.7rem;
+	width: 0.5rem;
+	height: 0.5rem;
 	border-radius: 50%;
 	content: ' ';
 	text-align: center;
@@ -1226,7 +1236,6 @@ main.grid .tile a h2{
 		position: fixed;
 		display: block; 
 		height: 0px;
-		color: #000;
 		right: calc(17px + 0.5rem);
 		top:calc(17px + 0.5rem);
 		/*padding: calc(17px + 0.5rem);*/
@@ -1454,6 +1463,7 @@ main.grid .tile a h2{
 	.slick-dots {
 		position: static;
 		text-align: center;
+		margin-top: 0.5rem;
 	}
 
 	#main-content {
