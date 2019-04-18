@@ -6,7 +6,7 @@ $(function(){
 
 	console.log('Ralston Bau ok');
 
-	let isMenuOpened = $.parseJSON( $.cookie('menu.open') );
+	let isMenuOpened = $.cookie('menu.open') === "true" ? true : false;
 
 	// var isMenuOpened = $.cookie('menu.open') == true ? true : false;
 
