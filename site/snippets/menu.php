@@ -11,7 +11,7 @@
 
 	<div id="mobile-menu">
 	<!-- main menu -->
-	<nav id="main-menu">
+	<nav id="main-menu" class="menu">
 		<ul>
 			<!-- practices -->
 			<li class="practices" data-menu="practices"><a href="#"><?= t('practice') ?></a>
@@ -76,7 +76,7 @@
 			
 		
 
-		<nav id="secondary-menu">
+		<nav id="secondary-menu" class="menu">
 			<!-- practices -->
 			<ul class="practices sub-menu">
 				<?php if ($practicetype): ?>
@@ -103,15 +103,7 @@
 			</ul>
 		</nav>
 	
-		<!-- <h1>Now</h1> -->
-		<?php //foreach($site->children()->findBy('uid','notes')->children()->visible()->sortBy('date', 'asc') as $article): ?>
-
-	<!-- 	<div>
-			<h2><?php // echo $article->title()->html() ?></h2>
-			<p><?php // echo $article->place()->text() ?><br><?php // echo $article->datefromto()->text() ?></p>
-		</div> -->
-	
-		<?php //endforeach; ?>
+		<?php // echo snippet("news"); ?>
 
 	</div>
 	<div id="main" class="drawer txt-normal loading">

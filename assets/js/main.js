@@ -4,12 +4,28 @@ var overmenu = false;
 
 $(function(){
 
-	console.log('Ralston Bau yo');
+	console.log('Ralston Bau ok');
+
+	let isMenuOpened = $.parseJSON( $.cookie('menu.open') );
+
+	// var isMenuOpened = $.cookie('menu.open') == true ? true : false;
+
+	console.log('isMenuOpened',isMenuOpened);
+
+	$("body").addClass("notransition");
 
 
-	setCookie("ok", "super")
+	if(isMenuOpened === true){
+		$("#info").removeClass("loading");
+		$("#main").removeClass("loading");
+	}else{
+		$("#info").addClass("loading");
+		$("#main").addClass("loading");
+	}
 
-	console.log("Cookie" , getCookie("ok"), getCookie("test"));
+	let clearNoTransition = window.setTimeout( function(){ $("body").removeClass("notransition"); console.log("transition ok") },2000);
+	
+
 
 
 	$.expr[':'].internal = function (obj, index, meta, stack) {
@@ -32,8 +48,6 @@ $(function(){
 
 
 
-
-
 	/**
 	 * MENU
 	 * @type {[type]}
@@ -41,13 +55,17 @@ $(function(){
 	let selectedMenu = $("#main-content").data('menu');
 	let selectedSubMenu = $("#main-content").data('submenu');
 
-	console.log(selectedMenu+ " " + selectedSubMenu);
+	console.log("selectedMenu:" + selectedMenu + " | selectedSubMenu:" + selectedSubMenu);
 
-	$("#main-menu").find("."+selectedMenu).addClass('selected');
-	$("#secondary-menu").find("."+selectedMenu).css("display","block");
+	if(selectedMenu != ""){
+		$("#main-menu").find("."+selectedMenu).addClass('selected');
+		$("#secondary-menu").find("."+selectedMenu).css("display","block");
+	}
 
-	$("#main-menu").find("."+selectedSubMenu).addClass('active');
-	$("#secondary-menu").find("."+selectedSubMenu).addClass('active');
+	if(selectedSubMenu != ""){
+		$("#main-menu").find("."+selectedSubMenu).addClass('active');
+		$("#secondary-menu").find("."+selectedSubMenu).addClass('active');
+	}
 
 
 	$("#main-menu>ul>li>a").click(function(event){
@@ -65,8 +83,29 @@ $(function(){
 
 		let clickedMenu = $(this).parent().data('menu');
 		$("#secondary-menu").find("."+clickedMenu).css("display","block");
+	});
+
+	$(".menu a").click(function(event){
+		isMenuOpened = true;
+		$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+
+		console.log('isMenuOpened',isMenuOpened);
+	})
+
+
+
+	/**
+	 * MOBILE MENU
+	 */
+
+	$("#hamburger").click(function(event){
+
+		$(this).toggleClass('active')
+		$("#mobile-menu").toggleClass("show");
 
 	});
+
+
 
 
 	$("body").mousemove(function(event){
@@ -80,6 +119,11 @@ $(function(){
 			if(!overmenu){
 				$("#info").addClass("loading");
 				$("#main").addClass("loading");
+
+				isMenuOpened = false;
+				$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+
+				console.log('isMenuOpened',isMenuOpened);
 			}
 		}, 2000);
 	})
@@ -94,15 +138,44 @@ $(function(){
 		if(!overmenu){
 			$("#info").addClass("loading");
 			$("#main").addClass("loading");
+
+			isMenuOpened = false;
+			$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+
+			console.log('isMenuOpened',isMenuOpened);
 		}
 	}, 2000);
 
 
+
+	$("#info a").click(function(e){
+
+		e.stopPropagation();
+
+	})
+
 	$("#info").click(function(e){
 		$("#info").toggleClass("loading");
 		$("#main").toggleClass("loading");
+
+		if( $("#main").hasClass('loading') ){
+			isMenuOpened = false;
+		}else{
+			isMenuOpened = true;
+		}
+		$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+
+		console.log('isMenuOpened',isMenuOpened);
+
+		$("body").removeClass("notransition");
 	})
 	
+
+
+
+
+
+
 	
 	/**
 	 * GALLERY CAROUSSEL
@@ -127,6 +200,14 @@ $(function(){
 		});
 	})
 
+
+
+	/**
+	 * SCROLL MENU BEHAVIOR
+	 */
+
+	var previousScrollVal = 0;
+
 	$(window).scroll(function(){
 		// console.log( $('body').scrollTop() + " " + ( $(document).height() - $('body').height() ) );
 
@@ -137,33 +218,40 @@ $(function(){
 		}
 	})
 
-
-
 	$(window).bind('scroll', function(e) {
 		var val = $(this).scrollTop();
 
-		console.log(val);
+		console.log(previousScrollVal - val);
 
-		if (val >= ( $(document).height() - $('body').height() )) {
+		if( previousScrollVal - val > 1){ // on remonte
+
 			$("#btn-newsletter").addClass("show");
-		} else {
-			$("#btn-newsletter").removeClass("show");
-		}
-
-
-		if (val > 40) {
-			$("#title>h1").addClass("hide");
-		} else {
 			$("#title>h1").removeClass("hide");
+
+
+		}else{
+			if (val >= ( $(document).height() - $('body').height() )) {
+				$("#btn-newsletter").addClass("show");
+			} else {
+				$("#btn-newsletter").removeClass("show");
+			}
+
+
+			if (val > 40) {
+				$("#title>h1").addClass("hide");
+			} else {
+				$("#title>h1").removeClass("hide");
+			}
 		}
+
+		
+
+		previousScrollVal = val;
 
 	});
 	
+	
 
-	/**
-	 * SHARE
-	 */
-	// $('.prettySocial').prettySocial();
 
 	/**
 	 * NEWSLETTER
@@ -187,34 +275,6 @@ $(function(){
 		event.stopPropagation();
 	});
 
-	$("#hamburger").click(function(event){
-
-		$(this).toggleClass('active')
-		$("#mobile-menu").toggleClass("show");
-
-	});
+	
 });
 
-
-function setCookie(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + (exdays*24*60*60*1000));
-	var expires = "expires="+ d.toUTCString();
-	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-	var name = cname + "=";
-	var decodedCookie = decodeURIComponent(document.cookie);
-	var ca = decodedCookie.split(';');
-	for(var i = 0; i <ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-			return c.substring(name.length, c.length);
-		}
-	}
-	return "";
-}

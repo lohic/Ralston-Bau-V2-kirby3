@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 <!-- home.php -->
-<div id="main-content" class="grid">
+<div id="main-content" class="grid" data-menu="" data-submenu="">
 	<main class="the-grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php

@@ -11,12 +11,15 @@ html, body{
 	height: 100%;
 }
 
-/*
 
-font-family: big-caslon-fb, serif;
-	font-weight: 400;
+body.notransition * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+}
 
- */
+
 
 body{
 	font-family: "Colaborate", sans-serif;
@@ -175,7 +178,6 @@ body{
 	background: #F2E0CD;
 	/*padding:33px 64px;*/
 	/*padding: 2.29vw 4.44vw;*/
-
 	padding: 2.29vw 3.26vw;
 	cursor: pointer;
 }
@@ -1254,13 +1256,21 @@ main.grid .tile a h2{
 		margin-left: 2rem;
 	}
 
-	#main-menu .sub-menu li{
+	#mobile-menu #main-menu .sub-menu li{
 		/*font-size: 1.7rem;*/
 		font-size: 1.4rem;
 		line-height: 1.35em;
-		margin: 0.5rem 0;
+		/*margin: 0.5rem 0;*/
+		/*transition: margin 0.4s ease;*/
+	    animation-duration: 0.6s;
+	    animation-fill-mode: forwards;
+	    transition-timing-function: ease;
 	}
 
+	#mobile-menu.show #main-menu .sub-menu li{
+		animation-name: item-menu-open-animation;
+		/*margin: 0.5rem 0;*/
+	}
 
 	#mobile-menu{
 		background: #FFF;
@@ -1272,12 +1282,43 @@ main.grid .tile a h2{
 		z-index: 3999;
 		overflow: auto;
 		/*padding: 3.26vw; */
-		padding: calc(17px + 0.5rem); 
+		/*padding: calc(17px + 0.5rem); */
+		padding: calc(11px + 0.5rem) 3vw; 
 		display: none;
+		animation-name: mobile-menu-close-animation;
+	    animation-duration: 0.4s;
+	    animation-fill-mode: forwards;
+	    transition-timing-function: ease;
 	}
 
 	#mobile-menu.show{
 		display:grid;
+		animation-name: mobile-menu-open-animation;
+	    animation-duration: 0.4s;
+	    animation-fill-mode: forwards;
+	    transition-timing-function: ease;
+	}
+
+	@keyframes mobile-menu-open-animation {
+	    0% {
+	    	opacity:0;
+	    	transform: translateY( -50px ) ;
+	    }
+	    100% {
+			opacity:1;
+	    	transform: translateY( 0px ) ;
+	    }
+
+	}
+
+	@keyframes item-menu-open-animation {
+	    0% {
+	    	margin: 0rem 0;
+	    }
+	    100% {
+			margin: 0.5rem 0;
+	    }
+
 	}
 
 	#main-menu li {
@@ -1429,7 +1470,10 @@ main.grid .tile a h2{
 		margin: 0 0 2rem 0;
 	}
 
-
+	.gallery,
+	#main.loading .gallery{
+		margin-bottom: 2rem;
+	}
 
 	.gallery,
 	.gallery figure,
@@ -1442,14 +1486,14 @@ main.grid .tile a h2{
 	#main.loading .gallery,
 	#main.loading .gallery figure,
 	#main.loading .gallery img,
-	#main.loading .gallery .panorama div,
+	#main.loading .gallery .panorama,
 	#map{
 		/*height: 250px;*/
 		height: 50.90vw;
 	}
 
 	.gallery .panorama div,
-	#main.loading .gallery .panorama div,
+	#main.loading .gallery .panorama,
 	.gallery iframe,
 	#main.loading .gallery iframe {
 		height: 50.90vw !important;
@@ -1557,7 +1601,8 @@ main.grid .tile a h2{
 
 	#main-content {
 		margin: 0;
-		padding: 2vw 2vw calc(4.3vw + 0.8rem);
+		/*padding: 2vw 2vw calc(4.3vw + 0.8rem);*/
+		padding: 9vw 2vw calc(4.3vw + 0.8rem);
 	}
 
 	#btn-newsletter {
