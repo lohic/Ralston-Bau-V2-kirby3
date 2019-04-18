@@ -9,9 +9,6 @@
 <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
 <?= js(['assets/vendor/jquery-3.3.1.min.js',
-		// 'assets/vendor/isotope.pkgd.min.js',
-		// 'assets/vendor/imagesloaded.pkgd.min.js',
-		// 'assets/vendor/prettySocial-1.1.0/jquery.prettySocial.min.js',
 		 'assets/vendor/jquery.cookie-1.4.1.min.js',
 		 'assets/vendor/jssocials-1.4.0/dist/jssocials.min.js',
 		 'assets/vendor/slick-1.8.1/slick/slick.min.js',
@@ -22,8 +19,6 @@
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
 		 'assets/fonts/Colaborate/stylesheet.css',
 		 'assets/vendor/jssocials-1.4.0/dist/jssocials.css',
-		 // 'assets/vendor/jssocials-1.4.0/dist/jssocials-theme-minimal.css',
-		 // 'assets/vendor/fontawesome-free-5.7.2-web/css/all.min.css',
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/css/reset.css',
 		 'assets/css/style.css?v=1.20'/*,
