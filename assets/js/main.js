@@ -5,10 +5,10 @@ var overmenu = false;
 $(function(){
 
 	console.log('Ralston Bau ok');
+	let domainName = $("[name='rb:domain']").attr("content");
+	console.log('domain', domainName);
 
-	let isMenuOpened = $.cookie('menu.open') === "true" ? true : false;
-
-	// var isMenuOpened = $.cookie('menu.open') == true ? true : false;
+	let isMenuOpened = Cookies.get('menu.open') === "true" ? true : false;
 
 	console.log('isMenuOpened',isMenuOpened);
 
@@ -87,7 +87,7 @@ $(function(){
 
 	$(".menu a").click(function(event){
 		isMenuOpened = true;
-		$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
 		console.log('isMenuOpened',isMenuOpened);
 	})
@@ -121,7 +121,7 @@ $(function(){
 				$("#main").addClass("loading");
 
 				isMenuOpened = false;
-				$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+				Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
 				console.log('isMenuOpened',isMenuOpened);
 			}
@@ -140,7 +140,7 @@ $(function(){
 			$("#main").addClass("loading");
 
 			isMenuOpened = false;
-			$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+			Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
 			console.log('isMenuOpened',isMenuOpened);
 		}
@@ -163,7 +163,7 @@ $(function(){
 		}else{
 			isMenuOpened = true;
 		}
-		$.cookie('menu.open', isMenuOpened, { path: '/', domain: 'localhost' });
+		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
 		console.log('isMenuOpened',isMenuOpened);
 
@@ -223,7 +223,7 @@ $(function(){
 
 		console.log(previousScrollVal - val);
 
-		if( previousScrollVal - val > 1){ // on remonte
+		if( previousScrollVal - val >= 0){ // on remonte
 
 			$("#btn-newsletter").addClass("show");
 			$("#title>h1").removeClass("hide");
