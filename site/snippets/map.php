@@ -148,6 +148,9 @@
 				endif;
 			endforeach;
 		endforeach;
+
+
+	if(count($lng) > 0):
 	?>
 
 	map.fitBounds([[
@@ -159,7 +162,10 @@
 	]], {padding: {top: 60, bottom:20, left: 30, right: 30}});
 
 
-	<?php endif;  ?>	  
+	<?php 
+	endif;
+	endif; 
+	?>	  
 
 	$(function(){
 

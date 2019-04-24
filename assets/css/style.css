@@ -1624,7 +1624,7 @@ main.grid .tile a h2{
 	}
 
 	#main .gallery figure.panorama{
-		height: 522px;
+		/*height: 522px;*/
 		width: calc(100vw - 512.8px);
 	}
 
@@ -1977,15 +1977,15 @@ main.grid .tile a h2{
 		display: none;
 	}
 
-	main:after{
+	/*main:after{
 		white-space: pre;
 		display: block;
 		text-align: right;
 		content: "RALSTON BAU\00000A\00000AKanonhaugen 39\00000AN-5097 Bergen\00000ANorway\00000A\00000A73-75 La Canebière\00000AF-13001 Marseille\00000AFrance\00000A\00000Astudio@ralstonbau.com";
-		font-size: 0.8rem; /* 0.9rem */
+		font-size: 0.8rem;
 		line-height: 1.15em;
 		margin: 1rem 1vw 2rem;
-	}
+	}*/
 
 }
 
