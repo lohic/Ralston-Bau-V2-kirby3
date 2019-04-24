@@ -6,4 +6,12 @@ Panorama:
 
 ----
 
+Maptoggle: true
+
+----
+
+Columntoggle: false
+
+----
+
 Text: Cases's map

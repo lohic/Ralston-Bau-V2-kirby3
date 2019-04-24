@@ -2,6 +2,10 @@ Title: Shroom
 
 ----
 
+Columntoggle: false
+
+----
+
 Text: 
 
 ----
@@ -30,11 +34,11 @@ Forms:
 
 ----
 
-Images: 
+Date: 2019-03-14 16:00
 
 ----
 
-Date: 2019-03-14 16:00
+Description: 
 
 ----
 
@@ -42,7 +46,29 @@ Thumbnail:
 
 ----
 
+Panorama: 
+
+----
+
 Themes: public, lighting
+
+----
+
+Addresses: 
+
+- 
+  map:
+    lat: "48.562942"
+    lon: "7.7662531"
+    number: "18"
+    city: Strasbourg
+    country: France
+    postcode: "67100"
+    address: Rue de Ribeauvillé
+
+----
+
+Images: 
 
 ----
 
