@@ -12,6 +12,14 @@ Thumbnail:
 
 ----
 
+Panorama: 
+
+----
+
+Columntoggle: false
+
+----
+
 Description: 
 
 The population is aging and have longer active lives through improved health. From a certain age, humans can be left outside the community as well as from an economic standpoint. In this program Transplant asks: “How can we make the older generation participate longer in the community?”. In order to give an answer to this, we wish to develop the program: “Participate longer”. Each person which has a “normal functioning” mind, also has a creative soul. This means that anyone is able to influence the society, assuming that they have the technical aides and the competence to use these tools to materialise their ideas.
@@ -20,3 +28,7 @@ Elder citizens do not always have these aides nor the skills to use them, due to
 
 Problematics
 The elder population is beginning to be bigger than the present working generation. After a life of working, and without experience of using modern communication tools, motivated elders can get isolated. Valuable knowledge is lost, where as it could be useful for the society.
+
+----
+
+Legend: 

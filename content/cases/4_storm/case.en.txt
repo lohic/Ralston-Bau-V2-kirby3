@@ -2,6 +2,10 @@ Title: Storm
 
 ----
 
+Columntoggle: false
+
+----
+
 Text: 
 
 ----
@@ -28,15 +32,19 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 2019-03-15 16:20
 
 ----
 
+Description: 
+
+----
+
 Thumbnail: 
+
+----
+
+Panorama: 
 
 ----
 
@@ -51,3 +59,7 @@ lon: "5.0320356"
 city: Florø
 country: Norway
 postcode: "6901"
+
+----
+
+Images: 

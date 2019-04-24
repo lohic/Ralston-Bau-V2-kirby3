@@ -10,6 +10,11 @@ columns:
       content:
         type: fields
         fields:
+
+          columnToggle:
+            label: Use columns for the text
+            type: toggle
+            
           text:
             type: textarea
             size: large

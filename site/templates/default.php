@@ -7,9 +7,13 @@
 		<h2><?= $page->title() ?></h2>
 	</header>
 	<main>
-		<div class="text">
+		<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
 			<?= $page->text()->kt() ?>
 		</div>
+
+		<?php if($page->mapToggle()->isTrue()) : ?>
+		<?php echo snippet('map', ['global'=> true]) ?>
+		<?php endif;?>
 	</main>
 </div>
 <!-- fin default.php -->

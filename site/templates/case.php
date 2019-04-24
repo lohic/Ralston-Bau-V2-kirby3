@@ -13,7 +13,7 @@
 		<?php //echo snippet('share') ?>
 		
 		<section class="case">
-			<div class="text">
+			<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
 
 				<?php if( $page->description()->isNotEmpty() ) : ?>
 				<div class="description">

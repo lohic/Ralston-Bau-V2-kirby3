@@ -333,7 +333,7 @@ main h3.practice-title{
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 1.8rem;
-	margin: 1rem 1vw;
+	margin: 2rem 1vw 1rem;
 }
 
 
@@ -341,11 +341,15 @@ main h3.practice-title{
 
 
 .text{
-	margin: 2rem 1vw;
+	margin: 1rem 1vw 2rem;
 	font-size: 1.2rem;
 	line-height: 1.25em;
 	font-weight: 100;
 	/*max-width: 55rem;*/
+}
+
+.text.columns{
+	column-count: 2;
 }
 
 .text:after{
@@ -1470,6 +1474,10 @@ main.grid .tile a h2{
 		margin: 0 0 2rem 0;
 	}
 
+	.text.columns{
+		column-count: 1;
+	}
+
 	.gallery,
 	#main.loading .gallery{
 		margin-bottom: 2rem;
@@ -1736,7 +1744,7 @@ main.grid .tile a h2{
 		width: auto;
 		height: auto;
 		display: block;
-		padding: 17px;
+		padding: 17px 17px 150px
 	}
 
 	#content{
@@ -1825,6 +1833,10 @@ main.grid .tile a h2{
 		background: none !important;
 		/*content:url(http://localhost:8888/Site-RALSTON-BAU-kirby3/media/pages/cases/camp-table/1492902465-1553356282/undercst-447x670.jpg);*/
 	}
+
+	iframe{
+		display: none;
+	}
 /*
 	.slick-track figure.panorama{
 		height: 10cm !important;
@@ -1899,13 +1911,18 @@ main.grid .tile a h2{
 	}*/
 
 
+	section{
+		break-inside: avoid;
+	}
+
 
 	.text {
 		max-width: auto; 
-		font-size: 1rem;
+		font-size: 0.9rem;
 		/*margin-left: 4rem;*/
 		text-align: justify;
 		hyphens: auto;
+		line-height: 1.15em;
 	}
 
 	.text h1,
@@ -1932,9 +1949,9 @@ main.grid .tile a h2{
 
 	.text a:after {
 		content: " [url: " attr(href) "]";
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		position: relative;
-		bottom: 0.2rem;
+		bottom: 0.1rem;
 	}
 
 
@@ -1956,6 +1973,16 @@ main.grid .tile a h2{
 
 	.related{
 		display: none;
+	}
+
+	main:after{
+		white-space: pre;
+		display: block;
+		text-align: right;
+		content: "RALSTON BAU\00000A\00000AKanonhaugen 39\00000AN-5097 Bergen\00000ANorway\00000A\00000A73-75 La Canebière\00000AF-13001 Marseille\00000AFrance\00000A\00000Astudio@ralstonbau.com";
+		font-size: 0.8rem; /* 0.9rem */
+		line-height: 1.15em;
+		margin: 1rem 1vw 2rem;
 	}
 
 }

@@ -9,6 +9,14 @@ Panorama:
 
 ----
 
+Maptoggle: true
+
+----
+
+Columntoggle: false
+
+----
+
 Text: 
 
 Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston Bau takes ideas into action, and complex questions into essential objects.

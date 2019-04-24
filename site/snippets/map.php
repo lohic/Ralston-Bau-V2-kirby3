@@ -14,6 +14,8 @@
 <div class="text">
 <h3><?= t('location') ?>:</h3>
 </div>
+<?php else : ?>
+<h3 class="practice-title">Cases location</h3>
 <?php endif; ?>
 <div id="map"></div>
 <style>

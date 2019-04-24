@@ -2,6 +2,14 @@ Title: Honors
 
 ----
 
+Panorama: 
+
+----
+
+Columntoggle: false
+
+----
+
 Text: 
 
 ## Awards

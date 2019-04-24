@@ -7,7 +7,7 @@
 		<h2><?= $page->title() ?></h2>
 	</header>
 	<main class="texte">
-		<div class="text">
+		<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
 			<?= $page->text()->kt() ?>
 			
 			<address>
@@ -27,6 +27,10 @@
 				<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="<?= $kirby->url('assets') ?>/images/ig.svg" alt="instagram"></a>
 			</nav>
 		</div>
+
+		<?php if($page->mapToggle()->isTrue()) : ?>
+		<?php echo snippet('map', ['global'=> true]) ?>
+		<?php endif;?>
 	</main>
 </div>
 <!-- fin about.php -->

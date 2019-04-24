@@ -15,7 +15,7 @@
 		 'assets/vendor/jssocials-1.4.0/dist/jssocials.min.js',
 		 'assets/vendor/slick-1.8.1/slick/slick.min.js',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
-		 'assets/js/main.js?v=1.30']) ?> 
+		 'assets/js/main.js?v=1.31']) ?> 
 
 <?= css(['https://use.typekit.net/vrl2tmu.css',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
@@ -23,7 +23,7 @@
 		 'assets/vendor/jssocials-1.4.0/dist/jssocials.css',
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.21'/*,
+		 'assets/css/style.css?v=1.25'/*,
 		 '@auto'*/]) ?>
 
 <?php

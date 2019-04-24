@@ -12,7 +12,7 @@
 	<h3 class="practice-title"><?= $page->title() ?></h3>
 	<?php //endif; ?>
 
-	<div class="text">
+	<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
 		<?php if( $page->legend()->isNotEmpty() ) : ?>
 		<div class="description">
 			<?= $page->legend()->kt() ?>

@@ -42,6 +42,10 @@ columns:
         translate: false 
         query: page.images
 
+      columnToggle:
+        label: Use columns for the text
+        type: toggle
+
       description:
         type: textarea
         size: large

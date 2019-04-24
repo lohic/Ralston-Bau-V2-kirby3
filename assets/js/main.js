@@ -6,11 +6,11 @@ $(function(){
 
 	console.log('Ralston Bau ok');
 	let domainName = $("[name='rb:domain']").attr("content");
-	console.log('domain', domainName);
+	// console.log('domain', domainName);
 
 	let isMenuOpened = Cookies.get('menu.open') === "true" ? true : false;
 
-	console.log('isMenuOpened',isMenuOpened);
+	// console.log('isMenuOpened',isMenuOpened);
 
 	$("body").addClass("notransition");
 
@@ -55,7 +55,7 @@ $(function(){
 	let selectedMenu = $("#main-content").data('menu');
 	let selectedSubMenu = $("#main-content").data('submenu');
 
-	console.log("selectedMenu:" + selectedMenu + " | selectedSubMenu:" + selectedSubMenu);
+	// console.log("selectedMenu:" + selectedMenu + " | selectedSubMenu:" + selectedSubMenu);
 
 	if(selectedMenu != ""){
 		$("#main-menu").find("."+selectedMenu).addClass('selected');
@@ -70,7 +70,7 @@ $(function(){
 
 	$("#main-menu>ul>li>a").click(function(event){
 
-		console.log("#main-menu item click");
+		// console.log("#main-menu item click");
 
 		$("#main-menu li").removeClass('selected');
 		$("#main-menu li, #secondary-menu li").removeClass('active');
@@ -88,8 +88,7 @@ $(function(){
 	$(".menu a").click(function(event){
 		isMenuOpened = true;
 		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
-
-		console.log('isMenuOpened',isMenuOpened);
+		// console.log('isMenuOpened',isMenuOpened);
 	})
 
 
@@ -107,14 +106,12 @@ $(function(){
 
 
 
-
 	$("body").mousemove(function(event){
 		if( event.originalEvent.clientX < $("#main").offset().left ){
 			overmenu = true;
 		}else{
 			overmenu = false;
 		}
-
 		setTimeout(function(){
 			if(!overmenu){
 				$("#info").addClass("loading");
@@ -122,8 +119,7 @@ $(function(){
 
 				isMenuOpened = false;
 				Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
-
-				console.log('isMenuOpened',isMenuOpened);
+				// console.log('isMenuOpened',isMenuOpened);
 			}
 		}, 2000);
 	})
@@ -142,16 +138,12 @@ $(function(){
 			isMenuOpened = false;
 			Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
-			console.log('isMenuOpened',isMenuOpened);
+			// console.log('isMenuOpened',isMenuOpened);
 		}
 	}, 2000);
 
-
-
 	$("#info a").click(function(e){
-
 		e.stopPropagation();
-
 	})
 
 	$("#info").click(function(e){
@@ -164,16 +156,9 @@ $(function(){
 			isMenuOpened = true;
 		}
 		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
-
-		console.log('isMenuOpened',isMenuOpened);
-
+		// console.log('isMenuOpened',isMenuOpened);
 		$("body").removeClass("notransition");
 	})
-	
-
-
-
-
 
 
 	
@@ -210,7 +195,6 @@ $(function(){
 
 	$(window).scroll(function(){
 		// console.log( $('body').scrollTop() + " " + ( $(document).height() - $('body').height() ) );
-
 		if( $('body').scrollTop() >= ( $(document).height() - $('body').height() ) ){
 			$("#btn-newsletter").addClass("show");
 		}else{
@@ -221,31 +205,24 @@ $(function(){
 	$(window).bind('scroll', function(e) {
 		var val = $(this).scrollTop();
 
-		console.log(previousScrollVal - val);
+		// console.log(previousScrollVal - val);
 
 		if( previousScrollVal - val >= 0){ // on remonte
 
 			$("#btn-newsletter").addClass("show");
 			$("#title>h1").removeClass("hide");
-
-
 		}else{
 			if (val >= ( $(document).height() - $('body').height() )) {
 				$("#btn-newsletter").addClass("show");
 			} else {
 				$("#btn-newsletter").removeClass("show");
 			}
-
-
 			if (val > 40) {
 				$("#title>h1").addClass("hide");
 			} else {
 				$("#title>h1").removeClass("hide");
 			}
 		}
-
-		
-
 		previousScrollVal = val;
 
 	});
@@ -271,7 +248,7 @@ $(function(){
 	});	
 
 	$("input, textarea, #btn-send").click(function(event){
-		console.log("stop propagation")
+		// console.log("stop propagation")
 		event.stopPropagation();
 	});
 
