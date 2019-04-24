@@ -14,7 +14,7 @@ columns:
           columnToggle:
             label: Use columns for the text
             type: toggle
-            
+
           text:
             type: textarea
             size: large
@@ -115,17 +115,21 @@ columns:
 
           # https://github.com/sylvainjule/kirby-locator
           # https://docs.mapbox.com/help/glossary/map-id/
-          map:
-            label: Location
-            type: locator
-            translate: false
-            # tiles: mapbox
-            center:
-              lat: 60.395027
-              lon: 5.322331
-            zoom:
-              # min: 2
-              default: 12
-              # max: 18
+          addresses:
+            label: Addresses
+            type: structure
+            fields: 
+              map:
+                label: Location
+                type: locator
+                translate: false
+                # tiles: mapbox
+                center:
+                  lat: 60.395027
+                  lon: 5.322331
+                zoom:
+                  # min: 2
+                  default: 12
+                  # max: 18
 
           

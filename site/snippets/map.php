@@ -4,11 +4,13 @@
 <section class="map">
 <?php 
 
-	$location = $page->map()->yaml();
+	$addresses = $page->addresses()->toStructure();
+
+	// $location = $page->map()->yaml();
 	// print_r($location);
 ?>
 
-<?php if( (!empty( $location['lon'] ) && !empty( $location['lat'] ) || $global == true )){ ?>
+<?php if( ($addresses->isNotEmpty() || $global == true )){ ?>
 
 <?php if ( $global == false ) :  ?>
 <div class="text">
@@ -39,7 +41,7 @@
 	const map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/ralstonbau/cjsbogl7o159o1fqe26pdxzh2',
-		center: [<?= $location['lon'] ?>, <?= $location['lat'] ?>],
+		//center: [<?php // echo $location['lon'] ?>, <?php // echo $location['lat'] ?>],
 		zoom: 10.0
 	});
 	<?php else:  ?>
@@ -72,34 +74,67 @@
 	
 	// https://docs.mapbox.com/mapbox-gl-js/api/#marker
 
-	<?php if ( $global == false ) :  ?>
 
-	var marker = new mapboxgl.Marker()
+	<?php 
+
+	$lat = array();
+	$lng = array();
+
+	if ( $global == false ) :  
+		foreach($addresses as $address ) :
+	
+		$location = $address->map()->yaml();
+
+		$lat[] = $location['lat'];
+		$lng[] = $location['lon'];
+
+	?>
+
+	var marker = new Array();
+
+	// one case markers
+	marker.push( new mapboxgl.Marker()
 		  .setLngLat([<?= $location['lon'] ?>, <?= $location['lat'] ?>])
-		  .addTo(map);
+		  .addTo(map) );
 
+	<?php endforeach; ?>
 
-	<?php else :  ?>	  
+	map.fitBounds([[
+		<?= min($lng)?>,
+		<?= min($lat)?>
+	], [
+		<?= max($lng)?>,
+		<?= max($lat)?>
+	]], {padding: {top: 60, bottom:20, left: 30, right: 30}});
 
+	<?php	
+	else :  
+	?>	  
+
+	// all cases markers
 	var marker = new Array();
 
 	<?php
 	$cases = page('cases')->children()
 		->listed();
-	foreach($cases as $page):
 
-		$location = $page->map()->yaml();
+	$lat = array();
+	$lng = array();
+
+		foreach($cases as $page):
+
+			foreach($page->addresses()->toStructure() as $address ) :
+
+				$location = $address->map()->yaml();
 
 
-		// $page->url()
-		// $page->title()
-		// 
-		if( !empty( $location['lon'] ) && !empty( $location['lat'] ) ) :
+				// $page->url()
+				// $page->title()
+				// 
+				if( !empty( $location['lon'] ) && !empty( $location['lat'] ) ) :
 
-
-
-		$avLon[] = $location['lon'];
-		$avLat[] = $location['lat'];
+				$lat[] = $location['lat'];
+				$lng[] = $location['lon'];
 	?>
 
 	marker.push( new mapboxgl.Marker()
@@ -108,15 +143,20 @@
 		  .addTo(map) );
 	
 	
-	<?php 
 	
-		endif;
-	endforeach;
-
+	<?php 
+				endif;
+			endforeach;
+		endforeach;
 	?>
 
-
-	map.setCenter([<?= array_sum( $avLon )/count($avLon) ?>, <?= array_sum( $avLat )/count($avLat) ?>]);
+	map.fitBounds([[
+		<?= min($lng)?>,
+		<?= min($lat)?>
+	], [
+		<?= max($lng)?>,
+		<?= max($lat)?>
+	]], {padding: {top: 60, bottom:20, left: 30, right: 30}});
 
 
 	<?php endif;  ?>	  
