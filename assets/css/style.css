@@ -26,6 +26,7 @@ body{
 	font-style: normal;
 	font-weight: 100;
 	line-height: 1.25em;
+	background: #F2E0CD;
 }
 
 
@@ -1209,6 +1210,7 @@ main.grid .tile a h2{
 		height: auto;
 		display: block;
 		padding: 17px;
+		background: none;
 	}
 
 	#content{
