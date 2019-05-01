@@ -23,7 +23,7 @@
 		 'assets/vendor/jssocials-1.4.0/dist/jssocials.css',
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.28'/*,
+		 'assets/css/style.css?v=1.30'/*,
 		 '@auto'*/]) ?>
 
 <?php
