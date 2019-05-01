@@ -112,3 +112,14 @@ tabs:
             type:  url
             help:  URL of the thumbnail that will represent your website on the social networks.
             translate: false
+  analytics:
+    label: Analytics
+    columns:
+      - width: 3/4
+        sections:
+          main:
+            type: matomo-main
+      - width: 1/4
+        sections:
+          sidebar:
+            type: matomo-sidebar

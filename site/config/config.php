@@ -8,5 +8,8 @@ return [
     'thumbs' => [
 		'driver' => 'im'
 		// ,'bin' => 'convert'
-	]
+	],
+	'sylvainjule.matomo.url'        => 'http://analytics.ralstonbau.com', #required
+    'sylvainjule.matomo.id'         => '1', #required
+    'sylvainjule.matomo.token'      => '981205d607ffc067a858fbee82584e9b', #required for the panel integration
 ];
