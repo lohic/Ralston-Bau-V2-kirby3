@@ -105,7 +105,7 @@
 	], [
 		<?= max($lng)?>,
 		<?= max($lat)?>
-	]], {padding: {top: 60, bottom:20, left: 30, right: 30}});
+	]], {padding: {top: 60, bottom:20, left: 30, right: 30}, maxZoom:8});
 
 	<?php	
 	else :  
@@ -159,7 +159,7 @@
 	], [
 		<?= max($lng)?>,
 		<?= max($lat)?>
-	]], {padding: {top: 60, bottom:20, left: 30, right: 30}});
+	]], {padding: {top: 60, bottom:20, left: 30, right: 30}, maxZoom:8});
 
 
 	<?php 
