@@ -114,6 +114,7 @@ tabs:
             translate: false
   analytics:
     label: Analytics
+    icon: refresh
     columns:
       - width: 3/4
         sections:
