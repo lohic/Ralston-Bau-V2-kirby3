@@ -572,6 +572,7 @@ a{
 	margin-top: 1rem;
 }
 
+#contact a,
 .links a{
 	display: inline-block;
 	margin-right: 0.3rem;
@@ -681,17 +682,17 @@ a{
 	height: 0;
 }
 
- .slick-dots{
- 	position: absolute;
- 	bottom: 1rem ;
- 	width: 100%;
- 	/*left: 1rem;*/
- 	right: 1rem;
+.slick-dots{
+	position: absolute;
+	bottom: 1rem ;
+	width: 100%;
+	/*left: 1rem;*/
+	right: 1rem;
 	text-align: right;
 	z-index: 3000;
- }
+}
 
- .slick-dots li{
+.slick-dots li{
 	position: relative;
 	display: inline-block;
 	width: 0.5rem;
@@ -1584,7 +1585,7 @@ main.grid .tile a h2{
 
 }
 
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1500px){
 	html{
 		font-size: 18px;
 	}
@@ -1954,6 +1955,21 @@ main.grid .tile a h2{
 		font-size: 0.7rem;
 		position: relative;
 		bottom: 0.1rem;
+	}
+
+	.text #contact a img{
+		display: none;
+	}
+
+	.text #contact a{
+		display: block;
+		text-decoration: none;
+	}
+
+	.text #contact a:after {
+		content: attr(href);
+		font-size: 0.9rem;
+		position: static;
 	}
 
 
