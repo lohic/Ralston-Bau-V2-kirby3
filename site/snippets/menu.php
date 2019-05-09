@@ -2,7 +2,11 @@
 
 
 <div id="title" class="drawer">
+	<?php if($logo = $site->logo()->toFile() ): ?>
+	<h1><a class="logo" href="<?= $site->url() ?>"><img id="logo" class="custom" src="<?= $logo->url() ?>" alt="Ralston Bau"></a></h1>
+	<?php else : ?>
 	<h1><a class="logo" href="<?= $site->url() ?>"><img id="logo" src="<?= $kirby->url('assets') ?>/images/logo.svg" alt="Ralston Bau"></a></h1>
+	<?php endif; ?>
 	<button id="hamburger" class="button">
 		<div class="hamburger-box">
 			<div class="hamburger-inner"></div>
@@ -14,7 +18,7 @@
 	<nav id="main-menu" class="menu">
 		<ul>
 			<!-- practices -->
-			<li class="practices" data-menu="practices"><a href="#"><?= t('practice') ?></a>
+			<li class="practices" data-menu="practices"><a href="#"><?= $site->practicetxt()->text() //t('practice') ?></a>
 				<ul class="sub-menu">
 
 					<?php 
@@ -32,7 +36,7 @@
 				</ul>
 			</li>
 			<!-- cases -->
-			<li class="cases" data-menu="cases"><a href="#"><?= t('cases') ?></a>
+			<li class="cases" data-menu="cases"><a href="#"><?= $site->casestxt()->text() //t('cases') ?></a>
 				<ul class="sub-menu">
 					<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
 					<?php foreach ($casethemes as $theme): ?>
@@ -42,7 +46,7 @@
 				</ul>
 			</li>
 			<!-- pages -->
-			<li class="studio" data-menu="studio"><a href="#"><?= t('studio') ?></a>
+			<li class="studio" data-menu="studio"><a href="#"><?= $site->studiotxt()->text() //t('studio') ?></a>
 				<ul class="sub-menu">
 					<?php foreach ($site->children()->listed() as $item): ?>
 						<li <?php e(Url::current() == $item->url(), ' class="active"') ?>><?= $item->title()->link() ?></li>
@@ -66,8 +70,9 @@
 	
 	</div>
 	
-
-	<button id="btn-newsletter" class="button"><?= t('newsletter','Newsletter') ?></button>        
+	<?php if($site->newsletterform()->isTrue()) :?>
+	<button id="btn-newsletter" class="button"><?= t('newsletter','Newsletter') ?></button> 
+	<?php endif; ?>      
 </div>
 
 

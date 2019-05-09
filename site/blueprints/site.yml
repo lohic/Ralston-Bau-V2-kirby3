@@ -61,30 +61,58 @@ tabs:
     icon: text
     columns:
       - width: 1/2
-        fields:
-          maintenance:
-            label: Maintenance
-            type: toggle
-            text: Enable Maintenance
-            translate: false
-          share:
-            label: Share on
-            type: checkboxes
-            options:
-              facebook: Facebook
-              twitter: Twitter
-              pinterest: Pinterest
-            help:  Enable the icons to share content on social network.
-          facebook-id:
-            label: Facebook page title
-            type: text
-          twitter-id:
-            label: Twitter
-            type: text
-            placeholder: @twitter-account
+        sections:
+          param1:
+            type: fields 
+            fields:
+              maintenance:
+                label: Maintenance
+                type: toggle
+                text: Enable Maintenance
+                translate: false
+              practicetxt:
+                label: Practice label
+                type: text
+                default: Practice
+              casestxt:
+                label: Cases label
+                type: text
+                default: Cases
+              studiotxt:
+                label: Studio label
+                type: text
+                default: Studio
+              logo:
+                label: Logo
+                type: files
+                query: site.images
+                multiple: false
+                translate: false
+                layout: cards
+                size: small
+                help: if none, default RalstonBau logo
+          logos:
+            type: files
+            headline: Fichiers SVG
+            layout: list
+            template: logo
+            info: "{{ file.dimensions }}"
+            image:
+              # ratio: 5/4
+              back: white
+              # cover: true
+            # min: 1
+            size: medium
+
+
 
       - width: 1/2
         fields:
+          newsletterform:
+            label: Newsletter form
+            type: toggle
+            text: Enable Newsletter form
+            translate: false
           projectbgcolor:
             type: color
             editableAlpha: false
@@ -107,11 +135,11 @@ tabs:
           keywords:
             label: Keywords
             type:  tags
-          ogimage:
-            label: Site Thumbnail
-            type:  url
-            help:  URL of the thumbnail that will represent your website on the social networks.
-            translate: false
+          # ogimage:
+          #   label: Site Thumbnail
+          #   type:  url
+          #   help:  URL of the thumbnail that will represent your website on the social networks.
+          #   translate: false
   analytics:
     label: Analytics
     icon: refresh

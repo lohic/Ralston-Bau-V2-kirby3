@@ -6,6 +6,7 @@
 
 <?php } ?>
 
+<?php if($site->newsletterform()->isTrue()) :?>
 <div id="newsletter">
 
 	<form action="//tinyletter.com/ralstonbau" method="post" target="popupwindow" onsubmit="window.open('//tinyletter.com/ralstonbau', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
@@ -19,6 +20,7 @@
 	</form>
 
 </div>
+<?php endif; ?>
 
 <script>
 	$("#share").jsSocials({

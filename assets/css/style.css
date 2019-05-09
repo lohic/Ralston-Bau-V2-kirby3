@@ -110,6 +110,17 @@ body{
 }
 
 
+#logo.custom{
+	max-width: 7rem;
+	max-height: 11.36rem;
+	width: auto; 
+	height: auto;
+	position: relative;
+	left: -1.63vw;
+	top: -1.33vw;
+}
+
+
 /* HAMBURGER BUTTON */
 #hamburger{
 	display: none;
