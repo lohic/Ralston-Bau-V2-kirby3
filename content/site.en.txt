@@ -6,15 +6,23 @@ Maintenance: false
 
 ----
 
-Share: facebook, twitter
+Practicetxt: Practice
 
 ----
 
-Facebook-id: 
+Casestxt: Cases
 
 ----
 
-Twitter-id: 
+Studiotxt: Studio
+
+----
+
+Logo: 
+
+----
+
+Newsletterform: true
 
 ----
 
@@ -35,3 +43,19 @@ Keywords:
 ----
 
 Ogimage: 
+
+----
+
+Casetxt: Cases
+
+----
+
+Share: facebook, twitter
+
+----
+
+Facebook-id: 
+
+----
+
+Twitter-id: 
