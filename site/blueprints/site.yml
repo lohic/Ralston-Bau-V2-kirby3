@@ -65,23 +65,90 @@ tabs:
           param1:
             type: fields 
             fields:
+              practicetxt:
+                label: Practice label
+                type: text
+                default: Practice
+                width: 1/2
+              casestxt:
+                label: Cases label
+                type: text
+                default: Cases
+                width: 1/2
+              studiotxt:
+                label: Studio label
+                type: text
+                default: Studio
+                width: 1/2
+              line:
+                type: line
+              bigpicturetxt:
+                label: Big picture label
+                type: text
+                default: Big picture
+                width: 1/2
+              peopletxt:
+                label: People label
+                type: text
+                default: People
+                width: 1/2
+              scenariotxt:
+                label: Scenario label
+                type: text
+                default: Scenario
+                width: 1/2
+              formtxt:
+                label: Form label
+                type: text
+                default: Form
+                width: 1/2
+
+      - width: 1/2
+        sections:
+          param2:
+            type: fields 
+            fields:
               maintenance:
                 label: Maintenance
                 type: toggle
                 text: Enable Maintenance
                 translate: false
-              practicetxt:
-                label: Practice label
-                type: text
-                default: Practice
-              casestxt:
-                label: Cases label
-                type: text
-                default: Cases
-              studiotxt:
-                label: Studio label
-                type: text
-                default: Studio
+                width: 1/2
+              newsletterform:
+                label: Newsletter form
+                type: toggle
+                text: Enable Newsletter form
+                translate: false
+                width: 1/2
+              projectbgcolor:
+                type: color
+                editableAlpha: false
+                default: "#000000"
+                presets:
+                  - "#000000"
+                  - "#FFFFFF"
+                  - "#F2E0CD"
+                width: 1/2
+              projecttxtcolor:
+                type: color
+                editableAlpha: false
+                default: "#FFFFFF"
+                presets:
+                  - "#000000"
+                  - "#FFFFFF"
+                  - "#F2E0CD"
+                width: 1/2
+              description:
+                label: Description
+                type:  textarea
+              keywords:
+                label: Keywords
+                type:  tags
+              # ogimage:
+              #   label: Site Thumbnail
+              #   type:  url
+              #   help:  URL of the thumbnail that will represent your website on the social networks.
+              #   translate: false
               logo:
                 label: Logo
                 type: files
@@ -103,43 +170,6 @@ tabs:
               # cover: true
             # min: 1
             size: medium
-
-
-
-      - width: 1/2
-        fields:
-          newsletterform:
-            label: Newsletter form
-            type: toggle
-            text: Enable Newsletter form
-            translate: false
-          projectbgcolor:
-            type: color
-            editableAlpha: false
-            default: "#000000"
-            presets:
-              - "#000000"
-              - "#FFFFFF"
-              - "#F2E0CD"
-          projecttxtcolor:
-            type: color
-            editableAlpha: false
-            default: "#FFFFFF"
-            presets:
-              - "#000000"
-              - "#FFFFFF"
-              - "#F2E0CD"
-          description:
-            label: Description
-            type:  textarea
-          keywords:
-            label: Keywords
-            type:  tags
-          # ogimage:
-          #   label: Site Thumbnail
-          #   type:  url
-          #   help:  URL of the thumbnail that will represent your website on the social networks.
-          #   translate: false
   analytics:
     label: Analytics
     icon: refresh

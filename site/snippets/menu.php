@@ -29,7 +29,7 @@
 					<?php if ($practicetype): ?>
 					<?php foreach ($practicetype as $step): ?>
 					<?php if(in_array($step, $practicelist, true)): ?>
-						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
+						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?=  $site->{$step.'txt'}()->text()//t($step) ?></a></li>
 					<?php endif ?>
 					<?php endforeach ?>
 					<?php endif ?>
@@ -87,7 +87,7 @@
 				<?php if ($practicetype): ?>
 				<?php foreach ($practicetype as $step): ?>
 				<?php if(in_array($step, $practicelist, true)): ?>
-					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?> ><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= t($step) ?></a></li>
+					<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?> ><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?= $site->{$step.'txt'}()->text() // t($step) ?></a></li>
 				<?php endif ?>
 				<?php endforeach ?>
 				<?php endif ?>
