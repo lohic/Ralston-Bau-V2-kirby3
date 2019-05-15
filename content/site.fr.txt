@@ -30,14 +30,6 @@ Formtxt: Form
 
 ----
 
-Maintenance: false
-
-----
-
-Newsletterform: true
-
-----
-
 Projectbgcolor: #000000
 
 ----
@@ -54,11 +46,7 @@ Keywords:
 
 ----
 
-Logo: 
-
-----
-
-Formstxt: Forms
+Formstxt: Forms fr
 
 ----
 
