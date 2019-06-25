@@ -28,11 +28,11 @@ Forms:
 
 ----
 
-Images: 
+Date: 2019-03-15 17:25
 
 ----
 
-Date: 2019-03-15 17:25
+Description: 
 
 ----
 
@@ -40,8 +40,16 @@ Thumbnail:
 
 ----
 
-Themes: privacy, acoustic
+Panorama: 
+
+----
+
+Themes: privacy, acoustic, sharing
 
 ----
 
 Map: 
+
+----
+
+Images: 

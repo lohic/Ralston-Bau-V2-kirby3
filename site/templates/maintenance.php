@@ -9,10 +9,26 @@
 <div id="title" class="drawer">
 	<h1><img id="logo" src="<?= kirby()->url() ?>/assets/images/logo.svg" alt="Ralston Bau"></h1>
 
+
+	<div id="mobile-menu">
+
+		<!-- lang selector -->
+		<!-- <nav class="languages" role="navigation">
+			<ul>
+				<?php foreach($kirby->languages() as $language): ?>
+				<li<?php e($kirby->language() == $language, ' class="active"') ?>>
+					 <a href="<?= $page->url($language->code()) ?>"><?= html($language->name()) ?></a>
+				</li>
+				<?php endforeach ?>
+			</ul>
+		</nav> -->
+	</div>
+
+
 	<button id="btn-newsletter"><?= t('newsletter','Newsletter') ?></button>        
 </div>
 
-<div id="content" class="drawer">
+<div id="content" class="drawer maintenance">
 	<div id="info" class="drawer">
 			
 		<h1>Now</h1>
@@ -39,9 +55,11 @@
 
 
 		<div id="contact">
+			<a href="http://www.ideal-lab.org" target="_blank"><img class="btn-ideallab" src="<?= kirby()->url() ?>/assets/images/ideal_lab_logo-white.svg" alt="ideal lab"></a>
+			<a href="http://www.idealist.institute" target="_blank"><img class="btn-idealistinstitute" src="<?= kirby()->url() ?>/assets/images/idealist-institute-logo-white.svg" alt="idealist institute"></a>
 			<a href="https://www.facebook.com/ralstonbau" target="_blank"><img class="btn-facebook" src="<?= kirby()->url() ?>/assets/images/facebook.svg" alt="facebook"></a>
 			<a href="https://www.instagram.com/studioralstonbau" target="_blank"><img class="btn-instagram" src="<?= kirby()->url() ?>/assets/images/instagram.svg" alt="instagram"></a>
-			<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= kirby()->url() ?>/assets/images/mail.svg" alt="mail"></a>
+			<a href="mailto:studio@ralstonbau.com"><img class="btn-mail" src="<?= kirby()->url() ?>/assets/images/email.svg" alt="mail"></a>
 		</div>
 	</div>
 
@@ -54,33 +72,33 @@
 	var lang_id  = 0;
 
 	var intro = {
-		"fr" : "<?= page('home')->intro('fr')->text()->text() ?>",
-		"en" : "<?= page('home')->intro('en')->text()->text() ?>",
-		"no" : "<?= page('home')->intro('no')->text()->text() ?>"
+		"fr" : "<?= page('home')->content('fr')->intro()->text() ?>",
+		"en" : "<?= page('home')->content('en')->intro()->text() ?>",
+		"no" : "<?= page('home')->content('no')->intro()->text() ?>"
 	};	
 
-	$(document).ready(function(){
-		console.log("RALSTON BAU ok");
+	// $(document).ready(function(){
+	// 	console.log("RALSTON BAU ok");
 
 
 
-		//  MAINTENANCE DRAWERS
-		$('.lang').text( intro.en );
+	// 	//  MAINTENANCE DRAWERS
+	// 	$('.lang').text( intro.en );
 
-		setTimeout(function(){ 
-			$("#info").toggleClass("loading");
-			$("#main").toggleClass("loading");
-		}, 2000);
+	// 	setTimeout(function(){ 
+	// 		$("#info").toggleClass("loading");
+	// 		$("#main").toggleClass("loading");
+	// 	}, 2000);
 
 
-		$("#info").click(function(e){
-			$("#info").toggleClass("loading");
-			$("#main").toggleClass("loading");
-		})
+	// 	$("#info").click(function(e){
+	// 		$("#info").toggleClass("loading");
+	// 		$("#main").toggleClass("loading");
+	// 	})
 
 		var lang_bloc = document.querySelector("p.lang");
 
-		console.log(lang_bloc);
+	// 	console.log(lang_bloc);
 
 		lang_bloc.addEventListener("animationstart", listener, false);
 		lang_bloc.addEventListener("animationend", listener, false);
@@ -109,21 +127,21 @@
 
 
 
-		// STORIES PANEL
-		$("#newsletter").css("visibility", "hidden");
+	// 	// STORIES PANEL
+	// 	$("#newsletter").css("visibility", "hidden");
 
-		$("#btn-newsletter").click(function(event){
-			$("#newsletter")
-				.css("visibility", "")
-				.addClass('open');//.show();
-		});
+	// 	$("#btn-newsletter").click(function(event){
+	// 		$("#newsletter")
+	// 			.css("visibility", "")
+	// 			.addClass('open');//.show();
+	// 	});
 
-		$("#newsletter").click(function(event){
-			$("#newsletter")
-				.removeClass('open');//.hide();
-		});
+	// 	$("#newsletter").click(function(event){
+	// 		$("#newsletter")
+	// 			.removeClass('open');//.hide();
+	// 	});
 
-	})
+	// })
 
 
 </script>

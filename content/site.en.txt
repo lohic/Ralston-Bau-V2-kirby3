@@ -2,7 +2,71 @@ Title: Ralston Bau
 
 ----
 
+Practicetxt: Practice
+
+----
+
+Casestxt: Cases
+
+----
+
+Studiotxt: Studio
+
+----
+
+Bigpicturetxt: Big picture
+
+----
+
+Peopletxt: People
+
+----
+
+Scenariotxt: Scenario
+
+----
+
+Formtxt: Form
+
+----
+
 Maintenance: false
+
+----
+
+Newsletterform: true
+
+----
+
+Projectbgcolor: #000000
+
+----
+
+Projecttxtcolor: #FFFFFF
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Logo: 
+
+----
+
+Formstxt: Forms
+
+----
+
+Ogimage: 
+
+----
+
+Casetxt: Cases
 
 ----
 
@@ -15,15 +79,3 @@ Facebook-id:
 ----
 
 Twitter-id: 
-
-----
-
-Description: 
-
-----
-
-Keywords: 
-
-----
-
-Ogimage: 

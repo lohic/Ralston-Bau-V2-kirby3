@@ -5,7 +5,7 @@ return array (
 	'default' => true,
 	'direction' => 'ltr',
 	'locale' => 'en_US',
-	'name' => 'En',
+	'name' => 'English',
 	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',
@@ -17,6 +17,8 @@ return array (
 		'scenario' => 'Scenario',
 		'people' => 'People',
 		'form' => 'Form',
-		'bigpicture' => 'Big picture'
+		'bigpicture' => 'Big picture',
+		'location' => 'Case location',
+		'linked' => 'Related cases'
 	]
 );

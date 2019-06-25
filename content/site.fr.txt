@@ -1,0 +1,69 @@
+Title: Ralston Bau
+
+----
+
+Practicetxt: Practice
+
+----
+
+Casestxt: Cases
+
+----
+
+Studiotxt: Studio
+
+----
+
+Bigpicturetxt: Big picture
+
+----
+
+Peopletxt: People
+
+----
+
+Scenariotxt: Scenario
+
+----
+
+Formtxt: Form
+
+----
+
+Projectbgcolor: #000000
+
+----
+
+Projecttxtcolor: #FFFFFF
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Formstxt: Forms fr
+
+----
+
+Ogimage: 
+
+----
+
+Casetxt: Cases
+
+----
+
+Share: facebook, twitter
+
+----
+
+Facebook-id: 
+
+----
+
+Twitter-id: 

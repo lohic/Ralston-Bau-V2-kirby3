@@ -2,7 +2,19 @@ Title: Camp Tables
 
 ----
 
+Columntoggle: false
+
+----
+
 Text: 
+
+#Test de titre niveau 1
+
+##Test de titre niveau 2
+
+###Test de titre niveau 3
+
+http://www.loichorellou.net
 
 ----
 
@@ -24,11 +36,14 @@ Forms:
 
 ----
 
-Images: 
+Date: 2019-03-05 18:00
 
 ----
 
-Date: 2019-03-05 18:00
+Description: 
+
+Ceci est une description
+et ça fonctionne
 
 ----
 
@@ -38,7 +53,32 @@ Thumbnail:
 
 ----
 
+Panorama: 
+
+- undercst-447x670.jpg
+
+----
+
 Themes: circular
+
+----
+
+Addresses: 
+
+- 
+  map:
+    lat: "48.8845888"
+    lon: "2.3639301"
+    number: "12"
+    city: Paris
+    country: France
+    postcode: "75018"
+- 
+  map:
+    lat: "60.3943034"
+    lon: "5.3258117"
+    city: Hordaland
+    country: Norvège
 
 ----
 
@@ -49,6 +89,10 @@ lon: "5.400416"
 city: Dale
 country: Norway
 postcode: "6963"
+
+----
+
+Images: 
 
 ----
 

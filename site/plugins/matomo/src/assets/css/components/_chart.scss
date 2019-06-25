@@ -1,0 +1,43 @@
+.matomo-chart {
+	position: relative;
+	width: 100%;
+	margin-top: 2.5rem;
+	.overlay, .empty {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(239, 239, 239, 0.85);
+		z-index: 1000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: opacity 0.3s ease-out;
+		.loader {
+			font-size: 30px;
+		}
+	}
+	.empty {
+		margin-top: 0;
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			background: darken(#efefef, 2%);
+			color: lighten(black, 60%);
+		}
+	}
+
+	.chart {
+		height: 52.5vh;
+	}
+	&.is-empty {
+		margin-top: 1.5rem;
+		.chart {
+			height: 25vh;
+		}
+	}
+}

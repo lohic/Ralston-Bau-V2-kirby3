@@ -12,11 +12,39 @@ options:
 
 columns:
   - width: 1/2
-    fields:
-      text:
-        label: Text
-        type: textarea
-        size: huge
+    sections:
+      content:
+        type: fields
+        fields:
+
+          panorama:
+            type: files
+            multiple: false
+            translate: false 
+            query: page.images
+
+          mapToggle:
+            label: Show global map
+            type: toggle
+
+          columnToggle:
+            label: Use columns for the text
+            type: toggle
+            
+          text:
+            label: Text
+            type: textarea
+            size: huge
+      images:
+        type: files
+        layout: cards
+        template: image
+        info: "{{ file.dimensions }}"
+        image:
+          ratio: 5/4
+          cover: true
+        min: 1
+        size: small
 
   - width: 1/2
     fields:

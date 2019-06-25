@@ -1,16 +1,19 @@
 <?php snippet('header') ?>
 <!-- default.php -->
 <div id="main-content" data-menu="studio">
-
-	<main class="texte">
-		<header class="intro">
-			<?= snippet('gallery', ['page' => $page]); ?>
-			<h1><?= $page->title() ?></h1>
-		</header>
-
-		<div class="text">
+	<header class="intro">
+		<?= snippet('gallery', ['page' => $page]); ?>
+		<div class="gradient"></div>
+		<h2><?= $page->title() ?></h2>
+	</header>
+	<main>
+		<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
 			<?= $page->text()->kt() ?>
 		</div>
+
+		<?php if($page->mapToggle()->isTrue()) : ?>
+		<?php echo snippet('map', ['global'=> true]) ?>
+		<?php endif;?>
 	</main>
 </div>
 <!-- fin default.php -->

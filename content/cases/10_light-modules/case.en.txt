@@ -24,15 +24,14 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 
 
 ----
 
 Thumbnail: 
+
+- >
+  chenel_chandelier_mood_anders-600x861.jpg
 
 ----
 
@@ -41,3 +40,7 @@ Themes: light
 ----
 
 Map: 
+
+----
+
+Images: 

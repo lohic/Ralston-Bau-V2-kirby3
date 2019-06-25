@@ -1,0 +1,19 @@
+{
+    "name": "sylvainjule/matomo",
+    "description": "Matomo helpers and panel sections for Kirby",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sylvain Julé",
+            "email": "contact@sylvain-jule.fr"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    },
+    "extra": {
+        "installer-name": "matomo"
+    },
+    "minimum-stability": "beta"
+}

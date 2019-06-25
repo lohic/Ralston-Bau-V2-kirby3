@@ -2,20 +2,26 @@ Title: Contact
 
 ----
 
+Panorama: 
+
+- ii-manifesto.gif
+
+----
+
 Text: 
 
 ----
 
 Address: 
 
-Lystgården
-Kanonhaugen 39
-5097 Bergen
-Norway
+RALSTON BAU
 
-Le Building
+Kanonhaugen 39 
+N-5097 Bergen
+Norway
+#
 73-75 La Canebière
-13001 Marseille
+F-13001 Marseille
 France
 
 ----

@@ -30,15 +30,21 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 2019-03-14 11:05
 
 ----
 
+Description: 
+
+----
+
 Thumbnail: 
+
+- capture-decran-2019-02-18-a-15.21.15.png
+
+----
+
+Panorama: 
 
 ----
 
@@ -53,3 +59,7 @@ lon: "5.8490243"
 city: Saint-Nazaire-les-Eymes
 country: France
 postcode: "38330"
+
+----
+
+Images: 

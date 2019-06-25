@@ -24,15 +24,13 @@ Forms:
 
 ----
 
-Images: 
-
-----
-
 Date: 
 
 ----
 
 Thumbnail: 
+
+- candle-holder2.jpg
 
 ----
 
@@ -47,3 +45,7 @@ lon: "5.400416"
 city: Dale
 country: Norway
 postcode: "6963"
+
+----
+
+Images: 

@@ -1,16 +1,17 @@
 <?php snippet('header') ?>
 <!-- cases.php -->
-<div id="main-content" data-menu="cases">
-	<main class="grid">
-		<div class="grid-sizer"></div>
+<div id="main-content" class="grid" data-menu="cases">
+	<main class="the-grid">
+		<!-- <div class="grid-sizer"></div> -->
 		<?php
-		$practices = page('cases')->children()
+		$cases = page('cases')->children()
 			->listed()
 			->filterBy('themes', param('theme'), ',');
-		foreach($practices as $page):
+		foreach($cases as $page):
 		?>
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
+			<div class="gradient"></div>
 			<h2><?= $page->title() ?></h2>
 			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>

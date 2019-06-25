@@ -4,7 +4,7 @@ return [
 	'code' => 'no',
 	'direction' => 'ltr',
 	'locale' => 'no_NO',
-	'name' => 'No',
+	'name' => 'Norsk',
 	'translations' => [
 		'submit' => 'Submit',
 		'cancel' => 'Cancel',
@@ -16,6 +16,8 @@ return [
 		'scenario' => 'Scenario',
 		'people' => 'People',
 		'form' => 'Form',
-		'bigpicture' => 'Big picture'
+		'bigpicture' => 'Big picture',
+		'location' => 'Plassering av prosjektet',
+		'linked' => 'Relatert prosjekt'
 	]
 ];

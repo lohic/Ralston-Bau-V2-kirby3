@@ -16,6 +16,21 @@ pages:
   template: default
 
 fields:
+
+  panorama:
+    type: files
+    multiple: false
+    translate: false 
+    query: page.images
+
+  mapToggle:
+    label: Show global map
+    type: toggle
+
+  columnToggle:
+    label: Use columns for the text
+    type: toggle
+    
   text:
     type: textarea
     size: huge

@@ -4,7 +4,7 @@ return [
 	'code' => 'fr',
 	'direction' => 'ltr',
 	'locale' => 'fr_FR',
-	'name' => 'Fr',
+	'name' => 'Français',
 	'translations' => [
 		'submit' => 'Envoyer',
 		'cancel' => 'Annuler',
@@ -16,6 +16,8 @@ return [
 		'scenario' => 'Scenario',
 		'people' => 'People',
 		'form' => 'Form',
-		'bigpicture' => 'Big picture'
+		'bigpicture' => 'Big picture',
+		'location' => 'Localisation du projet',
+		'linked' => 'Projets liés'
 	]
 ];
