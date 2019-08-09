@@ -38,8 +38,8 @@
             "authors": [
                 {
                     "name": "Cory LaViska",
-                    "homepage": "http://www.abeautifulsite.net/",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "homepage": "http://www.abeautifulsite.net/"
                 }
             ],
             "description": "A PHP class that makes working with images as simple as possible.",
@@ -90,8 +90,8 @@
             "authors": [
                 {
                     "name": "Filipe Dobreira",
-                    "homepage": "https://github.com/filp",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "homepage": "https://github.com/filp"
                 }
             ],
             "description": "php error handling for cool kids",
@@ -243,9 +243,9 @@
             "authors": [
                 {
                     "name": "Mathieu Lechat",
+                    "role": "Developer",
                     "email": "math.lechat@gmail.com",
-                    "homepage": "http://matthecat.com",
-                    "role": "Developer"
+                    "homepage": "http://matthecat.com"
                 }
             ],
             "description": "Extract colors from an image as a human would do.",
@@ -289,9 +289,9 @@
             "authors": [
                 {
                     "name": "Michel Fortin",
+                    "role": "Developer",
                     "email": "michel.fortin@michelf.ca",
-                    "homepage": "https://michelf.ca/",
-                    "role": "Developer"
+                    "homepage": "https://michelf.ca/"
                 },
                 {
                     "name": "John Gruber",
