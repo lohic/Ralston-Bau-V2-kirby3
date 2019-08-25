@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <!-- search.php -->
 <div id="main-content" class="grid search-result" data-menu="search">
-	<h1>Search results: <?= $_GET["q"] ?></h1>
+	<h1>Search results: <?= isset($_GET["q"])? $_GET["q"] : "" ?></h1>
 	<main class="the-grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php
