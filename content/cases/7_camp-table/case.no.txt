@@ -18,28 +18,6 @@ http://www.loichorellou.net
 
 ----
 
-Bigpictures: 
-
-----
-
-Peoples: 
-
-----
-
-Scenarios: 
-
-----
-
-Forms:
-
-- practices/camp-tables
-
-----
-
-Date: 2019-03-05 18:00
-
-----
-
 Description:
 
 Ceci est une description
@@ -47,35 +25,11 @@ et ça fonctionne
 
 ----
 
-Thumbnail:
-
-- undercst-447x670.jpg
-
-----
-
-Panorama:
-
-- undercst-447x670.jpg
-
-----
-
 Themes: circular
 
 ----
 
-Themes2: Circular
-
-----
-
-Addresses:
-
-- 
-  map:
-    lat: "60.5914743"
-    lon: "5.8188548"
-    city: Dale
-    country: Norvège
-    postcode: "5721"
+Addresses: 
 
 ----
 
