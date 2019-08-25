@@ -40,13 +40,6 @@
 			<!-- cases -->
 			<li class="cases" data-menu="cases"><a href="#"><?= $site->casestxt()->text() //t('cases') ?></a>
 				<ul class="sub-menu">
-					<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
-					<?php foreach ($casethemes as $theme): ?>
-						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active '.$theme.'"',  ' class="'.$theme.'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst( $theme) ) ?></a></li>
-					<?php endforeach ?>
-					<?php endif ?>
-
-
 					<?php $casethemes2 = $site->projectscategories()->toStructure(); ?>
 					<?php foreach ($casethemes2 as $theme): ?>
 						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme->name_en()->text(), ' class="active '.$theme->name_en()->text().'"',  ' class="'.$theme->name_en()->text().'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme->name_en()->text() ?>"><?= html( Str::ucfirst( $theme->name_en()->text()) ) ?></a></li>
@@ -120,13 +113,6 @@
 			</ul>
 			<!-- cases -->
 			<ul class="cases sub-menu">
-				<?php if ($casethemes): ?>
-				<?php foreach ($casethemes as $theme): ?>
-					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active '.$theme.'"',  ' class="'.$theme.'"') ?> ><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst($theme) ) ?></a></li>
-				<?php endforeach ?>
-				<?php endif ?>
-
-
 				<?php $casethemes2 = $site->projectscategories()->toStructure(); ?>
 				<?php foreach ($casethemes2 as $theme): ?>
 				
