@@ -1,0 +1,71 @@
+title: Editor
+description: Editor is not allowed to publish or access to site settings
+
+columns:
+  - width: 1/2
+    fields:
+      country:
+        label: Country
+        type: text
+        translate: false 
+      twitter:
+        label: Twitter
+        type: text
+        icon: twitter
+        placeholder: @username
+        translate: false 
+
+  - width: 1/2
+    fields:
+      website:
+        label: Website
+        type: url
+        translate: false 
+      instagram:
+        label: Instagram
+        type: text
+        icon: instagram
+        placeholder: username
+        translate: false 
+
+permissions:
+  access:
+    panel: true
+    site: true
+    settings: false
+    users: false
+  files:
+    create: true
+    changeName: true
+    delete: true
+    replace: true
+    update: false
+  site:
+    update: false
+  pages:
+    create: true
+    changeTemplate: true
+    changeTitle: true
+    changeSlug: true
+    delete: false
+    hide: true
+    sort: true
+    update: true
+  user:
+    create: false
+    changeName: true
+    changeEmail: true
+    changeLanguage: true
+    changePassword: true
+    changeRole: false
+    delete: true
+    update: true
+  users:
+    create: false
+    changeEmail: false
+    changeLanguage: false
+    changeName: false
+    changePassword: false
+    changeRole: false
+    delete: false
+    update: false

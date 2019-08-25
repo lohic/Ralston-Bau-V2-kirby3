@@ -18,6 +18,6 @@ return [
 		'form' => 'Form',
 		'bigpicture' => 'Big picture',
 		'location' => 'Plassering av prosjektet',
-		'linked' => 'Relatert prosjekt'
+		'linked' => 'Relaterte prosjekter'
 	]
 ];

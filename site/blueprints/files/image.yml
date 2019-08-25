@@ -23,4 +23,5 @@ columns:
             type: url
           embed:
             label: Video embed html
+            help: <p>&lt;iframe src=&quot;https://player.vimeo.com/video/327705197?autoplay=1&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen &gt;&lt;/iframe&gt;</p><p>Size MUST be set to 640x360 the same way, only the vimeo ID need to be changed, otherwise, there will be reponsive issues</p>
             type: text

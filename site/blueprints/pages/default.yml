@@ -12,6 +12,23 @@ status:
     label: Menu Page
     text: The page is listed in the main menu
 
+options:
+  changeTemplate: 
+    admin: true
+    editor: false
+  changeTitle: 
+    admin: true
+    editor: false
+  delete: 
+    admin: true
+    editor: false
+  update: 
+    admin: true
+    editor: false
+  status: 
+    admin: true
+    editor: false
+
 pages:
   template: default
 

@@ -102,7 +102,22 @@ tabs:
                 type: text
                 default: Form
                 width: 1/2
-
+              line3:
+                type: line
+              projectscategories:
+                label: Categories for projects (cases)
+                type: structure
+                translate: false
+                fields:
+                  name_en:
+                    label: Name (en, default)
+                    type: text
+                  name_fr:
+                    label: Name (fr)
+                    type: text
+                  name_no:
+                    label: Name (no)
+                    type: text
       - width: 1/2
         sections:
           param2:
@@ -114,15 +129,15 @@ tabs:
                 text: Enable Maintenance
                 translate: false
                 width: 1/2
-              newsletterform:
-                label: Newsletter form
+              enablesearch:
+                label: Enable searchbar
                 type: toggle
-                text: Enable Newsletter form
                 translate: false
                 width: 1/2
               projectbgcolor:
                 type: color
                 editableAlpha: false
+                translate: false
                 default: "#000000"
                 presets:
                   - "#000000"
@@ -132,18 +147,42 @@ tabs:
               projecttxtcolor:
                 type: color
                 editableAlpha: false
+                translate: false
                 default: "#FFFFFF"
                 presets:
                   - "#000000"
                   - "#FFFFFF"
                   - "#F2E0CD"
                 width: 1/2
-              description:
-                label: Description
+              newsletterform:
+                label: Newsletter form
+                type: toggle
+                text: Enable Newsletter form
+                translate: false
+                width: 1/2
+              tinyletterurl:
+                label: Tinyletter form URL
+                type: text
+                translate: false
+                width: 1/2
+                when: 
+                  newsletterform: true
+              newslettertxt:
+                label: Newsletter text
                 type:  textarea
+                when: 
+                  newsletterform: true
+              line2:
+                type: line
+              description:
+                label: Description (SEO)
+                type:  textarea
+                buttons: false
+                translate: false
               keywords:
-                label: Keywords
+                label: Keywords (SEO)
                 type:  tags
+                translate: false
               # ogimage:
               #   label: Site Thumbnail
               #   type:  url

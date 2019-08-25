@@ -1,7 +1,7 @@
 <section class="gallery">
 <?php $panorama = "" ?>
 <?php if( $page->panorama()->isNotEmpty() ) : ?>
-<?php 
+<?php
 
 if( $page->parent() != null ) :
 	$panorama = $page->parent().'/'.$page->slug().'/'.$page->panorama()->toFile()->filename(); 
@@ -21,9 +21,14 @@ endif;
 		<?php if($image->embed()->isNotEmpty()) : ?>
 		<?= $image->embed() ?>
 		<?php else: ?>
+		<a class="fullscreen-link" data-fancybox="gallery" href="<?= $image->link()->or($image->url()) ?>">
+			<img class="fullscreen-btn" src="<?= $kirby->url('assets') ?>/images/fullscreen.svg" >
+		</a>
 		<?= $image->resize(null,700) ?>
 		<?php endif; ?>
 		<!-- </a> -->
 	</figure>
 <?php endforeach ?>
+
+
 </section>

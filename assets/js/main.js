@@ -1,3 +1,9 @@
+/* ==========================================================================
+   DESIGNED BY Loïc Horellou
+   			   www.loichorellou.net
+   it's a little bit messy here !
+   ========================================================================== */
+
 // javascript
 
 var overmenu = false;
@@ -186,6 +192,15 @@ $(function(){
 	})
 
 
+	/**
+	 * GALLERY FANCYBOX
+	 */
+
+	$('[data-fancybox="gallery"]').fancybox({
+		infobar: false,
+		toolbar: false, //"auto",
+	});
+
 
 	/**
 	 * SCROLL MENU BEHAVIOR
@@ -196,9 +211,9 @@ $(function(){
 	$(window).scroll(function(){
 		// console.log( $('body').scrollTop() + " " + ( $(document).height() - $('body').height() ) );
 		if( $('body').scrollTop() >= ( $(document).height() - $('body').height() ) ){
-			$("#btn-newsletter").addClass("show");
+			$("#search-newsletter").addClass("show");
 		}else{
-			$("#btn-newsletter").removeClass("show");
+			$("#search-newsletter").removeClass("show");
 		}
 	})
 
@@ -209,13 +224,13 @@ $(function(){
 
 		if( previousScrollVal - val >= 0){ // on remonte
 
-			$("#btn-newsletter").addClass("show");
+			$("#search-newsletter").addClass("show");
 			$("#title>h1").removeClass("hide");
 		}else{
 			if (val >= ( $(document).height() - $('body').height() )) {
-				$("#btn-newsletter").addClass("show");
+				$("#search-newsletter").addClass("show");
 			} else {
-				$("#btn-newsletter").removeClass("show");
+				$("#search-newsletter").removeClass("show");
 			}
 			if (val > 40) {
 				$("#title>h1").addClass("hide");

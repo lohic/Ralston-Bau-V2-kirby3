@@ -1,14 +1,16 @@
 <?php snippet('header') ?>
-<!-- cases.php -->
-<div id="main-content" class="grid" data-menu="cases">
+<!-- search.php -->
+<div id="main-content" class="grid search-result" data-menu="search">
+	<h1>Search results: <?= $_GET["q"] ?></h1>
 	<main class="the-grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php
-		$cases = page('cases')->children()
-			->listed()
-			// ->filterBy('themes', param('theme'), ',');
-			->filterBy('themes2', param('theme'), ',');
-		foreach($cases as $page):
+		// $cases = page('cases')->children()
+		// 	->listed()
+		// 	->filterBy('themes2', param('theme'), ',');
+		// foreach($cases as $page):
+		
+		foreach ($results as $page):
 		?>
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
@@ -24,5 +26,5 @@
 		<?php endforeach; ?>
 	</main>
 </div>
-<!-- fin cases.php -->
+<!-- fin search.php -->
 <?php snippet('footer') ?>

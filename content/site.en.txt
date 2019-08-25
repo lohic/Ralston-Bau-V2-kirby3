@@ -30,11 +30,76 @@ Formtxt: Form
 
 ----
 
+Projectscategories:
+
+- 
+  name_en: Acoustic
+  name_fr: Accoustique
+  name_no: null
+- 
+  name_en: Circular
+  name_fr: Circulaire
+  name_no: null
+- 
+  name_en: Design
+  name_fr: null
+  name_no: null
+- 
+  name_en: Food
+  name_fr: null
+  name_no: null
+- 
+  name_en: Identity
+  name_fr: null
+  name_no: null
+- 
+  name_en: Knowledge
+  name_fr: Connaissance
+  name_no: null
+- 
+  name_en: Light
+  name_fr: null
+  name_no: null
+- 
+  name_en: Lighting
+  name_fr: null
+  name_no: null
+- 
+  name_en: Local
+  name_fr: null
+  name_no: null
+- 
+  name_en: Migration
+  name_fr: null
+  name_no: null
+- 
+  name_en: Privacy
+  name_fr: null
+  name_no: null
+- 
+  name_en: Public
+  name_fr: null
+  name_no: null
+- 
+  name_en: Sharing
+  name_fr: null
+  name_no: null
+- 
+  name_en: Social
+  name_fr: null
+  name_no: null
+- 
+  name_en: Upcycling
+  name_fr: null
+  name_no: null
+
+----
+
 Maintenance: false
 
 ----
 
-Newsletterform: true
+Enablesearch: true
 
 ----
 
@@ -46,15 +111,31 @@ Projecttxtcolor: #FFFFFF
 
 ----
 
-Description: 
+Newsletterform: true
 
 ----
 
-Keywords: 
+Tinyletterurl: //tinyletter.com/ralstonbau
+
+----
+
+Newslettertxt: Text **newsletter** super !!!!
+
+----
+
+Description: description  SEO pour ralston&bau
+
+----
+
+Keywords: super, un autre mot clef
 
 ----
 
 Logo: 
+
+----
+
+Newsletter-txt: Hello, super
 
 ----
 
