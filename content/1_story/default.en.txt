@@ -2,7 +2,14 @@ Title: About
 
 ----
 
-Panorama: 
+Panorama:
+
+- >
+  20150812-ralston_bau-34728-liten-aenfotografi.jpg
+
+----
+
+Thumbnail:
 
 - >
   20150812-ralston_bau-34728-liten-aenfotografi.jpg
@@ -17,7 +24,7 @@ Columntoggle: false
 
 ----
 
-Text: 
+Text:
 
 Independent design studio decoding the complexity of our world, connecting people and our common spaces through transformative practice. Ralston Bau takes ideas into action, and complex questions into essential objects.
 
