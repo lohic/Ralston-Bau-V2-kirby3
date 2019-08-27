@@ -24,8 +24,9 @@
 		</nav> -->
 	</div>
 
-
-	<button id="btn-newsletter"><?= t('newsletter','Newsletter') ?></button>        
+	<div id="search-newsletter">
+		<button id="btn-newsletter" class="button"><?= t('newsletter','Newsletter') ?></button>   
+	</div>  
 </div>
 
 <div id="content" class="drawer maintenance">

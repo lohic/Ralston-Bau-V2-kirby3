@@ -39,14 +39,24 @@ fields:
     multiple: false
     translate: false 
     query: page.images
+    width: 1/2
+            
+  thumbnail:
+    type: files
+    multiple: false
+    translate: false 
+    query: page.images
+    width: 1/2
 
   mapToggle:
     label: Show global map
     type: toggle
+    width: 1/2
 
   columnToggle:
     label: Use columns for the text
     type: toggle
+    width: 1/2
     
   text:
     type: textarea
