@@ -139,7 +139,7 @@
 
 	marker.push( new mapboxgl.Marker()
 		  .setLngLat([<?= $location['lon'] ?>, <?= $location['lat'] ?>])
-		  .setPopup( new mapboxgl.Popup({ offset: 35 }).setHTML('<p><a href="<?= $page->url() ?>"><?= $page->title() ?></a></p>') )
+		  .setPopup( new mapboxgl.Popup({ offset: 35 }).setHTML('<p><a href="<?= $page->url() ?>"><?= addslashes( $page->title() ) ?></a></p>') )
 		  .addTo(map) );
 	
 	
