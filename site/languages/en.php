@@ -18,7 +18,8 @@ return array (
 		'people' => 'People',
 		'form' => 'Form',
 		'bigpicture' => 'Big picture',
-		'location' => 'Case location',
+		'location' => 'Context',
+		'locations' => 'Case locations',
 		'linked' => 'Related cases'
 	]
 );

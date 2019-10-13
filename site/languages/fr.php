@@ -17,7 +17,8 @@ return [
 		'people' => 'People',
 		'form' => 'Form',
 		'bigpicture' => 'Big picture',
-		'location' => 'Localisation du projet',
+		'location' => 'Contexte',
+		'locations' => 'Localisation des projets',
 		'linked' => 'Projets liés'
 	]
 ];
