@@ -1,0 +1,57 @@
+Title: Camp Tables
+
+----
+
+Columntoggle: false
+
+----
+
+Text: 
+
+#Test de titre niveau 1
+
+##Test de titre niveau 2
+
+###Test de titre niveau 3
+
+http://www.loichorellou.net
+
+----
+
+Description: 
+
+Ceci est une description
+et ça fonctionne
+
+----
+
+Themes: circular
+
+----
+
+Themes2: Circular
+
+----
+
+Addresses: 
+
+- 
+  map: null
+
+----
+
+Images: 
+
+----
+
+Tags: 
+
+----
+
+Map: 
+
+lat: "61.3635404"
+lon: "5.400416"
+city: Dale
+country: Norway
+postcode: "6963"

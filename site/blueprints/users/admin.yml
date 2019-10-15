@@ -1,0 +1,29 @@
+title: Admin
+description: Admin has all rights
+
+columns:
+  - width: 1/2
+    fields:
+      country:
+        label: Country
+        type: text
+        translate: false 
+      twitter:
+        label: Twitter
+        type: text
+        icon: twitter
+        placeholder: @username
+        translate: false 
+
+  - width: 1/2
+    fields:
+      website:
+        label: Website
+        type: url
+        translate: false 
+      instagram:
+        label: Instagram
+        type: text
+        icon: instagram
+        placeholder: username
+        translate: false 

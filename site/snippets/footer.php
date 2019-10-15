@@ -9,8 +9,15 @@
 <?php if($site->newsletterform()->isTrue()) :?>
 <div id="newsletter">
 
-	<form action="//tinyletter.com/ralstonbau" method="post" target="popupwindow" onsubmit="window.open('//tinyletter.com/ralstonbau', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-		
+
+	
+
+	<form action="<?= $site->tinyletterurl()->text() ?>" method="post" target="popupwindow" onsubmit="window.open('<?= $site->tinyletterurl()->text() ?>', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+
+		<?php if($site->newslettertxt()->isNotEmpty() ) : ?>
+		<div class="text"><?= $site->newslettertxt()->kt() ?></div>
+		<?php endif; ?>
+
 		<p><input type="text" name="email" id="tlemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email@domain.ltd" />
 		<input type="hidden" value="1" name="embed"/>
 		<button type="submit" id="btn-send" class="button"><?= t('subscribe','Subscribe') ?></button></p>

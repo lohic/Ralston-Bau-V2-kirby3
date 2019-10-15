@@ -9,6 +9,20 @@ status:
 options:
   url: false
   delete: false
+  changeTemplate:
+    *: false 
+    admin: true
+  changeTitle: 
+    *: false 
+    admin: true
+  update: 
+    *: false 
+    admin: true
+  status: 
+    *: false 
+    admin: true
+
+
 
 columns:
   - width: 1/2

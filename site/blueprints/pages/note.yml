@@ -2,6 +2,17 @@ title: Note
 num: date
 icon: 📖
 
+options:
+  create: 
+    *: false
+    admin: true
+  status: 
+    *: false
+    admin: true
+  delete: 
+    *: false
+    admin: true
+
 status:
   draft:
     label: Draft

@@ -30,19 +30,11 @@ Formtxt: Form
 
 ----
 
-Projectbgcolor: #000000
+Newslettertxt: Text **newsletter** super en français !!!!
 
 ----
 
-Projecttxtcolor: #FFFFFF
-
-----
-
-Description: 
-
-----
-
-Keywords: 
+Newsletter-txt: 
 
 ----
 

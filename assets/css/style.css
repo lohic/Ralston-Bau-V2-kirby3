@@ -1,3 +1,9 @@
+/* ==========================================================================
+   DESIGNED BY Loïc Horellou
+   			   www.loichorellou.net
+   it's a little bit messy here !
+   ========================================================================== */
+
 *, *:before, *:after {box-sizing:  border-box !important;}
 
 html{
@@ -31,9 +37,6 @@ body{
 
 
 
-
-
-
 .drawer{
 	height: 100vh;
 	position: absolute;
@@ -58,12 +61,12 @@ body{
 	grid-template-columns: auto;
 	/*grid-template-rows: 12.5vw auto 3.5rem 1rem;*/
 	/*grid-template-rows: 12.5vw auto 1rem;*/
-	grid-template-rows: 11.36rem auto 1rem;
+	grid-template-rows: 11.36rem auto 3rem;
 	grid-gap: 1rem;
 	grid-template-areas: 
 	"logo-bloc"
 	"mobile-menu"
-	"btn-newsletter";
+	"search-newsletter";
 	justify-items: start;
 }
 
@@ -96,10 +99,11 @@ body{
 	grid-area: contact;
 }*/
 
-#title #btn-newsletter{
-	grid-area: btn-newsletter;
+#title #search-newsletter{
+	grid-area: search-newsletter;
 	align-self: end;
 }
+
 
 #logo{
 	width: 7rem; /* 9vw */ 
@@ -348,7 +352,9 @@ main h3.practice-title{
 	margin: 2rem 1vw 1rem;
 }
 
-
+.search-result>h1{
+	margin-bottom: 1rem;
+}
 
 
 
@@ -634,6 +640,11 @@ a{
 	transition: height 2s ease;
 }
 
+.gallery figure{
+	position: relative;
+	outline: none;
+}
+
 .gallery iframe{
 	height: 26.4vw !important;
 	width: 46.93vw !important;
@@ -682,7 +693,22 @@ a{
 }
 
 
+.fancybox-button{
+	background: transparent;
+}
 
+.fullscreen-link{
+	display: block;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+	outline: none;
+}
+
+.fullscreen-btn{
+	width: 1.2045rem !important;
+	height: 1.2045rem !important;
+}
 
 .gallery img{
 	width: auto;
@@ -733,14 +759,14 @@ a{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 0.5rem;
-	height: 0.5rem;
+	width: 0.35rem;
+	height: 0.35rem;
 	border-radius: 50%;
 	content: ' ';
 	text-align: center;
 	/*opacity: .25;*/
 	background: transparent;
-	border: solid white 2px;
+	border: solid white 1px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -873,8 +899,42 @@ main.texte a{
     }
 }
 
+/* ==========================================================================
+   Search Form
+   ========================================================================== */
 
+.search-form{
+	display: flex;
+	margin-bottom: 1rem;
+}
 
+.search-form input{
+	margin: 0;
+	font-size: 0.95rem;
+	border: 0;
+	background: none;
+	border-bottom: solid 1px #AAA;
+	border-radius: 0;
+	font-weight:100;
+	width:100%;
+	padding: 0 0.1rem;
+	outline:none;
+}
+
+.search-form input:focus{
+	border-color:#000;
+}
+
+.search-form button{
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.search-form button img{
+	width:1.7045rem
+}
 
 
 /* ==========================================================================
@@ -897,6 +957,7 @@ main.texte a{
     animation-fill-mode: forwards;
     visibility: hidden;
     z-index: 5000;
+    overflow: auto;
 }
 
 #newsletter.open{
@@ -949,8 +1010,14 @@ main.texte a{
 	color: #FFF;
 	text-decoration: none;
 	margin-left: 0.6rem;
-	font-family: big-caslon-fb, serif;
-	font-weight: 400;
+	/*font-family: big-caslon-fb, serif;*/
+	/*font-weight: 400;*/
+}
+
+#newsletter .text{
+	color: #FFF;
+	margin-left: 0.6rem;
+	margin-right: 0.6rem;
 }
 
 #btn-send{
@@ -1189,7 +1256,7 @@ main.grid .tile a h2{
 	}
 
 	#title{
-		grid-template-rows: 9.36rem auto 1rem;
+		grid-template-rows: 9.36rem auto 3rem;
 	}
 
 	#secondary-menu ul {
@@ -1349,24 +1416,6 @@ main.grid .tile a h2{
 		margin-bottom: 1rem;
 	}
 
-/*	#title{
-		left:0;
-		background: #FFF;
-		width: 17.36vw;
-		padding: 3.26vw; 
-
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-rows: 12.5vw auto 4rem 2.5rem 1rem;
-		grid-template-areas: 
-		"logo-bloc"
-		"main-menu"
-		"languages"
-		"contact"
-		"btn-newsletter";
-		justify-items: start;
-	}
-*/
 
 	#main{
 		width: auto;
@@ -1397,16 +1446,11 @@ main.grid .tile a h2{
 		max-width: 100%;
 	}
 
-	#main #contact{
-		position: fixed;
-		right: 17px;
-		bottom: 17px;
-	}
 
-	#btn-newsletter{
+	#search-newsletter{
 		position: fixed;
 		z-index: 3000;
-		display: block;
+		display: flex;
 		background: #FFF;
 		padding: 3.5vw 2.5vw;
 		left: 0;
@@ -1415,10 +1459,17 @@ main.grid .tile a h2{
 		text-align: right;
 		font-size: 0.8rem;
 		transition: bottom 0.5s ease;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	#btn-newsletter.show{
+	#search-newsletter.show{
 		bottom: 0;
+	}
+
+	#search-newsletter .search-form{
+		width: 50%;
+		margin: 0;
 	}
 
 	#main #contact img{
@@ -1596,6 +1647,7 @@ main.grid .tile a h2{
 
 }
 
+
 @media screen and (min-width: 1500px){
 	html{
 		font-size: 18px;
@@ -1711,6 +1763,26 @@ main.grid .tile a h2{
 	#btn-newsletter.show{
 		bottom: 0;
 	}
+
+
+	/* DISPARITION à l'horizontal MENNU TOP & BOTTOM */
+
+	#title{
+		padding: 0;
+	}
+	#title>h1{
+		display: none; 
+	}
+
+	#main-content {
+		margin: 0;
+		padding: 2vw;
+	}
+
+	#btn-newsletter{
+		display: none;
+	}
+
 }
 
 
@@ -1738,6 +1810,8 @@ main.grid .tile a h2{
 	}
 
 	#mobile-menu,
+	#search-newsletter,
+	.fullscreen-link,
 	#btn-newsletter,
 	#newsletter,
 	.map,

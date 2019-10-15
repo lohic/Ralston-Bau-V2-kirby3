@@ -1,0 +1,22 @@
+Title: Test carte
+
+----
+
+Columntoggle: false
+
+----
+
+Text: La carte fonctionne
+
+----
+
+Description: 
+
+----
+
+Themes: 
+
+----
+
+Themes2: Local
+

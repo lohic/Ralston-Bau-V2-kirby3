@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Fullscreen Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Fullscreen-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group" transform="translate(13.000000, 14.000000) scale(-1, 1) translate(-13.000000, -14.000000) translate(0.000000, 1.000000)" stroke="#FFFFFF">
+            <path d="M0,9.07512019 L0,1.5 C0,0.672 0.671,0 1.5,0 L9.07481971,0" id="Path-Copy" stroke-linejoin="round"></path>
+            <path d="M16,25.0751202 L16,17.5 C16,16.672 16.671,16 17.5,16 L25.0748197,16" id="Path-Copy-2" stroke-linejoin="round" transform="translate(20.537410, 20.537560) rotate(-180.000000) translate(-20.537410, -20.537560) "></path>
+            <path d="M9.07481971,9.07512019 L0.453654805,0.453669826" id="Path-2"></path>
+            <path d="M24.6211649,24.6214504 L16,16" id="Path-2-Copy" transform="translate(20.310582, 20.310725) rotate(-180.000000) translate(-20.310582, -20.310725) "></path>
+        </g>
+    </g>
+</svg>

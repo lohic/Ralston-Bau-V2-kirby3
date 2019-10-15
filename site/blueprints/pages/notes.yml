@@ -4,6 +4,7 @@ options:
   changeSlug: false
   delete: false
   preview: false
+  
 num: zero 
 
 sections:

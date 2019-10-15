@@ -6,7 +6,8 @@
 		<?php
 		$cases = page('cases')->children()
 			->listed()
-			->filterBy('themes', param('theme'), ',');
+			// ->filterBy('themes', param('theme'), ',');
+			->filterBy('themes2', param('theme'), ',');
 		foreach($cases as $page):
 		?>
 		<div class="tile">

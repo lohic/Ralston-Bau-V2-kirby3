@@ -13,6 +13,8 @@
 		</div><!-- <img src="<?= $kirby->url('assets') ?>/images/hamburger.svg"> -->
 	</button>
 
+
+	<!-- MOBILE MENU -->
 	<div id="mobile-menu">
 	<!-- main menu -->
 	<nav id="main-menu" class="menu">
@@ -38,11 +40,23 @@
 			<!-- cases -->
 			<li class="cases" data-menu="cases"><a href="#"><?= $site->casestxt()->text() //t('cases') ?></a>
 				<ul class="sub-menu">
-					<?php if ($casethemes = page('cases')->children()->listed()->pluck("themes", ",", true)): ?>
-					<?php foreach ($casethemes as $theme): ?>
-						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active '.$theme.'"',  ' class="'.$theme.'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst( $theme) ) ?></a></li>
+					<?php $casethemes2 = $site->projectscategories()->toStructure(); ?>
+					<?php foreach ($casethemes2 as $theme): ?>
+						
+						<?php
+
+						$themename = $theme->{ "name_" . kirby()->language() }()->text();
+
+						if( $themename->isEmpty() ){
+							$themename = $theme->name_en()->text();
+						}
+
+						// echo $themename;
+						?>
+
+						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme->name_en()->text(), ' class="active '.$theme->name_en()->text().'"',  ' class="'.$theme->name_en()->text().'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme->name_en()->text() ?>"><?= html( Str::ucfirst( $themename ) ) ?></a></li>
 					<?php endforeach ?>
-					<?php endif ?>
+
 				</ul>
 			</li>
 			<!-- pages -->
@@ -69,10 +83,27 @@
 
 	
 	</div>
-	
-	<?php if($site->newsletterform()->isTrue()) :?>
-	<button id="btn-newsletter" class="button"><?= t('newsletter','Newsletter') ?></button> 
-	<?php endif; ?>      
+
+
+	<div id="search-newsletter">
+		<?php if($site->enablesearch()->isTrue()) :?>
+		<form class="search-form" action="<?= $site->page('search')->url() ?>">
+			<?php 
+
+			if(!isset( $query ) ){
+				$query = "";
+			}
+
+			?>
+			<input type="text" name="q" value="<?= html($query) ?>">
+			<button type="submit"><img alt="search" src="<?= $kirby->url('assets') ?>/images/search-black.svg"></button>
+		</form>
+		<?php endif; ?>  
+		
+		<?php if($site->newsletterform()->isTrue()) :?>
+		<button id="btn-newsletter" class="button"><?= t('newsletter','Newsletter') ?></button> 
+		<?php endif; ?> 
+	</div>    
 </div>
 
 
@@ -94,11 +125,22 @@
 			</ul>
 			<!-- cases -->
 			<ul class="cases sub-menu">
-				<?php if ($casethemes): ?>
-				<?php foreach ($casethemes as $theme): ?>
-					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme, ' class="active '.$theme.'"',  ' class="'.$theme.'"') ?> ><a href="<?= $site->url().'/cases/theme:'.$theme ?>"><?= html( Str::ucfirst($theme) ) ?></a></li>
+				<?php $casethemes2 = $site->projectscategories()->toStructure(); ?>
+				<?php foreach ($casethemes2 as $theme): ?>
+				
+					<?php
+
+					$themename = $theme->{ "name_" . kirby()->language() }()->text();
+
+					if( $themename->isEmpty() ){
+						$themename = $theme->name_en()->text();
+					}
+
+					// echo $themename;
+					?>
+
+					<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme->name_en()->text(), ' class="active '.$theme->name_en()->text().'"',  ' class="'.$theme->name_en()->text().'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme->name_en()->text() ?>"><?= html( Str::ucfirst( $themename ) ) ?></a></li>
 				<?php endforeach ?>
-				<?php endif ?>
 			</ul>
 			<!-- studio -->
 			<ul class="studio sub-menu">

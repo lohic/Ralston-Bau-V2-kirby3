@@ -4,6 +4,14 @@ status:
   draft: true
   listed: true
 
+options:
+  status: 
+    *: false
+    admin: true
+  delete: 
+    *: false
+    admin: true
+
 columns:
   - width: 2/3
     sections:
@@ -108,16 +116,26 @@ columns:
             query: page.images
 
           themes:
-            label: Themes
+            label: Themes (old)
             type: tags
             options: query
             query: page.siblings.pluck("themes", ",", true)
+
+          themes2:
+            label: Themes
+            type: multiselect
+            options: query
+            query:
+              fetch: site.projectscategories.toStructure
+              text: "{{structureItem.name_en}}"
+              value: "{{structureItem.name_en}}"
 
           # https://github.com/sylvainjule/kirby-locator
           # https://docs.mapbox.com/help/glossary/map-id/
           addresses:
             label: Addresses
             type: structure
+            translate: false
             fields: 
               map:
                 label: Location
