@@ -42,7 +42,19 @@
 				<ul class="sub-menu">
 					<?php $casethemes2 = $site->projectscategories()->toStructure(); ?>
 					<?php foreach ($casethemes2 as $theme): ?>
-						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme->name_en()->text(), ' class="active '.$theme->name_en()->text().'"',  ' class="'.$theme->name_en()->text().'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme->name_en()->text() ?>"><?= html( Str::ucfirst( $theme->name_en()->text()) ) ?></a></li>
+						
+						<?php
+
+						$themename = $theme->{ "name_" . kirby()->language() }()->text();
+
+						if( $themename->isEmpty() ){
+							$themename = $theme->name_en()->text();
+						}
+
+						// echo $themename;
+						?>
+
+						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme->name_en()->text(), ' class="active '.$theme->name_en()->text().'"',  ' class="'.$theme->name_en()->text().'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme->name_en()->text() ?>"><?= html( Str::ucfirst( $themename ) ) ?></a></li>
 					<?php endforeach ?>
 
 				</ul>
