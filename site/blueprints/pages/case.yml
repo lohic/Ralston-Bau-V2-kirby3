@@ -135,6 +135,7 @@ columns:
           addresses:
             label: Addresses
             type: structure
+            translate: false
             fields: 
               map:
                 label: Location

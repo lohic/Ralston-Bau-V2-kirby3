@@ -2,7 +2,7 @@
 
 <!-- case.php -->
 
-<div id="main-content" data-menu="cases" data-submenu="<?= $page->themes()->toData(",")[0] ?>">
+<div id="main-content" data-menu="cases" data-submenu="<?= $page->themes2()->toData(",")[0] ?>">
 	<header class="intro">
 		<?= snippet('gallery', ['page' => $page]); ?>
 		<div class="gradient"></div>
@@ -86,6 +86,8 @@
 		<?php echo snippet('share') ?>
 
 		<?php echo snippet('map', ['global'=> false]) ?>
+
+
 	</main>
 </div>
 
