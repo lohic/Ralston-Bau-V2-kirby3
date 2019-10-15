@@ -6,7 +6,7 @@ Columntoggle: false
 
 ----
 
-Text:
+Text: 
 
 #Test de titre niveau 1
 
@@ -18,7 +18,7 @@ http://www.loichorellou.net
 
 ----
 
-Description:
+Description: 
 
 Ceci est une description
 et ça fonctionne
@@ -29,7 +29,14 @@ Themes: circular
 
 ----
 
+Themes2: Circular
+
+----
+
 Addresses: 
+
+- 
+  map: null
 
 ----
 
@@ -41,7 +48,7 @@ Tags:
 
 ----
 
-Map:
+Map: 
 
 lat: "61.3635404"
 lon: "5.400416"
