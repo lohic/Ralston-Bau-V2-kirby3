@@ -2,7 +2,15 @@
 
 <!-- case.php -->
 
-<div id="main-content" data-menu="cases" data-submenu="<?= $page->themes2()->toData(",")[0] ?>">
+<?php 
+
+// print_r($page->themes2()->toData(",")->first());
+// 
+// $page->themes2()->toData(",")[0]
+
+
+ ?>
+<div id="main-content" data-menu="cases" data-submenu="<?= a::first( $page->themes2()->toData() ) ?>">
 	<header class="intro">
 		<?= snippet('gallery', ['page' => $page]); ?>
 		<div class="gradient"></div>

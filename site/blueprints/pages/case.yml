@@ -117,13 +117,14 @@ columns:
 
           themes:
             label: Themes (old)
-            type: tags
+            type: hidden #tags
             options: query
             query: page.siblings.pluck("themes", ",", true)
 
           themes2:
             label: Themes
             type: multiselect
+            translate: false 
             options: query
             query:
               fetch: site.projectscategories.toStructure
