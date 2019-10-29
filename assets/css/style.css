@@ -261,9 +261,36 @@ body{
 }
 #main-content{
 	margin: 0.4vw;
+	position: relative;
 }
+
 #main-content.grid{
 	/*margin: 0;*/
+}
+
+#main-content #intro{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+	background: linear-gradient(#000, transparent 100vh);
+}
+
+#main-content #intro div{
+	/*max-width: 50vw;*/
+
+	font-family: big-caslon-fb, serif;
+	font-weight: 400;
+	font-style: normal;
+	padding: 90px 85px;
+	font-size: 3.1875rem;
+	line-height: 1.25em;
 }
 
 
@@ -1300,6 +1327,13 @@ main.grid .tile a h2{
 		right: auto;
 	}
 
+	#main-content #intro div{
+		/*max-width: 50vw;*/
+
+		padding: 110px 25px;
+		font-size: 1.5875rem;
+	}
+
 	#info{
 		left: auto;
 		right: auto;
@@ -1309,6 +1343,10 @@ main.grid .tile a h2{
 		/*max-height: 100vh;*/
 
 		display: none;
+	}
+
+	#main-content #intro{
+		position: fixed;
 	}
 
 	#info.loading{

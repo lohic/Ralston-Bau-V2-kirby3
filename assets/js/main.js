@@ -15,6 +15,9 @@ $(function(){
 	// console.log('domain', domainName);
 
 	let isMenuOpened = Cookies.get('menu.open') === "true" ? true : false;
+	let hideLanding  = Cookies.get('hideLanding') === "true" ? true : false;
+
+	console.log("hideLanding",hideLanding)
 
 	// console.log('isMenuOpened',isMenuOpened);
 
@@ -130,6 +133,51 @@ $(function(){
 		}, 2000);
 	})
 
+
+	/**
+	 * LANDING ON HOME
+	 */
+
+	if( !hideLanding && $("body").hasClass("home") ){
+		
+
+		$("#intro").show()
+	 	$(".the-grid").hide()
+
+
+	 	// if( !is_touch_device() ){
+	 	// 	console.log("LANDING PAGE Desktop")
+
+			// setTimeout(function(){
+			// 	console.log("grid fade in out")
+
+			// 	$(".the-grid").fadeIn(2000);
+			// 	$("#intro").fadeOut(2000, function(){
+
+			// 		console.log("end fade out")
+
+			// 		hideLanding = true
+			// 		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+
+			// 	});
+
+
+			// 	// isMenuOpened = false;
+			// 	// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+
+			// }, 5000);
+
+		// }else{
+		// 	console.log("LANDING PAGE Touch")
+
+
+		// }
+	} else {
+		$("#intro").hide()
+		$(".the-grid").show()
+	}
+
+	
 
 
 	/**
@@ -269,4 +317,15 @@ $(function(){
 
 	
 });
+
+
+function is_touch_device() {
+	return (('ontouchstart' in window)
+		|| (navigator.MaxTouchPoints > 0)
+		|| (navigator.msMaxTouchPoints > 0));
+}
+
+// if (!is_touch_device()) {
+//  document.getElementById('touchOnly').style.display='none';
+// }
 

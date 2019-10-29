@@ -1,6 +1,13 @@
 <?php snippet('header') ?>
 <!-- home.php -->
 <div id="main-content" class="grid" data-menu="cases" data-submenu="">
+
+	<div id="intro">
+		<div>
+			<p class="lang"><?= page('home')->intro()->text() ?></p>
+		</div>
+	</div>
+
 	<main class="the-grid">
 		<!-- <div class="grid-sizer"></div> -->
 		<?php
