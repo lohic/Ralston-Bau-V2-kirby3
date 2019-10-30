@@ -145,33 +145,33 @@ $(function(){
 	 	$(".the-grid").hide()
 
 
-	 	// if( !is_touch_device() ){
-	 	// 	console.log("LANDING PAGE Desktop")
+	 	if( !is_touch_device() ){
+	 		console.log("LANDING PAGE Desktop")
 
-			// setTimeout(function(){
-			// 	console.log("grid fade in out")
+			setTimeout(function(){
+				console.log("grid fade in out")
 
-			// 	$(".the-grid").fadeIn(2000);
-			// 	$("#intro").fadeOut(2000, function(){
+				$(".the-grid").fadeIn(2000);
+				$("#intro").fadeOut(2000, function(){
 
-			// 		console.log("end fade out")
+					console.log("end fade out")
 
-			// 		hideLanding = true
-			// 		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+					hideLanding = true
+					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
 
-			// 	});
-
-
-			// 	// isMenuOpened = false;
-			// 	// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
-
-			// }, 5000);
-
-		// }else{
-		// 	console.log("LANDING PAGE Touch")
+				});
 
 
-		// }
+				// isMenuOpened = false;
+				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+
+			}, 5000);
+
+		}else{
+			console.log("LANDING PAGE Touch")
+			// https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+
+		}
 	} else {
 		$("#intro").hide()
 		$(".the-grid").show()
