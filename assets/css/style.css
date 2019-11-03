@@ -735,6 +735,7 @@ a{
 .fullscreen-btn{
 	width: 1.2045rem !important;
 	height: 1.2045rem !important;
+	mix-blend-mode: difference;
 }
 
 .gallery img{

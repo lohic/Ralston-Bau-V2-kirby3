@@ -142,38 +142,44 @@ $(function(){
 		
 
 		$("#intro").show()
+		$("#newsletter").hide()
 	 	$(".the-grid").hide()
 
 
-	 	if( !is_touch_device() ){
-	 		console.log("LANDING PAGE Desktop")
-
-			setTimeout(function(){
-				console.log("grid fade in out")
-
-				$(".the-grid").fadeIn(2000);
-				$("#intro").fadeOut(2000, function(){
-
-					console.log("end fade out")
-
-					hideLanding = true
-					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
-
-				});
+	 	hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
 
-				// isMenuOpened = false;
-				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+	 // 	if( !is_touch_device() ){
+	 // 		console.log("LANDING PAGE Desktop")
 
-			}, 5000);
+		// 	setTimeout(function(){
+		// 		console.log("grid fade in out")
 
-		}else{
-			console.log("LANDING PAGE Touch")
-			// https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+		// 		$(".the-grid").fadeIn(2000);
+		// 		$("#newsletter").show()
+		// 		$("#intro").fadeOut(2000, function(){
 
-		}
+		// 			console.log("end fade out")
+
+		// 			hideLanding = true
+		// 			Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+
+		// 		});
+
+
+		// 		// isMenuOpened = false;
+		// 		// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+
+		// 	}, 5000);
+
+		// }else{
+		// 	console.log("LANDING PAGE Touch")
+		// 	// https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+
+		// }
 	} else {
 		$("#intro").hide()
+		$("#newsletter").show()
 		$(".the-grid").show()
 	}
 
