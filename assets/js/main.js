@@ -7,6 +7,7 @@
 // javascript
 
 var overmenu = false;
+var lastDelta = 0;
 
 $(function(){
 
@@ -146,37 +147,85 @@ $(function(){
 	 	$(".the-grid").hide()
 
 
-	 	hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+	 	if( !is_touch_device() ){
+	 		console.log("LANDING PAGE Desktop")
+
+			setTimeout(function(){
+				console.log("grid fade in out")
+
+				$(".the-grid").fadeIn(2000)
+				$("#newsletter").show()
+				$("#intro").fadeOut(2000, function(){
+
+					console.log("end fade out")
+
+					hideLanding = true
+					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+
+				});
 
 
-	 // 	if( !is_touch_device() ){
-	 // 		console.log("LANDING PAGE Desktop")
+				// isMenuOpened = false;
+				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
-		// 	setTimeout(function(){
-		// 		console.log("grid fade in out")
+			}, 5000);
 
-		// 		$(".the-grid").fadeIn(2000);
-		// 		$("#newsletter").show()
-		// 		$("#intro").fadeOut(2000, function(){
+		}else{
+			console.log("LANDING PAGE Touch")
+			// https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+			
+			var hammertime = new Hammer(document.querySelector("#intro"));
+			hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+			hammertime.on('pan', function(ev) {
+				// console.log(ev, ev.deltaY, "translate", `translate3d(0px, ${ev.deltaY}px, 0px)`);
 
-		// 			console.log("end fade out")
+				$("#intro")
+				.css("transition", "none")
+				.css("transform", `translate3d(0px, ${ev.deltaY}px, 0px)`)
 
-		// 			hideLanding = true
-		// 			Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+				lastDelta = ev.deltaY;
+			});
+			hammertime.on('panend', function(ev) {
+				// console.log(ev, ev.deltaY);
 
-		// 		});
+				
 
+				if(lastDelta > 300 || lastDelta < -300){
+					$(".the-grid").fadeIn(1000)
+					$("#newsletter").show()
+					$("#intro")
+					.css("transition", "transform ease-in-out 0.5s")
+					.css("transform", `translate3d(0px, ${2 * lastDelta}px, 0px)`)
+					.fadeOut(1000, function(){
 
-		// 		// isMenuOpened = false;
-		// 		// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+						console.log("end fade out")
 
-		// 	}, 5000);
+						hideLanding = true
+						Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
 
-		// }else{
-		// 	console.log("LANDING PAGE Touch")
-		// 	// https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+					});
+				}else{
+					$("#intro")
+					.css("transition", "transform ease-in-out 0.5s")
+					.css("transform", "translate3d(0px, 0px, 0px)")
+				}
+			});
+			// hammertime.on('swipe', function(ev) {
+			// 	// console.log(ev);
 
-		// }
+			// 	$(".the-grid").fadeIn(1000)
+			// 	$("#newsletter").show()
+			// 	$("#intro").fadeOut(1000, function(){
+
+			// 		console.log("end fade out")
+
+			// 		hideLanding = true
+			// 		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+
+			// 	});
+			// });
+
+		}
 	} else {
 		$("#intro").hide()
 		$("#newsletter").show()
