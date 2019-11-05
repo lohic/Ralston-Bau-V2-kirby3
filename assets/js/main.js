@@ -8,12 +8,21 @@
 
 var overmenu = false;
 var lastDelta = 0;
+var cookieExpiration = new Date(new Date().getTime() + 60 * 60 * 1000); // 60 minutes
+
+
 
 $(function(){
 
 	console.log('Ralston Bau ok');
 	let domainName = $("[name='rb:domain']").attr("content");
 	// console.log('domain', domainName);
+	
+	 
+	if( document.referrer.search( domainName ) === -1){
+		let hideLanding = false
+		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+	}
 
 	let isMenuOpened = Cookies.get('menu.open') === "true" ? true : false;
 	let hideLanding  = Cookies.get('hideLanding') === "true" ? true : false;
@@ -97,7 +106,7 @@ $(function(){
 
 	$(".menu a").click(function(event){
 		isMenuOpened = true;
-		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName, expires: cookieExpiration });
 		// console.log('isMenuOpened',isMenuOpened);
 	})
 
@@ -128,7 +137,7 @@ $(function(){
 				$("#main").addClass("loading");
 
 				isMenuOpened = false;
-				Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+				Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName, expires: cookieExpiration });
 				// console.log('isMenuOpened',isMenuOpened);
 			}
 		}, 2000);
@@ -160,7 +169,7 @@ $(function(){
 					console.log("end fade out")
 
 					hideLanding = true
-					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
 
 				});
 
@@ -168,7 +177,7 @@ $(function(){
 				// isMenuOpened = false;
 				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
-			}, 5000);
+			}, 4000);
 
 		}else{
 			console.log("LANDING PAGE Touch")
@@ -201,7 +210,7 @@ $(function(){
 						console.log("end fade out")
 
 						hideLanding = true
-						Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+						Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
 
 					});
 				}else{
@@ -226,13 +235,22 @@ $(function(){
 			// });
 
 		}
+
+
+
 	} else {
 		$("#intro").hide()
 		$("#newsletter").show()
 		$(".the-grid").show()
 	}
 
-	
+	// pour réafficher l'annonce après la fermeture de la fenetre
+	// $(window).on( "unload",function() {
+	// 	hideLanding = false
+	// 	Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+	// })
+
+
 
 
 	/**
@@ -373,6 +391,26 @@ $(function(){
 	
 });
 
+
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchstart", handle, { passive: false });
+    } else {
+      this.addEventListener("touchstart", handle, { passive: true });
+    }
+  }
+};
+
+jQuery.event.special.touchmove = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchmove", handle, { passive: false });
+    } else {
+      this.addEventListener("touchmove", handle, { passive: true });
+    }
+  }
+};
 
 function is_touch_device() {
 	return (('ontouchstart' in window)
