@@ -45,6 +45,11 @@ $(function(){
 	let clearNoTransition = window.setTimeout( function(){ $("body").removeClass("notransition"); console.log("transition ok") },2000);
 	
 
+	if( hideLanding && $("body").hasClass("home") ){
+		$("#intro").hide()
+		$("#newsletter").show()
+		$(".the-grid").show()
+	}
 
 
 	$.expr[':'].internal = function (obj, index, meta, stack) {
