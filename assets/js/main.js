@@ -177,7 +177,7 @@ $(function(){
 				// isMenuOpened = false;
 				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
 
-			}, 4000);
+			}, 6000);
 
 		}else{
 			console.log("LANDING PAGE Touch")
