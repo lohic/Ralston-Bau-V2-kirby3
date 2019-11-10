@@ -1,9 +1,9 @@
-@import 
+@import
     'abstracts/_variables.scss',
     'abstracts/_mixins.scss';
-@import 
+@import
     'vendors/_leaflet.scss';
-@import 
+@import
     'components/_map.scss';
 
 
@@ -71,14 +71,18 @@
 	.map-container {
 		position: relative;
 		margin-top: 1rem;
-		padding-top: 65%;
-		@include responsive-height;
 		.map {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+		}
+	}
+	&:not(.closed) {
+		.map-container {
+			padding-top: 65%;
+			@include responsive-height;
 		}
 	}
 
@@ -98,7 +102,7 @@
 				width: 50%;
 				padding: 0.75rem 0;
 				border-bottom: 1px solid lighten($color-border-light, 2%);
-				
+
 				// no border on the nth-last(2) only if it's an odd number,
 				// in case there's only one block in the last row
 				&:nth-last-child(2):nth-child(odd),
@@ -190,6 +194,32 @@
 	        padding: .5rem .75rem;
 	    }
 	}
+
+
+	/* Filled
+	----------------------------*/
+
+	&.filled.closed {
+		.k-locator-container {
+			display: flex;
+		}
+		.k-locator-input {
+			display: none;
+		}
+		.map-container {
+			width: 200px;
+			padding-top: 0;
+			margin-top: 0;
+            pointer-events: none;
+			.leaflet-bottom.leaflet-right,
+			.leaflet-top.leaflet-left {
+				display: none;
+			}
+            .leaflet-marker-icon {
+                cursor: default;
+            }
+		}
+	}
 }
 
 
@@ -197,7 +227,7 @@
 ----------------------------*/
 
 .k-sections > .k-column[data-width="1/1"] {
-	.k-locator-field {
+	.k-locator-field:not(.closed) {
 		.map-container {
 			padding-top: 35%;
 			@include responsive-height;
@@ -206,7 +236,7 @@
 }
 
 .k-sections > .k-column[data-width="3/4"] {
-	.k-locator-field {
+	.k-locator-field:not(.closed) {
 		.map-container {
 			padding-top: 45%;
 			@include responsive-height;
@@ -215,7 +245,7 @@
 }
 
 .k-sections > .k-column[data-width="2/3"] {
-	.k-locator-field {
+	.k-locator-field:not(.closed) {
 		.map-container {
 			padding-top: 50%;
 			@include responsive-height;
@@ -225,7 +255,26 @@
 
 .k-sections > .k-column[data-width="1/3"],
 .k-sections > .k-column[data-width="1/4"] {
-	.leaflet-control-zoom-in, .leaflet-control-zoom-out { 
+	.k-locator-field {
+		&.filled.closed {
+			.k-locator-container {
+				display: block
+			}
+			.k-locator-input {
+				display: none;
+			}
+			.map-container {
+				width: 100%;
+				padding-top: 50%;
+				margin-top: 0;
+				.leaflet-bottom.leaflet-right,
+				.leaflet-top.leaflet-left {
+					display: none;
+				}
+			}
+		}
+	}
+	.leaflet-control-zoom-in, .leaflet-control-zoom-out {
 		@include small-controls;
 	}
 }
