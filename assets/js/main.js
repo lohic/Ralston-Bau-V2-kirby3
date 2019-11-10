@@ -224,20 +224,27 @@ $(function(){
 					.css("transform", "translate3d(0px, 0px, 0px)")
 				}
 			});
-			// hammertime.on('swipe', function(ev) {
-			// 	// console.log(ev);
+			
+			
+			setTimeout(function(){
+				console.log("grid fade in out")
 
-			// 	$(".the-grid").fadeIn(1000)
-			// 	$("#newsletter").show()
-			// 	$("#intro").fadeOut(1000, function(){
+				$(".the-grid").fadeIn(2000)
+				$("#newsletter").show()
+				$("#intro").fadeOut(2000, function(){
 
-			// 		console.log("end fade out")
+					console.log("end fade out")
 
-			// 		hideLanding = true
-			// 		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName })
+					hideLanding = true
+					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
 
-			// 	});
-			// });
+				});
+
+
+				// isMenuOpened = false;
+				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+
+			}, 6000);
 
 		}
 
