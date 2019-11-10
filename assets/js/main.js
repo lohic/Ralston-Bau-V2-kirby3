@@ -7,14 +7,27 @@
 // javascript
 
 var overmenu = false;
+var lastDelta = 0;
+var cookieExpiration = new Date(new Date().getTime() + 60 * 60 * 1000); // 60 minutes
+
+
 
 $(function(){
 
 	console.log('Ralston Bau ok');
 	let domainName = $("[name='rb:domain']").attr("content");
 	// console.log('domain', domainName);
+	
+	 
+	if( document.referrer.search( domainName ) === -1){
+		let hideLanding = false
+		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+	}
 
 	let isMenuOpened = Cookies.get('menu.open') === "true" ? true : false;
+	let hideLanding  = Cookies.get('hideLanding') === "true" ? true : false;
+
+	console.log("hideLanding",hideLanding)
 
 	// console.log('isMenuOpened',isMenuOpened);
 
@@ -32,6 +45,11 @@ $(function(){
 	let clearNoTransition = window.setTimeout( function(){ $("body").removeClass("notransition"); console.log("transition ok") },2000);
 	
 
+	if( hideLanding && $("body").hasClass("home") ){
+		$("#intro").hide()
+		$("#newsletter").show()
+		$(".the-grid").show()
+	}
 
 
 	$.expr[':'].internal = function (obj, index, meta, stack) {
@@ -93,7 +111,7 @@ $(function(){
 
 	$(".menu a").click(function(event){
 		isMenuOpened = true;
-		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+		Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName, expires: cookieExpiration });
 		// console.log('isMenuOpened',isMenuOpened);
 	})
 
@@ -124,11 +142,126 @@ $(function(){
 				$("#main").addClass("loading");
 
 				isMenuOpened = false;
-				Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+				Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName, expires: cookieExpiration });
 				// console.log('isMenuOpened',isMenuOpened);
 			}
 		}, 2000);
 	})
+
+
+	/**
+	 * LANDING ON HOME
+	 */
+
+	if( !hideLanding && $("body").hasClass("home") ){
+		
+
+		$("#intro").show()
+		$("#newsletter").hide()
+	 	$(".the-grid").hide()
+
+
+	 	if( !is_touch_device() ){
+	 		console.log("LANDING PAGE Desktop")
+
+			setTimeout(function(){
+				console.log("grid fade in out")
+
+				$(".the-grid").fadeIn(2000)
+				$("#newsletter").show()
+				$("#intro").fadeOut(2000, function(){
+
+					console.log("end fade out")
+
+					hideLanding = true
+					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+
+				});
+
+
+				// isMenuOpened = false;
+				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+
+			}, 6000);
+
+		}else{
+			console.log("LANDING PAGE Touch")
+			// https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+			
+			var hammertime = new Hammer(document.querySelector("#intro"));
+			hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+			hammertime.on('pan', function(ev) {
+				// console.log(ev, ev.deltaY, "translate", `translate3d(0px, ${ev.deltaY}px, 0px)`);
+
+				$("#intro")
+				.css("transition", "none")
+				.css("transform", `translate3d(0px, ${ev.deltaY}px, 0px)`)
+
+				lastDelta = ev.deltaY;
+			});
+			hammertime.on('panend', function(ev) {
+				// console.log(ev, ev.deltaY);
+
+				
+
+				if(lastDelta > 300 || lastDelta < -300){
+					$(".the-grid").fadeIn(1000)
+					$("#newsletter").show()
+					$("#intro")
+					.css("transition", "transform ease-in-out 0.5s")
+					.css("transform", `translate3d(0px, ${2 * lastDelta}px, 0px)`)
+					.fadeOut(1000, function(){
+
+						console.log("end fade out")
+
+						hideLanding = true
+						Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+
+					});
+				}else{
+					$("#intro")
+					.css("transition", "transform ease-in-out 0.5s")
+					.css("transform", "translate3d(0px, 0px, 0px)")
+				}
+			});
+			
+			
+			setTimeout(function(){
+				console.log("grid fade in out")
+
+				$(".the-grid").fadeIn(2000)
+				$("#newsletter").show()
+				$("#intro").fadeOut(2000, function(){
+
+					console.log("end fade out")
+
+					hideLanding = true
+					Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+
+				});
+
+
+				// isMenuOpened = false;
+				// Cookies.set('menu.open', isMenuOpened, { path: '/', domain: domainName });
+
+			}, 6000);
+
+		}
+
+
+
+	} else {
+		$("#intro").hide()
+		$("#newsletter").show()
+		$(".the-grid").show()
+	}
+
+	// pour réafficher l'annonce après la fermeture de la fenetre
+	// $(window).on( "unload",function() {
+	// 	hideLanding = false
+	// 	Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
+	// })
+
 
 
 
@@ -269,4 +402,35 @@ $(function(){
 
 	
 });
+
+
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchstart", handle, { passive: false });
+    } else {
+      this.addEventListener("touchstart", handle, { passive: true });
+    }
+  }
+};
+
+jQuery.event.special.touchmove = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchmove", handle, { passive: false });
+    } else {
+      this.addEventListener("touchmove", handle, { passive: true });
+    }
+  }
+};
+
+function is_touch_device() {
+	return (('ontouchstart' in window)
+		|| (navigator.MaxTouchPoints > 0)
+		|| (navigator.msMaxTouchPoints > 0));
+}
+
+// if (!is_touch_device()) {
+//  document.getElementById('touchOnly').style.display='none';
+// }
 

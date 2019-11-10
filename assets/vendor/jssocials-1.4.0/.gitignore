@@ -2,6 +2,6 @@
 /bower_components/
 .idea
 .sass-cache
-dist
+# dist
 _site
 

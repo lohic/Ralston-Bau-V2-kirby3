@@ -2,6 +2,10 @@ Title: Gastronomic Institute
 
 ----
 
+Columntoggle: false
+
+----
+
 Text: 
 
 ----
@@ -28,13 +32,29 @@ Date:
 
 ----
 
+Description: 
+
+----
+
 Thumbnail: 
 
 - anders-veggoppifra-854x670.jpg
 
 ----
 
+Panorama: 
+
+----
+
 Themes: food, identity
+
+----
+
+Themes2: Food, Identity
+
+----
+
+Addresses: 
 
 ----
 

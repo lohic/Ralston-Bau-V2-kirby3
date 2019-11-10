@@ -1,0 +1,63 @@
+Title: Gastronomic Institute
+
+----
+
+Slug: gastronomic-institute
+
+----
+
+Text: 
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: - practices/vertical-feast
+
+----
+
+Date: 
+
+----
+
+Thumbnail: - anders-veggoppifra-854x670.jpg
+
+----
+
+Themes: food, identity
+
+----
+
+Map: 
+
+lat: "58.9680427"
+lon: "5.7324722"
+city: Stavanger
+country: Norway
+postcode: "4006"
+
+----
+
+Images: 
+
+----
+
+Columntoggle: false
+
+----
+
+Description: 
+
+----
+
+Themes2: Food, Identity
