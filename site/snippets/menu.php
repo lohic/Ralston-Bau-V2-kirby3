@@ -74,9 +74,11 @@
 	<nav class="languages" role="navigation">
 		<ul>
 			<?php foreach($kirby->languages() as $language): ?>
+			<?php if( $language->code() != "no"): ?>
 			<li<?php e($kirby->language() == $language, ' class="active"') ?>>
 				 <a href="<?= $page->url($language->code()) ?>"><?= html($language->name()) ?></a>
 			</li>
+			<?php endif; ?>
 			<?php endforeach ?>
 		</ul>
 	</nav>

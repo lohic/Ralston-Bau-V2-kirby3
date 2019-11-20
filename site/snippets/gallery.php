@@ -12,6 +12,9 @@ endif;
 ?>
 	<figure class="panorama" style="background-image: url(<?= $page->panorama()->toFile()->url() ?>)">
 		<!-- <div style="background-image: url(<?= $page->panorama()->toFile()->url() ?>) !important"></div> -->
+		<a class="fullscreen-link" data-fancybox="gallery" href="<?= $page->panorama()->toFile()->link()->or($page->panorama()->toFile()->url()) ?>">
+			<img class="fullscreen-btn" src="<?= $kirby->url('assets') ?>/images/fullscreen.svg" >
+		</a>
 		<?= $page->panorama()->toFile()->resize(null,700) ?>
 	</figure>
 <?php endif; ?>
