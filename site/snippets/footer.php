@@ -32,6 +32,7 @@
 <script>
 	$("#share").jsSocials({
     	showLabel: false,
+        showCount: false,
         shares: [{
 	        share: "email",
 	        logo: "<?= $kirby->url('assets') ?>/images/email.svg"

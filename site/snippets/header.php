@@ -7,8 +7,37 @@
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <meta name="description" content="<?= $site->description()->text() ?>">
 <meta name="keywords" content="<?= $site->keywords()->text() ?>">
-<meta name="author" content="Loïc Horellou">
+<meta name="author" content="Ralston Bau">
 <meta name='rb:domain' content='<?= parse_url( $kirby->url() )['host'] ?>'>
+
+<!--
+	┌────────────────────────────────┐
+	│████████████████████████████████│
+	│ 		                         │
+	│ SITE DESIGNED BY LOIC HORELLOU │
+	│      www.loichorellou.net      │
+	│ 		                         │
+	│▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│
+	└────────────────────────────────┘
+-->
+
+<meta property="og:title" content="<?= $page->title() ?> | 	<?= $site->title() ?>" />
+<meta property="og:description" content="<?= $page->title() ?> : <?= Str::replace( $page->description()->text(), "\n", " " ) ?>" />
+<meta property="article:published_time" content="<?= $page->date()->toDate('Y-m-d') ?>" />
+<meta property="og:url" content="<?= $page->url() ?>" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ralstonbau">
+<meta name="twitter:title" content="<?= $page->title() ?> | 	<?= $site->title() ?>">
+<meta name="twitter:description" content="<?= Str::short( Str::replace( $page->description()->text(), "\n", " " ), 199 ) ?>">
+<meta name="twitter:creator" content="@ralstonbau">
+
+<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
+<meta property="og:image" content="<?= $page->thumbnail()->toFile()->resize(400,400)->url() ?>" />
+<meta name="twitter:image" content="<?= $page->thumbnail()->toFile()->resize(400,400)->url() ?>">
+<?php endif; ?>
+
 
 
 <title><?= $page->title() ?> | 	<?= $site->title() ?></title>
