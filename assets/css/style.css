@@ -719,6 +719,10 @@ a{
 	display: none;
 }
 
+#main .gallery figure.panorama img.fullscreen-btn{
+	display: inline;
+}
+
 
 .fancybox-button{
 	background: transparent;
