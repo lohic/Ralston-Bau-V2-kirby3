@@ -1841,6 +1841,7 @@ main.grid .tile a h2{
   	body {
   		-webkit-print-color-adjust: exact;
   		color-adjust:exact;
+  		margin: 5mm;
   	}
 
 	html{
