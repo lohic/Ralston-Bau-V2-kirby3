@@ -115,8 +115,7 @@
 	var marker = new Array();
 
 	<?php
-	$cases = page('cases')->children()
-		->listed();
+	$cases = page('cases')->children()->listed();
 
 	$lat = array();
 	$lng = array();
@@ -126,7 +125,6 @@
 			foreach($page->addresses()->toStructure() as $address ) :
 
 				$location = $address->map()->yaml();
-
 
 				// $page->url()
 				// $page->title()

@@ -49,7 +49,7 @@
 		 'assets/vendor/slick-1.8.1/slick/slick.min.js',
 		 'assets/vendor/fancybox-master/dist/jquery.fancybox.min.js',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
-		 'assets/js/main.js?v=1.42']) ?> 
+		 'assets/js/main.js?v=1.45']) ?> 
 
 <?= css(['https://use.typekit.net/vrl2tmu.css',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
@@ -58,7 +58,7 @@
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/vendor/fancybox-master/dist/jquery.fancybox.min.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.42'/*,
+		 'assets/css/style.css?v=1.45'/*,
 		 '@auto'*/]) ?>
 
 <?php

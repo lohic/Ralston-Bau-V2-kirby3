@@ -18,7 +18,28 @@
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
 			<div class="gradient"></div>
-			<h2><?= $page->title() ?></h2>
+			<h2><?php  
+
+				$addresses = $page->addresses()->toStructure();
+				$villes = array();
+
+
+				foreach($addresses as $address ) :
+	
+					$location = $address->map()->yaml();
+		
+					if( !empty( $location['city'] ) ) :
+
+						$villes[] = $location['city'];
+
+					endif;
+						
+				endforeach;
+
+
+				echo count($villes)>0 ? "<span class=\"ville\">".implode(", ", $villes)."</span><br>" : "";
+
+			?><?= $page->title() ?></h2>
 			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>
 			<?php else : ?>

@@ -332,6 +332,9 @@ $(function(){
 	$('[data-fancybox="gallery"]').fancybox({
 		infobar: false,
 		toolbar: false, //"auto",
+		// clickSlide: "close",
+		// clickOutside: "close",
+		// hideScrollbar: true
 	});
 
 

@@ -1108,7 +1108,8 @@ main.the-grid{
 	font-weight: 400;
 	/*font-size: 2.95rem;*/
 	font-size: 2.65rem;
-	line-height: 1em;
+	/*line-height: 1em;*/
+	line-height: .8em;
 	position: absolute;
 	bottom: 1.175rem;
 	left: 10px;
@@ -1116,6 +1117,14 @@ main.the-grid{
 	opacity: 0;
 	transition: opacity 1s ease;
 }
+
+.tile h2 .ville{
+	font-family: "Colaborate", sans-serif;
+	font-size: .95rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
 .tile img{
 	width: 100%;
 	height: auto; 
@@ -1575,6 +1584,13 @@ main.grid .tile a h2{
 		left: 10px;
 	}
 
+	.tile h2 .ville{	
+		font-family: "Colaborate", sans-serif;
+		font-size: .70rem;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
 
 	.text .description{
 		width: 100%;
@@ -1841,7 +1857,7 @@ main.grid .tile a h2{
   	body {
   		-webkit-print-color-adjust: exact;
   		color-adjust:exact;
-  		margin: 5mm;
+  		margin: 0mm;
   	}
 
 	html{
