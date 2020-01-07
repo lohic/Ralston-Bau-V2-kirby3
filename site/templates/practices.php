@@ -12,7 +12,9 @@
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
 			<div class="gradient"></div>
-			<h2><?= $page->title() ?></h2>
+			<div class="tile-title">
+				<h2><?= $page->title() ?></h2>
+			</div>
 			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>
 			<?php else : ?>
