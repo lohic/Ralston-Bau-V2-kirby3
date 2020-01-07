@@ -102,6 +102,11 @@ columns:
             label: Legend
             size: medium
             buttons: false
+
+          showcity:
+            type: toggle
+            label: Show City ?
+            default: false
             
           thumbnail:
             type: files

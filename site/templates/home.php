@@ -18,7 +18,9 @@
 		<div class="tile">
 			<a href="<?= $page->url() ?>">
 			<div class="gradient"></div>
-			<h2><?php  
+			<div class="tile-title">
+				<?php if($page->showcity()->isTrue()): ?>
+				<p class="ville"><?php  
 
 				$addresses = $page->addresses()->toStructure();
 				$villes = array();
@@ -37,9 +39,11 @@
 				endforeach;
 
 
-				echo count($villes)>0 ? "<span class=\"ville\">".implode(", ", $villes)."</span><br>" : "";
+				echo count($villes)>0 ? implode(", ", $villes) : "";
 
-			?><?= $page->title() ?></h2>
+			?></p><?php endif; ?>
+				<h2><?= $page->title() ?></h2>
+			</div>
 			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>
 			<?php else : ?>

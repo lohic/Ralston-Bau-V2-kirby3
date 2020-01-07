@@ -332,8 +332,12 @@ $(function(){
 	$('[data-fancybox="gallery"]').fancybox({
 		infobar: false,
 		toolbar: false, //"auto",
-		// clickSlide: "close",
-		// clickOutside: "close",
+		clickSlide: "close",
+		clickOutside: "close",
+		touch : {
+		  vertical : true,  // Allow to drag content vertically
+		  momentum : true   // Continuous movement when panning
+		},
 		// hideScrollbar: true
 	});
 
