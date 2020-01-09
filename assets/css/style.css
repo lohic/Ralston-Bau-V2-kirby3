@@ -1583,6 +1583,15 @@ main.grid .tile a h2{
 		/*padding: 2vw 2vw calc(8.3vw + 1rem);*/
 	}
 
+	.tile .tile-title{
+		opacity: 1;
+	}
+
+	.tile .gradient{
+		background: linear-gradient(to top, rgba(0,0,0,0.4) 0%,rgba(216,216,216,0) 100%);
+		opacity: 1;
+	}
+
 	.tile h2{
 		font-size: 1.95rem;
 		bottom: 0.875rem;
