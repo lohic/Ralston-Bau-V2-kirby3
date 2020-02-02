@@ -512,7 +512,7 @@ p+p{
 .related-cases li h2{
 	position: relative;
 	z-index: 10;
-	text-align: center;
+	text-align: left;
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	margin: 1rem;
