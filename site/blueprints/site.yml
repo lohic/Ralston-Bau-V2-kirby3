@@ -197,6 +197,14 @@ tabs:
                 layout: cards
                 size: small
                 help: if none, default RalstonBau logo
+              thumbnail:
+                label: Thumbnail
+                type: files
+                query: site.find('case').children.images
+                multiple: false
+                translate: false
+                layout: cards
+                size: small
           logos:
             type: files
             headline: Fichiers SVG

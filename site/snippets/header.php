@@ -36,6 +36,10 @@
 <?php if( $page->thumbnail()->isNotEmpty() ) : ?>
 <meta property="og:image" content="<?= $page->thumbnail()->toFile()->resize(400,400)->url() ?>" />
 <meta name="twitter:image" content="<?= $page->thumbnail()->toFile()->resize(400,400)->url() ?>">
+<?php elseif( $site->thumbnail()->isNotEmpty() ) :?>
+<meta property="og:image" content="<?= $site->thumbnail()->toFile()->resize(400,400)->url() ?>" />
+<meta name="twitter:image" content="<?= $site->thumbnail()->toFile()->resize(400,400)->url() ?>">
+
 <?php endif; ?>
 
 
