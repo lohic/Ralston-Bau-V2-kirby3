@@ -3,7 +3,11 @@
 return [
 	'code' => 'no',
 	'direction' => 'ltr',
-	'locale' => 'no_NO',
+	'locale' => [
+		LC_ALL  => 'no_NO.utf8',
+		LC_NUMERIC  => 'en_US.utf-8',
+	],
+	// 'locale' => 'no_NO',
 	'name' => 'Norsk',
 	'translations' => [
 		'submit' => 'Submit',

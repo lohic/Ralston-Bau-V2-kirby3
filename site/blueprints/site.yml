@@ -56,6 +56,14 @@ tabs:
           forms:
             extends: sections/forms
             status: listed
+
+      - width: 1
+        sections:
+          products:
+            extends: sections/orders
+            headline: Orders
+            # status: draft
+
   settings:
     label: Settings
     icon: text

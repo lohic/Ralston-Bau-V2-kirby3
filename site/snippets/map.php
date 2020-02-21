@@ -85,8 +85,8 @@
 	
 		$location = $address->map()->yaml();
 
-		$lat[] = intval( $location['lat'] );
-		$lng[] = intval( $location['lon'] );
+		$lat[] = (float) $location['lat'];
+		$lng[] = (float) $location['lon'];
 
 	?>
 
@@ -94,7 +94,7 @@
 
 	// one case markers
 	marker.push( new mapboxgl.Marker()
-		  .setLngLat([<?= intval( $location['lon']) ?>, <?= intval($location['lat']) ?>])
+		  .setLngLat([<?= (float) $location['lon'] ?>, <?= (float) $location['lat'] ?>])
 		  .addTo(map) );
 
 	<?php endforeach; ?>
@@ -131,12 +131,12 @@
 				// 
 				if( !empty( $location['lon'] ) && !empty( $location['lat'] ) ) :
 
-				$lat[] = intval( $location['lat'] );
-				$lng[] = intval( $location['lon'] );
+				$lat[] = (float) $location['lat'] ;
+				$lng[] = (float) $location['lon'] ;
 	?>
 
 	marker.push( new mapboxgl.Marker()
-		  .setLngLat([<?= intval($location['lon']) ?>, <?= intval($location['lat']) ?>])
+		  .setLngLat([<?= (float)$location['lon'] ?>, <?= (float)$location['lat'] ?>])
 		  .setPopup( new mapboxgl.Popup({ offset: 35 }).setHTML('<p><a href="<?= $page->url() ?>"><?= addslashes( $page->title() ) ?></a></p>') )
 		  .addTo(map) );
 	

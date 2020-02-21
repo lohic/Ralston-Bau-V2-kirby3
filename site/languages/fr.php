@@ -3,7 +3,11 @@
 return [
 	'code' => 'fr',
 	'direction' => 'ltr',
-	'locale' => 'fr_FR',
+	'locale' => [
+		LC_ALL  => 'fr_FR.utf8',
+		LC_NUMERIC  => 'en_US.utf-8',
+	],
+	//'fr_FR',
 	'name' => 'Français',
 	'translations' => [
 		'submit' => 'Envoyer',
