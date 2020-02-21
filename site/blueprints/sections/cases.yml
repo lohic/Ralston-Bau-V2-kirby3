@@ -1,14 +1,25 @@
 type: pages
 headline: Cases
 parent: site.find("cases")
-size: tiny
-info: "{{ page.case.toDate('d.m.Y') }}"
-# layout: cards
+# size: tiny
+# info: "{{ page.case.toDate('d.m.Y') }}"
 template: case
-empty: No cases yet
-# sortBy: date desc
-limit: 50
-image:
-  # query: page.cover
-  cover: true
-  ratio: 5/4
+empty: No case yet
+# image:
+#   # query: page.cover
+#   cover: true
+#   ratio: 5/4
+
+# headline: Cases
+type: pagetable
+limit: 10
+# sortBy: title asc
+# # info: "{{ page.prenom }}"
+# limit: 25
+columns:
+  title:
+    label: Title
+    text: '{{ page.title }}'
+  themes:
+    label: Themes
+    text: '{{page.themes2}}'
