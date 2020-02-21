@@ -1,0 +1,21 @@
+Title: Bioregion Vestland
+
+----
+
+Columntoggle: false
+
+----
+
+Text: Une biorégion correspond à un territoire dont les limites ne sont pas définies par des frontières politiques, mais par des limites géographiques qui prennent en compte tant les communautés humaines que les écosystèmes. Le biorégionalisme est à la fois une philosophie et un engagement social qui met l’accent sur de petites échelles, la décentralisation. Comme l’avance Peter Berg dans une présentation à l’Université de Californie du Nord, le concept de biorégion est un concept plus culturel que scientifique. Les biorégionalistes mettent en avant le fait que la protection de l'environnement devrait être fondée sur des caractéristiques locales, à savoir les biorégions. Cette approche met l'accent sur l'environnement unique de chaque région par la promotion de la consommation de produits locaux et de la culture d'espèces indigènes, en vue d'atteindre un développement en harmonie avec les régions bio-géographiques. Ce mouvement est avant tout un appel à l'action, à un activisme en faveur d'un renouvellement de la responsabilité civique et de l'intendance écologique dans le respect des communautés en place. (link: http://www.bioregionvestland.com text: Bioregion Vestland) est un projet de développement axé sur le design. Nous souhaitons développer des chaînes de valeur circulaires régionales qui incitent les entreprises de la Norvège occidentale à la transition écologique grâce à une production, des services et des produits qui éliminent progressivement les plastiques. Nous embrassons le bois, les industries marines, agricoles et alimentaires. Nous activons une nouvelle industrie en utilisant la R&D existante, qui gère les déchets comme une ressource. La livraison de l'avant-projet comprend la cartographie des conditions régionales ainsi que l'ancrage et la qualification de trois à quatre projets principaux.
+
+----
+
+Description:
+
+Projet d'innovation écologique
+avec Design Region Bergen
+2019-20
+
+----
+
+Showcity: true

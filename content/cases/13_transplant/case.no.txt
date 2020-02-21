@@ -1,4 +1,4 @@
-Title: Rural design centre
+Title: Ruralt design senter
 
 ----
 
@@ -10,31 +10,9 @@ Text: On our way to live in California, we had a pit stop on the west coast of N
 
 ----
 
-Bigpictures: 
-
-----
-
-Peoples: 
-
-----
-
-Scenarios: 
-
-----
-
-Forms:
-
-- practices/transplant-form
-
-----
-
-Date: 2010-06-01 12:00
-
-----
-
 Description:
 
-Design centre
+**Design centre**
 600m2
 2007 | Dale i sunnfjord, Norway
 
@@ -44,35 +22,7 @@ Showcity: true
 
 ----
 
-Thumbnail:
-
-- transplant_front_retouched.jpg
-
-----
-
-Panorama:
-
-- transplant_front_retouched.jpg
-
-----
-
 Themes: Public, Centre
-
-----
-
-Themes2: Space, Public
-
-----
-
-Addresses:
-
-- 
-  map:
-    lat: "61.3635404"
-    lon: "5.400416"
-    city: Dale
-    country: Norway
-    postcode: "6963"
 
 ----
 

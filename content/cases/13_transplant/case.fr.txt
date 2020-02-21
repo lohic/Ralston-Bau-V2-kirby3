@@ -1,0 +1,29 @@
+Title: Centre de design rural
+
+----
+
+Columntoggle: false
+
+----
+
+Text: En chemin pour vivre en Californie, nous avons fait une halte sur la côte ouest de la Norvège pendant quelques mois dans une résidence d'art. Après réflexion, nous ne voulions pas que cette expérience s’arrête et nous avons commencé à élaborer des scénarios nous permettant de rester là-bas, dans un village situé au bord d’un fjord. La vie est vraiment pleine de surprises. Nous avons vécu là-bas pendant 15 ans.
+
+----
+
+Description:
+
+**Centre de design**
+600m2
+2007 | Dale i sunnfjord, Norvège
+
+----
+
+Showcity: true
+
+----
+
+Themes: Public, Sharing
+
+----
+
+Images: 

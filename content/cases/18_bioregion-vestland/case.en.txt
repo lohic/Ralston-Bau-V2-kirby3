@@ -1,0 +1,66 @@
+Title: Bioregion Vestland
+
+----
+
+Columntoggle: false
+
+----
+
+Text: A bioregion corresponds to a territory whose limits are not defined by political borders, but by geographical limits which take into account both human communities and ecosystems. Bioregionalism is both a philosophy and a social commitment that emphasises small scales, decentralisation. As Peter Berg suggests in a presentation at the University of Northern California, the concept of bioregion is more a cultural concept than a scientific one. Bioregionalists point out that environmental protection should be based on local characteristics, namely bioregions. This approach emphasises the unique environment of each region by promoting the consumption of local products and the cultivation of native species, with a view to achieving development in harmony with bio-geographic regions. This movement is above all a call to action, to activism in favour of a renewal of civic responsibility and ecological stewardship while respecting the communities in place. (link: http://www.bioregionvestland.com text: Bioregion Vestland) is a design-driven development project. We want to develop regional circular value chains that stimulate companies in Western Norway to green change through innovative production, services and product phasing out plastics. We embrace the timber, marine, agricultural and food industries. We activate new industry by using existing R&D, which manage waste as a resource. The delivery from the pre-project includes mapping of regional conditions as well as anchoring and qualification of three to four main projects.
+
+----
+
+Bigpictures: 
+
+----
+
+Peoples: 
+
+----
+
+Scenarios: 
+
+----
+
+Forms: 
+
+----
+
+Date: 2019-10-31 19:00
+
+----
+
+Description:
+
+Green innovation project
+with design region bergen
+2019-20
+
+----
+
+Showcity: true
+
+----
+
+Thumbnail:
+
+- 20-bioregion-mainpic.jpg
+
+----
+
+Panorama: 
+
+----
+
+Themes2: Bioregion
+
+----
+
+Addresses:
+
+- 
+  map:
+    lat: 60.3943055
+    lon: 5.3259192
+    city: Vestland
+    country: Norway
