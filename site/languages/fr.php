@@ -5,7 +5,7 @@ return [
 	'direction' => 'ltr',
 	'locale' => [
 		LC_ALL  => 'fr_FR.utf8',
-		LC_NUMERIC  => 'en_US.utf-8',
+		LC_NUMERIC  => 'en_US.utf8',
 	],
 	//'fr_FR',
 	'name' => 'Français',

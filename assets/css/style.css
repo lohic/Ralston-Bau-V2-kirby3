@@ -499,7 +499,7 @@ p+p{
 }
 
 .related-cases li .gradient{
-	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1136,7 +1136,7 @@ main.the-grid{
 }
 
 .tile .gradient{
-	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1156,7 +1156,7 @@ header.intro{
 }
 
 header.intro .gradient{
-	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(216,216,216,0) 100%);
+	background: linear-gradient(to top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1311,7 +1311,83 @@ main.grid .tile a h2{
 }
 
 
+/* DESKTOP */
+@media screen and (min-width: 1500px){
+	html{
+		font-size: 18px;
+	}
 
+	#title{
+		/*background: #F00;*/
+		width: 250px;
+		padding: 50px;
+	}
+
+	#content{
+		left: 250px;
+	}
+
+	#info{
+		width: 250px;
+		padding: 36px 52px;
+	}
+
+	#main{
+		width: calc(100vw - 500px)
+	}
+
+	#main.loading{
+		width: calc(100vw - 310px);
+	}
+
+	#main-content {
+		margin: 6.4px;
+	}
+
+	#main.loading .gallery,
+	#main.loading .gallery figure,
+	#main.loading .gallery img,
+	#map{
+		height: 522px;
+	}
+
+	#main .gallery figure.panorama{
+		/*height: 522px;*/
+		width: calc(100vw - 512.8px);
+	}
+
+	#main.loading .gallery figure.panorama{
+		height: 522px;
+		width: calc(100vw - 322.8px);
+	}
+
+	main.the-grid{
+		column-count: 3;
+	}
+
+	.loading main.the-grid{
+		column-gap: 6.4px;
+		column-count: 3;
+	}
+
+	.tile{
+		margin-bottom: 3.2px;
+	}
+
+	.text{
+		margin: 2rem 16px;
+	}
+
+	.text.columns{
+		column-count: 3;
+	}
+
+	.text .description{
+		width: 245px;
+	}
+}
+
+/* SMARTPHONE */
 @media screen and (max-width: 750px){
 
 	html{
@@ -1588,7 +1664,7 @@ main.grid .tile a h2{
 	}
 
 	.tile .gradient{
-		background: linear-gradient(to top, rgba(0,0,0,0.4) 0%,rgba(216,216,216,0) 100%);
+		background: linear-gradient(to top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
 		opacity: 1;
 	}
 
@@ -1721,73 +1797,7 @@ main.grid .tile a h2{
 }
 
 
-@media screen and (min-width: 1500px){
-	html{
-		font-size: 18px;
-	}
-
-	#title{
-		/*background: #F00;*/
-		width: 250px;
-		padding: 50px;
-	}
-
-	#content{
-		left: 250px;
-	}
-
-	#info{
-		width: 250px;
-		padding: 36px 52px;
-	}
-
-	#main{
-		width: calc(100vw - 500px)
-	}
-
-	#main.loading{
-		width: calc(100vw - 310px);
-	}
-
-	#main-content {
-		margin: 6.4px;
-	}
-
-	#main.loading .gallery,
-	#main.loading .gallery figure,
-	#main.loading .gallery img,
-	#map{
-		height: 522px;
-	}
-
-	#main .gallery figure.panorama{
-		/*height: 522px;*/
-		width: calc(100vw - 512.8px);
-	}
-
-	#main.loading .gallery figure.panorama{
-		height: 522px;
-		width: calc(100vw - 322.8px);
-	}
-
-	.loading main.the-grid{
-		column-gap: 6.4px;
-	}
-
-	.tile{
-		margin-bottom: 3.2px;
-	}
-
-	.text{
-		margin: 2rem 16px;
-	}
-
-	.text .description{
-		width: 245px;
-	}
-}
-
-
+/* SMARTPHONE HORIZONTAL */
 @media screen and (max-width: 750px) and (orientation: landscape){
 /*	#title {
 		grid-template-rows: 7.36rem auto 1rem;
@@ -1858,13 +1868,14 @@ main.grid .tile a h2{
 
 }
 
-
+/* SMALL SMARTPHONE */
 @media screen and (max-width: 370px ){
 	html{
 		font-size: 16px;
 	}
 }
 
+/* PRINT */
 @media print {
 	
 

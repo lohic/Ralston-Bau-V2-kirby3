@@ -32,7 +32,7 @@ columns:
             width: 1/2
             type: pages
             translate: false
-            query: site.find("practices").children.filterBy("practicetype", "bigpicture")
+            query: site.find("practices").childrenAndDrafts.filterBy("practicetype", "bigpicture")
             multiple: true
             info: "{{ page.images.count }} image(s)"
             empty: "No Big picture selected"
@@ -44,7 +44,7 @@ columns:
             width: 1/2
             type: pages
             translate: false
-            query: site.find("practices").children.filterBy("practicetype", "people")
+            query: site.find("practices").childrenAndDrafts.filterBy("practicetype", "people")
             multiple: true
             info: "{{ page.images.count }} image(s)"
             empty: "No People selected"
@@ -56,7 +56,7 @@ columns:
             width: 1/2
             type: pages
             translate: false
-            query: site.find("practices").children.filterBy("practicetype", "scenario")
+            query: site.find("practices").childrenAndDrafts.filterBy("practicetype", "scenario")
             multiple: true
             info: "{{ page.images.count }} image(s)"
             empty: "No Scenarios selected"
@@ -68,7 +68,7 @@ columns:
             width: 1/2
             type: pages
             translate: false
-            query: site.find("practices").children.filterBy("practicetype", "form")
+            query: site.find("practices").childrenAndDrafts.filterBy("practicetype", "form")
             multiple: true
             info: "{{ page.images.count }} image(s)"
             empty: "No Form selected"
