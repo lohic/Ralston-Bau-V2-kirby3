@@ -30,7 +30,7 @@ Formtxt: Form
 
 ----
 
-Projectscategories: 
+Projectscategories:
 
 - 
   name_en: Acoustic
@@ -135,7 +135,7 @@ Logo:
 
 ----
 
-Thumbnail: 
+Thumbnail:
 
 - publications/img_0905.crop_.72dpi.jpg
 
@@ -166,3 +166,13 @@ Facebook-id:
 ----
 
 Twitter-id: 
+
+----
+
+Items:
+
+- 
+  id: test
+  quantity: "2"
+  price: "30"
+  tax: "20"

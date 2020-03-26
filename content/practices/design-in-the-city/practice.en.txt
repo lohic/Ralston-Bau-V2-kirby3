@@ -1,0 +1,25 @@
+Title: Design in the city
+
+----
+
+Practicetype: bigpicture
+
+----
+
+Thumbnail: 
+
+----
+
+Panorama: 
+
+----
+
+Columntoggle: false
+
+----
+
+Description: Ok design in the city
+
+----
+
+Legend: 
