@@ -759,6 +759,7 @@ a{
 	right: 1rem;
 	text-align: right;
 	z-index: 3000;
+	mix-blend-mode: difference;
 }
 
 .slick-dots li{

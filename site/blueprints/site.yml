@@ -18,23 +18,23 @@ tabs:
       - width: 1/2
         sections:
           practices: sections/practices
-      - width: 1/1
-        sections:
-          products:
-            type: pagetable
-            create: product
-            template:
-              - product
-            columns:
-              title;
-                label: Title
-                text: '{{page.title}}'
-              price:
-                label: Price
-                text: '{{ page.price }}'
-              tax:
-                label: Tax
-                text: '{{page.tax}}'
+      # - width: 1/1
+      #   sections:
+      #     products:
+      #       type: pagetable
+      #       create: product
+      #       template:
+      #         - product
+      #       columns:
+      #         title;
+      #           label: Title
+      #           text: '{{page.title}}'
+      #         price:
+      #           label: Price
+      #           text: '{{ page.price }}'
+      #         tax:
+      #           label: Tax
+      #           text: '{{page.tax}}'
       - width: 1/2
         sections:
           notes: sections/notes
