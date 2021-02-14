@@ -759,6 +759,7 @@ a{
 	right: 1rem;
 	text-align: right;
 	z-index: 3000;
+	mix-blend-mode: difference;
 }
 
 .slick-dots li{
@@ -1092,7 +1093,7 @@ main.the-grid{
 .tile{
 	display: inline-block;
 	/*padding: 5px;*/
-	margin-bottom: 0.2vw; /* 0.4 vw*/ 
+	/*margin-bottom: 0.2vw;*/ /* 0.4 vw*/ 
 	position: relative;
 	width: 100%;
 }
@@ -1772,10 +1773,11 @@ main.grid .tile a h2{
 
 	.loading main.the-grid{
 		column-gap: 6.4px;
+		column-count: 3;
 	}
 
 	.tile{
-		margin-bottom: 3.2px;
+		/*margin-bottom: 3.2px;*/
 	}
 
 	.text{

@@ -44,7 +44,7 @@
 			?></p><?php endif; ?>
 				<h2><?= $page->title() ?></h2>
 			</div>
-			<?php if( $page->thumbnail()->isNotEmpty() ) : ?>
+			<?php if( $page->thumbnail()->isNotEmpty() && !is_null($page->thumbnail()->toFile() ) ) : ?>
 				<?= $page->thumbnail()->toFile()->resize(400,null) ?>
 			<?php else : ?>
 				<img alt="" src="<?= $kirby->url('assets') ?>/images/black.png">

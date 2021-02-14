@@ -35,7 +35,9 @@
         showCount: false,
         shares: [{
 	        share: "email",
-	        logo: "<?= $kirby->url('assets') ?>/images/email.svg"
+	        logo: "<?= $kirby->url('assets') ?>/images/email.svg",
+	        text: "<?= $site->title() ?> : <?= $page->title() ?>"
+	        // to: "my.address@test.com"
 		}, {
 	        share: "facebook",
 	        logo: "<?= $kirby->url('assets') ?>/images/facebook.svg"

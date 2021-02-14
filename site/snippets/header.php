@@ -62,7 +62,7 @@
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/vendor/fancybox-master/dist/jquery.fancybox.min.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.47'/*,
+		 'assets/css/style.css?v=1.49'/*,
 		 '@auto'*/]) ?>
 
 <?php
