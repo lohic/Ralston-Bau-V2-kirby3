@@ -1,13 +1,19 @@
 type: pages
 headline: Practice
 parent: site.find("practices")
-size: tiny
-info: "[{{page.practicetype}}] {{ page.images.count }} image(s)"
-# layout: cards
+# size: tiny
+# info: "[{{page.practicetype}}] {{ page.images.count }} image(s)"
 template: practice
 empty: No practice yet
-limit: 50
-image:
-  # query: page.cover
-  cover: true
-  ratio: 5/4
+# image:
+#   cover: true
+#   ratio: 5/4
+type: pagetable
+limit: 10
+columns:
+  title:
+    label: Title
+    text: '{{ page.title }}'
+  practice_type:
+    label: Practice type
+    text: '{{page.practicetype}}'
