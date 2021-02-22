@@ -25,10 +25,10 @@
 
 				<?php if( $page->description()->isNotEmpty() ) : ?>
 				<div class="description">
-					<?= $page->description()->kt() ?>
+					<?= $page->description()->kt()->ft() ?>
 				</div>
 				<?php endif; ?>
-				<?= $page->text()->kt() ?>
+				<?= $page->text()->kt()->ft() ?>
 			</div>
 		</section>
 		

@@ -8,7 +8,7 @@
 	</header>
 	<main>
 		<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
-			<?= $page->text()->kt() ?>
+			<?= $page->text()->kt()->ft() ?>
 		</div>
 
 		<?php if($page->mapToggle()->isTrue()) : ?>

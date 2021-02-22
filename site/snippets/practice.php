@@ -15,10 +15,10 @@
 	<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
 		<?php if( $page->legend()->isNotEmpty() ) : ?>
 		<div class="description">
-			<?= $page->legend()->kt() ?>
+			<?= $page->legend()->kt()->ft() ?>
 		</div>
 		<?php endif; ?>
-		<?= $page->description()->kt() ?>
+		<?= $page->description()->kt()->ft() ?>
 	</div>
 
 	<?php if($showtitle == true) : ?>

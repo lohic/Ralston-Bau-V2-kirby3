@@ -8,7 +8,7 @@
 	</header>
 	<main class="texte">
 		<div class="text<?= $page->columnToggle()->isTrue()?' columns':''; ?>">
-			<?= $page->text()->kt() ?>
+			<?= $page->text()->kt()->ft() ?>
 			
 			<address>
 				<?= $page->address()->kt() ?>
