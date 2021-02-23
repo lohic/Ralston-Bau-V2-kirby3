@@ -478,12 +478,19 @@ p+p{
 }
 
 .footnotes-container{
+	font-size: 1rem;
 	margin-top: 1rem;
 }
 .footnotes-list{
 	list-style: decimal;
 	list-style-position: inside;
 }
+.footnotes-list li{
+	font-size: .9em;
+	line-height: 1.15em;
+}
+
+
 sup.footnote{
 	background: #fff;
 	color: #000;
@@ -507,20 +514,20 @@ sup.footnote a{
 }
 
 span.footnotereverse{
-	width: .75rem;
-	height: .75rem;
-	border-radius: .5rem;
+	width: .75em;
+	height: .75em;
+	border-radius: .5em;
 	display: inline-block;
 	position: relative;
-	bottom: .25rem;
+	bottom: .25em;
 }
 
 span.footnotereverse a{
-	width: .8rem;
-	height: .8rem;
+	width: .8em;
+	height: .8em;
 	display: flex;
 	text-decoration: none;
-	font-size: .6rem;
+	font-size: .6em;
 	outline: none;
 	justify-content: center;
 	align-items: center;
@@ -2165,6 +2172,18 @@ main.grid .tile a h2{
 		font-size: 0.7rem;
 		position: relative;
 		bottom: 0.1rem;
+	}
+
+	.text .footnote,
+	.text .footnote a{
+		width: auto;
+	}
+
+	.text .footnote a:after{
+		content: "";
+	}
+	.text .footnotereverse a{
+		display: none;
 	}
 
 	.text #contact a img{
