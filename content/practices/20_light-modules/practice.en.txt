@@ -10,10 +10,26 @@ Thumbnail:
 
 ----
 
-Description: 
+Panorama: 
+
+----
+
+Columntoggle: false
+
+----
+
+Whitetoggle: true
+
+----
+
+Description:
 
 Light Modules is a paper lighting system creating monumental on-measure lighting and ceiling for permanent and temporary spaces. Using paper gives large installations lightness and softly diffuse the light in the interior. The simple Light Modules system make the ceiling into a living and lit-up installation. The three module sizes and the adjustable hight of each module, makes it possible to create an endless amount of 3 Dimensional ceiling landscape and chandelier designs. The system grid is made of aluminium and is attached onto or hanging from the ceiling and the shades are made out of Drop Paper that is a durable and fire proof paper. The Drop Paper comes in several colours, thicknesses and can also be printed with any pattern. Produced by Les Procédés Chenel International.
 
 Lighting & ceiling
 modular system
 Drop Paper & cellulose
+
+----
+
+Legend: 

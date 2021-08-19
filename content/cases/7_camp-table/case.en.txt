@@ -6,6 +6,10 @@ Columntoggle: false
 
 ----
 
+Whitetoggle: true
+
+----
+
 Text:
 
 #Test de titre niveau 1
