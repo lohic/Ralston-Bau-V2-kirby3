@@ -30,7 +30,7 @@ Formtxt: Form
 
 ----
 
-Projectscategories: 
+Projectscategories:
 
 - 
   name_en: Acoustic
@@ -99,7 +99,7 @@ Maintenance: false
 
 ----
 
-Enablesearch: true
+Introtext: true
 
 ----
 
@@ -123,6 +123,10 @@ Newslettertxt: Text **newsletter** super !!!!
 
 ----
 
+Enablesearch: true
+
+----
+
 Description: description  SEO pour ralston&bau
 
 ----
@@ -135,7 +139,7 @@ Logo:
 
 ----
 
-Thumbnail: 
+Thumbnail:
 
 - publications/img_0905.crop_.72dpi.jpg
 
