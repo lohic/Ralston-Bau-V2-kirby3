@@ -5,22 +5,22 @@
 		<div v-if="loading" class="loader"></div>
 		<ul v-else-if="!loading && !isEmpty">
 			<li>
-				<div class="icon"><svg><use xlink:href="#icon-matomo-calendar" /></svg></div>
+				<div class="icon"><svg><use href="#icon-matomo-calendar" /></svg></div>
 				<div class="text">{{ $t('matomo.chart.day') }}</div>
 				<div class="number">{{ results.day }}</div>
 			</li>
 			<li>
-				<div class="icon"><svg><use xlink:href="#icon-matomo-calendar" /></svg></div>
+				<div class="icon"><svg><use href="#icon-matomo-calendar" /></svg></div>
 				<div class="text">{{ $t('matomo.chart.week') }}</div>
 				<div class="number">{{ results.week }}</div>
 			</li>
 			<li>
-				<div class="icon"><svg><use xlink:href="#icon-matomo-calendar" /></svg></div>
+				<div class="icon"><svg><use href="#icon-matomo-calendar" /></svg></div>
 				<div class="text">{{ $t('matomo.chart.month') }}</div>
 				<div class="number">{{ results.month }}</div>
 			</li>
 			<li>
-				<div class="icon"><svg><use xlink:href="#icon-matomo-calendar" /></svg></div>
+				<div class="icon"><svg><use href="#icon-matomo-calendar" /></svg></div>
 				<div class="text">{{ $t('matomo.chart.year') }}</div>
 				<div class="number">{{ results.year }}</div>
 			</li>
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-	data() { 
+	data() {
 		return {
 			loading: true,
 			status: 'loading',
@@ -63,10 +63,10 @@ export default {
 			this.$api
 		        .get('matomo-panel/get-bulk-summary')
 		        .then(response => {
-		        	this.results.day = response[0]
+		        	this.results.day = response[0].value
 		        	this.results.week = this.getLast7Days(response[1])
-		        	this.results.month = response[2]
-		        	this.results.year = response[3]
+		        	this.results.month = response[2].value
+		        	this.results.year = response[3].value
 
 		        	this.loading = false
 		        	this.status = response.status

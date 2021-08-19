@@ -11,7 +11,7 @@ class Matomo {
 		// if deactivated or missing option
 		if(!option('sylvainjule.matomo.id') || !option('sylvainjule.matomo.url') || !option('sylvainjule.matomo.active')) {
 			return false;
-		} 
+		}
 		// if debugging the plugin, return true before checking the blacklist / user status
 		if(option('sylvainjule.matomo.debug')) {
 			return true;
@@ -23,7 +23,7 @@ class Matomo {
 		// if users tracking is disabled and an I'm logged in
 		if(!option('sylvainjule.matomo.trackUsers') && kirby()->user()) {
 			return false;
-		} 
+		}
 
 		return true;
 	}
@@ -47,19 +47,19 @@ class Matomo {
 	public function __construct() {
     	$this->url   = option('sylvainjule.matomo.url');
 		$this->id    = option('sylvainjule.matomo.id');
-		$this->token = option('sylvainjule.matomo.token');
+		$this->token = is_callable($this->token) ? $this->token() : option('sylvainjule.matomo.token');
     }
 
 	public function apiWidget($widget, $method, $period, $date, $limit, $lang) {
 		$url  = $this->url;
 		$url .= "?module=API&method=" . $method;
 		$url .= "&idSite=". $this->id ."&period=". $period ."&date=" . $date;
-		$url .= "&format=PHP&language=". $lang;
+		$url .= "&format=JSON&language=". $lang;
 		$url .= $limit ? "&filter_limit=" . $limit : '';
 		$url .= "&token_auth=". $this->token;
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 
 		return $content;
 	}
@@ -70,7 +70,7 @@ class Matomo {
 		$url  = $this->url;
 
 		$url .= "?module=API&method=API.getBulkRequest";
-		$url .= "&token_auth=". $this->token ."&format=PHP";
+		$url .= "&token_auth=". $this->token ."&format=JSON";
 
 		$i = 0;
 		foreach($widgets as $widget) {
@@ -80,7 +80,7 @@ class Matomo {
 		}
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 
 		return $content;
 	}
@@ -89,10 +89,10 @@ class Matomo {
 		$url  = $this->url;
 		$url .= "?module=API&method=". $method;
 		$url .= "&idSite=". $this->id ."&period=". $period ."&date=" . $date;
-		$url .= "&format=PHP&token_auth=". $this->token;
+		$url .= "&format=JSON&token_auth=". $this->token;
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 
 		return $content;
 	}
@@ -101,10 +101,10 @@ class Matomo {
 		$url  = $this->url;
 		$url .= "?module=API&method=". $method;
 		$url .= "&idSite=". $this->id ."&period=". $period ."&date=" . $date;
-		$url .= "&format=PHP&token_auth=". $this->token;
+		$url .= "&format=JSON&token_auth=". $this->token;
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 
 		return $content;
 	}
@@ -115,10 +115,10 @@ class Matomo {
 
 		$url .= "?module=API&method=" . $method;
 		$url .= "&idSite=". $this->id ."&lastMinutes=3";
-		$url .= "&format=PHP&token_auth=". $this->token;
+		$url .= "&format=JSON&token_auth=". $this->token;
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 
 		return $content;
 	}
@@ -127,7 +127,7 @@ class Matomo {
 		$url  = $this->url;
 
 		$url .= "?module=API&method=API.getBulkRequest";
-		$url .= "&token_auth=". $this->token ."&format=PHP";
+		$url .= "&token_auth=". $this->token ."&format=JSON";
 
 		$url .= "&urls[0]=";
 		$url .= urlencode("method=VisitsSummary.getVisits&idSite=". $this->id ."&period=day&date=today");
@@ -142,7 +142,7 @@ class Matomo {
 		$url .= urlencode("method=VisitsSummary.getVisits&idSite=". $this->id ."&period=year&date=today");
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 
 		return $content;
 	}
@@ -151,11 +151,11 @@ class Matomo {
 		$url  = $this->url;
 		$url .= "?module=API&method=Actions.getPageUrls";
 		$url .= "&idSite=". $this->id ."&period=". $period ."&date=today";
-		$url .= "&format=PHP&token_auth=". $this->token;
+		$url .= "&format=JSON&token_auth=". $this->token;
 		$url .= $lang['multilang'] ? '&expanded=1' : '';
 
 		$fetched = file_get_contents($url);
-		$content = unserialize($fetched);
+		$content = json_decode($fetched,true);
 		$content = $this->filterPageMetrics($content, $uri, $lang);
 		return $content;
 	}
@@ -171,7 +171,7 @@ class Matomo {
 		$currentLang = $lang['current'];
 		$defaultLang = $lang['default'];
 		$isDefault   = $currentLang == $defaultLang;
- 
+
 		// set the correct language and find the page
 		if($multilang) $site->visit($site->homePage(), $currentLang);
 		$page   = $site->childrenAndDrafts()->find($uri);
@@ -198,7 +198,7 @@ class Matomo {
 			// loop through all language
 			foreach($kirby->languages() as $language) {
 				if($language->code() == $currentLang) continue;
-				
+
 				$tempCode    = $language->code();
 				$tempDefault = $tempCode == $defaultLang;
 				$tempUrl     = $page->url($tempCode);
@@ -207,7 +207,7 @@ class Matomo {
 
 				$tempMetrics = $this->filterWithUri($content, $tempUri, $tempCode, $tempDefault);
 				array_push($metrics, $tempMetrics);
-			}		
+			}
 
 			// filter out empty languages
 			$metrics = array_filter($metrics);
@@ -250,7 +250,7 @@ class Matomo {
 				'current' => $current,
 				'all'     => $all,
 			);
-			
+
 		}
 	}
 
@@ -264,7 +264,7 @@ class Matomo {
 			});
 	    	// if the array exists, make it the new $content
 			if(count($langArray)) {
-				$content = reset($langArray)['subtable'] ?? array(); 
+				$content = reset($langArray)['subtable'] ?? array();
 			}
 			// if the array isn't found, but the language isn't the default one
 			else {

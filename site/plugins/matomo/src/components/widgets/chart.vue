@@ -128,7 +128,7 @@ export default {
             return config
         }
     },
-    watch: { 
+    watch: {
         currentPeriod: {
             immediate: true,
             handler(newVal, oldVal) {
@@ -162,8 +162,7 @@ export default {
                             return key.split('-')[0] == currentYear;
                         })
                         formatedLabels = labels.map(key => {
-                            let date = key.split('-')
-                            return dayjs(date[1]).format('MMMM')
+                            return dayjs(key).format('MMMM')
                         })
                         tooltipLabels = labels.map(key => {
                             return dayjs(key).format('MMMM YYYY')
@@ -194,9 +193,7 @@ export default {
                     if(this.currentPeriod == 'week') {
                         let currentMonth = ('0' + (d.getMonth() + 1)).slice(-2)
 
-                        let labels = Object.keys(response).filter(key => {
-                            return parseInt(key.split('-')[1]) == parseInt(currentMonth);
-                        })
+                        let labels = Object.keys(response)
                         formatedLabels = labels.map(key => {
                             let date = key.split('-')
                             return date[2] +'/'+ date[1]
@@ -212,7 +209,8 @@ export default {
                     if(this.currentPeriod == 'day') {
                         let labels = Object.keys(response)
                         formatedLabels = labels.map(key => {
-                            return parseInt(key) + 1 + 'h'
+                            let label = parseInt(key) + 1 + 'h'
+                            return isFinite(label) ? label : ''
                         })
                         tooltipLabels = formatedLabels
                         dataset = labels.map(key => {

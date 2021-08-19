@@ -14,10 +14,10 @@
 					</div>
 					<div class="details">{{ $t('matomo.visits').toLowerCase() }} {{ $t('matomo.period.'+currentPeriod) }}.</div>
 				</div>
-				<div :class="['difference', visitsDiff.status, {grey: loading}]">
+				<div v-if="isFinite(visitsDiff.diff)" :class="['difference', visitsDiff.status, {grey: loading}]">
 					<span v-if="loading"><span class="loader"></span></span>
 					<span v-else>{{visitsDiff.string}}%</span>
-					<div v-if="!loading" class="icon"><svg><use xlink:href="#icon-matomo-arrow-up" /></svg></div>
+					<div v-if="!loading" class="icon"><svg><use href="#icon-matomo-arrow-up" /></svg></div>
 				</div>
 			</div>
 			<div v-if="!isEmpty" class="matomo-overview-block">
@@ -28,10 +28,10 @@
 						<span v-else>{{durationString}}</span></div>
 					<div class="details">{{ $t('matomo.duration.caption') }}.</div>
 				</div>
-				<div :class="['difference', durationDiff.status, {grey: loading}]">
+				<div v-if="isFinite(durationDiff.diff)" :class="['difference', durationDiff.status, {grey: loading}]">
 					<span v-if="loading"><span class="loader"></span></span>
 					<span v-else>{{durationDiff.string}}%</span>
-					<div v-if="!loading" class="icon"><svg><use xlink:href="#icon-matomo-arrow-up" /></svg></div>
+					<div v-if="!loading" class="icon"><svg><use href="#icon-matomo-arrow-up" /></svg></div>
 				</div>
 			</div>
 			<div v-if="!isEmpty" class="matomo-overview-block">
@@ -39,14 +39,14 @@
 					<h5>{{ $t('matomo.bounce') }}</h5>
 					<div class="big-number">
 						<span v-if="loading"><span class="loader"></span></span>
-						<span v-else>{{current.bounce}}%</span>
+						<span v-else>{{bounceString}}</span>
 					</div>
 					<div class="details">{{ $t('matomo.bounce.caption') }}.</div>
 				</div>
-				<div :class="['difference', bounceDiff.status, {grey: loading}]">
+				<div v-if="isFinite(bounceDiff.diff)" :class="['difference', bounceDiff.status, {grey: loading}]">
 					<span v-if="loading"><span class="loader"></span></span>
 					<span v-else>{{bounceDiff.string}}%</span>
-					<div v-if="!loading" class="icon"><svg><use xlink:href="#icon-matomo-arrow-up" /></svg></div>
+					<div v-if="!loading" class="icon"><svg><use href="#icon-matomo-arrow-up" /></svg></div>
 				</div>
 			</div>
 			<div v-if="!isEmpty" class="matomo-overview-block">
@@ -54,14 +54,14 @@
 					<h5>{{ $t('matomo.actions') }}</h5>
 					<div class="big-number">
 						<span v-if="loading"><span class="loader"></span></span>
-						<span v-else>{{current.actions}}</span>
+						<span v-else>{{actionsString}}</span>
 					</div>
 					<div class="details">{{ $t('matomo.actions.caption') }}.</div>
 				</div>
-				<div :class="['difference', actionsDiff.status, {grey: loading}]">
+				<div v-if="isFinite(actionsDiff.diff)" :class="['difference', actionsDiff.status, {grey: loading}]">
 					<span v-if="loading"><span class="loader"></span></span>
 					<span v-else>{{actionsDiff.string}}%</span>
-					<div v-if="!loading" class="icon"><svg><use xlink:href="#icon-matomo-arrow-up" /></svg></div>
+					<div v-if="!loading" class="icon"><svg><use href="#icon-matomo-arrow-up" /></svg></div>
 				</div>
 			</div>
 			<div v-else class="empty">{{ $t('matomo.empty') }}</div>
@@ -71,7 +71,7 @@
 
 <script>
 export default {
-	data() { 
+	data() {
 		return {
 			loading: true,
 			status: 'loading',
@@ -107,7 +107,8 @@ export default {
 			let string = prefix + Math.abs(diff)
 			return {
 				string: string,
-				status: status
+				status: status,
+                diff: diff
 			}
 		},
 		durationDiff() {
@@ -117,7 +118,8 @@ export default {
 			let string = prefix + Math.abs(diff)
 			return {
 				string: string,
-				status: status
+				status: status,
+                diff: diff
 			}
 		},
 		bounceDiff() {
@@ -127,7 +129,8 @@ export default {
 			let string = prefix + Math.abs(diff)
 			return {
 				string: string,
-				status: status
+				status: status,
+                diff: diff
 			}
 		},
 		actionsDiff() {
@@ -137,12 +140,19 @@ export default {
 			let string = prefix + Math.abs(diff)
 			return {
 				string: string,
-				status: status
+				status: status,
+                diff: diff
 			}
 		},
 		durationString() {
 			return this.formatTime(this.current.duration)
 		},
+        bounceString() {
+            return !isFinite(this.current.bounce) ? '–' : this.current.bounce + '%'
+        },
+        actionsString() {
+            return !isFinite(this.current.actions) ? '–' : this.current.actions + '%'
+        },
 		isPositive() {
 			return !this.loading
 		},
@@ -188,7 +198,7 @@ export default {
 	},
 	destroyed() {
 	},
-	watch: { 
+	watch: {
       	currentPeriod: {
       		immediate: true,
       		handler(newVal, oldVal) {
@@ -254,7 +264,7 @@ export default {
 		},
 		formatTime(time) {
             let t = Math.floor(time)
-            return (t - (t%=60)) / 60 + (9 < t ? 'mn ' : 'mn 0') + t + 's'
+            return isFinite(t) ? (t - (t%=60)) / 60 + (9 < t ? 'mn ' : 'mn 0') + t + 's' : '–'
 		},
 		firstN(obj, n) {
   			return Object.keys(obj).slice(0, n).reduce(function(el, index) {
@@ -263,7 +273,7 @@ export default {
     		}, {})
   		},
 		lastN(obj, n) {
-  			return Object.keys(obj).slice(Object.keys(obj).length - n).reduce(function(el, index) { 
+  			return Object.keys(obj).slice(Object.keys(obj).length - n).reduce(function(el, index) {
       			el[index] = obj[index]
       			return el;
     		}, {})
@@ -301,7 +311,7 @@ export default {
             }).slice(0, length)
   		},
   		toObj(arr, obj) {
-  			return arr.reduce(function(el, index) { 
+  			return arr.reduce(function(el, index) {
       			el[index] = obj[index]
       			return el;
     		}, {})
@@ -327,7 +337,7 @@ export default {
   		},
   		diff(current, prev) {
   			let diff = (current - prev) / prev * 100
-  			return diff.toFixed(2)
+            return diff.toFixed(2)
   		}
 	},
 }
