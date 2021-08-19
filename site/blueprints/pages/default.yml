@@ -51,12 +51,18 @@ fields:
   mapToggle:
     label: Show global map
     type: toggle
-    width: 1/2
+    width: 1/3
 
   columnToggle:
     label: Use columns for the text
     type: toggle
-    width: 1/2
+    width: 1/3
+
+  whiteToggle:
+    label: White Background
+    type: toggle
+    width: 1/3
+
     
   text:
     type: textarea

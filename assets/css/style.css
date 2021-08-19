@@ -333,6 +333,20 @@ main .text h3{
 	margin-bottom: 0.875em;
 }*/
 
+#main.whitebg{
+	background: #FFF;
+	color: #000;
+}
+#main.whitebg header h2{
+	color: #FFF;
+}
+#main.whitebg .gallery{
+	background: #EEE;
+}
+#main.whitebg .jssocials-shares{
+	mix-blend-mode: difference;
+}
+
 .txt-normal{
 }
 

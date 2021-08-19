@@ -22,6 +22,12 @@ columns:
           columnToggle:
             label: Use columns for the text
             type: toggle
+            width: 1/2
+
+          whiteToggle:
+            label: White Background
+            type: toggle
+            width: 1/2
 
           text:
             type: textarea

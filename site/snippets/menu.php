@@ -155,6 +155,7 @@
 		<?php // echo snippet("news"); ?>
 
 	</div>
-	<div id="main" class="drawer txt-normal loading">
+	<div id="main" class="drawer txt-normal loading<?= $page->whiteToggle()->isTrue()?' whitebg':''; ?>">
+		<?php // var_dump( $page ) ?>
 
 <!-- fin menu.php

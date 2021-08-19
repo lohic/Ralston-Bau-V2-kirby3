@@ -1,15 +1,10 @@
 <?php snippet('header') ?>
-
 <!-- case.php -->
-
 <?php 
-
 // print_r($page->themes2()->toData(",")->first());
 // 
 // $page->themes2()->toData(",")[0]
-
-
- ?>
+?>
 <div id="main-content" data-menu="cases" data-submenu="<?= a::first( $page->themes2()->toData() ) ?>">
 	<header class="intro">
 		<?= snippet('gallery', ['page' => $page]); ?>
@@ -98,7 +93,5 @@
 
 	</main>
 </div>
-
 <!-- fin case.php -->
-
 <?php snippet('footer') ?>
