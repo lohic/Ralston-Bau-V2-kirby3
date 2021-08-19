@@ -46,6 +46,11 @@
 
 <title><?= $page->title() ?> | 	<?= $site->title() ?></title>
 
+<?php
+$domain = $kirby->url();
+Cookie::set("test", "ok", ["lifetime"=>10,"domain"=>$domain]); 
+?>
+
 <?=  js(['assets/vendor/jquery-3.3.1.min.js',
 		 'assets/vendor/hammer.min.js',
 		 'assets/vendor/js.cookie-2.2.0.min.js',
@@ -53,7 +58,7 @@
 		 'assets/vendor/slick-1.8.1/slick/slick.min.js',
 		 'assets/vendor/fancybox-master/dist/jquery.fancybox.min.js',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js',
-		 'assets/js/main.js?v=1.47']) ?> 
+		 'assets/js/main.js?v=1.51']) ?> 
 
 <?= css(['https://use.typekit.net/vrl2tmu.css',
 		 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
@@ -62,14 +67,8 @@
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/vendor/fancybox-master/dist/jquery.fancybox.min.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.54'/*,
+		 'assets/css/style.css?v=1.55'/*,
 		 '@auto'*/]) ?>
-
-<?php
-
-$domain = $kirby->url();
-
-Cookie::set("test", "ok", ["lifetime"=>10,"domain"=>$domain]); ?>
 
 <?php if( $site->projectbgcolor() != "#000000" || $site->projecttxtcolor() != "#FFFFFF" ) : ?>
 <style>
@@ -82,7 +81,7 @@ Cookie::set("test", "ok", ["lifetime"=>10,"domain"=>$domain]); ?>
 
 </head>
 
-<body class="<?php echo $page->slug() ?>">
+<body class="<?php echo $page->slug() ?><?= $site->introtext()->isFalse() ? " hideLanding" : "" ?>">
 
 <?php if($site->maintenance()->isTrue() and $page->uid() != 'maintenance') { go('maintenance');} ?>
 

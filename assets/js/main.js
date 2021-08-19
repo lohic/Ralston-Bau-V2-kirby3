@@ -17,17 +17,24 @@ $(function(){
 	console.log('Ralston Bau ok');
 	let domainName = $("[name='rb:domain']").attr("content");
 	// console.log('domain', domainName);
-	
+	let hideLanding;
+
+	console.log("hidelanding Class",$("body").hasClass("hideLanding"))
 	 
 	if( document.referrer.search( domainName ) === -1){
-		let hideLanding = false
+		hideLanding = $("body").hasClass("hideLanding") ? true : false;
 		Cookies.set('hideLanding', hideLanding, { path: '/', domain: domainName, expires: cookieExpiration })
 	}
 
 	let isMenuOpened = Cookies.get('menu.open') === "true" ? true : false;
-	let hideLanding  = Cookies.get('hideLanding') === "true" ? true : false;
+	
+	if( $("body").hasClass("hideLanding") ){
+		hideLanding = true;
+	}else{
+		hideLanding  = Cookies.get('hideLanding') === "true" ? true : false;
+	}
 
-	console.log("hideLanding",hideLanding)
+	console.log( "hidelanding",hideLanding )
 
 	// console.log('isMenuOpened',isMenuOpened);
 

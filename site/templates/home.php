@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <!-- home.php -->
 <div id="main-content" class="grid" data-menu="cases" data-submenu="">
-
+	
 	<div id="intro">
 		<div>
 			<p class="lang"><?= page('home')->intro()->text() ?></p>

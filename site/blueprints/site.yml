@@ -122,9 +122,10 @@ tabs:
                 text: Enable Maintenance
                 translate: false
                 width: 1/2
-              enablesearch:
-                label: Enable searchbar
+              introtext:
+                label: Text intro
                 type: toggle
+                text: show text intro
                 translate: false
                 width: 1/2
               projectbgcolor:
@@ -165,6 +166,11 @@ tabs:
                 type:  textarea
                 when: 
                   newsletterform: true
+              enablesearch:
+                label: Enable searchbar
+                type: toggle
+                translate: false
+                width: 1/2
               line2:
                 type: line
               description:
