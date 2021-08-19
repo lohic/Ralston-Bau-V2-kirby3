@@ -22,7 +22,8 @@
         "getkirby/cms": "^3.0",
         "sylvainjule/matomo": "^1.0",
         "sylvainjule/footnotes": "^1.0",
-        "sylvainjule/pagetable": "^1.0"
+        "sylvainjule/pagetable": "^1.0",
+        "timoetting/kirby-color": "^1.0"
     },
     "config": {
         "optimize-autoloader": true

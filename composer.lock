@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95cc140be79542ed274be6400b64ce91",
+    "content-hash": "822bf6243a4528b1391a9fc916cf6cf6",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -851,6 +851,49 @@
                 }
             ],
             "time": "2021-05-27T12:26:48+00:00"
+        },
+        {
+            "name": "timoetting/kirby-color",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TimOetting/kirby-color.git",
+                "reference": "20e47c38be14779fb403a28683f923b4ca284dd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TimOetting/kirby-color/zipball/20e47c38be14779fb403a28683f923b4ca284dd8",
+                "reference": "20e47c38be14779fb403a28683f923b4ca284dd8",
+                "shasum": ""
+            },
+            "type": "plugin",
+            "autoload": {
+                "files": [
+                    "config.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Ötting",
+                    "email": "no@email.com"
+                }
+            ],
+            "description": "Kirby-Color is a color picker plugin for Kirby CMS v3.",
+            "support": {
+                "issues": "https://github.com/TimOetting/kirby-color/issues",
+                "source": "https://github.com/TimOetting/kirby-color/tree/v1.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/TimOetting/10",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-11-25T00:38:46+00:00"
         },
         {
             "name": "true/punycode",
