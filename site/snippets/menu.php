@@ -19,24 +19,6 @@
 	<!-- main menu -->
 	<nav id="main-menu" class="menu">
 		<ul>
-			<!-- practices -->
-			<li class="practices" data-menu="practices"><a href="#"><?= $site->practicetxt()->text() //t('practice') ?></a>
-				<ul class="sub-menu">
-
-					<?php 
-
-						$practicelist = page('practices')->children()->listed()->pluck("practicetype", ",", true);
-						$practicetype = ['bigpicture','people','scenario','form'];
-					 ?>
-					<?php if ($practicetype): ?>
-					<?php foreach ($practicetype as $step): ?>
-					<?php if(in_array($step, $practicelist, true)): ?>
-						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?=  $site->{$step.'txt'}()->text()//t($step) ?></a></li>
-					<?php endif ?>
-					<?php endforeach ?>
-					<?php endif ?>
-				</ul>
-			</li>
 			<!-- cases -->
 			<li class="cases" data-menu="cases"><a href="#"><?= $site->casestxt()->text() //t('cases') ?></a>
 				<ul class="sub-menu">
@@ -57,6 +39,24 @@
 						<li <?php e(Url::current() == $site->url().'/cases/theme:'.$theme->name_en()->text(), ' class="active '.$theme->name_en()->text().'"',  ' class="'.$theme->name_en()->text().'"') ?>><a href="<?= $site->url().'/cases/theme:'.$theme->name_en()->text() ?>"><?= html( Str::ucfirst( $themename ) ) ?></a></li>
 					<?php endforeach ?>
 
+				</ul>
+			</li>
+			<!-- practices -->
+			<li class="practices" data-menu="practices"><a href="#"><?= $site->practicetxt()->text() //t('practice') ?></a>
+				<ul class="sub-menu">
+
+					<?php 
+
+						$practicelist = page('practices')->children()->listed()->pluck("practicetype", ",", true);
+						$practicetype = ['bigpicture','people','scenario','form'];
+					 ?>
+					<?php if ($practicetype): ?>
+					<?php foreach ($practicetype as $step): ?>
+					<?php if(in_array($step, $practicelist, true)): ?>
+						<li <?php e(Url::current() == $site->url().'/practices/practicetype:'.$step, ' class="active '.$step.'"', ' class="'.$step.'"') ?>><a href="<?= $site->url().'/practices/practicetype:'.$step ?>"><?=  $site->{$step.'txt'}()->text()//t($step) ?></a></li>
+					<?php endif ?>
+					<?php endforeach ?>
+					<?php endif ?>
 				</ul>
 			</li>
 			<!-- pages -->
