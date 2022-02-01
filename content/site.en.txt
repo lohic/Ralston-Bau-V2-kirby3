@@ -2,6 +2,22 @@ Title: Ralston Bau
 
 ----
 
+Maintenance: false
+
+----
+
+Introtext: true
+
+----
+
+Projectbgcolor: #000000
+
+----
+
+Projecttxtcolor: #FFFFFF
+
+----
+
 Practicetxt: Practice
 
 ----
@@ -95,22 +111,6 @@ Projectscategories:
 
 ----
 
-Maintenance: false
-
-----
-
-Introtext: true
-
-----
-
-Projectbgcolor: #000000
-
-----
-
-Projecttxtcolor: #FFFFFF
-
-----
-
 Newsletterform: true
 
 ----
@@ -124,6 +124,18 @@ Newslettertxt: Text **newsletter** super !!!!
 ----
 
 Enablesearch: true
+
+----
+
+Contactemail: contact@ralstonbau.com
+
+----
+
+Instagram: https://www.instagram.com/studioralstonbau/
+
+----
+
+Facebook: https://www.facebook.com/ralstonbau
 
 ----
 
