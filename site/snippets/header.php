@@ -67,7 +67,7 @@ Cookie::set("test", "ok", ["lifetime"=>10,"domain"=>$domain]);
 		 'assets/vendor/slick-1.8.1/slick/slick.css',
 		 'assets/vendor/fancybox-master/dist/jquery.fancybox.min.css',
 		 'assets/css/reset.css',
-		 'assets/css/style.css?v=1.55'/*,
+		 'assets/css/style.css?v=1.59'/*,
 		 '@auto'*/]) ?>
 
 <?php if( $site->projectbgcolor() != "#000000" || $site->projecttxtcolor() != "#FFFFFF" ) : ?>
