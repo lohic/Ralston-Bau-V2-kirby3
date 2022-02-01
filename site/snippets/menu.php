@@ -84,19 +84,25 @@
 		</nav>
 
 		<div class="social-media">
+			<?php if( !$site->contactemail()->isEmpty() ) : ?>
 			<div class="jssocials-share jssocials-share-email">
-				<a target="_self" href="mailto:?subject=Ralston%20Bau%20%3A%20Longer%20participation&amp;body=http%3A%2F%2Flocalhost%3A8888%2FSite-RALSTON-BAU-kirby3%2Fen%2Fpractices%2Flonger-participation" class="jssocials-share-link">
-					<img src="<?= $kirby->urls()->assets() ?>/images/email.svg" class="jssocials-share-logo">
+				<a target="_self" href="mailto:<?= $site->contactemail()->text() ?>" class="jssocials-share-link">
+					<img src="<?= $kirby->urls()->assets() ?>/images/email.svg" class="jssocials-share-logo" alt="email">
 				</a>
 			</div>
-			<div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8888%2FSite-RALSTON-BAU-kirby3%2Fen%2Fpractices%2Flonger-participation" class="jssocials-share-link">
-				<img src="<?= $kirby->urls()->assets() ?>/images/facebook.svg" class="jssocials-share-logo"></a>
+			<?php endif; ?>
+			<?php if( !$site->facebook()->isEmpty() ) : ?>
+			<div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="<?= $site->facebook()->text() ?>" class="jssocials-share-link">
+				<img src="<?= $kirby->urls()->assets() ?>/images/facebook.svg" class="jssocials-share-logo" alt="facebook logo"></a>
 			</div>
+			<?php endif; ?>
+			<?php if( !$site->instagram()->isEmpty() ) : ?>
 			<div class="jssocials-share jssocials-share-instagram">
-				<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A8888%2FSite-RALSTON-BAU-kirby3%2Fen%2Fpractices%2Flonger-participation" class="jssocials-share-link">
-					<img src="<?= $kirby->urls()->assets() ?>/images/instagram.svg" class="jssocials-share-logo">
+				<a target="_blank" href="<?= $site->instagram()->text() ?>" class="jssocials-share-link">
+					<img src="<?= $kirby->urls()->assets() ?>/images/instagram.svg" class="jssocials-share-logo" alt="instagram logo">
 				</a>
 			</div>
+			<?php endif; ?>
 		</div>
 
 	
@@ -124,19 +130,25 @@
 	</div>
 
 	<div class="social-media">
+		<?php if( !$site->contactemail()->isEmpty() ) : ?>
 		<div class="jssocials-share jssocials-share-email">
-			<a target="_self" href="mailto:?subject=Ralston%20Bau%20%3A%20Longer%20participation&amp;body=http%3A%2F%2Flocalhost%3A8888%2FSite-RALSTON-BAU-kirby3%2Fen%2Fpractices%2Flonger-participation" class="jssocials-share-link">
-				<img src="<?= $kirby->urls()->assets() ?>/images/email.svg" class="jssocials-share-logo">
+			<a target="_self" href="mailto:<?= $site->contactemail()->text() ?>" class="jssocials-share-link">
+				<img src="<?= $kirby->urls()->assets() ?>/images/email.svg" class="jssocials-share-logo" alt="email">
 			</a>
 		</div>
-		<div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8888%2FSite-RALSTON-BAU-kirby3%2Fen%2Fpractices%2Flonger-participation" class="jssocials-share-link">
-			<img src="<?= $kirby->urls()->assets() ?>/images/facebook.svg" class="jssocials-share-logo"></a>
+		<?php endif; ?>
+		<?php if( !$site->facebook()->isEmpty() ) : ?>
+		<div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="<?= $site->facebook()->text() ?>" class="jssocials-share-link">
+			<img src="<?= $kirby->urls()->assets() ?>/images/facebook.svg" class="jssocials-share-logo" alt="facebook logo"></a>
 		</div>
+		<?php endif; ?>
+		<?php if( !$site->instagram()->isEmpty() ) : ?>
 		<div class="jssocials-share jssocials-share-instagram">
-			<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A8888%2FSite-RALSTON-BAU-kirby3%2Fen%2Fpractices%2Flonger-participation" class="jssocials-share-link">
-				<img src="<?= $kirby->urls()->assets() ?>/images/instagram.svg" class="jssocials-share-logo">
+			<a target="_blank" href="<?= $site->instagram()->text() ?>" class="jssocials-share-link">
+				<img src="<?= $kirby->urls()->assets() ?>/images/instagram.svg" class="jssocials-share-logo" alt="instagram logo">
 			</a>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>
 

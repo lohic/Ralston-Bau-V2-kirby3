@@ -84,7 +84,7 @@ body{
 }
 
 #mobile-menu.show{
-	grid-template-rows: auto 4.5rem 1.95rem;
+	grid-template-rows: auto 4.5rem 2.35rem;
 	grid-template-areas: 
 		"main-menu"
 		"languages"
@@ -1401,7 +1401,7 @@ main.grid .tile a h2{
 	}
 
 	#title{
-		grid-template-rows: 9.36rem auto 3rem 1.95rem;
+		grid-template-rows: 9.36rem auto 3rem 2.35rem;
 	}
 
 	#secondary-menu ul {
@@ -1545,7 +1545,8 @@ main.grid .tile a h2{
 	}
 
 	#title #mobile-menu>.social-media{
-		display: auto;
+		display: block;
+		background: #fff;
 	}
 
 	@keyframes mobile-menu-open-animation {

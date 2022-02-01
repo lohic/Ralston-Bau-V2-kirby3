@@ -58,6 +58,40 @@ tabs:
           param1:
             type: fields 
             fields:
+              maintenance:
+                label: Maintenance
+                type: toggle
+                text: Enable Maintenance
+                translate: false
+                width: 1/2
+              introtext:
+                label: Text intro
+                type: toggle
+                text: show text intro
+                translate: false
+                width: 1/2
+              projectbgcolor:
+                type: color
+                editableAlpha: false
+                translate: false
+                default: "#000000"
+                presets:
+                  - "#000000"
+                  - "#FFFFFF"
+                  - "#F2E0CD"
+                width: 1/2
+              projecttxtcolor:
+                type: color
+                editableAlpha: false
+                translate: false
+                default: "#FFFFFF"
+                presets:
+                  - "#000000"
+                  - "#FFFFFF"
+                  - "#F2E0CD"
+                width: 1/2
+              line5:
+                type: line
               practicetxt:
                 label: Practice label
                 type: text
@@ -116,38 +150,6 @@ tabs:
           param2:
             type: fields 
             fields:
-              maintenance:
-                label: Maintenance
-                type: toggle
-                text: Enable Maintenance
-                translate: false
-                width: 1/2
-              introtext:
-                label: Text intro
-                type: toggle
-                text: show text intro
-                translate: false
-                width: 1/2
-              projectbgcolor:
-                type: color
-                editableAlpha: false
-                translate: false
-                default: "#000000"
-                presets:
-                  - "#000000"
-                  - "#FFFFFF"
-                  - "#F2E0CD"
-                width: 1/2
-              projecttxtcolor:
-                type: color
-                editableAlpha: false
-                translate: false
-                default: "#FFFFFF"
-                presets:
-                  - "#000000"
-                  - "#FFFFFF"
-                  - "#F2E0CD"
-                width: 1/2
               newsletterform:
                 label: Newsletter form
                 type: toggle
@@ -171,6 +173,20 @@ tabs:
                 type: toggle
                 translate: false
                 width: 1/2
+              line4:
+                type: line
+              contactemail:
+                type: email
+                label: Contact email
+                translate: false
+              instagram:
+                type: url
+                label: Instagram url
+                translate: false
+              facebook:
+                type: url
+                label: Facebook url
+                translate: false
               line2:
                 type: line
               description:
