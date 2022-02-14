@@ -1531,9 +1531,9 @@ main.grid .tile a h2{
 		padding: calc(11px + 0.5rem) 3vw; 
 		display: none;
 		animation-name: mobile-menu-close-animation;
-	    animation-duration: 0.4s;
-	    animation-fill-mode: forwards;
-	    transition-timing-function: ease;
+		animation-duration: 0.4s;
+		animation-fill-mode: forwards;
+		transition-timing-function: ease;
 	}
 
 	#mobile-menu.show{
@@ -1619,7 +1619,8 @@ main.grid .tile a h2{
 		background: #FFF;
 		padding: 3.5vw 2.5vw;
 		left: 0;
-		bottom: -3.4rem;
+		/*bottom: -3.4rem;*/
+		bottom: -5rem;
 		right: 0;
 		text-align: right;
 		font-size: 0.8rem;
@@ -1952,8 +1953,13 @@ main.grid .tile a h2{
 	#title{
 		padding: 0;
 	}
+
 	#title>h1{
 		display: none; 
+	}
+
+	#title #mobile-menu>.social-media{
+		display: none;
 	}
 
 	#main-content {
