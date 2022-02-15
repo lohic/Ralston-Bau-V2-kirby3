@@ -1544,6 +1544,10 @@ main.grid .tile a h2{
 		transition-timing-function: ease;
 	}
 
+	#title>.social-media {
+		display: none;
+	}
+
 	#title #mobile-menu>.social-media{
 		display: block;
 		background: #fff;
