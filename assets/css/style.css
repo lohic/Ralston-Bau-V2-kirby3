@@ -1415,7 +1415,7 @@ main.grid .tile a h2{
 
 
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 950px){
 
 	html{
 		font-size: 20px;
@@ -1833,76 +1833,7 @@ main.grid .tile a h2{
 
 }
 
-
-@media screen and (min-width: 1500px){
-	html{
-		font-size: 18px;
-	}
-
-	#title{
-		/*background: #F00;*/
-		width: 250px;
-		padding: 50px;
-	}
-
-	#content{
-		left: 250px;
-	}
-
-	#info{
-		width: 250px;
-		padding: 36px 52px;
-	}
-
-	#main{
-		width: calc(100vw - 500px)
-	}
-
-	#main.loading{
-		width: calc(100vw - 310px);
-	}
-
-	#main-content {
-		margin: 6.4px;
-	}
-
-	#main.loading .gallery,
-	#main.loading .gallery figure,
-	#main.loading .gallery img,
-	#map{
-		height: 522px;
-	}
-
-	#main .gallery figure.panorama{
-		/*height: 522px;*/
-		width: calc(100vw - 512.8px);
-	}
-
-	#main.loading .gallery figure.panorama{
-		height: 522px;
-		width: calc(100vw - 322.8px);
-	}
-
-	.loading main.the-grid{
-		column-gap: 6.4px;
-		column-count: 3;
-	}
-
-	.tile{
-		/*margin-bottom: 3.2px;*/
-	}
-
-	.text{
-		margin: 2rem 16px;
-	}
-
-	.text .description{
-		width: 245px;
-	}
-}
-
-
-@media screen and (max-width: 750px) and (orientation: landscape){
+@media screen and (max-width: 950px) and (orientation: landscape){
 /*	#title {
 		grid-template-rows: 7.36rem auto 1rem;
 	}*/
@@ -1976,6 +1907,77 @@ main.grid .tile a h2{
 	}
 
 }
+
+
+@media screen and (min-width: 1500px){
+	html{
+		font-size: 18px;
+	}
+
+	#title{
+		/*background: #F00;*/
+		width: 250px;
+		padding: 50px;
+	}
+
+	#content{
+		left: 250px;
+	}
+
+	#info{
+		width: 250px;
+		padding: 36px 52px;
+	}
+
+	#main{
+		width: calc(100vw - 500px)
+	}
+
+	#main.loading{
+		width: calc(100vw - 310px);
+	}
+
+	#main-content {
+		margin: 6.4px;
+	}
+
+	#main.loading .gallery,
+	#main.loading .gallery figure,
+	#main.loading .gallery img,
+	#map{
+		height: 522px;
+	}
+
+	#main .gallery figure.panorama{
+		/*height: 522px;*/
+		width: calc(100vw - 512.8px);
+	}
+
+	#main.loading .gallery figure.panorama{
+		height: 522px;
+		width: calc(100vw - 322.8px);
+	}
+
+	.loading main.the-grid{
+		column-gap: 6.4px;
+		column-count: 3;
+	}
+
+	.tile{
+		/*margin-bottom: 3.2px;*/
+	}
+
+	.text{
+		margin: 2rem 16px;
+	}
+
+	.text .description{
+		width: 245px;
+	}
+}
+
+
+
 
 
 @media screen and (max-width: 370px ){
