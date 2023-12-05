@@ -18,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/food-tools
+Forms: - practices/food-tools
 
 ----
 
@@ -32,9 +30,7 @@ Date:
 
 ----
 
-Thumbnail: 
-
-- mouillette-all-1292x670.jpg
+Thumbnail: - mouillette-all-1292x670.jpg
 
 ----
 
@@ -42,10 +38,14 @@ Themes: food
 
 ----
 
-Map: 
+Map:
 
 lat: "61.3635404"
 lon: "5.400416"
 city: Dale
 country: Norway
 postcode: "6963"
+
+----
+
+Uuid: DbaVfzyQ7IHg5tFa

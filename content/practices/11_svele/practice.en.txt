@@ -6,14 +6,16 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- ideal_lab_svele-r-b.jpg
+Thumbnail: - ideal_lab_svele-r-b.jpg
 
 ----
 
-Description: 
+Description:
 
 Svele has been designed during the Ideal Lab’ process of the theme “Replanted Identity” in 2015. In an initial workshop that called for dialog and gathering around Florø identity, the native and migrant participants contributed by bringing home- cooked finger foods. The natural choices for the “Florøværingar” with west norwegian culture was to offer the Svele, a small moon shaped pancake, and those with polish background brought Kiefies, a crescent shaped cookie. We were touched by the generous hospitality that was expressed by our city hosts and out of this experience grew our desire to create a dedicated object.
 
 Shapes of both Svele and Kiefies are descending from the moon at different stages. We used the flat circular form to create two serving trays that took the name Svele after the regional pancake speciality that usually is placed flat on a plate and folded in two or three with brunost (brown cheese) or sugared butter inside. Our aim was to elegantly enhance the display and give them an outwards reaching movement symbolising the desire to share. Svele is an open palm reflecting proudly and as a manifest object the metallurgic tradition and heritage of the city. The dramaturgy of the coastal landscape and the colossal forces interacting are illustrated by the contradiction between the strength of the shiny metal material and its unexpectedly thin and bent shape. Hovering over the table and mirroring the surroundings in its shiny surface, Svele gives the illusion of floating with poetic fragility.
+
+----
+
+Uuid: Vv9VZAxp4ZHUrc6D

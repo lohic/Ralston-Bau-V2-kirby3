@@ -8,6 +8,8 @@ Display subpages in a flexible, sortable and searchable table.
 
 ## Overview
 
+> Kirby 3.6+ is supported with Pagetable 1.1+. You should use 1.0.9 with previous Kirby 3 versions.
+
 > This plugin is completely free and published under the MIT license. However, if you are using it in a commercial project and want to help me keep up with maintenance, please consider [making a donation of your choice](https://paypal.me/sylvainjl) or purchasing your license(s) through [my affiliate link](https://a.paddle.com/v2/click/1129/36369?link=1170).
 
 - [1. Installation](#1-installation)
@@ -18,6 +20,7 @@ Display subpages in a flexible, sortable and searchable table.
   * [3.3. Visibility options](#33-visibility-options)
   * [3.4. Query](#34-query)
   * [3.5. Custom strings](#35-custom-strings)
+  * [3.6. Panel / preview link](#36-panel-preview-link)
 - [4. Column options](#4-column-options)
   * [4.1. label](#41-label)
   * [4.2. text](#42-text)
@@ -26,6 +29,7 @@ Display subpages in a flexible, sortable and searchable table.
   * [4.5. class](#45-class)
   * [4.6. sortable](#46-sortable)
   * [4.7. searchable](#47-searchable)
+  * [4.8. mobile](#48-mobile)
 - [5. Complete example](#5-complete-example)
 - [6. License](#6-license)
 - [7. Credits](#7-credits)
@@ -148,6 +152,17 @@ sections:
       reset: Reset
 ```
 
+### 3.6. Panel / preview link
+
+By default, each row will redirect to its panel page. You can however chose to redirect your editors to its preview page instead, by setting the `url` option.
+
+```yaml
+sections:
+  mypagetable:
+    type: pagetable
+    url: preview
+```
+
 <br/>
 
 ## 4. Column options
@@ -256,8 +271,7 @@ columns:
 
 > type: `string`, default: `auto`
 
-The width of the column in the table.
-Available widths: 1/6, 1/4, 1/3, 1/2, 2/3, 3/4
+The width of the column in the table, written as a fraction and automatically calculated (1/2, 1/3, 1/6, 32/94, etc.)
 
 ```yaml
 columns:
@@ -301,6 +315,20 @@ columns:
   title:
     searchable: true
 ```
+
+#### 4.8. `mobile`
+
+> type: `Boolean`, default: `false`
+
+By default, only the first column is shown on mobile viewports. You can change it for whichever column you'd like by setting this to `true`.
+
+```yaml
+columns:
+  title:
+    mobile: true
+```
+
+Note that only one column can have this option.
 
 <br/>
 

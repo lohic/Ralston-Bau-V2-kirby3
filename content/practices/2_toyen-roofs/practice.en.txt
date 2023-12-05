@@ -6,16 +6,18 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- toyen-roofs-market-dam.jpg
+Thumbnail: - toyen-roofs-market-dam.jpg
 
 ----
 
-Description: 
+Description:
 
 Tøyen Market Roof, Tøyen Water, Festival Roof, Tøyen Sunshine
 by Ralston & Bau
 Urban lighting
 Iron, paint and stainless steel, LED and polycarbonate
 October 2016 / Produced by Merethe Bua
+
+----
+
+Uuid: knUUlzOXYoirA4sd

@@ -2,7 +2,7 @@ Title: Publications
 
 ----
 
-Text: 
+Text:
 
 ## Videos
 (link: https://www.youtube.com/watch?v=UqJyHYeDMcY  text: TED xNantes) / 14 min talk (english) France 2014
@@ -140,3 +140,7 @@ ISBN-13 978-1-57965-405-4
 Van Gogh’s Table at the Auberge Ravoux
 Edition Heöbeke Paris/Artisan (Division of Workman Publishing)
 ISBN-13 978-1579651824
+
+----
+
+Uuid: nKfnPrTkiKyxD50J

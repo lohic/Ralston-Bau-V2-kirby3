@@ -10,27 +10,19 @@ Text:
 
 ----
 
-Bigpictures: 
-
-- practices/longer-participation
+Bigpictures: - practices/longer-participation
 
 ----
 
-Peoples: 
-
-- practices/sensing-dale
+Peoples: - practices/sensing-dale
 
 ----
 
-Scenarios: 
-
-- practices/knowledge-transfer
+Scenarios: - practices/knowledge-transfer
 
 ----
 
-Forms: 
-
-- practices/shroom
+Forms: - practices/shroom
 
 ----
 
@@ -54,7 +46,7 @@ Themes: public, lighting
 
 ----
 
-Addresses: 
+Addresses:
 
 - 
   map:
@@ -72,10 +64,14 @@ Images:
 
 ----
 
-Map: 
+Map:
 
 lat: "61.3635404"
 lon: "5.400416"
 city: Dale
 country: Norway
 postcode: "6963"
+
+----
+
+Uuid: ZsxoPBToCkeK6dOE

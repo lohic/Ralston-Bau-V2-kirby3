@@ -6,16 +6,18 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- mouillette_01.jpg
+Thumbnail: - mouillette_01.jpg
 
 ----
 
-Description: 
+Description:
 
 Through observations of everyday human rituals we find inspiration for unique ideas. As part of the food-ritual series we have two objects in production: Mouillette and Mums, both made out of massive ash and produced by Vevang Produksjon. Mouillette is an egg cup and bread board all in one, inspired by a french food-ritual. For breakfast one eats two eggs, you prepare bread in thin slices with butter and salt and you dip it into the soft boiled egg. Mums is a snack board with a glass holder all in one. Ideal for little children having a afternoon snack, Mums is a board for enjoying bread and drinks on a bench or on the grass. Prepared with a hole for a glass and a shape that lays steadily on your lap, the board has become popular for fishermen at sea and for picnics in the park.
 
 Product
 Massive ash
 20 x 32 cm
+
+----
+
+Uuid: cuJpaaoT0q3BUODC

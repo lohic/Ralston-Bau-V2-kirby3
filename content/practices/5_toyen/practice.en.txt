@@ -6,13 +6,11 @@ Practicetype: bigpicture
 
 ----
 
-Thumbnail: 
-
-- il-ri-rgb.jpg
+Thumbnail: - il-ri-rgb.jpg
 
 ----
 
-Description: 
+Description:
 
 Identity is, literally, what makes us identical to others. It is essential for forming a community, be it religious, national, local, sexual, racial or artistic. What makes an identity interesting is that it is in fact, a combination of multiple identities that are unique to each one of us and resembles a tool box. Everyone searches in their own, to find the identity that is useful at a given moment. It allows us to find a similarity with other people and create a connection, an identified community, even if it is a superficial and momentary one. Some can use their identity to exclude, but the traveler know it is more useful to use the identity that includes. Socialising with unknown people is about finding the « identity zone » in which we can communicate.
 
@@ -24,3 +22,7 @@ This mix of identities is the way we define ourselves and a way to connect ourse
 
 A successful local identity is a meeting point of the best in us. Where of the physical peculiarities of its territory meets the history of the place and the people who live there, while still making space for those who haven’t moved there yet, those who are just passing by, and those who would like to settle for good. The success of a local identity is a daily collective practice, an object of desire, something unique and simple, open enough to include most people, but with enough restrictive definition not to lose its strength. The search for identity is the quest for what unites people, what bring them together, through what is identical to all. 
 The Ideal Lab have invited French and Norwegian creative Agents to immerse themselves in two unique places - Florø and Saint Nazaire. Both are distinctive, gorgeous and in transformation - with similarities and differences. These Agents collectively and individually studied and observed these Micropolises to project a new version of the local identity in artworks and objects, all vectors of a “replanted identity”.
+
+----
+
+Uuid: cwTEMQkOkQZ8k7bo

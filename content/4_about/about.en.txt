@@ -2,9 +2,7 @@ Title: Contact
 
 ----
 
-Panorama: 
-
-- ii-manifesto.gif
+Panorama: - ii-manifesto.gif
 
 ----
 
@@ -12,7 +10,7 @@ Text:
 
 ----
 
-Address: 
+Address:
 
 RALSTON BAU
 
@@ -34,7 +32,7 @@ Phone:
 
 ----
 
-Social: 
+Social:
 
 - 
   platform: Instagram
@@ -48,9 +46,13 @@ Social:
 
 ----
 
-Contact: 
+Contact:
 
 Kirby Magazine Inc.
 Sesamestreet 1
 Gotham City
 USA
+
+----
+
+Uuid: d1Epd63KGGxkyeIV

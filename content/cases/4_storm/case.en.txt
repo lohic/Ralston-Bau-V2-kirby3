@@ -10,9 +10,7 @@ Text:
 
 ----
 
-Bigpictures: 
-
-- practices/toyen
+Bigpictures: - practices/toyen
 
 ----
 
@@ -20,15 +18,11 @@ Peoples:
 
 ----
 
-Scenarios: 
-
-- practices/adapt
+Scenarios: - practices/adapt
 
 ----
 
-Forms: 
-
-- practices/storm
+Forms: - practices/storm
 
 ----
 
@@ -52,7 +46,7 @@ Themes: identity, migration
 
 ----
 
-Map: 
+Map:
 
 lat: "61.5998581"
 lon: "5.0320356"
@@ -63,3 +57,7 @@ postcode: "6901"
 ----
 
 Images: 
+
+----
+
+Uuid: E6b1kaqLHQ0b8Fmd

@@ -6,9 +6,7 @@ Practicetype: bigpicture
 
 ----
 
-Thumbnail:
-
-- dsc_0567.jpg
+Thumbnail: - dsc_0567.jpg
 
 ----
 
@@ -36,3 +34,7 @@ The elder population is beginning to be bigger than the present working generati
 ----
 
 Legend: 
+
+----
+
+Uuid: 2CuvTEmrLpfE79wl

@@ -10,7 +10,7 @@ Columntoggle: false
 
 ----
 
-Text: 
+Text:
 
 ## Awards
 2013  Label VIA
@@ -67,3 +67,7 @@ Musée de la Lunetterie / Morez, France
 2000  International Biennial of Design Saint-Etienne, France
 2000  Musée d’Art Contemporain Abbaye de Meymac, France
 2000  Musée de la Lunetterie / Morez, France
+
+----
+
+Uuid: 0SSKb3mxnc8IX436

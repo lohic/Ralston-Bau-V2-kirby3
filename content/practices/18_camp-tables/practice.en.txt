@@ -6,9 +6,7 @@ Practicetype: form
 
 ----
 
-Thumbnail:
-
-- ct.jpg
+Thumbnail: - ct.jpg
 
 ----
 
@@ -36,3 +34,7 @@ Limited series 100 ex / size
 2015 - Florø, Norway
 Permanent Collection Sogn og
 Fjordane Art Museum
+
+----
+
+Uuid: xl5BypipobyqGCiQ

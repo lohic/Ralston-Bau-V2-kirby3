@@ -6,14 +6,16 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- ideal_lab_storm-r-b.jpg
+Thumbnail: - ideal_lab_storm-r-b.jpg
 
 ----
 
-Description: 
+Description:
 
 Storm has been designed within Ideal Lab Replanted Identity process. On the West coast of Norway, both nature and people are shaped by the extreme weather conditions. The strong winds incline the maritime pine in a vertical position, giving body to the quote: “the wind does not break a bendy tree”. The Florøværing is taking any unexpected situations in a pragmatic stride. A cancelled flight or a black out because of the passing storm is taken with a calm confidence while they are adapting their plans to the new situation. The ability to adapt is essential to integration of new inhabitants and create a replanted local identity.
 
 Both immaterial and material adaptation gives new shape to the existing. We wanted to illustrate this in the Storm vases. Our first idea was to make these vases out of bended steel pipes, inspired by the local oil based industry, which is sustaining the local community of Florø. From a shipbuilding culture, Florø have had to learn how to be proud of working with pipes. Great strength is used to bend these to adapt them to the need of their usage. In the case of the Storm vases, it is the flowers that are taking the shape of bended glass.
+
+----
+
+Uuid: 37mJNav5qwk46itv

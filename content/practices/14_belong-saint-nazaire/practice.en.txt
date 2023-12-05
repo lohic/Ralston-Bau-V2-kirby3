@@ -6,10 +6,12 @@ Practicetype: scenario
 
 ----
 
-Thumbnail: 
-
-- saint-nazaire-62.jpg
+Thumbnail: - saint-nazaire-62.jpg
 
 ----
 
 Description: Belonging is a result of the two previous scenarios. Belonging is a feeling based on the collective identity, shared rituals and a collective imagination. The common identity shows what people really share, the rituals which make everyone feel physically and emotionally connected. The collective imagination is filled with events, artistic expressions, and traditions which have touched everyone. Ideal Lab’s Agents were fascinated by the significance of manual traditions in both cities - creating, fixing, making, restoring -  and their absence in the public space. Both cities have a typical architecture (wood for Florø, post-war rational planning for Saint-Nazaire) which is sometimes not well taken care of nor embraced. The collective transformation process, through work and the reclaiming of public space, are the main themes of this scenario. The pass-stop use of the city for practicalities, gave us the idea to design seats that invite the busy habitants to slow down, enjoy and take a break. Inspired by the locksman, who guides the boats into and out of the port, the urban seats “Lamaneur” take their shape from the architecture of the 50’s locks-houses.
+
+----
+
+Uuid: UvqfKFNMydhn07mk

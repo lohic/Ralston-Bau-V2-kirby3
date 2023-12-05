@@ -6,13 +6,11 @@ Practicetype: people
 
 ----
 
-Thumbnail: 
-
-- dsc_0596.jpg
+Thumbnail: - dsc_0596.jpg
 
 ----
 
-Description: 
+Description:
 
 *A space is not a thing rather a set of relations between things*
 (Henri Lefebvre, The Production of Space 1974).
@@ -31,3 +29,7 @@ In order to grasp the qualitative experience of town living a group of elders is
 # Identifying climatic qualities
 Heat, coldness, dryness, wetness/humidity, light, darkness, wind and calmness are all climatic qualities of the human environment. Our psychological perception is influenced by subjective factors like memory, experience, preference etc. making the perception of places a highly individual matter. In this workshop we want to explore which climatic qualities are being experienced in Dale and we want to create personal visualizations of specific climatic qualities
 by single use cameras. The result of the day is situated and individual observations making a sketch like description of which climatic qualities are being experienced in Dale. This information is put on the blog as well as samples of the individual visualizations of specific qualities. The aim is to raise reflections and further social exchange. It is a qualitative perspective which can be developed further by including more people and more places. As an example it is interesting to reflect upon whether a group of women would experience the same qualities as the men did, that is - whether a gender difference exist in perceiving and evaluating climatic qualities.
+
+----
+
+Uuid: IY1Tqi7HLzLPbGXy

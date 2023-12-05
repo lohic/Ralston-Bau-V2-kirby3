@@ -17,7 +17,12 @@ $structure-item-height: 40px;
 	table-layout: fixed;
   	width: 100%;
   	max-width: 100%;
-  	user-select: none;
+
+    thead,
+    .cover-image,
+    .pagetable-options-container {
+        user-select: none;
+    }
 
 	th, td {
     	border-bottom: 2px solid $color-background;
@@ -25,28 +30,6 @@ $structure-item-height: 40px;
     	@include text-truncate;
     	&.cover-image {
     		width: 38px !important;
-    	}
-    	&:not(.cover-image):not(.pagetable-options-container) {
-    		width: auto;
-    		/* column widths */
-			&.col-width-1-6 {
-			    width: calc(100% / 6) !important;
-			}
-			&.col-width-1-4 {
-			    width: 25% !important;
-			}
-			&.col-width-1-3 {
-			    width: calc(100% / 3) !important;
-			}
-			&.col-width-1-2 {
-			    width: 50% !important;
-			}
-			&.col-width-2-3 {
-			    width: calc(100% / 3 * 2) !important;
-			}
-			&.col-width-3-4 {
-			    width: 75% !important;
-			}
     	}
     	&.pagetable-options-container {
     		&.pagetable-options-two {
@@ -57,24 +40,18 @@ $structure-item-height: 40px;
             }
             &.pagetable-options-none {
                 width: 0px !important;
+                padding: 0;
             }
     	}
 		@media screen and (max-width: $breakpoint-medium) {
 			display: none;
 			&.cover-image,
-			&:nth-child(2),
+			&.mobile-column,
     		&.pagetable-options-container {
       			display: table-cell;
 			}
-			&:not(.cover-image):not(.pagetable-options-container) {
-				&.col-width-1-6,
-				&.col-width-1-4,
-				&.col-width-1-3,
-				&.col-width-1-2,
-				&.col-width-2-3,
-				&.col-width-3-4 {
-					width: auto !important;
-				}
+    		&.mobile-column {
+      			width: auto !important;
 			}
     	}
   	}
@@ -126,7 +103,7 @@ $structure-item-height: 40px;
     	height: $structure-item-height;
     	padding: 0;
     	&:not(.cover-image) {
-	    	a {
+	    	a, span[data-disabled] {
 	    		display: block;
 	    		width: 100%;
 	    		padding: .5rem .75rem;

@@ -18,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/le-building-table
+Forms: - practices/le-building-table
 
 ----
 
@@ -40,7 +38,7 @@ Themes: identity, local
 
 ----
 
-Map: 
+Map:
 
 lat: "43.2957584"
 lon: "5.3757902"
@@ -48,3 +46,7 @@ city: Marseille
 country: France
 postcode: "13001"
 address: La Canebière
+
+----
+
+Uuid: QYRBjEWPeej1IGXS

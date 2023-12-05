@@ -6,14 +6,16 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- ideal_lab_les-lamaneurs-r-b-03.jpg
+Thumbnail: - ideal_lab_les-lamaneurs-r-b-03.jpg
 
 ----
 
-Description: 
+Description:
 
 Situated by the Saint-Nazaire port, six little docking houses made in 50’s architecture, are hosting the Lamaneurs. They are professional seamen on land that guide the ships going in and out of the harbour and fasten them safely at quay. A lamaneur is guarding and monitoring the harbour, empathically looking after any vessel passing through. Day and night. Saint-Nazaire is a workers city. Its centre is a place you go through or jump into to buy something on your way home, without really linger or take part in a social urban life. We wished to offer spaces for the Nazariens to indulge in a well deserved break.
 
 We created the Lamaneurs, a series of urban furnitures that invite the habitants to slow down and enjoy their city. Like the lamaneur guiding the ship, these furnitures are taking care of people. The shapes are taken from the docking houses that have a rounded front to provide a wide angle visibility and the metal and wood materials where selected from the ship building artisan industries we collaborated with. Four versions of Lamaneurs each with its own attitude, has been created inspired by their rituals: Lunch break, Coffee break, Long watch and Power nap.
+
+----
+
+Uuid: wj6CNaGImokEb0Jw

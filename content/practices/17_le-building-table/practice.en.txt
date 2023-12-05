@@ -6,14 +6,16 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- le-building-table-small.jpeg
+Thumbnail: - le-building-table-small.jpeg
 
 ----
 
-Description: 
+Description:
 
 This is Le Building table is inspired by the modernist construction of the Building Canebière in Marseille, designed by the architects Fernand Pouillon and F. Bart, P. Borel, R. Egger, J. Estienne, L. Pierre, J.-L. Sourdeau Architects. 
 
 It is made in regional massive oliver ash wood by the local craftsman Christophe Claeys.
+
+----
+
+Uuid: nFIFFcrWJfgNBirh

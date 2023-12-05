@@ -34,9 +34,7 @@ Scenarios:
 
 ----
 
-Forms:
-
-- practices/camp-tables
+Forms: - practices/camp-tables
 
 ----
 
@@ -55,15 +53,11 @@ Showcity: true
 
 ----
 
-Thumbnail:
-
-- undercst-447x670.jpg
+Thumbnail: - undercst-447x670.jpg
 
 ----
 
-Panorama:
-
-- undercst-447x670.jpg
+Panorama: - undercst-447x670.jpg
 
 ----
 
@@ -102,3 +96,7 @@ lon: "5.400416"
 city: Dale
 country: Norway
 postcode: "6963"
+
+----
+
+Uuid: FqRTiZuHs6xC6uZm

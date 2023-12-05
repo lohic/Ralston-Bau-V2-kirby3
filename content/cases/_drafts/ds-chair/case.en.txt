@@ -26,9 +26,7 @@ Date:
 
 ----
 
-Thumbnail: 
-
-- ds-chair-table-11021-cropped-882x670.jpg
+Thumbnail: - ds-chair-table-11021-cropped-882x670.jpg
 
 ----
 
@@ -37,3 +35,7 @@ Themes:
 ----
 
 Map: 
+
+----
+
+Uuid: TSUuhp4StdIHf6wC

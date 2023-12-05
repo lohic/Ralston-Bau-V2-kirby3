@@ -26,6 +26,9 @@
         "timoetting/kirby-color": "^1.0"
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
     }
 }

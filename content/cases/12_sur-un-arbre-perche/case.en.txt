@@ -18,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/sur-un-arbre-perche
+Forms: - practices/sur-un-arbre-perche
 
 ----
 
@@ -28,9 +26,7 @@ Date:
 
 ----
 
-Thumbnail: 
-
-- balancoire-et-arbre-hd-600x921.jpg
+Thumbnail: - balancoire-et-arbre-hd-600x921.jpg
 
 ----
 
@@ -43,3 +39,7 @@ Map:
 ----
 
 Images: 
+
+----
+
+Uuid: bkvEjyvL0OsaQ3hs

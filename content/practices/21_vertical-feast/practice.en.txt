@@ -6,13 +6,11 @@ Practicetype: form
 
 ----
 
-Thumbnail: 
-
-- anders-veggoppifra.jpg
+Thumbnail: - anders-veggoppifra.jpg
 
 ----
 
-Description: 
+Description:
 
 Måltidets Hus is the new 9000 m2 national and international resource centre for food development, host of the Gastronomic Institute and Norwegian chef team. Ralston & Bau was commissioned by (link: https://www.figgjo.com/ text: Figgjo) to make a permanent installation in the reception hall. A central wall that runs three flights high was transformed into a generous, vertical feast table. Combined iconic Figgjo dishes form organic shaped plates and bowls on the table, the wall was covered with an innovative laminated wood material simulating a linen table cloth. The wood was engraved with the shapes of ghost silverware and glasses, while a classic chair backrest at the top of the wall completes the illusion of the vertical table. The installation was opened to the public on the 16th of September. If you are in Stavanger, just pass by to take your bite of the vertical meal.
 
@@ -21,3 +19,7 @@ Scenography
 3 x 15 m.
 Stavanger, Norway
 2010
+
+----
+
+Uuid: bRyi6G0cCx73nmVH

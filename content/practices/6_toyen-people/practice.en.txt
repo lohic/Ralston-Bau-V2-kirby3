@@ -6,10 +6,12 @@ Practicetype: people
 
 ----
 
-Thumbnail: 
-
-- 20161019-ideal_lab-71108.jpg
+Thumbnail: - 20161019-ideal_lab-71108.jpg
 
 ----
 
 Description: xxxx
+
+----
+
+Uuid: VQUw2MRg19CuwzHl

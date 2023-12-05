@@ -6,27 +6,19 @@ Text:
 
 ----
 
-Bigpictures: 
-
-- practices/toyen
+Bigpictures: - practices/toyen
 
 ----
 
-Peoples: 
-
-- practices/les-lamaneurs-people
+Peoples: - practices/les-lamaneurs-people
 
 ----
 
-Scenarios: 
-
-- practices/belong-saint-nazaire
+Scenarios: - practices/belong-saint-nazaire
 
 ----
 
-Forms: 
-
-- practices/les-lamaneurs
+Forms: - practices/les-lamaneurs
 
 ----
 
@@ -38,9 +30,7 @@ Description:
 
 ----
 
-Thumbnail: 
-
-- capture-decran-2019-02-18-a-15.21.15.png
+Thumbnail: - capture-decran-2019-02-18-a-15.21.15.png
 
 ----
 
@@ -52,7 +42,7 @@ Themes: public, identity
 
 ----
 
-Map: 
+Map:
 
 lat: "45.2566002"
 lon: "5.8490243"
@@ -63,3 +53,7 @@ postcode: "38330"
 ----
 
 Images: 
+
+----
+
+Uuid: 2X6yTX7grMqC3QWu

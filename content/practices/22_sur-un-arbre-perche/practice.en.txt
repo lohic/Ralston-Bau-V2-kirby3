@@ -10,10 +10,14 @@ Thumbnail:
 
 ----
 
-Description: 
+Description:
 
 Sur un Arbre Perché is a restaurant in Paris. The concept is based on a fable by Jean de la Fontaine, “The Crow and the Fox” and proposes a space shaped for childrens dreams and contemporary comfort. Next to the heavy traffic of a Parisian boulevard, the restaurant presents a fresh breath of air with Nordic inspirations. Wood from a 200-year old barn has been reused to create intimate spaces on different levels, like nests. The white tree is placed centrally in the restaurant, spreading its leaves throughout the whole space from floor to ceiling. Four rocking chairs are hanging from the tree inviting guests to a relaxing meal for two. Sails diffuse the lighting making it more indirect. The Nest chair and table for 2 or 4 people was especially designed for this restaurant and are made out of wrought iron with the tabletop made out of polyethylene.
 
 Restaurant
 200 m2
 Paris, France
+
+----
+
+Uuid: hLb5zwj3im1z2VOz

@@ -6,9 +6,7 @@ Text:
 
 ----
 
-Bigpictures: 
-
-- practices/toyen
+Bigpictures: - practices/toyen
 
 ----
 
@@ -20,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/svele
+Forms: - practices/svele
 
 ----
 
@@ -42,10 +38,14 @@ Themes: identity, food
 
 ----
 
-Map: 
+Map:
 
 lat: "61.5998581"
 lon: "5.0320356"
 city: Florø
 country: Norway
 postcode: "6901"
+
+----
+
+Uuid: tI17Q3sO9hmd4gDq

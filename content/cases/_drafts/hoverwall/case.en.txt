@@ -2,7 +2,7 @@ Title: Hover wall
 
 ----
 
-Text: 
+Text:
 
 “Hover Wall” is a graphic design applied to an existing paper-Wall ‘Pipe Drop’  from Les Procédés Chenel International. The paper wall can be used to form small rooms or to separate a room into several parts. The paper wall is produced in a “honeycomb” structure which gives it properties that enables flexible use and free standing stability. The “HoverWall” design plays with visual deception and gives the impression of being a floating wall, or the perceiver being in a floating room.
 
@@ -32,9 +32,7 @@ Date:
 
 ----
 
-Thumbnail: 
-
-- 1-749x670.jpg
+Thumbnail: - 1-749x670.jpg
 
 ----
 
@@ -43,3 +41,7 @@ Themes:
 ----
 
 Map: 
+
+----
+
+Uuid: SmTkMbCNCLpdjYnx

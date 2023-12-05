@@ -22,9 +22,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/vertical-feast
+Forms: - practices/vertical-feast
 
 ----
 
@@ -36,9 +34,7 @@ Description:
 
 ----
 
-Thumbnail: 
-
-- anders-veggoppifra-854x670.jpg
+Thumbnail: - anders-veggoppifra-854x670.jpg
 
 ----
 
@@ -58,7 +54,7 @@ Addresses:
 
 ----
 
-Map: 
+Map:
 
 lat: "58.9680427"
 lon: "5.7324722"
@@ -69,3 +65,7 @@ postcode: "4006"
 ----
 
 Images: 
+
+----
+
+Uuid: c6mZ0dILAZJVwasZ

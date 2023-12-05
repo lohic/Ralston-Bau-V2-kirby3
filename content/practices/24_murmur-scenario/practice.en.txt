@@ -6,15 +6,17 @@ Practicetype: scenario
 
 ----
 
-Thumbnail: 
-
-- screen-shot-2019-03-18-at-14.32.33.png
+Thumbnail: - screen-shot-2019-03-18-at-14.32.33.png
 
 ----
 
-Description: 
+Description:
 
 We extracted from the immersive process with people the following point-of-view:
 An engaged Community Manager who had a former unfulfilling career, is busy juggling the daily space management with anticipating future content, needs changeable rooms and big light furniture that doesn't get lost, store away without taking space and effortlessly adapt and bring value to any type of event and member, because a successful co-working space is one that is alive and experienced as a new space from one hour to the next, at the same time as it provides individual privacy.
 
 Based on those conclusions, we tested several scenarios and created their essence in MurMur, an extension of ourself in spaces, protecting your thoughts and activities visually and offering a more serene acoustic environment, in any space or situation.
+
+----
+
+Uuid: 7hnsI18xuoy7U2Cj

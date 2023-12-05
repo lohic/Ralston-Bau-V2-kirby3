@@ -10,9 +10,7 @@ Text: Map seems to work
 
 ----
 
-Bigpictures:
-
-- practices/longer-participation
+Bigpictures: - practices/longer-participation
 
 ----
 
@@ -71,3 +69,7 @@ Addresses:
     city: Paris
     country: France
     postcode: "75018"
+
+----
+
+Uuid: jwk5t69S90v2vKih

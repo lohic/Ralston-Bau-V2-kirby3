@@ -6,13 +6,11 @@ Practicetype: scenario
 
 ----
 
-Thumbnail: 
-
-- dsc_0674.jpg
+Thumbnail: - dsc_0674.jpg
 
 ----
 
-Description: 
+Description:
 
 # Urban Development
 The mission is to involve seniors in the local development.
@@ -25,3 +23,7 @@ perspective for a future development. Prototypes of the public lighting have bee
 # Knowledge transfer
 The mission is to increase knowledge transfers between generations
 We explored and studied the different ways to reintroduce the seniors‘ knowledge and the competences. Together with the participating elders, the studio linked the knowledge with contemporary design and material aspects. Resulting out of the knowledge transfer, prototypes have been realised and tuned with experts with urban lighting, sustainable and ecological friendly materials.
+
+----
+
+Uuid: NmupxneNnJrI5Ne5

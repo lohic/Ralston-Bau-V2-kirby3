@@ -18,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/redesign-form
+Forms: - practices/redesign-form
 
 ----
 
@@ -28,9 +26,7 @@ Date:
 
 ----
 
-Thumbnail: 
-
-- candle-holder2.jpg
+Thumbnail: - candle-holder2.jpg
 
 ----
 
@@ -38,7 +34,7 @@ Themes: social, upcycling
 
 ----
 
-Map: 
+Map:
 
 lat: "61.3635404"
 lon: "5.400416"
@@ -49,3 +45,7 @@ postcode: "6963"
 ----
 
 Images: 
+
+----
+
+Uuid: q3mjttMoKTpK8iQ6

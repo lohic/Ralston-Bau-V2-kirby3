@@ -6,15 +6,11 @@ Text:
 
 ----
 
-Bigpictures: 
-
-- practices/alibis-big-picture
+Bigpictures: - practices/alibis-big-picture
 
 ----
 
-Peoples: 
-
-- practices/alibis-people
+Peoples: - practices/alibis-people
 
 ----
 
@@ -42,10 +38,14 @@ Themes: social, sharing, knowledge
 
 ----
 
-Map: 
+Map:
 
 lat: "45.88975045"
 lon: "6.135465100226"
 city: Annecy
 country: France
 postcode: "74000"
+
+----
+
+Uuid: cWTh2VLArx05Xob8

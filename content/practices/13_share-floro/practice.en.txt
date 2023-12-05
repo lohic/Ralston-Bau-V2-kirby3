@@ -10,8 +10,12 @@ Thumbnail:
 
 ----
 
-Description: 
+Description:
 
 Identity (“ having something identical “) can only be created through the act of sharing. That said, sharing is not always easy when natives already have their habits and social networks, while the newcomers do not know all the rules. Successful sharing is preceded by a personal selection of what is really important, like a chef selecting ingredients or a DJ selecting songs. Sharing becomes a way to progress and improve when it goes both ways. Each person thinks about what is important to them, shares it, and enjoys the experience and the selections of others.
 
 In Florø, like in Saint-Nazaire, sharing seems to be a delicate operation even though we realised that in good conditions everyone is eager to contribute. The preparation of conducive conditions for sharing is what inspired us.
+
+----
+
+Uuid: Gyv1Se8Pb0i7FzRV

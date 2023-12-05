@@ -10,7 +10,7 @@ Thumbnail:
 
 ----
 
-Description: 
+Description:
 
 Shroom is an outdoor light fixture and furniture series with an unique detection system that reacts to movement and ambient light. “The idea behind the Shroom came from working with habitants in a Norwegian village and their memories related to physical places. We wanted to create a lighting adapted to the life and needs in Nordic cities, close to nature and with long dark nights during the winter. The amazing light of stars and aurora borealis (Nordic lights) are affected by public lighting, therefore it made sense to make light fixtures that are fully lit only when needed, say the designers.” The light dims to a 10 per cent light strength, if nobody is in its proximity and when someone passes by, the Shroom smoothly brightens
 to full luminosity, lighting up the path. This is both energy-saving and avoiding unnecessary light pollution.
@@ -19,3 +19,7 @@ Made from linen fibres, a natural fibre bio-composite material, the light fixtur
 Launch: September 2012 at 100% Norway in London 
 Exhibition: April 2013 at MOST at Salone del Mobile Milano, Saint-Etienne International Design Biennial
 Award: Red Dot Product Design Award 2013
+
+----
+
+Uuid: sPhg35Uu9Ajr32Jy

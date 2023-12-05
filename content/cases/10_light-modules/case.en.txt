@@ -18,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/light-modules
+Forms: - practices/light-modules
 
 ----
 
@@ -28,7 +26,7 @@ Date:
 
 ----
 
-Thumbnail: 
+Thumbnail:
 
 - >
   chenel_chandelier_mood_anders-600x861.jpg
@@ -44,3 +42,7 @@ Map:
 ----
 
 Images: 
+
+----
+
+Uuid: inRc1M5DrRH7n7Bk

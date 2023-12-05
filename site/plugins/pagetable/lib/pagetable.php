@@ -38,9 +38,15 @@ $options = A::merge($options, [
         },
         'query' => function(string $query = '') {
             return $query;
+        },
+        'url' => function($url = 'panel') {
+            return $url;
         }
     ),
     'computed' => array(
+        'columns' => function () {
+            return $this->columns;
+        },
         'translations' => function() {
             $translations = $this->translations;
             $keys         = array_keys($translations);
@@ -109,7 +115,6 @@ $options = A::merge($options, [
             if ($this->sortBy) {
                 $pages = $pages->sortBy(...Str::split($this->sortBy, ' '));
             }
-
             return $pages;
         },
         'total' => function () {
@@ -117,6 +122,7 @@ $options = A::merge($options, [
         },
         'data' => function () {
             $data = array();
+            $hasMobile = false;
 
             if($this->showImage) {
                 $data['columns'][] = array(
@@ -126,18 +132,34 @@ $options = A::merge($options, [
                     'globalSearchDisabled' => true,
                     'thClass' => 'cover-image',
                     'tdClass' => 'cover-image',
+                    'mobile'  => false,
                 );
             }
 
+            // calculate width ratio
+            $calculateRatio = function (string $width) {
+                list($first, $second) = Str::split($width, '/');
+
+                if (empty($first) === true || empty($second) === true) {
+                    return '100%';
+                }
+
+                $result = (100 / (int)$second) * (int)$first;
+                $result = number_format($result, 2, '.', '');
+                return $result . '%';
+            };
+
             // loop through the user display choices
-            foreach($this->columns as $key => $column) {
+            foreach($this->columns() as $key => $column) {
                 $sortable   = $column['sortable'] ?? true;
                 $searchable = $column['searchable'] ?? true;
+                $mobile     = $column['mobile'] ?? false;
                 $type       = $column['type'] ?? 'text';
                 $label      = $column['label'] ?? ucfirst($key);
                 $label      = I18n::translate($label, $label);
                 $thClass    = '';
                 $tdClass    = '';
+                $width      = null;
 
                 $columnData = array(
                     'label'                => $label,
@@ -145,6 +167,8 @@ $options = A::merge($options, [
                     'type'                 => $type,
                     'sortable'             => $sortable,
                     'globalSearchDisabled' => !$searchable,
+                    'mobile'               => $mobile,
+                    'width'                => $width
                 );
 
                 if($type == 'date') {
@@ -160,18 +184,29 @@ $options = A::merge($options, [
                     $columnData['dateOutputFormat'] = $dateOutputFormat;
                 }
                 if(array_key_exists('width', $column)) {
-                    $width   = 'col-width-'. str_replace('/', '-', $column['width']) .' ';
-                    $thClass = $width;
-                    $tdClass = $width;
+                    $width = $calculateRatio($column['width']);
                 }
                 if(array_key_exists('class', $column)) {
                     $thClass .= 'head-'. $column['class'];
                     $tdClass .= 'row-'. $column['class'];
                 }
+                if($mobile && !$hasMobile) {
+                    $hasMobile = true;
+                    $thClass .= ' mobile-column';
+                    $tdClass .= ' mobile-column';
+                }
 
-                $columnData['thClass'] = $thClass;
-                $columnData['tdClass'] = $tdClass;
+                $columnData['thClass'] = $thClass ?: null;
+                $columnData['tdClass'] = $tdClass ?: null;
+                $columnData['width']   = $width;
                 $data['columns'][]     = $columnData;
+            }
+
+            if(!$hasMobile) {
+                $index = $this->showImage ? 1 : 0;
+                $data['columns'][$index]['mobile'] = true;
+                $data['columns'][$index]['thClass'] .= ' mobile-column';
+                $data['columns'][$index]['tdClass'] .= ' mobile-column';
             }
 
             $optionsClass = 'pagetable-options-none';
@@ -181,6 +216,7 @@ $options = A::merge($options, [
             elseif ($this->showStatus || $this->showActions) {
                 $optionsClass = 'pagetable-options-one';
             }
+
 
             // last column is always the options
             $data['columns'][] = array(
@@ -195,28 +231,35 @@ $options = A::merge($options, [
 
             foreach ($this->pages as $item) {
                 $permissions = $item->permissions();
-                $blueprint   = $item->blueprint();
-                $image       = $item->panelImage($this->image ?? []);
+                $panel       = $item->panel();
+                $image       = $panel->image($this->image ?? []);
+                $url         = false;
+                if($this->url == 'panel') {
+                    $url = $panel->url(true);
+                }
+                if($this->url == 'preview') {
+                    $url = $item->previewUrl();
+                }
 
                 $baseOptions = [
                     'id'          => $item->id(),
-                    'dragText'    => $item->dragText('auto', $this->dragTextType),
+                    'dragText'    => $panel->dragText('auto', $this->dragTextType),
                     'text'        => $item->toString($this->text),
                     'info'        => $item->toString($this->info ?? false),
                     'parent'      => $item->parentId(),
-                    'icon'        => $item->panelIcon($image),
                     'image'       => $image,
-                    'link'        => $item->panelUrl(true),
+                    'link'        => $panel->url(true),
+                    'rowLink'     => $url,
                     'status'      => $item->status(),
                     'permissions' => [
                         'sort'         => $permissions->can('sort'),
-                        'changeStatus' => $permissions->can('changeStatus')
+                        'changeStatus' => $permissions->can('changeStatus'),
                     ],
                 ];
 
                 $userOptions = [];
                 // loop through the user display choices
-                foreach($this->columns as $key => $column) {
+                foreach($this->columns() as $key => $column) {
                     $userOptions[$key] = $item->toString($column['text']);
                 }
 
@@ -224,6 +267,8 @@ $options = A::merge($options, [
 
                 $data['rows'][] = $options;
             }
+
+
             return $data;
         },
     ),
@@ -244,7 +289,9 @@ $options = A::merge($options, [
                 'search'       => $this->search,
                 'showImage'    => $this->showImage,
                 'showStatus'   => $this->showStatus,
-                'showActions'  => $this->showActions
+                'showActions'  => $this->showActions,
+                'min'          => $this->min,
+                'mobileColumn' => $this->mobileColumn
             ],
             'translations' => $this->translations,
             'pagination' => $this->pagination,

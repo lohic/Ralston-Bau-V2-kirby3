@@ -18,9 +18,7 @@ Scenarios:
 
 ----
 
-Forms: 
-
-- practices/sous-les-cerisiers
+Forms: - practices/sous-les-cerisiers
 
 ----
 
@@ -32,9 +30,7 @@ Description: yes
 
 ----
 
-Thumbnail: 
-
-- slc-dark-tables-4.jpg
+Thumbnail: - slc-dark-tables-4.jpg
 
 ----
 
@@ -42,7 +38,7 @@ Themes: food, social
 
 ----
 
-Map: 
+Map:
 
 lat: "48.8439049"
 lon: "2.3282249"
@@ -55,3 +51,7 @@ address: Rue Stanislas
 ----
 
 Images: 
+
+----
+
+Uuid: p0A5zhwLdudnAl5Q
